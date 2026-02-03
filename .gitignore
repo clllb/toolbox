@@ -1,0 +1,30 @@
+# Editor
+.idea/
+.vscode/
+
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+docs/.vitepress/dist/
+build/
+
+# Caches
+docs/.vitepress/cache/
+.pnpm-debug.log*
+
+# Logs
+*.log
+
+# Lock files —— 注意：只忽略 npm/yarn 的，保留 pnpm 的！
+yarn.lock
+package-lock.json
+
+# Local env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db

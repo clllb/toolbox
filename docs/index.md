@@ -61,12 +61,12 @@ features:
   - icon: 💰
     title: 金主荣誉榜
     details: 超级无敌伟大的老板们聚集地👑<br />感谢支持，用爱发电，每周更新
-    link: /other/bossboss
+    link: /boss/bossboss
     linkText: 膜拜老板
   - icon: 💯
-    title: 关于大帅哥的点点滴滴
+    title: 咱就说陈老板这辈子也不容易
     details: '<small class="bottom-small">我的老朋友查理布朗，他从不放弃。</small>'
-    link: /other/aboutMe
+    link: /me/me
     linkText: 了解更多
 ---
 
