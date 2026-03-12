@@ -29,8 +29,10 @@
 
 > 👉 主站：[陈老板的百宝箱地址](https://toolguide.top) <br>
 > 👉 CSDN: [陈老老老板](https://blog.csdn.net/weixin_47343544)<br>
-> 👉 AI 中转站：[全网最稳定、售后最好的 AI 中转站-需要加我微信：18004630508](https://claude.leocoder.cn/)
+> 👉 AI 中转站：[全网最稳定、售后最好的 AI 中转站-需要加我微信：18004630508](https://claude.leocoder.cn/)<br>
 > 👉 公众号：陈老老老板<br>
+
+![公众号](/gzh.png)
 
 ## 🙏 鸣谢
 
