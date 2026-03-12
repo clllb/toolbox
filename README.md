@@ -7,27 +7,30 @@
 
 ### 📚 核心内容
 
-| 模块 | 内容亮点 |
-|------|--------|
-| 🔧 [**工具导航**](https://toolguide.top/nav/) | 覆盖工作/学习/生活/娱乐全场景，精选工具每周更新，拒绝收藏吃灰 |
-| 🆕 [**每周工具速递**](https://toolguide.top/weekly-tools/) | 每周一款工具深度测评，附使用场景+避坑指南，实用不踩雷 |
-| ☕ [**Java 进化论**](https://toolguide.top/java/) | 从入门到进阶系统化梳理Java核心，结合实战案例，拒绝纸上谈兵 |
-| 📝 [**面试宝典**](https://toolguide.top/interview/) | Java/通用岗高频面试题+解题思路，不止背答案更懂底层逻辑 |
-| ⚡ [**效率手册**](https://toolguide.top/efficiency/) | 工具使用技巧+场景落地方案，把好工具用出最大价值，高效摸鱼 |
-| 🐞 [**踩坑记录**](https://toolguide.top/bug/) | 汇总技术/工具避坑指南，帮你少走弯路，避坑避雷 |
-| 👑 [**金主荣誉榜**](https://toolguide.top/boss/bossboss) | 致敬用爱发电的超级老板们，每周更新荣誉榜单 |
-| 💯 [**陈老板这一辈子也不容易**](https://toolguide.top/me/me) | 解锁陈老板的成长故事，还有老朋友查理布朗的暖心陪伴 |
+| 模块                                                       | 内容亮点                                                      |
+| ---------------------------------------------------------- | ------------------------------------------------------------- |
+| 🔧 [**工具导航**](https://toolguide.top/nav/)              | 覆盖工作/学习/生活/娱乐全场景，精选工具每周更新，拒绝收藏吃灰 |
+| 🆕 [**每周工具速递**](https://toolguide.top/weekly-tools/) | 每周一款工具深度测评，附使用场景+避坑指南，实用不踩雷         |
+| 📝 [**AI 日报**](https://toolguide.top/AI/weekly/)         | 从入门到进阶系统化梳理 Java 核心，结合实战案例，拒绝纸上谈兵  |
+| 🤖 [**AI 周报**](https://toolguide.top/AI/daily/)          | Java/通用岗高频面试题+解题思路，不止背答案更懂底层逻辑        |
+| ⚡ [**AI 工具手册**](https://toolguide.top/AI/tool/)       | 工具使用技巧+场景落地方案，把好工具用出最大价值，高效摸鱼     |
+| 🐞 [**踩坑记录**](https://toolguide.top/bug/)              | 汇总技术/工具避坑指南，帮你少走弯路，避坑避雷                 |
+| 👑 [**金主荣誉榜**](https://toolguide.top/boss/bossboss)   | 致敬用爱发电的超级老板们，每周更新荣誉榜单                    |
+| 💯 [**陈老板这一辈子也不容易**](https://toolguide.top/me/) | 解锁陈老板的成长故事，还有老朋友查理布朗的暖心陪伴            |
 
 ### 🎨 趣味彩蛋
 
 - 主页查理布朗图片 hover 会「爱的魔力转圈圈」✨
 - 金主荣誉榜每周更新，感谢各位老板的“巨款”支持 💰
 - 不定期更新摸鱼技巧、黑科技工具，主打一个实用又好玩 🎉
+- AI 日报、AI 周报、AI 工具手册等 AI 相关内容持续更新，敬请期待 🤖
 
 ## 🚀 快速访问
 
-> 👉 主站：[https://toolguide.top](https://toolguide.top) <br>
-> 👉 CSDN: [https://blog.csdn.net/weixin_47343544](https://blog.csdn.net/weixin_47343544)
+> 👉 主站：[陈老板的百宝箱地址](https://toolguide.top) <br>
+> 👉 CSDN: [陈老老老板](https://blog.csdn.net/weixin_47343544)<br>
+> 👉 AI 中转站：[全网最稳定、售后最好的 AI 中转站-需要加我微信：18004630508](https://claude.leocoder.cn/)
+> 👉 公众号：陈老老老板<br>
 
 ## 🙏 鸣谢
 
@@ -45,6 +48,8 @@
 - ⭐ **Star 本仓库**（老板会开心一整天）
 - 💬 **提 [Issue](https://github.com/clllb/toolbox/issues)**（想要什么工具？尽管开口！）
 - 💌 **请老板喝杯咖啡**（见[金主荣誉榜](https://toolguide.top/boss/bossboss)）
+- 🔗 **分享给朋友**（好东西要一起享受！）
+- 📩 **联系陈老板**（微信：18004630508）
 
 ## 📄 许可证
 

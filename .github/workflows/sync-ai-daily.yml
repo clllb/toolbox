@@ -1,0 +1,122 @@
+name: Sync AI Daily & Weekly (CN & EN)
+
+on:
+  schedule:
+    # 每天 UTC 时间 02:30 运行 (即北京时间 10:30)
+    # 确保在源项目 10:00 更新完成后半小时执行
+    - cron: '30 2 * * *'
+  workflow_dispatch: # 允许手动触发测试
+
+jobs:
+  sync-content:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout target repo (toolbox)
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Setup Git User
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Clone source repo (Hextra-AI-Insight-Daily)
+        run: |
+          git clone --depth 1 --branch main https://github.com/justlovemaki/Hextra-AI-Insight-Daily.git source_repo
+
+      - name: Prepare Target Directories
+        run: |
+          mkdir -p docs/AI/daily/cn
+          mkdir -p docs/AI/daily/en
+          mkdir -p docs/AI/weekly/cn
+          mkdir -p docs/AI/weekly/en
+
+      # ================= 日报同步逻辑 =================
+      
+      - name: Sync CN Daily Reports
+        run: |
+          echo "Syncing CN Daily Reports..."
+          SRC_DIR="source_repo/content/cn"
+          DEST_DIR="docs/AI/daily/cn"
+          
+          if [ -d "$SRC_DIR" ]; then
+            # 查找 cn 目录下，深度为 2 (YYYY-MM 文件夹) 的 .md 文件
+            # 排除包含 /blog/ 的路径，防止误抓
+            find "$SRC_DIR" -maxdepth 2 -name "*.md" -type f | while read file; do
+              if [[ "$file" != *"/blog/"* ]]; then
+                cp "$file" "$DEST_DIR/"
+                echo "Copied CN Daily: $(basename $file)"
+              fi
+            done
+          else
+            echo "Warning: CN daily directory not found."
+          fi
+
+      - name: Sync EN Daily Reports
+        run: |
+          echo "Syncing EN Daily Reports..."
+          SRC_DIR="source_repo/content/en"
+          DEST_DIR="docs/AI/daily/en"
+          
+          if [ -d "$SRC_DIR" ]; then
+            find "$SRC_DIR" -maxdepth 2 -name "*.md" -type f | while read file; do
+              if [[ "$file" != *"/blog/"* ]]; then
+                cp "$file" "$DEST_DIR/"
+                echo "Copied EN Daily: $(basename $file)"
+              fi
+            done
+          else
+            echo "Warning: EN daily directory not found."
+          fi
+
+      # ================= 周报同步逻辑 =================
+
+      - name: Sync CN Weekly Reports
+        run: |
+          echo "Syncing CN Weekly Reports..."
+          SRC_FILE="source_repo/content/cn/blog/weekly/*.md"
+          DEST_DIR="docs/AI/weekly/cn"
+          
+          # 检查是否有文件匹配
+          shopt -s nullglob
+          files=($SRC_FILE)
+          if [ ${#files[@]} -gt 0 ]; then
+            cp $SRC_FILE "$DEST_DIR/"
+            echo "Copied ${#files[@]} CN Weekly files."
+          else
+            echo "No CN Weekly files found."
+          fi
+
+      - name: Sync EN Weekly Reports
+        run: |
+          echo "Syncing EN Weekly Reports..."
+          SRC_FILE="source_repo/content/en/blog/weekly/*.md"
+          DEST_DIR="docs/AI/weekly/en"
+          
+          shopt -s nullglob
+          files=($SRC_FILE)
+          if [ ${#files[@]} -gt 0 ]; then
+            cp $SRC_FILE "$DEST_DIR/"
+            echo "Copied ${#files[@]} EN Weekly files."
+          else
+            echo "No EN Weekly files found."
+          fi
+
+      # ================= 提交变更 =================
+
+      - name: Commit and Push Changes
+        run: |
+          git add docs/AI/
+          
+          if ! git diff --staged --quiet; then
+            git commit -m "feat: auto-sync AI Daily & Weekly (CN/EN) from upstream"
+            git push
+            echo "✅ Sync completed and pushed successfully."
+          else
+            echo "ℹ️ No new changes detected. Skipping commit."
+          fi

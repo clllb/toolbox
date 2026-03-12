@@ -17,14 +17,14 @@ hero:
     - text: 工具导航
       link: /nav/
       theme: alt
-    - text: java进化论
-      link: /java/index
+    - text: 每周工具速递
+      link: /weekly-tools/
       theme: brand
-    - text: 面试宝典
-      link: /interview/
+    - text: AI日报
+      link: /AI/day/index
       theme: alt
-    - text: 效率手册
-      link: /efficiency/
+    - text: AI周报
+      link: /AI/week/index
       theme: brand
 
 features:
@@ -35,28 +35,28 @@ features:
     linkText: 立即探索
   - icon: 🆕
     title: 每周工具速递
-    details: 每周一款有趣/实用的工具深度测评✨<br />附使用场景+避坑指南，不做无效收藏
+    details: 每周工具总结、打分、测评✨<br />附使用场景+避坑指南，不做无效收藏
     link: /weekly-tools/
     linkText: 本周推荐
-  - icon: ☕
-    title: Java进化论
-    details: 从入门到进阶，系统化梳理Java核心知识点<br />结合实战案例，拒绝纸上谈兵
-    link: /java/
-    linkText: 开始学习
   - icon: 📝
-    title: 面试宝典
-    details: 整理高频面试题+解题思路<small>（Java/通用岗）</small><br />不止背答案，更懂底层逻辑
-    link: /interview/
-    linkText: 刷题备战
+    title: AI日报
+    details: 每周工具总结、打分、测评✨<br />附使用场景+避坑指南，不做无效收藏
+    link: /AI/daily/index
+    linkText: 每日总结
+  - icon: 🤖
+    title: AI周报
+    details: 每周工具总结、打分、测评✨<br />附使用场景+避坑指南，不做无效收藏
+    link: /AI/weekly/index
+    linkText: 每周总结
   - icon: ⚡
-    title: 效率手册
+    title: AI工具手册
     details: 工具使用技巧+场景落地方案<br />把好工具用出最大价值，高效摸鱼
-    link: /efficiency/
-    linkText: 提效指南
+    link: /AI/tool/index
+    linkText: 工具指南
   - icon: 🐞
     title: 踩坑记录
     details: 那些年踩过的技术/工具坑<br />帮你少走弯路，避坑指南
-    link: /bug/
+    link: /bug/index
     linkText: 查看详情
   - icon: 💰
     title: 金主荣誉榜
@@ -66,7 +66,7 @@ features:
   - icon: 💯
     title: 咱就说陈老板这辈子也不容易
     details: '<small class="bottom-small">我的老朋友查理布朗，他从不放弃。</small>'
-    link: /me/me
+    link: /me/
     linkText: 了解更多
 ---
 

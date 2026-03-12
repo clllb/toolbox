@@ -27,4 +27,21 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       ],
     },
   ],
+  '/me/':[
+    {text: '年度总结',
+      collapsed: false,
+      items: [
+        { text: '2022年度总结', link: '/me/summary/2022' },
+        { text: '关于作者', link: '/me/' }
+      ],
+    }
+  ],
+  '/bug':[
+    {text: '公众号杂谈',
+      collapsed: false,
+      items:[
+          {text: 'What? FastExcel没了！', link: '/bug/fastexcel'}
+      ]
+    }
+  ]
 }

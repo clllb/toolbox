@@ -12,6 +12,10 @@ const props = defineProps<{
   link: NavLink['link']
 }>()
 
+const emit = defineEmits<{
+  click: [link: string]
+}>()
+
 const formatTitle = computed(() => {
   if (!props.title) {
     return ''
@@ -26,7 +30,14 @@ const svg = computed(() => {
 </script>
 
 <template>
-  <a v-if="link" class="m-nav-link" :href="link" target="_blank" rel="noreferrer">
+  <a
+    v-if="link"
+    class="m-nav-link"
+    :href="link"
+    target="_blank"
+    rel="noreferrer"
+    @click="emit('click', link)"
+  >
     <article class="box">
       <div class="box-header">
         <div v-if="svg" class="icon" v-html="svg"></div>

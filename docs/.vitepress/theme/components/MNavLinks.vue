@@ -10,6 +10,14 @@ const props = defineProps<{
   items: NavLink[]
 }>()
 
+const emit = defineEmits<{
+  'item-click': [link: string]
+}>()
+
+function handleItemClick(link: string) {
+  emit('item-click', link)
+}
+
 const formatTitle = computed(() => {
   return slugify(props.title)
 })
@@ -28,6 +36,7 @@ const formatTitle = computed(() => {
       :title="title"
       :desc="desc"
       :link="link"
+      @click="handleItemClick(link)"
     />
   </div>
 </template>
