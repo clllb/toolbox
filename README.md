@@ -13,7 +13,7 @@
 | 🆕 [**每周工具速递**](https://toolguide.top/weekly-tools/) | 每周一款工具深度测评，附使用场景+避坑指南，实用不踩雷         |
 | 📝 [**AI 日报**](https://toolguide.top/AI/weekly/)         | 从入门到进阶系统化梳理 Java 核心，结合实战案例，拒绝纸上谈兵  |
 | 🤖 [**AI 周报**](https://toolguide.top/AI/daily/)          | Java/通用岗高频面试题+解题思路，不止背答案更懂底层逻辑        |
-| ⚡ [**AI 工具手册**](https://toolguide.top/AI/tool/)       | 工具使用技巧+场景落地方案，把好工具用出最大价值，高效摸鱼     |
+| ⚡ [**AI 工具手册**](https://toolguide.top/AI/tools/)      | 工具使用技巧+场景落地方案，把好工具用出最大价值，高效摸鱼     |
 | 🐞 [**踩坑记录**](https://toolguide.top/bug/)              | 汇总技术/工具避坑指南，帮你少走弯路，避坑避雷                 |
 | 👑 [**金主荣誉榜**](https://toolguide.top/boss/bossboss)   | 致敬用爱发电的超级老板们，每周更新荣誉榜单                    |
 | 💯 [**陈老板这一辈子也不容易**](https://toolguide.top/me/) | 解锁陈老板的成长故事，还有老朋友查理布朗的暖心陪伴            |

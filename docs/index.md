@@ -51,7 +51,7 @@ features:
   - icon: ⚡
     title: AI工具手册
     details: 工具使用技巧+场景落地方案<br />把好工具用出最大价值，高效摸鱼
-    link: /AI/tool/index
+    link: /AI/tools/index
     linkText: 工具指南
   - icon: 🐞
     title: 踩坑记录
