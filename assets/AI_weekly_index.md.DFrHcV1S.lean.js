@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as a}from"./chunks/framework.BZK924bi.js";const _=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"AI/weekly/index.md","filePath":"AI/weekly/index.md","lastUpdated":1773330734000}'),n={name:"AI/weekly/index.md"};function r(o,s,d,c,i,p){return a(),t("div")}const m=e(n,[["render",r]]);export{_ as __pageData,m as default};
