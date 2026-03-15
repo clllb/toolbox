@@ -21,10 +21,10 @@ hero:
       link: /weekly-tools/
       theme: brand
     - text: AI日报
-      link: /AI/day/index
+      link: /AI/daily/index
       theme: alt
     - text: AI周报
-      link: /AI/week/index
+      link: /AI/weekly/index
       theme: brand
 
 features:
