@@ -1,4 +1,4 @@
-name: Sync AI Daily & Weekly (CN Only)
+name: Sync AI Daily & Weekly (CN Only + Clean + Rename)
 
 on:
   schedule:
@@ -49,7 +49,6 @@ jobs:
           SRC_DIR="source_repo/content/cn"
           BASE_DEST="docs/AI/daily/cn"
           
-          # 将起始日期转换为秒数以便比较
           START_TS=$(date -d "$START_DATE" +%s)
           
           if [ ! -d "$SRC_DIR" ]; then
@@ -57,40 +56,26 @@ jobs:
             exit 1
           fi
 
-          # 遍历 cn 目录下深度为 2 的所有 md 文件
           find "$SRC_DIR" -maxdepth 2 -name "*.md" -type f | while read -r file; do
             filename=$(basename "$file")
             
-            # 1. 过滤排除的文件
             if echo "$EXCLUDE_FILES" | grep -qw "$filename"; then
-              echo "⏭️  Skipping excluded file: $filename"
               continue
             fi
 
-            # 2. 尝试从文件名提取日期 (假设格式为 YYYY-MM-DD.md)
-            # 使用正则提取 YYYY-MM-DD 部分
             if [[ $filename =~ ([0-9]{4}-[0-9]{2}-[0-9]{2})\.md$ ]]; then
               file_date="${BASH_REMATCH[1]}"
               file_ts=$(date -d "$file_date" +%s 2>/dev/null)
               
-              # 如果日期解析失败或早于起始日期，跳过
               if [ -z "$file_ts" ] || [ "$file_ts" -lt "$START_TS" ]; then
-                echo "⏭️  Skipping old/invalid date file: $filename ($file_date)"
                 continue
               fi
 
-              # 3. 提取年月 (YYYY-MM) 用于创建子目录
               year_month=$(echo "$file_date" | cut -d '-' -f 1,2)
               dest_folder="$BASE_DEST/$year_month"
-              
-              # 创建月份目录
               mkdir -p "$dest_folder"
-              
-              # 复制文件
               cp "$file" "$dest_folder/"
               echo "✅ Copied: $year_month/$filename"
-            else
-              echo "⚠️  Skipping file with non-standard date format: $filename"
             fi
           done
 
@@ -114,31 +99,59 @@ jobs:
           for file in "${files[@]}"; do
             filename=$(basename "$file")
             
-            # 1. 过滤排除的文件
             if echo "$EXCLUDE_FILES" | grep -qw "$filename"; then
-              echo "⏭️  Skipping excluded weekly file: $filename"
               continue
             fi
 
-            # 2. 尝试从周报文件名提取日期 (通常周报文件名开头也是日期)
-            # 假设格式：2026-03-08-xxxx.md
             if [[ $filename =~ ^([0-9]{4}-[0-9]{2}-[0-9]{2}) ]]; then
               file_date="${BASH_REMATCH[1]}"
               file_ts=$(date -d "$file_date" +%s 2>/dev/null)
 
               if [ -z "$file_ts" ] || [ "$file_ts" -lt "$START_TS" ]; then
-                echo "⏭️  Skipping old weekly file: $filename ($file_date)"
                 continue
               fi
-            else
-               # 如果周报文件名没有标准日期前缀，为了安全起见，可以选择跳过或全部保留
-               # 这里选择保留，以防周报命名规则不同，但你也可以改为 continue 跳过
-               echo "⚠️  Weekly file without standard date prefix, syncing anyway: $filename"
             fi
 
             cp "$file" "$DEST_DIR/"
             echo "✅ Copied Weekly: $filename"
           done
+
+      # ================= 核心修改步骤：清理广告 + 替换名称 =================
+      - name: Process Content (Clean & Rename)
+        run: |
+          echo "🚀 Starting content processing..."
+          
+          TARGET_DIRS=("docs/AI/daily/cn" "docs/AI/weekly/cn")
+          
+          for dir in "${TARGET_DIRS[@]}"; do
+            if [ ! -d "$dir" ]; then 
+              continue 
+            fi
+            
+            find "$dir" -name "*.md" -type f | while read -r mdfile; do
+              echo "Processing: $mdfile"
+              
+              tmp_file=$(mktemp)
+              
+              # --- 步骤 1: 删除头部推广块 ---
+              # 删除从 ">  `AI资讯`" 到 "[进群交流🤙]" 的内容
+              sed '/^>  `AI资讯`/,/\[进群交流🤙\]/d' "$mdfile" > "$tmp_file"
+              mv "$tmp_file" "$mdfile"
+              
+              # --- 步骤 2: 删除尾部推广块及之后内容 ---
+              # 删除从 "## **AI资讯日报多渠道**" 到文件末尾的内容
+              sed '/^## \*\*AI资讯日报多渠道\*\*/,$d' "$mdfile" > "$tmp_file"
+              mv "$tmp_file" "$mdfile"
+              
+              # --- 步骤 3: 替换名称 (全局替换) ---
+              # 将所有的 "何夕2077" 替换为 "陈老板"
+              # g 表示全局替换 (一行有多个也会全换)
+              sed -i 's/何夕 2077/陈老板/g' "$mdfile"
+              
+              echo "✅ Cleaned and renamed: $mdfile"
+            done
+          done
+          echo "✅ All content processing completed."
 
       # ================= 提交变更 =================
       - name: Commit and Push Changes
@@ -146,7 +159,7 @@ jobs:
           git add docs/AI/
           
           if ! git diff --staged --quiet; then
-            git commit -m "feat: sync CN AI Daily (by month) & Weekly from upstream"
+            git commit -m "feat: sync CN AI content (cleaned, renamed to 陈老板, organized by month)"
             git push
             echo "✅ Sync completed and pushed successfully."
           else
