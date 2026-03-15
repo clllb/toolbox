@@ -115,64 +115,84 @@ jobs:
             fi
           done
 
-      # --- 3. 内容处理 ---
+      # --- 3. 内容处理：清洗广告 + 替换名字 + 针对性插入 H1 标题 ---
       - name: Process Content (Clean, Rename & Add H1)
         run: |
           echo "🚀 Starting content processing..."
-          TARGET_DIRS=("docs/AI/daily/cn" "docs/AI/weekly/cn")
-          processed_count=0
-          
-          for dir in "${TARGET_DIRS[@]}"; do
-            if [ ! -d "$dir" ]; then continue; fi
-            
+          DAILY_DIR="docs/AI/daily/cn"
+          WEEKLY_DIR="docs/AI/weekly/cn"
+
+          # --- 处理日报 ---
+          if [ -d "$DAILY_DIR" ]; then
+            echo "📄 Processing Daily Reports..."
             while IFS= read -r -d '' mdfile; do
               filename=$(basename "$mdfile")
               
-              # 尝试提取日期 (宽松匹配)
-              file_date=""
-              if [[ $filename =~ ([0-9]{4}-[0-9]{2}-[0-9]{2}) ]]; then
+              if [[ $filename =~ ^([0-9]{4}-[0-9]{2}-[0-9]{2}) ]]; then
                 file_date="${BASH_REMATCH[1]}"
-              fi
-              
-              # 如果没有提取到日期，使用当前日期或文件名作为 fallback，避免脚本出错
-              display_date=${file_date:-"Unknown"}
-
-              tmp_file=$(mktemp)
-              
-              # A: 删除单行广告
-              sed '/^>  `AI资讯/d' "$mdfile" > "$tmp_file"
-              mv "$tmp_file" "$mdfile"
-              
-              # B: 删除尾部推广块
-              tmp_file2=$(mktemp)
-              sed '/^## \*\*AI资讯日报多渠道\*\*/,$d' "$mdfile" > "$tmp_file2"
-              mv "$tmp_file2" "$mdfile"
-              
-              # C: 插入 H1 标题
-              h1_tag="<h1 align=\"center\">${display_date} AI资讯</h1>"
-              
-              if grep -q '## \*\*今日摘要\*\*' "$mdfile"; then
-                sed -i "s|## \*\*今日摘要\*\*|${h1_tag}\n\n## **今日摘要**|" "$mdfile"
-                echo "✅ Added H1 (Daily) to: $filename"
-              elif grep -q '## \*\*本周摘要\*\*' "$mdfile"; then
-                sed -i "s|## \*\*本周摘要\*\*|${h1_tag}\n\n## **本周摘要**|" "$mdfile"
-                echo "✅ Added H1 (Weekly) to: $filename"
-              else
-                # 如果都没有，直接在文件最前面插入
-                echo -e "${h1_tag}\n$(cat "$mdfile")" > "$tmp_file"
+                
+                # A: 清理广告
+                tmp_file=$(mktemp)
+                sed '/^>  `AI资讯/d' "$mdfile" > "$tmp_file"
                 mv "$tmp_file" "$mdfile"
-                echo "✅ Added H1 (Top) to: $filename"
-              fi
-              
-              # D: 全局替换名称
-              if grep -q "何夕2077" "$mdfile"; then
+                
+                tmp_file2=$(mktemp)
+                sed '/^## \*\*AI资讯日报多渠道\*\*/,$d' "$mdfile" > "$tmp_file2"
+                mv "$tmp_file2" "$mdfile"
+                
+                # B: 插入 H1 (日报逻辑)
+                h1_tag="<h1 align=\"center\">${file_date} AI资讯</h1>"
+                if grep -q '## \*\*今日摘要\*\*' "$mdfile"; then
+                  sed -i "s|## \*\*今日摘要\*\*|${h1_tag}\n\n## **今日摘要**|" "$mdfile"
+                  echo "✅ Added H1 to Daily: $filename"
+                else
+                  echo "⚠️ Skipped H1 for Daily (No '今日摘要'): $filename"
+                fi
+                
+                # C: 替换名字
                 sed -i 's/何夕2077/陈老板/g' "$mdfile"
               fi
+            done < <(find "$DAILY_DIR" -name "*.md" -type f -print0)
+          fi
+
+          # --- 处理周报 ---
+          if [ -d "$WEEKLY_DIR" ]; then
+            echo "📅 Processing Weekly Reports..."
+            while IFS= read -r -d '' mdfile; do
+              filename=$(basename "$mdfile")
               
-              processed_count=$((processed_count + 1))
-            done < <(find "$dir" -name "*.md" -type f -print0)
-          done
-          echo "✅ Total processed files: $processed_count"
+              if [[ $filename =~ ^([0-9]{4}-[0-9]{2}-[0-9]{2}) ]]; then
+                file_date="${BASH_REMATCH[1]}"
+                
+                # A: 清理广告 (与日报相同)
+                tmp_file=$(mktemp)
+                sed '/^>  `AI资讯/d' "$mdfile" > "$tmp_file"
+                mv "$tmp_file" "$mdfile"
+                
+                tmp_file2=$(mktemp)
+                sed '/^## \*\*AI资讯日报多渠道\*\*/,$d' "$mdfile" > "$tmp_file2"
+                mv "$tmp_file2" "$mdfile"
+                
+                # B: 插入 H1 (周报新逻辑)
+                h1_tag="<h1 align=\"center\">${file_date} AI资讯</h1>"
+                target_line="## 📠 陈老板 AI 深度信号周报"
+                
+                if grep -qF "$target_line" "$mdfile"; then
+                  # 使用 sed 在匹配行前插入 H1
+                  sed -i "s|$target_line|${h1_tag}\n\n${target_line}|" "$mdfile"
+                  echo "✅ Added H1 to Weekly: $filename"
+                else
+                  # 如果找不到目标行，作为后备方案，尝试在开头插入
+                  echo -e "${h1_tag}\n$(cat "$mdfile")" > "$tmp_file"
+                  mv "$tmp_file" "$mdfile"
+                  echo "⚠️ Added H1 at top (Target line not found): $filename"
+                fi
+                
+                # C: 替换名字
+                sed -i 's/何夕2077/陈老板/g' "$mdfile"
+              fi
+            done < <(find "$WEEKLY_DIR" -name "*.md" -type f -print0)
+          fi
 
       # --- 4. 提交变更 ---
       - name: Commit and Push Changes
