@@ -146,12 +146,13 @@ jobs:
           done
           echo "✅ Processed $processed_count files."
 
-            # --- 4. 自动更新侧边栏配置 ---
+      # --- 4. 自动更新侧边栏配置 ---
       - name: Update Sidebar Configuration
         run: |
           echo "🔄 Updating sidebar.ts..."
           
-          cat > update_sidebar.js << 'EOF'
+          # 注意：文件名后缀改为 .cjs 以兼容 CommonJS 语法
+          cat > update_sidebar.cjs << 'EOF'
           const fs = require('fs');
           const path = require('path');
 
@@ -191,11 +192,6 @@ jobs:
           const dailyFiles = getFilesWithDate(dailyDir);
           const dailyItemsStr = dailyFiles.map(f => `        { text: '${f.date}', link: '${f.link}' }`).join(',\n');
           
-          // 修复后的正则：
-          // 1. 匹配 text: 'AI日报' ... items: [
-          // 2. 捕获中间的所有内容 (非贪婪)
-          // 3. 匹配结束的 ] 以及随后的 }, { 或 } ] 等结构 (尽量宽松)
-          // 注意：原代码这里少了一个闭合括号 )
           const dailyRegex = /(text:\s*['"]AI日报['"][\s\S]*?items:\s*\[)([\s\S]*?)(\]\s*(?:,\s*\n\s*\}|\s*\n\s*\}\s*\]\s*\n\s*\}))/;
           
           if (dailyRegex.test(content)) {
@@ -211,9 +207,6 @@ jobs:
           const weeklyFiles = getFilesWithDate(weeklyDir);
           const weeklyItemsStr = weeklyFiles.map(f => `        { text: '${f.date}周报', link: '${f.link}' }`).join(',\n');
 
-          // 修复后的正则：补全了缺失的闭合括号，并优化了结尾匹配
-          // 原错误：... \}/);  <- 少了 )
-          // 新正则：... \})(?:...)?); 
           const weeklyRegex = /(text:\s*['"]AI周报['"][\s\S]*?items:\s*\[)([\s\S]*?)(\]\s*(?:,\s*\n\s*\}|\s*\n\s*\}\s*\]\s*\n\s*\}))/;
 
           if (weeklyRegex.test(content)) {
@@ -228,7 +221,8 @@ jobs:
           fs.writeFileSync(sidebarPath, content);
           EOF
 
-          node update_sidebar.js
+          # 注意：这里运行的也是 .cjs 文件
+          node update_sidebar.cjs
 
       # --- 5. 提交变更 (已修复：移除了错误的 uses 字段) ---
       - name: Commit and Push Changes
