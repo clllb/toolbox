@@ -1,8 +1,7 @@
-name: Sync AI Daily & Weekly (CN Only + Clean + Rename)
+name: Sync AI Daily & Weekly (CN Only + Fix Content + Rename)
 
 on:
   schedule:
-    # 每天 UTC 时间 02:30 运行 (即北京时间 10:30)
     - cron: '30 2 * * *'
   workflow_dispatch:
 
@@ -13,16 +12,11 @@ jobs:
       contents: write
 
     env:
-      # ================= 配置区域 =================
-      # 1. 只同步此日期之后的文件 (格式: YYYY-MM-DD)
-      START_DATE: "2026-03-01" 
-      
-      # 2. 需要排除的文件名列表 (空格分隔)
+      START_DATE: "2026-03-01"
       EXCLUDE_FILES: "_index.md about.md contact.md privacy-policy.md terms-of-service.md"
-      # ===========================================
 
     steps:
-      - name: Checkout target repo (toolbox)
+      - name: Checkout target repo
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -37,131 +31,114 @@ jobs:
         run: |
           git clone --depth 1 --branch main https://github.com/justlovemaki/Hextra-AI-Insight-Daily.git source_repo
 
-      - name: Prepare Base Directories
+      - name: Prepare Directories
         run: |
           mkdir -p docs/AI/daily/cn
           mkdir -p docs/AI/weekly/cn
 
-      # ================= 日报同步逻辑 (带月份归档) =================
-      - name: Sync CN Daily Reports with Monthly Folders
+      # --- 1. 同步日报 (带月份归档) ---
+      - name: Sync CN Daily Reports
         run: |
-          echo "Starting CN Daily Sync..."
           SRC_DIR="source_repo/content/cn"
           BASE_DEST="docs/AI/daily/cn"
-          
           START_TS=$(date -d "$START_DATE" +%s)
           
-          if [ ! -d "$SRC_DIR" ]; then
-            echo "Error: Source directory $SRC_DIR not found."
-            exit 1
-          fi
+          if [ ! -d "$SRC_DIR" ]; then echo "Source dir missing"; exit 1; fi
 
           find "$SRC_DIR" -maxdepth 2 -name "*.md" -type f | while read -r file; do
             filename=$(basename "$file")
+            if echo "$EXCLUDE_FILES" | grep -qw "$filename"; then continue; fi
             
-            if echo "$EXCLUDE_FILES" | grep -qw "$filename"; then
-              continue
-            fi
-
             if [[ $filename =~ ([0-9]{4}-[0-9]{2}-[0-9]{2})\.md$ ]]; then
               file_date="${BASH_REMATCH[1]}"
               file_ts=$(date -d "$file_date" +%s 2>/dev/null)
-              
-              if [ -z "$file_ts" ] || [ "$file_ts" -lt "$START_TS" ]; then
-                continue
-              fi
+              if [ -z "$file_ts" ] || [ "$file_ts" -lt "$START_TS" ]; then continue; fi
 
               year_month=$(echo "$file_date" | cut -d '-' -f 1,2)
               dest_folder="$BASE_DEST/$year_month"
               mkdir -p "$dest_folder"
               cp "$file" "$dest_folder/"
-              echo "✅ Copied: $year_month/$filename"
+              echo "✅ Copied Daily: $year_month/$filename"
             fi
           done
 
-      # ================= 周报同步逻辑 =================
+      # --- 2. 同步周报 ---
       - name: Sync CN Weekly Reports
         run: |
-          echo "Starting CN Weekly Sync..."
           SRC_PATTERN="source_repo/content/cn/blog/weekly/*.md"
           DEST_DIR="docs/AI/weekly/cn"
-          
           shopt -s nullglob
           files=($SRC_PATTERN)
-          
-          if [ ${#files[@]} -eq 0 ]; then
-            echo "No weekly files found."
-            exit 0
-          fi
-
           START_TS=$(date -d "$START_DATE" +%s)
 
           for file in "${files[@]}"; do
             filename=$(basename "$file")
+            if echo "$EXCLUDE_FILES" | grep -qw "$filename"; then continue; fi
             
-            if echo "$EXCLUDE_FILES" | grep -qw "$filename"; then
-              continue
-            fi
-
+            # 简单日期检查
             if [[ $filename =~ ^([0-9]{4}-[0-9]{2}-[0-9]{2}) ]]; then
               file_date="${BASH_REMATCH[1]}"
               file_ts=$(date -d "$file_date" +%s 2>/dev/null)
-
-              if [ -z "$file_ts" ] || [ "$file_ts" -lt "$START_TS" ]; then
-                continue
-              fi
+              if [ -n "$file_ts" ] && [ "$file_ts" -lt "$START_TS" ]; then continue; fi
             fi
 
             cp "$file" "$DEST_DIR/"
             echo "✅ Copied Weekly: $filename"
           done
 
-      # ================= 核心修改步骤：清理广告 + 替换名称 =================
-      - name: Process Content (Clean & Rename)
+      # ================= 核心修改步骤 (修复版) =================
+      - name: Process Content (Fix Delete & Rename)
         run: |
           echo "🚀 Starting content processing..."
           
           TARGET_DIRS=("docs/AI/daily/cn" "docs/AI/weekly/cn")
+          processed_count=0
+          renamed_count=0
           
           for dir in "${TARGET_DIRS[@]}"; do
-            if [ ! -d "$dir" ]; then 
-              continue 
-            fi
+            if [ ! -d "$dir" ]; then continue; fi
             
             find "$dir" -name "*.md" -type f | while read -r mdfile; do
-              echo "Processing: $mdfile"
+              # 1. 备份当前状态用于调试（可选，出错时可查看）
+              # cp "$mdfile" "$mdfile.bak" 
               
               tmp_file=$(mktemp)
               
-              # --- 步骤 1: 删除头部推广块 ---
-              # 删除从 ">  `AI资讯`" 到 "[进群交流🤙]" 的内容
-              sed '/^>  `AI资讯`/,/\[进群交流🤙\]/d' "$mdfile" > "$tmp_file"
+              # --- 步骤 A: 仅删除特定的单行广告 ---
+              # 逻辑：如果一行以 ">  `AI资讯" 开头，则删除该行 (d)
+              # 这样不会误删后面的正文，因为正文不在这一行内
+              sed '/^>  `AI资讯/d' "$mdfile" > "$tmp_file"
               mv "$tmp_file" "$mdfile"
               
-              # --- 步骤 2: 删除尾部推广块及之后内容 ---
-              # 删除从 "## **AI资讯日报多渠道**" 到文件末尾的内容
-              sed '/^## \*\*AI资讯日报多渠道\*\*/,$d' "$mdfile" > "$tmp_file"
-              mv "$tmp_file" "$mdfile"
+              # --- 步骤 B: 删除尾部推广块 (如果存在) ---
+              # 逻辑：如果存在 "## **AI资讯日报多渠道**"，删除该行及之后所有内容
+              # 使用临时文件再次处理
+              tmp_file2=$(mktemp)
+              sed '/^## \*\*AI资讯日报多渠道\*\*/,$d' "$mdfile" > "$tmp_file2"
+              mv "$tmp_file2" "$mdfile"
               
-              # --- 步骤 3: 替换名称 (全局替换) ---
-              # 将所有的 "何夕2077" 替换为 "陈老板"
-              # g 表示全局替换 (一行有多个也会全换)
-              sed -i 's/何夕 2077/陈老板/g' "$mdfile"
+              # --- 步骤 C: 全局替换名称 (何夕2077 -> 陈老板) ---
+              # 逻辑：直接替换字符串，不依赖行首行尾
+              if grep -q "何夕2077" "$mdfile"; then
+                sed -i 's/何夕2077/陈老板/g' "$mdfile"
+                echo "✅ Renamed in: $mdfile"
+              fi
               
-              echo "✅ Cleaned and renamed: $mdfile"
+              processed_count=$((processed_count + 1))
             done
           done
-          echo "✅ All content processing completed."
+          
+          echo "✅ Processed $processed_count files."
+          echo "✅ Content cleaning and renaming completed."
 
-      # ================= 提交变更 =================
+      # --- 3. 提交变更 ---
       - name: Commit and Push Changes
         run: |
           git add docs/AI/
-          
           if ! git diff --staged --quiet; then
-            git commit -m "feat: sync CN AI content (cleaned, renamed to 陈老板, organized by month)"
+            git commit -m "feat: sync CN content, fix ad removal, rename to 陈老板"
             git push
-            echo "✅ Sync completed and pushed successfully."
+            echo "✅ Pushed successfully."
           else
-            echo "ℹ️ No new changes detected."
+            echo "ℹ️ No changes."
           fi
