@@ -17,7 +17,6 @@ jobs:
       SIDEBAR_FILE: "docs/.vitepress/configs/sidebar.ts"
 
     steps:
-      # --- 使用 v4 版本 ---
       - name: Checkout target repo
         uses: actions/checkout@v4
         with:
@@ -29,12 +28,11 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      # --- 使用 v4 版本 + Node 20 + 禁用缓存 ---
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: ''  # 关键：禁用包管理器缓存，防止 pnpm 报错
+          cache: ''
 
       - name: Clone source repo
         run: |
@@ -107,7 +105,6 @@ jobs:
             find "$dir" -name "*.md" -type f | while read -r mdfile; do
               filename=$(basename "$mdfile")
               
-              # 提取日期
               if [[ $filename =~ ^([0-9]{4}-[0-9]{2}-[0-9]{2}) ]]; then
                 file_date="${BASH_REMATCH[1]}"
                 
@@ -204,9 +201,8 @@ jobs:
 
           node update_sidebar.js
 
-      # --- 5. 提交变更 ---
+      # --- 5. 提交变更 (已修复：移除了错误的 uses 字段) ---
       - name: Commit and Push Changes
-        uses: actions/checkout@v4 # 这里其实不需要 checkout，直接用 run 即可，但为了保持一致性保留上面的逻辑，这里直接运行 git 命令
         run: |
           git add docs/
           if ! git diff --staged --quiet; then
@@ -214,5 +210,5 @@ jobs:
             git push
             echo "✅ Pushed successfully."
           else
-            echo "ℹ️ No changes."
+            echo "ℹ️ No changes detected."
           fi
