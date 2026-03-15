@@ -1,6 +1,25 @@
 import type { DefaultTheme } from 'vitepress'
 
 export const sidebar: DefaultTheme.Config['sidebar'] = {
+  '/bug/':[  // 注意：这里修正了原代码中 '/bug' 缺少末尾斜杠的问题，保持规范
+    {
+      text: '公众号杂谈',
+      collapsed: false,
+      items:[
+          {text: 'What? FastExcel没了！', link: '/bug/fastexcel'}
+      ]
+    }
+  ],
+  '/me/':[
+    {
+      text: '年度总结',
+      collapsed: false,
+      items: [
+        { text: '2022年度总结', link: '/me/summary/2022' },
+        { text: '关于作者', link: '/me/' }
+      ]
+    }
+  ],
   // --- 修改为 /AI/ ---
   '/AI/': [
     {
@@ -23,15 +42,6 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         { text: '2026-03-02', link: '/AI/daily/cn/2026-03/2026-03-02.md' },
         { text: '2026-03-01', link: '/AI/daily/cn/2026-03/2026-03-01.md' }
 ],
-    }
-  ],
-  '/bug/':[  // 注意：这里修正了原代码中 '/bug' 缺少末尾斜杠的问题，保持规范
-    {
-      text: '公众号杂谈',
-      collapsed: false,
-      items:[
-          {text: 'What? FastExcel没了！', link: '/bug/fastexcel'}
-      ]
     }
   ]
 }
