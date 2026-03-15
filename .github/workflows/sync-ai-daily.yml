@@ -17,8 +17,9 @@ jobs:
       SIDEBAR_FILE: "docs/.vitepress/configs/sidebar.ts"
 
     steps:
+      # --- 使用 v4 版本 ---
       - name: Checkout target repo
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
@@ -28,10 +29,12 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
+      # --- 使用 v4 版本 + Node 20 + 禁用缓存 ---
       - name: Setup Node.js
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: ''  # 关键：禁用包管理器缓存，防止 pnpm 报错
 
       - name: Clone source repo
         run: |
@@ -91,7 +94,7 @@ jobs:
             echo "✅ Copied Weekly: $filename"
           done
 
-      # --- 3. 【核心】内容处理：清洗广告 + 替换名字 + 插入 H1 标题 ---
+      # --- 3. 内容处理：清洗广告 + 替换名字 + 插入 H1 标题 ---
       - name: Process Content (Clean, Rename & Add H1)
         run: |
           echo "🚀 Starting content processing..."
@@ -104,38 +107,32 @@ jobs:
             find "$dir" -name "*.md" -type f | while read -r mdfile; do
               filename=$(basename "$mdfile")
               
-              # 提取日期 (支持 YYYY-MM-DD.md 或 YYYY-MM-DD-....md)
+              # 提取日期
               if [[ $filename =~ ^([0-9]{4}-[0-9]{2}-[0-9]{2}) ]]; then
                 file_date="${BASH_REMATCH[1]}"
                 
                 tmp_file=$(mktemp)
                 
-                # --- 步骤 A: 删除单行广告 ---
+                # A: 删除单行广告
                 sed '/^>  `AI资讯/d' "$mdfile" > "$tmp_file"
                 mv "$tmp_file" "$mdfile"
                 
-                # --- 步骤 B: 删除尾部推广块 ---
+                # B: 删除尾部推广块
                 tmp_file2=$(mktemp)
                 sed '/^## \*\*AI资讯日报多渠道\*\*/,$d' "$mdfile" > "$tmp_file2"
                 mv "$tmp_file2" "$mdfile"
                 
-                # --- 步骤 C: 插入 H1 标题 ---
-                # 逻辑：在 "## **今日摘要**" 之前插入 <h1 align="center">YYYY-MM-DD AI资讯</h1>
-                # 使用 sed 的 i (insert) 命令
-                # 注意：sed 的替换内容中特殊字符需要转义，但这里主要是 HTML 标签
+                # C: 插入 H1 标题
                 h1_tag="<h1 align=\"center\">${file_date} AI资讯</h1>"
                 
-                # 如果文件中存在 "## **今日摘要**"，则在其前插入
                 if grep -q '## \*\*今日摘要\*\*' "$mdfile"; then
-                  # 使用 sed 在匹配行之前插入
-                  # 注意：不同系统 sed 行为略有差异，这里使用标准 GNU sed (Ubuntu Action 默认)
                   sed -i "s/## \*\*今日摘要\*\*/${h1_tag}\n\n## **今日摘要**/" "$mdfile"
                   echo "✅ Added H1 to: $filename"
                 else
                   echo "⚠️ Skipped H1 (No '今日摘要' found): $filename"
                 fi
                 
-                # --- 步骤 D: 全局替换名称 ---
+                # D: 全局替换名称
                 if grep -q "何夕2077" "$mdfile"; then
                   sed -i 's/何夕2077/陈老板/g' "$mdfile"
                 fi
@@ -209,6 +206,7 @@ jobs:
 
       # --- 5. 提交变更 ---
       - name: Commit and Push Changes
+        uses: actions/checkout@v4 # 这里其实不需要 checkout，直接用 run 即可，但为了保持一致性保留上面的逻辑，这里直接运行 git 命令
         run: |
           git add docs/
           if ! git diff --staged --quiet; then
