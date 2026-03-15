@@ -102,7 +102,8 @@ jobs:
           for dir in "${TARGET_DIRS[@]}"; do
             if [ ! -d "$dir" ]; then continue; fi
             
-            find "$dir" -name "*.md" -type f | while read -r mdfile; do
+            # 使用 process substitution 避免子 shell 导致变量不更新的问题，或者直接忽略计数显示问题
+            while IFS= read -r -d '' mdfile; do
               filename=$(basename "$mdfile")
               
               if [[ $filename =~ ^([0-9]{4}-[0-9]{2}-[0-9]{2}) ]]; then
@@ -110,20 +111,25 @@ jobs:
                 
                 tmp_file=$(mktemp)
                 
-                # A: 删除单行广告
+                # A: 删除单行广告 (注意：原正则中有反引号，确保转义正确，这里保持原样通常没问题，但建议检查)
+                # 原命令: sed '/^>  `AI资讯/d' 
+                # 如果反引号引起问题，可以使用单引号包裹整个表达式
                 sed '/^>  `AI资讯/d' "$mdfile" > "$tmp_file"
                 mv "$tmp_file" "$mdfile"
                 
                 # B: 删除尾部推广块
                 tmp_file2=$(mktemp)
+                # 注意：这里的正则包含 * 号，在 sed 中不需要转义，但在某些 shell 扩展下可能需要，这里放在单引号中是安全的
                 sed '/^## \*\*AI资讯日报多渠道\*\*/,$d' "$mdfile" > "$tmp_file2"
                 mv "$tmp_file2" "$mdfile"
                 
-                # C: 插入 H1 标题
+                # C: 插入 H1 标题 (修复点在这里)
                 h1_tag="<h1 align=\"center\">${file_date} AI资讯</h1>"
                 
                 if grep -q '## \*\*今日摘要\*\*' "$mdfile"; then
-                  sed -i "s/## \*\*今日摘要\*\*/${h1_tag}\n\n## **今日摘要**/" "$mdfile"
+                  # 【修复】将分隔符 / 改为 | ，避免 h1_tag 中的 / 冲突
+                  # 语法: sed -i "s|查找内容|替换内容|" 文件
+                  sed -i "s|## \*\*今日摘要\*\*|${h1_tag}\n\n## **今日摘要**|" "$mdfile"
                   echo "✅ Added H1 to: $filename"
                 else
                   echo "⚠️ Skipped H1 (No '今日摘要' found): $filename"
@@ -136,7 +142,7 @@ jobs:
                 
                 processed_count=$((processed_count + 1))
               fi
-            done
+            done < <(find "$dir" -name "*.md" -type f -print0)
           done
           echo "✅ Processed $processed_count files."
 
