@@ -41,7 +41,16 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         { text: '2026-03-03', link: '/AI/daily/cn/2026-03/2026-03-03.md' },
         { text: '2026-03-02', link: '/AI/daily/cn/2026-03/2026-03-02.md' },
         { text: '2026-03-01', link: '/AI/daily/cn/2026-03/2026-03-01.md' }
-],
+        ],
+    },
+    {
+      text: 'AI周报',
+      collapsed: false,
+      items: [
+        
+      ]
     }
   ]
+    
+    
 }
