@@ -5,11 +5,11 @@ export const nav: DefaultTheme.Config['nav'] = [
     link: '/nav/'
   },
   {
-    text: 'Java进化论',
+    text: 'AI相关',
     items: [
-      { text: '基础篇', link: '/java/base/data-structure' },
-      { text: '进阶篇', link: '/java/advanced/concurrency' },
-      { text: '实战练习', link: '/java/practice/design-patterns' },
+      { text: 'AI日报', link: '/AI/daily' },
+      { text: 'AI周报', link: '/AI/weekly' },
+      { text: 'AI工具', link: '/AI/tools' },
     ],
   },
   { text: '百宝箱主页',

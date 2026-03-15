@@ -37,7 +37,7 @@
 ## 🙏 鸣谢
 
 - 感谢所有打赏支持的「超级无敌伟大的老板们」👑
-- 感谢 [茂茂的开源模板 | maomao](https://github.com/maomao1996)
+- 感谢 [茂茂的开源模板 | maomao](https://github.com/maomao1996),[AI 日报 | 何夕夕](https://github.com/justlovemaki/CloudFlare-AI-Insight-Daily)
 - 感谢互联网上所有无私分享工具 / 教程的大佬们
 
 ## 💬 联系我

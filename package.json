@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "vitepress dev docs --port=8732",
     "build": "vitepress build docs",
-    "preview": "vitepress preview docs --port 8730",
+    "preview": "vitepress preview docs --port 8730 --host",
     "prepare": "husky install",
     "format": "prettier --write .",
     "package": "git archive --format zip --output toolbox.zip HEAD"

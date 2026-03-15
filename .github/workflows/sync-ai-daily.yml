@@ -1,4 +1,4 @@
-name: Sync AI Daily & Weekly (CN Only + Fix Content + Rename)
+name: Sync AI Content, Add H1 & Update Sidebar
 
 on:
   schedule:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  sync-content:
+  sync-and-update:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -14,10 +14,11 @@ jobs:
     env:
       START_DATE: "2026-03-01"
       EXCLUDE_FILES: "_index.md about.md contact.md privacy-policy.md terms-of-service.md"
+      SIDEBAR_FILE: "docs/.vitepress/configs/sidebar.ts"
 
     steps:
       - name: Checkout target repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
@@ -26,6 +27,11 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: '20'
 
       - name: Clone source repo
         run: |
@@ -36,7 +42,7 @@ jobs:
           mkdir -p docs/AI/daily/cn
           mkdir -p docs/AI/weekly/cn
 
-      # --- 1. 同步日报 (带月份归档) ---
+      # --- 1. 同步日报 ---
       - name: Sync CN Daily Reports
         run: |
           SRC_DIR="source_repo/content/cn"
@@ -75,7 +81,6 @@ jobs:
             filename=$(basename "$file")
             if echo "$EXCLUDE_FILES" | grep -qw "$filename"; then continue; fi
             
-            # 简单日期检查
             if [[ $filename =~ ^([0-9]{4}-[0-9]{2}-[0-9]{2}) ]]; then
               file_date="${BASH_REMATCH[1]}"
               file_ts=$(date -d "$file_date" +%s 2>/dev/null)
@@ -86,57 +91,128 @@ jobs:
             echo "✅ Copied Weekly: $filename"
           done
 
-      # ================= 核心修改步骤 (修复版) =================
-      - name: Process Content (Fix Delete & Rename)
+      # --- 3. 【核心】内容处理：清洗广告 + 替换名字 + 插入 H1 标题 ---
+      - name: Process Content (Clean, Rename & Add H1)
         run: |
           echo "🚀 Starting content processing..."
-          
           TARGET_DIRS=("docs/AI/daily/cn" "docs/AI/weekly/cn")
           processed_count=0
-          renamed_count=0
           
           for dir in "${TARGET_DIRS[@]}"; do
             if [ ! -d "$dir" ]; then continue; fi
             
             find "$dir" -name "*.md" -type f | while read -r mdfile; do
-              # 1. 备份当前状态用于调试（可选，出错时可查看）
-              # cp "$mdfile" "$mdfile.bak" 
+              filename=$(basename "$mdfile")
               
-              tmp_file=$(mktemp)
-              
-              # --- 步骤 A: 仅删除特定的单行广告 ---
-              # 逻辑：如果一行以 ">  `AI资讯" 开头，则删除该行 (d)
-              # 这样不会误删后面的正文，因为正文不在这一行内
-              sed '/^>  `AI资讯/d' "$mdfile" > "$tmp_file"
-              mv "$tmp_file" "$mdfile"
-              
-              # --- 步骤 B: 删除尾部推广块 (如果存在) ---
-              # 逻辑：如果存在 "## **AI资讯日报多渠道**"，删除该行及之后所有内容
-              # 使用临时文件再次处理
-              tmp_file2=$(mktemp)
-              sed '/^## \*\*AI资讯日报多渠道\*\*/,$d' "$mdfile" > "$tmp_file2"
-              mv "$tmp_file2" "$mdfile"
-              
-              # --- 步骤 C: 全局替换名称 (何夕2077 -> 陈老板) ---
-              # 逻辑：直接替换字符串，不依赖行首行尾
-              if grep -q "何夕2077" "$mdfile"; then
-                sed -i 's/何夕2077/陈老板/g' "$mdfile"
-                echo "✅ Renamed in: $mdfile"
+              # 提取日期 (支持 YYYY-MM-DD.md 或 YYYY-MM-DD-....md)
+              if [[ $filename =~ ^([0-9]{4}-[0-9]{2}-[0-9]{2}) ]]; then
+                file_date="${BASH_REMATCH[1]}"
+                
+                tmp_file=$(mktemp)
+                
+                # --- 步骤 A: 删除单行广告 ---
+                sed '/^>  `AI资讯/d' "$mdfile" > "$tmp_file"
+                mv "$tmp_file" "$mdfile"
+                
+                # --- 步骤 B: 删除尾部推广块 ---
+                tmp_file2=$(mktemp)
+                sed '/^## \*\*AI资讯日报多渠道\*\*/,$d' "$mdfile" > "$tmp_file2"
+                mv "$tmp_file2" "$mdfile"
+                
+                # --- 步骤 C: 插入 H1 标题 ---
+                # 逻辑：在 "## **今日摘要**" 之前插入 <h1 align="center">YYYY-MM-DD AI资讯</h1>
+                # 使用 sed 的 i (insert) 命令
+                # 注意：sed 的替换内容中特殊字符需要转义，但这里主要是 HTML 标签
+                h1_tag="<h1 align=\"center\">${file_date} AI资讯</h1>"
+                
+                # 如果文件中存在 "## **今日摘要**"，则在其前插入
+                if grep -q '## \*\*今日摘要\*\*' "$mdfile"; then
+                  # 使用 sed 在匹配行之前插入
+                  # 注意：不同系统 sed 行为略有差异，这里使用标准 GNU sed (Ubuntu Action 默认)
+                  sed -i "s/## \*\*今日摘要\*\*/${h1_tag}\n\n## **今日摘要**/" "$mdfile"
+                  echo "✅ Added H1 to: $filename"
+                else
+                  echo "⚠️ Skipped H1 (No '今日摘要' found): $filename"
+                fi
+                
+                # --- 步骤 D: 全局替换名称 ---
+                if grep -q "何夕2077" "$mdfile"; then
+                  sed -i 's/何夕2077/陈老板/g' "$mdfile"
+                fi
+                
+                processed_count=$((processed_count + 1))
               fi
-              
-              processed_count=$((processed_count + 1))
             done
           done
-          
           echo "✅ Processed $processed_count files."
-          echo "✅ Content cleaning and renaming completed."
 
-      # --- 3. 提交变更 ---
+      # --- 4. 自动更新侧边栏配置 ---
+      - name: Update Sidebar Configuration
+        run: |
+          echo "🔄 Updating sidebar.ts..."
+          
+          cat > update_sidebar.js << 'EOF'
+          const fs = require('fs');
+          const path = require('path');
+
+          const sidebarPath = process.env.SIDEBAR_FILE;
+          const dailyDir = 'docs/AI/daily/cn';
+          const weeklyDir = 'docs/AI/weekly/cn';
+
+          function getFilesWithDate(dir) {
+            if (!fs.existsSync(dir)) return [];
+            const files = [];
+            const walk = (currentDir) => {
+              const entries = fs.readdirSync(currentDir, { withFileTypes: true });
+              for (const entry of entries) {
+                const fullPath = path.join(currentDir, entry.name);
+                if (entry.isDirectory()) {
+                  walk(fullPath);
+                } else if (entry.isFile() && entry.name.endsWith('.md') && !entry.name.startsWith('_')) {
+                  const match = entry.name.match(/(\d{4}-\d{2}-\d{2})\.md$/) || entry.name.match(/^(\d{4}-\d{2}-\d{2})/);
+                  if (match) {
+                    const dateStr = match[1];
+                    let linkPath = fullPath.replace(/^docs/, '').split(path.sep).join('/');
+                    files.push({ date: dateStr, link: linkPath, name: entry.name });
+                  }
+                }
+              }
+            };
+            walk(dir);
+            return files.sort((a, b) => new Date(b.date) - new Date(a.date));
+          }
+
+          let content = fs.readFileSync(sidebarPath, 'utf8');
+
+          // 处理日报
+          const dailyFiles = getFilesWithDate(dailyDir);
+          const dailyItemsStr = dailyFiles.map(f => `        { text: '${f.date}', link: '${f.link}' }`).join(',\n');
+          const dailyRegex = /(text:\s*['"]AI日报['"][\s\S]*?items:\s*\[)([\s\S]*?)(\]\s*,?\s*\n\s*\},?\s*\n\s*\{)/;
+          if (dailyRegex.test(content)) {
+            content = content.replace(dailyRegex, (match, start, oldItems, end) => start + '\n' + dailyItemsStr + '\n' + end);
+            console.log('✅ Updated Daily Sidebar');
+          }
+
+          // 处理周报
+          const weeklyFiles = getFilesWithDate(weeklyDir);
+          const weeklyItemsStr = weeklyFiles.map(f => `        { text: '${f.date}周报', link: '${f.link}' }`).join(',\n');
+          const weeklyRegex = /(text:\s*['"]AI周报['"][\s\S]*?items:\s*\[)([\s\S]*?)(\]\s*\n\s*\}\s*\]\s*\n\s*\}/);
+          if (weeklyRegex.test(content)) {
+            content = content.replace(weeklyRegex, (match, start, oldItems, end) => start + '\n' + weeklyItemsStr + '\n' + end);
+            console.log('✅ Updated Weekly Sidebar');
+          }
+
+          fs.writeFileSync(sidebarPath, content);
+          EOF
+
+          node update_sidebar.js
+
+      # --- 5. 提交变更 ---
       - name: Commit and Push Changes
         run: |
-          git add docs/AI/
+          git add docs/
           if ! git diff --staged --quiet; then
-            git commit -m "feat: sync CN content, fix ad removal, rename to 陈老板"
+            git commit -m "feat: sync content, add H1 title, clean ads, rename, update sidebar"
             git push
             echo "✅ Pushed successfully."
           else
