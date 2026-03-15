@@ -1,0 +1,53 @@
+name: Build and Deploy to OSS
+
+on:
+  push:
+    branches:
+      - main   # 请根据您的实际分支名修改，如 master
+  workflow_dispatch: # 允许手动触发测试
+
+jobs:
+  build-and-sync:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # 1. 检出代码 (此时 dist 目录还不存在，因为它被 ignore 了)
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. 设置 Node.js 环境 (为了执行 npm run build)
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # 根据您的项目需求调整版本
+          cache: 'npm'       # 开启缓存加速安装
+
+      # 3. 安装依赖并构建 (这一步会在 Actions 环境中生成 dist 目录)
+      - name: Install and Build
+        run: |
+          npm install
+          npm run build
+          # 验证 dist 是否生成
+          ls -la dist 
+
+      # 4. 安装 ossutil 工具
+      - name: Setup ossutil
+        uses: manyuanrong/setup-ossutil@master
+        with:
+          endpoint: ${{ secrets.OSS_ENDPOINT }}
+          access-key-id: ${{ secrets.OSS_ACCESS_KEY_ID }}
+          access-key-secret: ${{ secrets.OSS_ACCESS_KEY_SECRET }}
+
+      # 5. 同步 dist 目录到 OSS
+      - name: Sync dist to OSS
+        run: |
+          echo "Starting sync of ./dist to oss://${{ secrets.OSS_BUCKET_NAME }}/"
+          
+          # 关键参数说明：
+          # -r: 递归同步
+          # -f: 强制覆盖
+          # --delete: 如果本地 dist 删除了文件，OSS 上也删除（保持完全一致）
+          # 注意：源路径是 ./dist/ ，目标路径是 Bucket 根目录或指定子目录
+          ossutil sync ./dist/ oss://${{ secrets.OSS_BUCKET_NAME }}/ -r -f --delete
+          
+          echo "✅ Deployment completed!"
