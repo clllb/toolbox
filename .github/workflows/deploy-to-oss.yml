@@ -43,11 +43,10 @@ jobs:
         run: |
           echo "Starting sync of ./dist to oss://${{ secrets.OSS_BUCKET_NAME }}/"
           
-          # 关键参数说明：
-          # -r: 递归同步
+          # 修正后的命令：去掉了 -r 参数
           # -f: 强制覆盖
           # --delete: 如果本地 dist 删除了文件，OSS 上也删除（保持完全一致）
-          # 注意：源路径是 ./dist/ ，目标路径是 Bucket 根目录或指定子目录
-          ossutil sync ./dist/ oss://${{ secrets.OSS_BUCKET_NAME }}/ -r -f --delete
+          # sync 命令默认就是递归同步目录的
+          ossutil sync ./dist/ oss://${{ secrets.OSS_BUCKET_NAME }}/ -f --delete
           
           echo "✅ Deployment completed!"
