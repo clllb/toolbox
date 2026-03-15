@@ -146,7 +146,7 @@ jobs:
           done
           echo "✅ Processed $processed_count files."
 
-      # --- 4. 自动更新侧边栏配置 ---
+            # --- 4. 自动更新侧边栏配置 ---
       - name: Update Sidebar Configuration
         run: |
           echo "🔄 Updating sidebar.ts..."
@@ -169,9 +169,11 @@ jobs:
                 if (entry.isDirectory()) {
                   walk(fullPath);
                 } else if (entry.isFile() && entry.name.endsWith('.md') && !entry.name.startsWith('_')) {
+                  // 匹配文件名中的日期 YYYY-MM-DD
                   const match = entry.name.match(/(\d{4}-\d{2}-\d{2})\.md$/) || entry.name.match(/^(\d{4}-\d{2}-\d{2})/);
                   if (match) {
                     const dateStr = match[1];
+                    // 统一路径分隔符为 /
                     let linkPath = fullPath.replace(/^docs/, '').split(path.sep).join('/');
                     files.push({ date: dateStr, link: linkPath, name: entry.name });
                   }
@@ -179,27 +181,48 @@ jobs:
               }
             };
             walk(dir);
+            // 按日期倒序排列
             return files.sort((a, b) => new Date(b.date) - new Date(a.date));
           }
 
           let content = fs.readFileSync(sidebarPath, 'utf8');
 
-          // 处理日报
+          // --- 处理日报 ---
           const dailyFiles = getFilesWithDate(dailyDir);
           const dailyItemsStr = dailyFiles.map(f => `        { text: '${f.date}', link: '${f.link}' }`).join(',\n');
-          const dailyRegex = /(text:\s*['"]AI日报['"][\s\S]*?items:\s*\[)([\s\S]*?)(\]\s*,?\s*\n\s*\},?\s*\n\s*\{)/;
+          
+          // 修复后的正则：
+          // 1. 匹配 text: 'AI日报' ... items: [
+          // 2. 捕获中间的所有内容 (非贪婪)
+          // 3. 匹配结束的 ] 以及随后的 }, { 或 } ] 等结构 (尽量宽松)
+          // 注意：原代码这里少了一个闭合括号 )
+          const dailyRegex = /(text:\s*['"]AI日报['"][\s\S]*?items:\s*\[)([\s\S]*?)(\]\s*(?:,\s*\n\s*\}|\s*\n\s*\}\s*\]\s*\n\s*\}))/;
+          
           if (dailyRegex.test(content)) {
-            content = content.replace(dailyRegex, (match, start, oldItems, end) => start + '\n' + dailyItemsStr + '\n' + end);
+            content = content.replace(dailyRegex, (match, start, oldItems, end) => {
+              return start + '\n' + dailyItemsStr + '\n' + end;
+            });
             console.log('✅ Updated Daily Sidebar');
+          } else {
+            console.warn('⚠️ Daily Sidebar pattern not found. Check sidebar.ts format.');
           }
 
-          // 处理周报
+          // --- 处理周报 ---
           const weeklyFiles = getFilesWithDate(weeklyDir);
           const weeklyItemsStr = weeklyFiles.map(f => `        { text: '${f.date}周报', link: '${f.link}' }`).join(',\n');
-          const weeklyRegex = /(text:\s*['"]AI周报['"][\s\S]*?items:\s*\[)([\s\S]*?)(\]\s*\n\s*\}\s*\]\s*\n\s*\}/);
+
+          // 修复后的正则：补全了缺失的闭合括号，并优化了结尾匹配
+          // 原错误：... \}/);  <- 少了 )
+          // 新正则：... \})(?:...)?); 
+          const weeklyRegex = /(text:\s*['"]AI周报['"][\s\S]*?items:\s*\[)([\s\S]*?)(\]\s*(?:,\s*\n\s*\}|\s*\n\s*\}\s*\]\s*\n\s*\}))/;
+
           if (weeklyRegex.test(content)) {
-            content = content.replace(weeklyRegex, (match, start, oldItems, end) => start + '\n' + weeklyItemsStr + '\n' + end);
+            content = content.replace(weeklyRegex, (match, start, oldItems, end) => {
+              return start + '\n' + weeklyItemsStr + '\n' + end;
+            });
             console.log('✅ Updated Weekly Sidebar');
+          } else {
+            console.warn('⚠️ Weekly Sidebar pattern not found. Check sidebar.ts format.');
           }
 
           fs.writeFileSync(sidebarPath, content);
