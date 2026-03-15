@@ -1,9 +1,8 @@
 name: Update AI Sidebar Only
 
-# 关键配置：监听主工作流的完成事件
 on:
   workflow_run:
-    workflows: ["Sync AI Content & Process Files"] # 必须与 sync-ai-daily.yml 中的 'name' 完全一致
+    workflows: ["Sync AI Content & Process Files"]
     types:
       - completed
     branches:
@@ -11,7 +10,6 @@ on:
 
 jobs:
   update-sidebar:
-    # 仅当主工作流成功执行时才运行
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     permissions:
@@ -47,6 +45,12 @@ jobs:
           const dailyDir = 'docs/AI/daily/cn';
           const weeklyDir = 'docs/AI/weekly/cn';
 
+          // 增强版：从任意位置提取日期，如果提取不到则返回空字符串
+          function extractDate(filename) {
+            const match = filename.match(/(\d{4}-\d{2}-\d{2})/);
+            return match ? match[1] : null;
+          }
+
           function getFilesWithDate(dir) {
             if (!fs.existsSync(dir)) return [];
             const files = [];
@@ -57,17 +61,33 @@ jobs:
                 if (entry.isDirectory()) {
                   walk(fullPath);
                 } else if (entry.isFile() && entry.name.endsWith('.md') && !entry.name.startsWith('_')) {
-                  const match = entry.name.match(/(\d{4}-\d{2}-\d{2})\.md$/) || entry.name.match(/^(\d{4}-\d{2}-\d{2})/);
-                  if (match) {
-                    const dateStr = match[1];
-                    let linkPath = fullPath.replace(/^docs/, '').split(path.sep).join('/');
-                    files.push({ date: dateStr, link: linkPath, name: entry.name });
-                  }
+                  const dateStr = extractDate(entry.name);
+                  let linkPath = fullPath.replace(/^docs/, '').split(path.sep).join('/');
+                  
+                  files.push({ 
+                    date: dateStr, 
+                    originalName: entry.name,
+                    link: linkPath, 
+                    // 用于排序：如果有日期用日期，没有则用文件名（避免 undefined 导致排序错误）
+                    sortKey: dateStr || entry.name 
+                  });
                 }
               }
             };
             walk(dir);
-            return files.sort((a, b) => new Date(b.date) - new Date(a.date));
+            
+            // 排序逻辑：有日期的按日期倒序，没日期的排后面按文件名
+            return files.sort((a, b) => {
+              if (a.date && b.date) {
+                return new Date(b.date) - new Date(a.date);
+              } else if (a.date) {
+                return -1; // a 有日期，排前面
+              } else if (b.date) {
+                return 1; // b 有日期，排前面
+              } else {
+                return b.originalName.localeCompare(a.originalName); // 都没日期，按文件名
+              }
+            });
           }
 
           if (!fs.existsSync(sidebarPath)) {
@@ -79,7 +99,7 @@ jobs:
 
           // --- 处理日报部分 ---
           const dailyFiles = getFilesWithDate(dailyDir);
-          const dailyItemsStr = dailyFiles.map(f => `        { text: '${f.date}', link: '${f.link}' }`).join(',\n');
+          const dailyItemsStr = dailyFiles.map(f => `        { text: '${f.date || f.originalName}', link: '${f.link}' }`).join(',\n');
           
           const dailyRegex = /(\/AI\/:\s*\[\s*\{\s*text:\s*['"]AI日报['"][\s\S]*?items:\s*\[)([\s\S]*?)(\]\s*\}\s*\])/;
           
@@ -95,15 +115,25 @@ jobs:
           // --- 处理周报部分 ---
           const weeklyFiles = getFilesWithDate(weeklyDir);
           if (weeklyFiles.length > 0) {
-             const weeklyItemsStr = weeklyFiles.map(f => `        { text: '${f.date}周报', link: '${f.link}' }`).join(',\n');
+             // 显示文本：优先显示日期，如果没有日期则显示文件名（去掉.md）
+             const weeklyItemsStr = weeklyFiles.map(f => {
+               const text = f.date ? `${f.date} 周报` : f.originalName.replace('.md', '');
+               return `        { text: '${text}', link: '${f.link}' }`;
+             }).join(',\n');
+             
+             // 匹配 AI周报 部分
              const weeklyRegex = /(text:\s*['"]AI周报['"][\s\S]*?items:\s*\[)([\s\S]*?)(\]\s*\}\s*\])/;
              
              if (weeklyRegex.test(content)) {
                content = content.replace(weeklyRegex, (match, start, oldItems, end) => {
                  return start + '\n' + weeklyItemsStr + '\n      ' + end;
                });
-               console.log('✅ Updated Weekly Sidebar Section');
+               console.log(`✅ Updated Weekly Sidebar Section (${weeklyFiles.length} files)`);
+             } else {
+               console.warn('⚠️ Weekly Sidebar pattern not found. Make sure "AI周报" exists in sidebar.ts');
              }
+          } else {
+            console.log('ℹ️ No weekly files found to update.');
           }
 
           fs.writeFileSync(sidebarPath, content);
@@ -115,7 +145,7 @@ jobs:
         run: |
           git add $SIDEBAR_FILE
           if ! git diff --staged --quiet; then
-            git commit -m "chore: auto-update AI sidebar directory after sync"
+            git commit -m "chore: auto-update AI sidebar (daily & weekly)"
             git push
             echo "✅ Sidebar updated and pushed."
           else
