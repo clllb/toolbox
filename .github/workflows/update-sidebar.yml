@@ -1,26 +1,20 @@
 # .github/workflows/update-sidebar.yml
 name: Update AI Sidebar Only
-
 on:
   workflow_run:
     workflows: ["Sync AI Content & Process Files"]
-    types:
-      - completed
-    branches:
-      - main
-  workflow_dispatch:  # ✅ 启用手动触发
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
 
 jobs:
   update-sidebar:
-    # ✅ 关键修复：当是 workflow_run 事件时，检查是否成功；当是手动触发时，直接运行
     if: ${{ github.event_name == 'workflow_dispatch' || (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success') }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
-
     env:
       SIDEBAR_FILE: "docs/.vitepress/configs/sidebar.ts"
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -28,15 +22,17 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
 
-      - name: Setup Git User
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+
+      - name: Debug - List AI files
+        run: |
+          echo "🔍 Daily files:"
+          find docs/AI/daily/cn -name "*.md" | sort -r
+          echo "🔍 Weekly files:"
+          find docs/AI/weekly/cn -name "*.md" | sort -r
 
       - name: Generate and Update Sidebar
         run: |
@@ -54,7 +50,10 @@ jobs:
           }
 
           function getFilesWithDate(dir) {
-            if (!fs.existsSync(dir)) return [];
+            if (!fs.existsSync(dir)) {
+              console.warn(`⚠️ Directory not found: ${dir}`);
+              return [];
+            }
             const files = [];
             const walk = (currentDir) => {
               const entries = fs.readdirSync(currentDir, { withFileTypes: true });
@@ -64,15 +63,9 @@ jobs:
                   walk(fullPath);
                 } else if (entry.isFile() && entry.name.endsWith('.md') && !entry.name.startsWith('_')) {
                   const dateStr = extractDate(entry.name);
-                  // ✅ 修复路径：确保链接格式为 /AI/daily/cn/2026-03/2026-03-18.md
                   let linkPath = fullPath.replace(/^docs/, '');
                   if (!linkPath.startsWith('/')) linkPath = '/' + linkPath;
-                  files.push({ 
-                    date: dateStr, 
-                    originalName: entry.name,
-                    link: linkPath,
-                    sortKey: dateStr || entry.name 
-                  });
+                  files.push({ date: dateStr, originalName: entry.name, link: linkPath, sortKey: dateStr || entry.name });
                 }
               }
             };
@@ -85,100 +78,120 @@ jobs:
             });
           }
 
+          // === Read sidebar file ===
           if (!fs.existsSync(sidebarPath)) {
             console.error(`❌ Sidebar file not found: ${sidebarPath}`);
             process.exit(1);
           }
-
           let content = fs.readFileSync(sidebarPath, 'utf8');
 
-          // ======================
-          // 更新 AI日报 部分
-          // ======================
-          const dailyStartMarker = `{ text: 'AI日报',`;
-          const dailyItemsStart = "items: [";
-          const dailyItemsEnd = "],";
-
+          // === Get files ===
           const dailyFiles = getFilesWithDate(dailyDir);
-          const dailyItemsStr = dailyFiles.map(f => 
-            `        { text: '${f.date}', link: '${f.link}' }`
-          ).join(',\n');
+          const weeklyFiles = getFilesWithDate(weeklyDir);
 
-          const dailyStartIndex = content.indexOf(dailyStartMarker);
-          if (dailyStartIndex !== -1) {
-            const itemsStartIndex = content.indexOf(dailyItemsStart, dailyStartIndex);
-            if (itemsStartIndex !== -1) {
-              const itemsEndIndex = content.indexOf(dailyItemsEnd, itemsStartIndex + dailyItemsStart.length);
-              if (itemsEndIndex !== -1) {
-                const before = content.substring(0, itemsStartIndex + dailyItemsStart.length);
-                const after = content.substring(itemsEndIndex);
-                content = before + '\n' + dailyItemsStr + '\n      ' + after;
-                console.log('✅ Updated Daily Sidebar Section');
-              } else {
-                console.warn('⚠️ Could not find end of daily items array.');
-              }
-            } else {
-              console.warn('⚠️ Could not find start of daily items array.');
-            }
-          } else {
-            console.warn('⚠️ AI日报 section not found in sidebar.');
+          console.log("📊 Found", dailyFiles.length, "daily files");
+          dailyFiles.forEach(f => console.log("  -", f.date, f.link));
+
+          console.log("📊 Found", weeklyFiles.length, "weekly files");
+          weeklyFiles.forEach(f => console.log("  -", f.date, f.link));
+
+          // === Update AI日报 section ===
+          const dailyStartMarker = `{ text: 'AI日报',`;
+          const dailySectionStart = content.indexOf(dailyStartMarker);
+          if (dailySectionStart === -1) {
+            console.error("❌ AI日报 section not found");
+            process.exit(1);
           }
 
-          // ======================
-          // 更新 AI周报 部分
-          // ======================
-          const weeklyStartMarker = `{ text: 'AI周报',`;
-          const weeklyItemsStart = "items: [";
-          // 找到下一个 "  }"（即对象结束）作为边界
-          const weeklyFiles = getFilesWithDate(weeklyDir);
-          const weeklyItemsStr = weeklyFiles.map(f => {
-            const text = f.date ? `${f.date} 周报` : f.originalName.replace('.md', '');
-            return `        { text: '${text}', link: '${f.link}' }`;
+          const itemsStartStr = "items: [";
+          const itemsStartIndex = content.indexOf(itemsStartStr, dailySectionStart);
+          if (itemsStartIndex === -1) {
+            console.error("❌ items: [ not found in AI日报 section");
+            process.exit(1);
+          }
+
+          // === Find closing ] using bracket matching ===
+          let pos = itemsStartIndex + itemsStartStr.length;
+          let depth = 0;
+
+          while (pos < content.length && depth > 0) {
+            if (content[pos] === '[') depth++;
+            else if (content[pos] === ']') depth--;
+            pos++;
+          }
+
+          if (depth !== 0) {
+            console.error("❌ Unmatched brackets in items array");
+            process.exit(1);
+          }
+
+          const itemsEndIndex = pos; // pos is after the last ]
+
+          // === Build new items string ===
+          const dailyItemsStr = dailyFiles.map(f => {
+            return ` { text: '${f.date}', link: '${f.link}' }`;
           }).join(',\n');
 
-          const weeklyStartIndex = content.indexOf(weeklyStartMarker);
-          if (weeklyStartIndex !== -1) {
-            const itemsStartIndex = content.indexOf(weeklyItemsStart, weeklyStartIndex);
-            if (itemsStartIndex !== -1) {
-              // 找到下一个 "  }," 或 "  }"（注意缩进）
-              const searchFrom = itemsStartIndex + weeklyItemsStart.length;
-              let endIndex1 = content.indexOf('\n    },', searchFrom); // 中间项
-              let endIndex2 = content.indexOf('\n  }', searchFrom);   // 最后一项（在 '/AI/' 数组内）
+          // === Replace content ===
+          const before = content.substring(0, itemsStartIndex + itemsStartStr.length);
+          const after = content.substring(itemsEndIndex);
+          const newContent = before + '\n' + dailyItemsStr + '\n ' + after;
 
-              let actualEndIndex = -1;
-              if (endIndex1 !== -1 && (endIndex2 === -1 || endIndex1 < endIndex2)) {
-                actualEndIndex = endIndex1;
-              } else if (endIndex2 !== -1) {
-                actualEndIndex = endIndex2;
-              }
+          content = newContent;
+          console.log("✅ Updated AI日报 section");
 
-              if (actualEndIndex !== -1) {
-                const before = content.substring(0, itemsStartIndex + weeklyItemsStart.length);
-                const after = content.substring(actualEndIndex);
-                content = before + '\n' + weeklyItemsStr + '\n      ' + after;
-                console.log(`✅ Updated Weekly Sidebar Section (${weeklyFiles.length} files)`);
-              } else {
-                console.warn('⚠️ Could not find end of weekly items block.');
-              }
-            } else {
-              console.warn('⚠️ Could not find start of weekly items array.');
-            }
-          } else {
-            console.warn('⚠️ AI周报 section not found in sidebar.');
+          // === Update AI周报 section ===
+          const weeklyStartMarker = `{ text: 'AI周报',`;
+          const weeklySectionStart = content.indexOf(weeklyStartMarker);
+          if (weeklySectionStart === -1) {
+            console.error("❌ AI周报 section not found");
+            process.exit(1);
           }
 
+          const weeklyItemsStartIndex = content.indexOf(itemsStartStr, weeklySectionStart);
+          if (weeklyItemsStartIndex === -1) {
+            console.error("❌ items: [ not found in AI周报 section");
+            process.exit(1);
+          }
+
+          // === Find closing ] for weekly ===
+          let weeklyPos = weeklyItemsStartIndex + itemsStartStr.length;
+          let weeklyDepth = 0;
+
+          while (weeklyPos < content.length && weeklyDepth > 0) {
+            if (content[weeklyPos] === '[') weeklyDepth++;
+            else if (content[weeklyPos] === ']') weeklyDepth--;
+            weeklyPos++;
+          }
+
+          if (weeklyDepth !== 0) {
+            console.error("❌ Unmatched brackets in weekly items array");
+            process.exit(1);
+          }
+
+          const weeklyItemsEndIndex = weeklyPos;
+
+          const weeklyItemsStr = weeklyFiles.map(f => {
+            const text = f.date ? `${f.date} 周报` : f.originalName.replace('.md', '');
+            return ` { text: '${text}', link: '${f.link}' }`;
+          }).join(',\n');
+
+          const weeklyBefore = content.substring(0, weeklyItemsStartIndex + itemsStartStr.length);
+          const weeklyAfter = content.substring(weeklyItemsEndIndex);
+          content = weeklyBefore + '\n' + weeklyItemsStr + '\n ' + weeklyAfter;
+          console.log("✅ Updated AI周报 section");
+
+          // === Write back to file ===
           fs.writeFileSync(sidebarPath, content);
+          console.log("✅ Successfully updated sidebar.ts");
+
           EOF
 
           node update_sidebar.cjs
+        id: update
 
-      - name: Commit and Push Sidebar Changes
+      - name: Commit changes
         run: |
-          git add "$SIDEBAR_FILE"
-          if ! git diff --staged --quiet; then
-            git commit -m "chore: auto-update AI sidebar (daily & weekly)"
-            git push
-            echo "✅ Sidebar updated and pushed."
-          else
-            echo "ℹ️ No sidebar changes needed."
-          fi
+          git add "${{ env.SIDEBAR_FILE }}"
+          git commit -m "🤖 Auto-update AI sidebar with latest reports"
+          git push
