@@ -1,3 +1,4 @@
+# .github/workflows/update-sidebar.yml
 name: Update AI Sidebar Only
 
 on:
@@ -7,6 +8,8 @@ on:
       - completed
     branches:
       - main
+  # 可选：取消下一行注释以支持手动触发（用于调试）
+  # workflow_dispatch:
 
 jobs:
   update-sidebar:
@@ -45,12 +48,13 @@ jobs:
           const dailyDir = 'docs/AI/daily/cn';
           const weeklyDir = 'docs/AI/weekly/cn';
 
-          // 增强版：从任意位置提取日期，如果提取不到则返回空字符串
+          // 从文件名中提取日期
           function extractDate(filename) {
             const match = filename.match(/(\d{4}-\d{2}-\d{2})/);
             return match ? match[1] : null;
           }
 
+          // 获取目录下所有 .md 文件并按日期排序
           function getFilesWithDate(dir) {
             if (!fs.existsSync(dir)) return [];
             const files = [];
@@ -63,79 +67,108 @@ jobs:
                 } else if (entry.isFile() && entry.name.endsWith('.md') && !entry.name.startsWith('_')) {
                   const dateStr = extractDate(entry.name);
                   let linkPath = fullPath.replace(/^docs/, '').split(path.sep).join('/');
-                  
                   files.push({ 
                     date: dateStr, 
                     originalName: entry.name,
                     link: linkPath, 
-                    // 用于排序：如果有日期用日期，没有则用文件名（避免 undefined 导致排序错误）
                     sortKey: dateStr || entry.name 
                   });
                 }
               }
             };
             walk(dir);
-            
-            // 排序逻辑：有日期的按日期倒序，没日期的排后面按文件名
             return files.sort((a, b) => {
-              if (a.date && b.date) {
-                return new Date(b.date) - new Date(a.date);
-              } else if (a.date) {
-                return -1; // a 有日期，排前面
-              } else if (b.date) {
-                return 1; // b 有日期，排前面
-              } else {
-                return b.originalName.localeCompare(a.originalName); // 都没日期，按文件名
-              }
+              if (a.date && b.date) return new Date(b.date) - new Date(a.date);
+              else if (a.date) return -1;
+              else if (b.date) return 1;
+              else return b.originalName.localeCompare(a.originalName);
             });
           }
 
+          // 读取 sidebar 文件
           if (!fs.existsSync(sidebarPath)) {
             console.error(`❌ Sidebar file not found: ${sidebarPath}`);
             process.exit(1);
           }
-
           let content = fs.readFileSync(sidebarPath, 'utf8');
 
-          // --- 处理日报部分 ---
+          // ======================
+          // 更新 AI日报 部分
+          // ======================
+          const dailyStartMarker = `{ text: 'AI日报',`;
+          const dailyItemsStart = "items: [";
+          const dailyItemsEnd = "],";
+
           const dailyFiles = getFilesWithDate(dailyDir);
-          const dailyItemsStr = dailyFiles.map(f => `        { text: '${f.date || f.originalName}', link: '${f.link}' }`).join(',\n');
-          
-          const dailyRegex = /(\/AI\/:\s*\[\s*\{\s*text:\s*['"]AI日报['"][\s\S]*?items:\s*\[)([\s\S]*?)(\]\s*\}\s*\])/;
-          
-          if (dailyRegex.test(content)) {
-            content = content.replace(dailyRegex, (match, start, oldItems, end) => {
-              return start + '\n' + dailyItemsStr + '\n      ' + end;
-            });
-            console.log('✅ Updated Daily Sidebar Section');
+          const dailyItemsStr = dailyFiles.map(f => 
+            `        { text: '${f.date}', link: '${f.link}' }`
+          ).join(',\n');
+
+          const dailyStartIndex = content.indexOf(dailyStartMarker);
+          if (dailyStartIndex !== -1) {
+            const itemsStartIndex = content.indexOf(dailyItemsStart, dailyStartIndex);
+            if (itemsStartIndex !== -1) {
+              const itemsEndIndex = content.indexOf(dailyItemsEnd, itemsStartIndex + dailyItemsStart.length);
+              if (itemsEndIndex !== -1) {
+                const before = content.substring(0, itemsStartIndex + dailyItemsStart.length);
+                const after = content.substring(itemsEndIndex);
+                content = before + '\n' + dailyItemsStr + '\n      ' + after;
+                console.log('✅ Updated Daily Sidebar Section');
+              } else {
+                console.warn('⚠️ Could not find end of daily items array.');
+              }
+            } else {
+              console.warn('⚠️ Could not find start of daily items array.');
+            }
           } else {
-            console.warn('⚠️ Daily Sidebar pattern not found.');
+            console.warn('⚠️ AI日报 section not found in sidebar.');
           }
 
-          // --- 处理周报部分 ---
+          // ======================
+          // 更新 AI周报 部分
+          // ======================
+          const weeklyStartMarker = `{ text: 'AI周报',`;
+          const weeklyItemsStart = "items: [";
+          const weeklyItemsEnd = "    }"; // 注意：最后一个条目后没有逗号，所以用 "}]" 的前缀
+
           const weeklyFiles = getFilesWithDate(weeklyDir);
-          if (weeklyFiles.length > 0) {
-             // 显示文本：优先显示日期，如果没有日期则显示文件名（去掉.md）
-             const weeklyItemsStr = weeklyFiles.map(f => {
-               const text = f.date ? `${f.date} 周报` : f.originalName.replace('.md', '');
-               return `        { text: '${text}', link: '${f.link}' }`;
-             }).join(',\n');
-             
-             // 匹配 AI周报 部分
-             const weeklyRegex = /(text:\s*['"]AI周报['"][\s\S]*?items:\s*\[)([\s\S]*?)(\]\s*\}\s*\])/;
-             
-             if (weeklyRegex.test(content)) {
-               content = content.replace(weeklyRegex, (match, start, oldItems, end) => {
-                 return start + '\n' + weeklyItemsStr + '\n      ' + end;
-               });
-               console.log(`✅ Updated Weekly Sidebar Section (${weeklyFiles.length} files)`);
-             } else {
-               console.warn('⚠️ Weekly Sidebar pattern not found. Make sure "AI周报" exists in sidebar.ts');
-             }
+          const weeklyItemsStr = weeklyFiles.map(f => {
+            const text = f.date ? `${f.date} 周报` : f.originalName.replace('.md', '');
+            return `        { text: '${text}', link: '${f.link}' }`;
+          }).join(',\n');
+
+          const weeklyStartIndex = content.indexOf(weeklyStartMarker);
+          if (weeklyStartIndex !== -1) {
+            const itemsStartIndex = content.indexOf(weeklyItemsStart, weeklyStartIndex);
+            if (itemsStartIndex !== -1) {
+              // 找到下一个 "}" 来确定 items 数组的结束位置
+              const itemsBlockEnd = content.indexOf('    }', itemsStartIndex);
+              if (itemsBlockEnd !== -1) {
+                // 再找一次，确保找到的是包含 "]," 或 "}" 的行
+                let actualEndIndex = content.indexOf('\n    },', itemsBlockEnd);
+                if (actualEndIndex === -1) {
+                  // 如果没找到带逗号的，说明是最后一个块
+                  actualEndIndex = content.indexOf('\n  }', itemsBlockEnd);
+                }
+                if (actualEndIndex !== -1) {
+                  const before = content.substring(0, itemsStartIndex + weeklyItemsStart.length);
+                  const after = content.substring(actualEndIndex);
+                  content = before + '\n' + weeklyItemsStr + '\n      ' + after;
+                  console.log(`✅ Updated Weekly Sidebar Section (${weeklyFiles.length} files)`);
+                } else {
+                  console.warn('⚠️ Could not determine end of weekly items block.');
+                }
+              } else {
+                console.warn('⚠️ Could not find weekly items block end marker.');
+              }
+            } else {
+              console.warn('⚠️ Could not find start of weekly items array.');
+            }
           } else {
-            console.log('ℹ️ No weekly files found to update.');
+            console.warn('⚠️ AI周报 section not found in sidebar.');
           }
 
+          // 写回文件
           fs.writeFileSync(sidebarPath, content);
           EOF
 
@@ -143,7 +176,7 @@ jobs:
 
       - name: Commit and Push Sidebar Changes
         run: |
-          git add $SIDEBAR_FILE
+          git add "$SIDEBAR_FILE"
           if ! git diff --staged --quiet; then
             git commit -m "chore: auto-update AI sidebar (daily & weekly)"
             git push
