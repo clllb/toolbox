@@ -95,9 +95,30 @@ jobs:
           console.log("📊 Found", weeklyFiles.length, "weekly files");
           weeklyFiles.forEach(f => console.log("  -", f.date, f.link));
 
+          // === Helper: Find section start by text content ===
+          function findSectionStart(content, searchText) {
+            const lines = content.split('\n');
+            for (let i = 0; i < lines.length; i++) {
+              if (lines[i].includes(searchText)) {
+                // Look backward for the nearest '{'
+                for (let j = i; j >= 0; j--) {
+                  const openBraceIndex = lines[j].indexOf('{');
+                  if (openBraceIndex !== -1) {
+                    // Calculate global index
+                    let globalIndex = 0;
+                    for (let k = 0; k < j; k++) {
+                      globalIndex += lines[k].length + 1; // +1 for \n
+                    }
+                    return globalIndex + openBraceIndex;
+                  }
+                }
+              }
+            }
+            return -1;
+          }
+
           // === Update AI日报 section ===
-          const dailyStartMarker = `{ text: 'AI日报',`;
-          const dailySectionStart = content.indexOf(dailyStartMarker);
+          const dailySectionStart = findSectionStart(content, "text: 'AI日报'");
           if (dailySectionStart === -1) {
             console.error("❌ AI日报 section not found");
             process.exit(1);
@@ -112,7 +133,7 @@ jobs:
 
           // === Find closing ] using bracket matching ===
           let pos = itemsStartIndex + itemsStartStr.length;
-          let depth = 0;
+          let depth = 1; // We are inside the '[' already
 
           while (pos < content.length && depth > 0) {
             if (content[pos] === '[') depth++;
@@ -125,24 +146,23 @@ jobs:
             process.exit(1);
           }
 
-          const itemsEndIndex = pos; // pos is after the last ]
+          const itemsEndIndex = pos;
 
           // === Build new items string ===
           const dailyItemsStr = dailyFiles.map(f => {
-            return ` { text: '${f.date}', link: '${f.link}' }`;
+            return `        { text: '${f.date}', link: '${f.link}' }`;
           }).join(',\n');
 
           // === Replace content ===
-          const before = content.substring(0, itemsStartIndex + itemsStartStr.length);
-          const after = content.substring(itemsEndIndex);
-          const newContent = before + '\n' + dailyItemsStr + '\n ' + after;
+          const before = content.substring(0, itemsStartIndex + itemsStartStr.length + 1); // +1 to include newline after [
+          const after = content.substring(itemsEndIndex - 1); // -1 to exclude the final ]
+          const newContent = before + '\n' + dailyItemsStr + '\n      ' + after;
 
           content = newContent;
           console.log("✅ Updated AI日报 section");
 
           // === Update AI周报 section ===
-          const weeklyStartMarker = `{ text: 'AI周报',`;
-          const weeklySectionStart = content.indexOf(weeklyStartMarker);
+          const weeklySectionStart = findSectionStart(content, "text: 'AI周报'");
           if (weeklySectionStart === -1) {
             console.error("❌ AI周报 section not found");
             process.exit(1);
@@ -156,7 +176,7 @@ jobs:
 
           // === Find closing ] for weekly ===
           let weeklyPos = weeklyItemsStartIndex + itemsStartStr.length;
-          let weeklyDepth = 0;
+          let weeklyDepth = 1;
 
           while (weeklyPos < content.length && weeklyDepth > 0) {
             if (content[weeklyPos] === '[') weeklyDepth++;
@@ -173,12 +193,12 @@ jobs:
 
           const weeklyItemsStr = weeklyFiles.map(f => {
             const text = f.date ? `${f.date} 周报` : f.originalName.replace('.md', '');
-            return ` { text: '${text}', link: '${f.link}' }`;
+            return `        { text: '${text}', link: '${f.link}' }`;
           }).join(',\n');
 
-          const weeklyBefore = content.substring(0, weeklyItemsStartIndex + itemsStartStr.length);
-          const weeklyAfter = content.substring(weeklyItemsEndIndex);
-          content = weeklyBefore + '\n' + weeklyItemsStr + '\n ' + weeklyAfter;
+          const weeklyBefore = content.substring(0, weeklyItemsStartIndex + itemsStartStr.length + 1);
+          const weeklyAfter = content.substring(weeklyItemsEndIndex - 1);
+          content = weeklyBefore + '\n' + weeklyItemsStr + '\n      ' + weeklyAfter;
           console.log("✅ Updated AI周报 section");
 
           // === Write back to file ===
@@ -188,7 +208,6 @@ jobs:
           EOF
 
           node update_sidebar.cjs
-        id: update
 
       - name: Commit changes
         run: |
