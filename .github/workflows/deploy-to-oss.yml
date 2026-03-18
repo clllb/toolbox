@@ -1,36 +1,54 @@
 name: Build and Deploy to OSS
 
+# 修改这里：添加 workflow_run 触发器
 on:
+  # 1. 保留手动触发，方便调试
+  workflow_dispatch:
+  
+  # 2. 保留本地 push 触发 (以防您本地直接推代码)
   push:
     branches:
-      - main   # 请根据您的实际分支名修改，如 master
-  workflow_dispatch: # 允许手动触发测试
+      - main
+  
+  # 3. 【新增】监听 "Update AI Sidebar Only" 工作流的成功完成
+  workflow_run:
+    workflows: ["Update AI Sidebar Only"] # 这里必须严格匹配第二个 action 的 name 字段
+    types:
+      - completed # 只有当它成功完成时才触发
+    branches:
+      - main
 
 jobs:
   build-and-sync:
+    # ⚠️ 重要提示：workflow_run 触发时，默认检出的是触发它的 commit 之前的代码
+    # 如果第二个 action 提交了新代码，我们需要确保这里能拉到最新的
     runs-on: ubuntu-latest
     
     steps:
-      # 1. 检出代码 (此时 dist 目录还不存在，因为它被 ignore 了)
+      # 1. 检出代码
+      # 对于 workflow_run 触发，建议显式指定拉取最新代码，或者依赖 push 事件的自然行为
+      # 如果第二个 action 刚刚 push 了，这里的 checkout 通常能拿到最新状态，
+      # 但为了保险，有时需要额外步骤拉取，不过大多数情况下 checkout@v4 足够。
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # 获取所有历史，确保能拿到最新提交
 
-      # 2. 设置 Node.js 环境 (为了执行 npm run build)
+      # 2. 设置 Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20' # 根据您的项目需求调整版本
-          cache: 'npm'       # 开启缓存加速安装
+          node-version: '20'
+          cache: 'npm'
 
-      # 3. 安装依赖并构建 (这一步会在 Actions 环境中生成 dist 目录)
+      # 3. 安装依赖并构建
       - name: Install and Build
         run: |
           npm install
           npm run build
-          # 验证 dist 是否生成
           ls -la dist 
 
-      # 4. 安装 ossutil 工具
+      # 4. 安装 ossutil
       - name: Setup ossutil
         uses: manyuanrong/setup-ossutil@master
         with:
@@ -38,15 +56,13 @@ jobs:
           access-key-id: ${{ secrets.OSS_ACCESS_KEY_ID }}
           access-key-secret: ${{ secrets.OSS_ACCESS_KEY_SECRET }}
 
-      # 5. 同步 dist 目录到 OSS
+      # 5. 同步到 OSS
       - name: Sync dist to OSS
         run: |
-          echo "Starting sync of ./dist to oss://${{ secrets.OSS_BUCKET_NAME }}/"
-          
-          # 修正后的命令：去掉了 -r 参数
-          # -f: 强制覆盖
-          # --delete: 如果本地 dist 删除了文件，OSS 上也删除（保持完全一致）
-          # sync 命令默认就是递归同步目录的
+          echo "Starting sync..."
+          if [ ! "$(ls -A ./dist)" ]; then
+            echo "❌ dist is empty!"
+            exit 1
+          fi
           ossutil sync ./dist/ oss://${{ secrets.OSS_BUCKET_NAME }}/ -f --delete
-          
           echo "✅ Deployment completed!"
