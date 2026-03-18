@@ -8,12 +8,12 @@ on:
       - completed
     branches:
       - main
-  # 可选：取消下一行注释以支持手动触发（用于调试）
-  # workflow_dispatch:
+  workflow_dispatch:  # ✅ 启用手动触发
 
 jobs:
   update-sidebar:
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    # ✅ 关键修复：当是 workflow_run 事件时，检查是否成功；当是手动触发时，直接运行
+    if: ${{ github.event_name == 'workflow_dispatch' || (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success') }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -48,13 +48,11 @@ jobs:
           const dailyDir = 'docs/AI/daily/cn';
           const weeklyDir = 'docs/AI/weekly/cn';
 
-          // 从文件名中提取日期
           function extractDate(filename) {
             const match = filename.match(/(\d{4}-\d{2}-\d{2})/);
             return match ? match[1] : null;
           }
 
-          // 获取目录下所有 .md 文件并按日期排序
           function getFilesWithDate(dir) {
             if (!fs.existsSync(dir)) return [];
             const files = [];
@@ -66,11 +64,13 @@ jobs:
                   walk(fullPath);
                 } else if (entry.isFile() && entry.name.endsWith('.md') && !entry.name.startsWith('_')) {
                   const dateStr = extractDate(entry.name);
-                  let linkPath = fullPath.replace(/^docs/, '').split(path.sep).join('/');
+                  // ✅ 修复路径：确保链接格式为 /AI/daily/cn/2026-03/2026-03-18.md
+                  let linkPath = fullPath.replace(/^docs/, '');
+                  if (!linkPath.startsWith('/')) linkPath = '/' + linkPath;
                   files.push({ 
                     date: dateStr, 
                     originalName: entry.name,
-                    link: linkPath, 
+                    link: linkPath,
                     sortKey: dateStr || entry.name 
                   });
                 }
@@ -85,11 +85,11 @@ jobs:
             });
           }
 
-          // 读取 sidebar 文件
           if (!fs.existsSync(sidebarPath)) {
             console.error(`❌ Sidebar file not found: ${sidebarPath}`);
             process.exit(1);
           }
+
           let content = fs.readFileSync(sidebarPath, 'utf8');
 
           // ======================
@@ -129,8 +129,7 @@ jobs:
           // ======================
           const weeklyStartMarker = `{ text: 'AI周报',`;
           const weeklyItemsStart = "items: [";
-          const weeklyItemsEnd = "    }"; // 注意：最后一个条目后没有逗号，所以用 "}]" 的前缀
-
+          // 找到下一个 "  }"（即对象结束）作为边界
           const weeklyFiles = getFilesWithDate(weeklyDir);
           const weeklyItemsStr = weeklyFiles.map(f => {
             const text = f.date ? `${f.date} 周报` : f.originalName.replace('.md', '');
@@ -141,25 +140,25 @@ jobs:
           if (weeklyStartIndex !== -1) {
             const itemsStartIndex = content.indexOf(weeklyItemsStart, weeklyStartIndex);
             if (itemsStartIndex !== -1) {
-              // 找到下一个 "}" 来确定 items 数组的结束位置
-              const itemsBlockEnd = content.indexOf('    }', itemsStartIndex);
-              if (itemsBlockEnd !== -1) {
-                // 再找一次，确保找到的是包含 "]," 或 "}" 的行
-                let actualEndIndex = content.indexOf('\n    },', itemsBlockEnd);
-                if (actualEndIndex === -1) {
-                  // 如果没找到带逗号的，说明是最后一个块
-                  actualEndIndex = content.indexOf('\n  }', itemsBlockEnd);
-                }
-                if (actualEndIndex !== -1) {
-                  const before = content.substring(0, itemsStartIndex + weeklyItemsStart.length);
-                  const after = content.substring(actualEndIndex);
-                  content = before + '\n' + weeklyItemsStr + '\n      ' + after;
-                  console.log(`✅ Updated Weekly Sidebar Section (${weeklyFiles.length} files)`);
-                } else {
-                  console.warn('⚠️ Could not determine end of weekly items block.');
-                }
+              // 找到下一个 "  }," 或 "  }"（注意缩进）
+              const searchFrom = itemsStartIndex + weeklyItemsStart.length;
+              let endIndex1 = content.indexOf('\n    },', searchFrom); // 中间项
+              let endIndex2 = content.indexOf('\n  }', searchFrom);   // 最后一项（在 '/AI/' 数组内）
+
+              let actualEndIndex = -1;
+              if (endIndex1 !== -1 && (endIndex2 === -1 || endIndex1 < endIndex2)) {
+                actualEndIndex = endIndex1;
+              } else if (endIndex2 !== -1) {
+                actualEndIndex = endIndex2;
+              }
+
+              if (actualEndIndex !== -1) {
+                const before = content.substring(0, itemsStartIndex + weeklyItemsStart.length);
+                const after = content.substring(actualEndIndex);
+                content = before + '\n' + weeklyItemsStr + '\n      ' + after;
+                console.log(`✅ Updated Weekly Sidebar Section (${weeklyFiles.length} files)`);
               } else {
-                console.warn('⚠️ Could not find weekly items block end marker.');
+                console.warn('⚠️ Could not find end of weekly items block.');
               }
             } else {
               console.warn('⚠️ Could not find start of weekly items array.');
@@ -168,7 +167,6 @@ jobs:
             console.warn('⚠️ AI周报 section not found in sidebar.');
           }
 
-          // 写回文件
           fs.writeFileSync(sidebarPath, content);
           EOF
 
