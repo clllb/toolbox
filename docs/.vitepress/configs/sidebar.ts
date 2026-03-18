@@ -26,6 +26,10 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       text: 'AI日报',
       collapsed: false, 
       items: [
+
+        { text: '2026-03-18', link: '/AI/daily/cn/2026-03/2026-03-18.md' },
+        { text: '2026-03-17', link: '/AI/daily/cn/2026-03/2026-03-17.md' },
+        { text: '2026-03-16', link: '/AI/daily/cn/2026-03/2026-03-16.md' },
         { text: '2026-03-15', link: '/AI/daily/cn/2026-03/2026-03-15.md' },
         { text: '2026-03-14', link: '/AI/daily/cn/2026-03/2026-03-14.md' },
         { text: '2026-03-13', link: '/AI/daily/cn/2026-03/2026-03-13.md' },
@@ -41,12 +45,13 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         { text: '2026-03-03', link: '/AI/daily/cn/2026-03/2026-03-03.md' },
         { text: '2026-03-02', link: '/AI/daily/cn/2026-03/2026-03-02.md' },
         { text: '2026-03-01', link: '/AI/daily/cn/2026-03/2026-03-01.md' }
-        ],
+      ],
     },
     {
       text: 'AI周报',
       collapsed: false,
       items: [
+
         { text: '2026-03-15 周报', link: '/AI/weekly/cn/2026-03-15-ai-signal-weekly-2026-w11-anthropic-agent-ecosystem-war.md' },
         { text: '2026-03-08 周报', link: '/AI/weekly/cn/2026-03-08-ai-weekly-2026-w10-gpt-5-4-militarization-claude-code.md' },
         { text: '2026-03-01 周报', link: '/AI/weekly/cn/2026-03-01-hexi-2077-ai-signal-weekly-2026-w09-trillion-dollar-arms-race.md' }
