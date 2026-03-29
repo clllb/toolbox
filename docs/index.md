@@ -16,16 +16,16 @@ hero:
   actions:
     - text: 工具导航
       link: /nav/
-      theme: alt
+      theme: brand
     - text: 每周工具速递
       link: /weekly-tools/
-      theme: brand
+      theme: alt
     - text: AI日报
       link: /AI/daily/index
-      theme: alt
+      theme: brand
     - text: AI周报
       link: /AI/weekly/index
-      theme: brand
+      theme: alt
 
 features:
   - icon: 🧰

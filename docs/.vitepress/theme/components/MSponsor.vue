@@ -7,11 +7,16 @@ const isModalOpen = ref(false)
 // 打开弹窗
 const openModal = () => {
   isModalOpen.value = true
+  // 使用 requestAnimationFrame 确保在下一帧设置样式
+  requestAnimationFrame(() => {
+    document.body.style.overflow = 'hidden'
+  })
 }
 
 // 关闭弹窗
 const closeModal = () => {
   isModalOpen.value = false
+  document.body.style.overflow = ''
 }
 
 // 点击背景遮罩层也可以关闭
@@ -32,11 +37,13 @@ const handleBackdropClick = (event: MouseEvent) => {
           href="https://github.com/clllb/toolbox"
           target="_blank"
           rel="noopener noreferrer"
-          class="sponsor-action-btn"
+          class="sponsor-action-btn sponsor-action-btn-primary"
         >
           ⭐ Star 本项目
         </a>
-        <a href="/boss/bossboss.html" class="sponsor-action-btn">🏆 查看打赏风云榜</a>
+        <a href="/boss/bossboss.html" class="sponsor-action-btn sponsor-action-btn-static">
+          🏆 查看打赏风云榜
+        </a>
       </div>
     </div>
 
@@ -44,23 +51,27 @@ const handleBackdropClick = (event: MouseEvent) => {
     <div class="sponsor-item">
       <div class="sponsor-title">👑 陈老板的小生意</div>
       <div class="sponsor-actions">
-        <!-- 按钮 1: AI 中转站 (已更新文案) -->
-        <button @click="openModal" class="sponsor-action-btn" type="button">
+        <!-- 按钮 1: AI 中转站 -->
+        <button
+          @click="openModal"
+          class="sponsor-action-btn sponsor-action-btn-primary"
+          type="button"
+        >
           💻 全网最稳定的
           <br />
-          AI 中转站 (加微信赠2美元试用)
+          AI 中转站 (加微信赠 2 美元试用)
         </button>
 
-        <!-- 按钮 2: 数据爬取 (已更新文案) -->
+        <!-- 按钮 2: 数据爬取 -->
         <a
           href="https://get.brightdata.com/vol1zp"
           target="_blank"
           rel="noopener noreferrer"
-          class="sponsor-action-btn"
+          class="sponsor-action-btn sponsor-action-btn-static"
         >
           📡 全网最好用的
           <br />
-          数据爬取代理 (注册赠2美元额度)
+          数据爬取代理 (注册赠 2 美元额度)
         </a>
       </div>
     </div>
@@ -72,26 +83,22 @@ const handleBackdropClick = (event: MouseEvent) => {
     </div>
 
     <!-- 4. 弹窗模态框 -->
-    <Transition name="fade">
-      <div v-if="isModalOpen" class="modal-backdrop" @click="handleBackdropClick">
-        <div class="modal-content" @click.stop>
-          <button class="modal-close" @click="closeModal">&times;</button>
-
-          <!-- 弹窗内容容器 -->
-          <div class="modal-body">
-            <div class="modal-title">🤖 AI 中转站 - 联系微信</div>
-
-            <!-- 图片容器，确保居中 -->
-            <div class="modal-image-wrapper">
-              <!-- 请确保 wx.jpg 放在 docs/public 目录下 -->
-              <img src="/wx.jpg" alt="微信二维码" class="modal-img" />
+    <Teleport to="body">
+      <Transition name="fade">
+        <div v-if="isModalOpen" class="modal-backdrop" @click="handleBackdropClick">
+          <div class="modal-content" @click.stop>
+            <button class="modal-close" @click="closeModal">&times;</button>
+            <div class="modal-body">
+              <div class="modal-title">🤖 AI 中转站 - 联系微信</div>
+              <div class="modal-image-wrapper">
+                <img src="/wx.jpg" alt="微信二维码" class="modal-img" />
+              </div>
+              <p class="modal-desc">扫码添加微信，备注"AI 试用"即送 2 美元试用</p>
             </div>
-
-            <p class="modal-desc">扫码添加微信，备注"AI 试用"即送2美元试用</p>
           </div>
         </div>
-      </div>
-    </Transition>
+      </Transition>
+    </Teleport>
   </div>
 </template>
 
@@ -131,44 +138,65 @@ const handleBackdropClick = (event: MouseEvent) => {
   display: block;
   width: 100%;
   box-sizing: border-box;
-  padding: 10px 12px; /* 稍微增加上下内边距以适应两行文字 */
+  padding: 10px 12px;
   background: var(--vp-c-bg-alt);
   border: 1px solid var(--vp-c-divider);
   border-radius: 6px;
   text-align: center;
   font-size: 13px;
   font-weight: 500;
-  color: var(--vp-c-brand);
+  color: var(--vp-c-text-1);
   text-decoration: none;
   transition: all 0.2s ease;
   cursor: pointer;
-
-  /* 【关键修改】允许文字换行，不再强制单行 */
   white-space: normal;
   overflow: visible;
   text-overflow: clip;
-  line-height: 1.4; /* 调整行高让两行文字更美观 */
-
-  /* 重置 button 默认样式 */
+  line-height: 1.4;
   font-family: inherit;
   margin: 0;
   appearance: none;
   -webkit-appearance: none;
 }
 
-/* 悬停效果 */
-.sponsor-action-btn:hover {
-  background: var(--vp-c-brand-lightest);
-  border-color: var(--vp-c-brand-light);
+/* 主题色按钮样式（跟随全局主题变化） */
+.sponsor-action-btn-primary {
+  color: var(--vp-c-brand);
+  border-color: var(--vp-c-divider);
+  background: var(--vp-c-bg-alt);
+}
+
+.sponsor-action-btn-primary:hover {
+  background: var(--vp-c-bg-mute);
+  border-color: var(--vp-c-divider);
   color: var(--vp-c-brand-dark);
   transform: translateY(-1px);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-/* 点击激活效果 */
-.sponsor-action-btn:active {
+.sponsor-action-btn-primary:active {
   transform: translateY(0);
-  background: var(--vp-c-brand-lighter);
+  background: var(--vp-c-bg-alt);
+}
+
+/* 静态颜色按钮样式（灰色背景，黑色文字） */
+.sponsor-action-btn-static {
+  color: #000;
+  border-color: var(--vp-c-divider);
+  background: #f5f5f5;
+}
+
+.sponsor-action-btn-static:hover {
+  background: #e8e8e8;
+  border-color: var(--vp-c-divider);
+  color: #000;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.sponsor-action-btn-static:active {
+  transform: translateY(0);
+  background: #f5f5f5;
 }
 
 /* --- 图片样式 --- */
@@ -184,18 +212,18 @@ const handleBackdropClick = (event: MouseEvent) => {
   transform: scale(1.05);
 }
 
-/* --- 弹窗样式 --- */
+/* --- 弹窗样式（使用 Teleport 挂载到 body） --- */
 .modal-backdrop {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background: rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 9999;
   backdrop-filter: blur(4px);
 }
 
@@ -204,7 +232,7 @@ const handleBackdropClick = (event: MouseEvent) => {
   padding: 24px;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  text-align: center; /* 【关键修改】确保内部内容居中 */
+  text-align: center;
   max-width: 90%;
   width: 320px;
   position: relative;
@@ -234,7 +262,7 @@ const handleBackdropClick = (event: MouseEvent) => {
 .modal-body {
   display: flex;
   flex-direction: column;
-  align-items: center; /* 【关键修改】Flex 布局垂直居中 */
+  align-items: center;
   width: 100%;
 }
 
@@ -246,7 +274,6 @@ const handleBackdropClick = (event: MouseEvent) => {
   width: 100%;
 }
 
-/* 【新增】图片包裹层，确保绝对居中 */
 .modal-image-wrapper {
   width: 100%;
   display: flex;
@@ -263,7 +290,7 @@ const handleBackdropClick = (event: MouseEvent) => {
   border-radius: 8px;
   padding: 4px;
   background: #fff;
-  display: block; /* 防止图片底部留白 */
+  display: block;
 }
 
 .modal-desc {
