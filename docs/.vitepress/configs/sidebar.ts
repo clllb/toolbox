@@ -27,6 +27,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       collapsed: false, 
       items: [
 
+        { text: '2026-03-30', link: '/AI/daily/cn/2026-03/2026-03-30.md' },
         { text: '2026-03-29', link: '/AI/daily/cn/2026-03/2026-03-29.md' },
         { text: '2026-03-28', link: '/AI/daily/cn/2026-03/2026-03-28.md' },
         { text: '2026-03-27', link: '/AI/daily/cn/2026-03/2026-03-27.md' },
@@ -63,6 +64,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       collapsed: false,
       items: [
 
+        { text: '2026-03-29 周报', link: '/AI/weekly/cn/2026-03-29-hexi-2077-ai-deep-signal-weekly-2026-w13.md' },
         { text: '2026-03-22 周报', link: '/AI/weekly/cn/2026-03-22-hexi-2077-ai-weekly-2026-w12.md' },
         { text: '2026-03-15 周报', link: '/AI/weekly/cn/2026-03-15-ai-signal-weekly-2026-w11-anthropic-agent-ecosystem-war.md' },
         { text: '2026-03-08 周报', link: '/AI/weekly/cn/2026-03-08-ai-weekly-2026-w10-gpt-5-4-militarization-claude-code.md' },
