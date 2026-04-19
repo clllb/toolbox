@@ -27,6 +27,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       collapsed: false, 
       items: [
 
+        { text: '2026-04-19', link: '/AI/daily/cn/2026-04/2026-04-19.md' },
         { text: '2026-04-18', link: '/AI/daily/cn/2026-04/2026-04-18.md' },
         { text: '2026-04-17', link: '/AI/daily/cn/2026-04/2026-04-17.md' },
         { text: '2026-04-16', link: '/AI/daily/cn/2026-04/2026-04-16.md' },
@@ -82,6 +83,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       collapsed: false,
       items: [
 
+        { text: '2026-04-19 周报', link: '/AI/weekly/cn/2026-04-19-ai-compute-agents-trust-crisis-2026-w16.md' },
         { text: '2026-04-12 周报', link: '/AI/weekly/cn/2026-04-12-ai-signal-weekly-2026-w15-agent-security-crisis.md' },
         { text: '2026-04-05 周报', link: '/AI/weekly/cn/2026-04-05-deepseek-v4-huawei-ascend-ai-sycophancy-weekly-2026-w14.md' },
         { text: '2026-03-29 周报', link: '/AI/weekly/cn/2026-03-29-hexi-2077-ai-deep-signal-weekly-2026-w13.md' },
