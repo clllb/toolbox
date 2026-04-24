@@ -28,3 +28,6 @@ Thumbs.db
 
 # Generated files
 toolbox.zip
+
+# Local workspaces
+.worktrees/
