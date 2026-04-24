@@ -12,6 +12,7 @@ build/
 
 # Caches
 docs/.vitepress/cache/
+docs/.vitepress/.temp/
 .pnpm-debug.log*
 
 # Logs
