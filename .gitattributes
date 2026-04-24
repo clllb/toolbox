@@ -2,13 +2,13 @@
 * text=auto
 
 # Explicitly declare text files you want to always be normalized and converted to LF on commit
-*.vue text
-*.ts text
-*.js text
-*.json text
-*.md text
-*.scss text
-*.css text
+*.vue text eol=lf
+*.ts text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.scss text eol=lf
+*.css text eol=lf
 
 # Denote all files that are truly binary and should not be modified
 *.png binary
