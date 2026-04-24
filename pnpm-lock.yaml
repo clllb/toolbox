@@ -31,6 +31,9 @@ importers:
       '@types/node':
         specifier: ^20.19.21
         version: 20.19.21
+      '@vitejs/plugin-vue':
+        specifier: ^5.2.4
+        version: 5.2.4(vite@5.4.20(@types/node@20.19.21)(sass@1.93.2))(vue@3.5.22)
       '@vue/test-utils':
         specifier: ^2.4.6
         version: 2.4.8(@vue/compiler-dom@3.5.22)(@vue/server-renderer@3.5.22(vue@3.5.22))(vue@3.5.22)
