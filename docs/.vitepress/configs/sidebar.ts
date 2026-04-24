@@ -19,6 +19,13 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       ]
     }
   ],
+  '/AI/prompts/': [
+    {
+      text: 'AI 图片提示词库',
+      collapsed: false,
+      items: [{ text: 'AI 图片提示词库', link: '/AI/prompts/' }]
+    }
+  ],
   '/me/': [
     {
       text: '年度总结',

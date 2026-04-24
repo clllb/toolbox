@@ -65,4 +65,18 @@ describe('MPromptLibrary', () => {
 
     expect(wrapper.find('[data-test="prompt-dialog"]').exists()).toBe(false)
   })
+
+  it('shows Chinese labels for categories and source metadata inside the dialog', async () => {
+    const wrapper = mount(MPromptLibrary, {
+      props: { models: PROMPT_LIBRARY_MODELS, items: PROMPT_LIBRARY_ITEMS },
+    })
+
+    expect(wrapper.text()).toContain('全部')
+    expect(wrapper.text()).toContain('海报')
+
+    await wrapper.get('[data-test="prompt-card"]').trigger('click')
+
+    expect(wrapper.text()).toContain('Introducing ChatGPT Images 2.0')
+    expect(wrapper.text()).toContain('2026-04-21')
+  })
 })

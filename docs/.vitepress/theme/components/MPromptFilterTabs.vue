@@ -25,3 +25,38 @@ const emit = defineEmits<{
     </button>
   </div>
 </template>
+
+<style scoped lang="scss">
+.m-prompt-filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tab {
+  padding: 8px 14px;
+  border: 1px solid var(--vp-c-border);
+  border-radius: 999px;
+  background: var(--vp-c-bg-alt);
+  color: var(--vp-c-text-2);
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    border-color: var(--vp-c-brand);
+    color: var(--vp-c-text-1);
+    background: var(--vp-c-bg-soft);
+  }
+
+  &.active {
+    border-color: var(--vp-c-brand);
+    background: var(--vp-c-brand-soft);
+    color: var(--vp-c-brand-1);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+}
+</style>

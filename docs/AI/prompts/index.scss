@@ -1,0 +1,17 @@
+.m-prompts-layout {
+  --vp-layout-max-width: 1660px;
+
+  .container,
+  .content-container,
+  .content {
+    max-width: 100% !important;
+  }
+
+  .vp-doc h1 {
+    margin-bottom: 8px;
+  }
+
+  .custom-block {
+    margin-bottom: 20px;
+  }
+}

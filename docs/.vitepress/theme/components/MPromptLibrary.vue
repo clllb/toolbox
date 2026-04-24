@@ -104,3 +104,25 @@ const activeModelAvailable = computed(() =>
     <MPromptDialog :item="activeItem" @close="activeItem = null" />
   </section>
 </template>
+
+<style scoped lang="scss">
+.m-prompt-library {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+
+.empty-state {
+  padding: 32px 20px;
+  border: 1px dashed var(--vp-c-border);
+  border-radius: 18px;
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-2);
+}
+</style>

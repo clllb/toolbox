@@ -48,6 +48,11 @@ features:
     details: 每周梳理重点趋势、产品更新与行业信号<br />把值得关注的内容集中看完
     link: /AI/weekly/index
     linkText: 每周总结
+  - icon: 🖼️
+    title: AI 图片提示词库
+    details: 按模型与分类整理图片提示词案例<br />支持查看样式图、中英双语提示词与来源说明
+    link: /AI/prompts/
+    linkText: 进入图库
   - icon: 🆕
     title: 公众号杂谈
     details: 记录技术实践、工具体验和折腾随笔<br />不止避坑，也分享一些值得聊的事
