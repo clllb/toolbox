@@ -44,10 +44,15 @@ jobs:
           const sidebarPath = process.env.SIDEBAR_FILE;
           const dailyDir = 'docs/AI/daily/cn';
           const weeklyDir = 'docs/AI/weekly/cn';
+          const itemsStartStr = 'items: [';
 
           function extractDate(filename) {
             const match = filename.match(/(\d{4}-\d{2}-\d{2})/);
             return match ? match[1] : null;
+          }
+
+          function escapeValue(value) {
+            return value.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
           }
 
           function getFilesWithDate(dir) {
@@ -55,143 +60,160 @@ jobs:
               console.warn(`⚠️ Directory not found: ${dir}`);
               return [];
             }
+
             const files = [];
-            const walk = (currentDir) => {
+
+            function walk(currentDir) {
               const entries = fs.readdirSync(currentDir, { withFileTypes: true });
               for (const entry of entries) {
                 const fullPath = path.join(currentDir, entry.name);
                 if (entry.isDirectory()) {
                   walk(fullPath);
-                } else if (entry.isFile() && entry.name.endsWith('.md') && !entry.name.startsWith('_')) {
-                  const dateStr = extractDate(entry.name);
-                  let linkPath = fullPath.replace(/^docs/, '');
-                  if (!linkPath.startsWith('/')) linkPath = '/' + linkPath;
-                  files.push({ date: dateStr, originalName: entry.name, link: linkPath, sortKey: dateStr || entry.name });
+                  continue;
                 }
+
+                if (!entry.isFile() || !entry.name.endsWith('.md') || entry.name.startsWith('_') || entry.name === 'index.md') {
+                  continue;
+                }
+
+                const date = extractDate(entry.name);
+                if (!date) {
+                  console.warn(`⚠️ Skipping file without date: ${fullPath}`);
+                  continue;
+                }
+
+                let link = fullPath.replace(/^docs/, '');
+                if (!link.startsWith('/')) {
+                  link = `/${link}`;
+                }
+
+                files.push({
+                  date,
+                  month: date.slice(0, 7),
+                  originalName: entry.name,
+                  link
+                });
               }
-            };
+            }
+
             walk(dir);
+
             return files.sort((a, b) => {
-              if (a.date && b.date) return new Date(b.date) - new Date(a.date);
-              else if (a.date) return -1;
-              else if (b.date) return 1;
-              else return b.originalName.localeCompare(a.originalName);
+              if (a.date !== b.date) {
+                return b.date.localeCompare(a.date);
+              }
+              return b.originalName.localeCompare(a.originalName);
             });
           }
 
-          // === Read sidebar file ===
-          if (!fs.existsSync(sidebarPath)) {
-            console.error(`❌ Sidebar file not found: ${sidebarPath}`);
-            process.exit(1);
+          function buildGroupedItems(files, labelBuilder) {
+            const groups = new Map();
+
+            for (const file of files) {
+              if (!groups.has(file.month)) {
+                groups.set(file.month, []);
+              }
+              groups.get(file.month).push(file);
+            }
+
+            const months = Array.from(groups.keys()).sort((a, b) => b.localeCompare(a));
+
+            return months.map((month) => {
+              const items = groups.get(month).map((file) => {
+                const text = escapeValue(labelBuilder(file));
+                const link = escapeValue(file.link);
+                return `            { text: '${text}', link: '${link}' }`;
+              }).join(',\n');
+
+              return [
+                '        {',
+                `          text: '${escapeValue(month)}',`,
+                '          collapsed: false,',
+                '          items: [',
+                items,
+                '          ]',
+                '        }'
+              ].join('\n');
+            }).join(',\n');
           }
-          let content = fs.readFileSync(sidebarPath, 'utf8');
 
-          // === Get files ===
-          const dailyFiles = getFilesWithDate(dailyDir);
-          const weeklyFiles = getFilesWithDate(weeklyDir);
-
-          console.log("📊 Found", dailyFiles.length, "daily files");
-          dailyFiles.forEach(f => console.log("  -", f.date, f.link));
-
-          console.log("📊 Found", weeklyFiles.length, "weekly files");
-          weeklyFiles.forEach(f => console.log("  -", f.date, f.link));
-
-          // === Helper: Find section start by text content ===
           function findSectionStart(content, searchText) {
             const lines = content.split('\n');
             for (let i = 0; i < lines.length; i++) {
-              if (lines[i].includes(searchText)) {
-                // Look backward for the nearest '{'
-                for (let j = i; j >= 0; j--) {
-                  const openBraceIndex = lines[j].indexOf('{');
-                  if (openBraceIndex !== -1) {
-                    let globalIndex = 0;
-                    for (let k = 0; k < j; k++) {
-                      globalIndex += lines[k].length + 1; // +1 for \n
-                    }
-                    return globalIndex + openBraceIndex;
-                  }
+              if (!lines[i].includes(searchText)) {
+                continue;
+              }
+
+              for (let j = i; j >= 0; j--) {
+                const openBraceIndex = lines[j].indexOf('{');
+                if (openBraceIndex === -1) {
+                  continue;
                 }
+
+                let globalIndex = 0;
+                for (let k = 0; k < j; k++) {
+                  globalIndex += lines[k].length + 1;
+                }
+                return globalIndex + openBraceIndex;
               }
             }
             return -1;
           }
 
-          // === Update AI日报 ===
-          const dailySectionStart = findSectionStart(content, "text: 'AI日报'");
-          if (dailySectionStart === -1) {
-            console.error("❌ AI日报 section not found");
+          function replaceSectionItems(content, sectionLabel, itemsContent) {
+            const sectionStart = findSectionStart(content, `text: '${sectionLabel}'`);
+            if (sectionStart === -1) {
+              throw new Error(`${sectionLabel} section not found`);
+            }
+
+            const itemsStartIndex = content.indexOf(itemsStartStr, sectionStart);
+            if (itemsStartIndex === -1) {
+              throw new Error(`items: [ not found in ${sectionLabel} section`);
+            }
+
+            let pos = itemsStartIndex + itemsStartStr.length;
+            let depth = 1;
+            while (pos < content.length && depth > 0) {
+              if (content[pos] === '[') depth++;
+              if (content[pos] === ']') depth--;
+              pos++;
+            }
+
+            if (depth !== 0) {
+              throw new Error(`Unmatched brackets in ${sectionLabel} items array`);
+            }
+
+            const before = content.substring(0, itemsStartIndex + itemsStartStr.length + 1);
+            const after = content.substring(pos - 1);
+            return `${before}\n${itemsContent}\n      ${after}`;
+          }
+
+          if (!fs.existsSync(sidebarPath)) {
+            console.error(`❌ Sidebar file not found: ${sidebarPath}`);
             process.exit(1);
           }
 
-          const itemsStartStr = "items: [";
-          const itemsStartIndex = content.indexOf(itemsStartStr, dailySectionStart);
-          if (itemsStartIndex === -1) {
-            console.error("❌ items: [ not found in AI日报 section");
-            process.exit(1);
-          }
+          let content = fs.readFileSync(sidebarPath, 'utf8');
+          const dailyFiles = getFilesWithDate(dailyDir);
+          const weeklyFiles = getFilesWithDate(weeklyDir);
 
-          // Bracket matching to find closing ]
-          let pos = itemsStartIndex + itemsStartStr.length;
-          let depth = 1;
-          while (pos < content.length && depth > 0) {
-            if (content[pos] === '[') depth++;
-            else if (content[pos] === ']') depth--;
-            pos++;
-          }
-          if (depth !== 0) {
-            console.error("❌ Unmatched brackets in daily items array");
-            process.exit(1);
-          }
-          const itemsEndIndex = pos;
+          console.log(`📊 Found ${dailyFiles.length} daily files`);
+          console.log(`📊 Found ${weeklyFiles.length} weekly files`);
 
-          const dailyItemsStr = dailyFiles.map(f =>
-            `        { text: '${f.date}', link: '${f.link}' }`
-          ).join(',\n');
+          content = replaceSectionItems(
+            content,
+            'AI日报',
+            buildGroupedItems(dailyFiles, (file) => file.date)
+          );
 
-          const beforeDaily = content.substring(0, itemsStartIndex + itemsStartStr.length + 1);
-          const afterDaily = content.substring(itemsEndIndex - 1);
-          content = beforeDaily + '\n' + dailyItemsStr + '\n      ' + afterDaily;
-          console.log("✅ Updated AI日报 section");
-
-          // === Update AI周报 ===
-          const weeklySectionStart = findSectionStart(content, "text: 'AI周报'");
-          if (weeklySectionStart === -1) {
-            console.error("❌ AI周报 section not found");
-            process.exit(1);
-          }
-
-          const weeklyItemsStartIndex = content.indexOf(itemsStartStr, weeklySectionStart);
-          if (weeklyItemsStartIndex === -1) {
-            console.error("❌ items: [ not found in AI周报 section");
-            process.exit(1);
-          }
-
-          let weeklyPos = weeklyItemsStartIndex + itemsStartStr.length;
-          let weeklyDepth = 1;
-          while (weeklyPos < content.length && weeklyDepth > 0) {
-            if (content[weeklyPos] === '[') weeklyDepth++;
-            else if (content[weeklyPos] === ']') weeklyDepth--;
-            weeklyPos++;
-          }
-          if (weeklyDepth !== 0) {
-            console.error("❌ Unmatched brackets in weekly items array");
-            process.exit(1);
-          }
-          const weeklyItemsEndIndex = weeklyPos;
-
-          const weeklyItemsStr = weeklyFiles.map(f => {
-            const text = f.date ? `${f.date} 周报` : f.originalName.replace('.md', '');
-            return `        { text: '${text}', link: '${f.link}' }`;
-          }).join(',\n');
-
-          const beforeWeekly = content.substring(0, weeklyItemsStartIndex + itemsStartStr.length + 1);
-          const afterWeekly = content.substring(weeklyItemsEndIndex - 1);
-          content = beforeWeekly + '\n' + weeklyItemsStr + '\n      ' + afterWeekly;
-          console.log("✅ Updated AI周报 section");
+          content = replaceSectionItems(
+            content,
+            'AI周报',
+            buildGroupedItems(weeklyFiles, (file) => `${file.date} 周报`)
+          );
 
           fs.writeFileSync(sidebarPath, content);
-          console.log("✅ Successfully updated sidebar.ts");
+          console.log('✅ Successfully updated sidebar.ts');
           EOF
 
           node update_sidebar.cjs
@@ -204,5 +226,9 @@ jobs:
       - name: Commit changes
         run: |
           git add "${{ env.SIDEBAR_FILE }}"
-          git commit -m "🤖 Auto-update AI sidebar with latest reports"
-          git push
+          if ! git diff --staged --quiet; then
+            git commit -m "🤖 Auto-update AI sidebar with latest reports"
+            git push
+          else
+            echo "ℹ️ No sidebar changes detected."
+          fi

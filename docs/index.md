@@ -17,8 +17,8 @@ hero:
     - text: 工具导航
       link: /nav/
       theme: brand
-    - text: 每周工具速递
-      link: /weekly-tools/
+    - text: AI工具手册
+      link: /AI/tools/
       theme: alt
     - text: AI日报
       link: /AI/daily/index
@@ -33,29 +33,24 @@ features:
     details: 精选全网好用的网站/工具，覆盖工作/学习/生活全场景<br />每周更新，拒绝收藏吃灰
     link: /nav/
     linkText: 立即探索
-  - icon: 🆕
-    title: 每周工具速递
-    details: 每周工具总结、打分、测评✨<br />附使用场景+避坑指南，不做无效收藏
-    link: /weekly-tools/
-    linkText: 本周推荐
+  - icon: ⚡️
+    title: AI工具手册
+    details: 合并每周工具速递与 AI 工具使用手册<br />从发现新工具到真正用顺手，一站搞定
+    link: /AI/tools/
+    linkText: 查看手册
   - icon: 📝
     title: AI日报
-    details: 每周工具总结、打分、测评✨<br />附使用场景+避坑指南，不做无效收藏
+    details: 每日追踪 AI 圈重要动态与热门产品<br />帮你快速了解今天发生了什么
     link: /AI/daily/index
     linkText: 每日总结
   - icon: 🤖
     title: AI周报
-    details: 每周工具总结、打分、测评✨<br />附使用场景+避坑指南，不做无效收藏
+    details: 每周梳理重点趋势、产品更新与行业信号<br />把值得关注的内容集中看完
     link: /AI/weekly/index
     linkText: 每周总结
-  - icon: ⚡
-    title: AI工具手册
-    details: 工具使用技巧+场景落地方案<br />把好工具用出最大价值，高效摸鱼
-    link: /AI/tools/index
-    linkText: 工具指南
-  - icon: 🐞
-    title: 踩坑记录
-    details: 那些年踩过的技术/工具坑<br />帮你少走弯路，避坑指南
+  - icon: 🆕
+    title: 公众号杂谈
+    details: 记录技术实践、工具体验和折腾随笔<br />不止避坑，也分享一些值得聊的事
     link: /bug/index
     linkText: 查看详情
   - icon: 💰

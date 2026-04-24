@@ -9,7 +9,7 @@ export const nav: DefaultTheme.Config['nav'] = [
     items: [
       { text: 'AI日报', link: '/AI/daily/index' },
       { text: 'AI周报', link: '/AI/weekly/index' },
-      { text: 'AI工具', link: '/AI/tools/index' },
+      { text: 'AI工具手册', link: '/AI/tools/' },
     ],
   },
   { text: '百宝箱主页',
