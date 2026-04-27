@@ -2,33 +2,59 @@ import { mount } from '@vue/test-utils'
 import { describe, expect, it } from 'vitest'
 
 import MPromptLibrary from '../../docs/.vitepress/theme/components/MPromptLibrary.vue'
-import {
-  PROMPT_LIBRARY_ITEMS,
-  PROMPT_LIBRARY_MODELS,
-} from '../../docs/AI/prompts/data'
+import { PROMPT_LIBRARY_ITEMS, PROMPT_LIBRARY_MODELS } from '../../docs/AI/prompts/data'
+
+const TAG_DRIVEN_ITEMS = [
+  {
+    id: 'brand-poster',
+    model: 'gpt-image-2',
+    category: 'portrait',
+    title: '品牌海报',
+    images: ['/brand-poster.webp'],
+    promptEn: 'brand poster',
+    promptZh: '品牌海报',
+    tags: ['海报', '品牌'],
+    sourceTitle: 'source',
+    sourceUrl: 'https://example.com/brand-poster',
+    sourceDate: '2026-04-21',
+  },
+  {
+    id: 'edu-info',
+    model: 'gpt-image-2',
+    category: 'landscape',
+    title: '教育信息图',
+    images: ['/edu-info.webp'],
+    promptEn: 'education infographic',
+    promptZh: '教育信息图',
+    tags: ['教育', '信息图'],
+    sourceTitle: 'source',
+    sourceUrl: 'https://example.com/edu-info',
+    sourceDate: '2026-04-21',
+  },
+] as any
 
 describe('MPromptLibrary', () => {
-  it('defaults to GPT image 2 and renders its cards', () => {
+  it('defaults to GPT image 2 and renders collected prompt cards', () => {
     const wrapper = mount(MPromptLibrary, {
       props: { models: PROMPT_LIBRARY_MODELS, items: PROMPT_LIBRARY_ITEMS },
     })
 
     expect(wrapper.text()).toContain('GPT image 2')
-    expect(wrapper.findAll('[data-test="prompt-card"]').length).toBeGreaterThan(0)
+    expect(wrapper.findAll('[data-test="prompt-card"]')).toHaveLength(PROMPT_LIBRARY_ITEMS.length)
+    expect(wrapper.text()).toContain('使用者界面截图')
   })
 
-  it('filters cards when a category tab is clicked', async () => {
+  it('filters prompt cards when a tag tab is clicked', async () => {
     const wrapper = mount(MPromptLibrary, {
       props: { models: PROMPT_LIBRARY_MODELS, items: PROMPT_LIBRARY_ITEMS },
     })
 
-    await wrapper.get('[data-test="category-tab-poster"]').trigger('click')
+    const posterItems = PROMPT_LIBRARY_ITEMS.filter((item) => item.tags.includes('海报'))
 
-    const titles = wrapper
-      .findAll('[data-test="prompt-card-title"]')
-      .map((node) => node.text())
+    await wrapper.get('[data-test="tag-tab-海报"]').trigger('click')
 
-    expect(titles).toEqual(['抹茶新品开业海报', '法式拼贴编辑海报'])
+    expect(wrapper.findAll('[data-test="prompt-card"]')).toHaveLength(posterItems.length)
+    expect(wrapper.text()).toContain('抹茶店广告')
   })
 
   it('shows the coming-soon empty state for nano banana 2', async () => {
@@ -41,42 +67,39 @@ describe('MPromptLibrary', () => {
     expect(wrapper.text()).toContain('该模型内容整理中，敬请期待')
   })
 
-  it('opens a detail dialog when a card is clicked', async () => {
+  it('opens a detail dialog from a prompt card', async () => {
     const wrapper = mount(MPromptLibrary, {
       props: { models: PROMPT_LIBRARY_MODELS, items: PROMPT_LIBRARY_ITEMS },
     })
 
     await wrapper.get('[data-test="prompt-card"]').trigger('click')
 
-    expect(wrapper.get('[data-test="prompt-dialog-title"]').text()).toContain(
-      '海边抓拍人像',
-    )
+    expect(wrapper.get('[data-test="prompt-dialog-title"]').text()).toContain('使用者界面截图')
     expect(wrapper.text()).toContain('English Prompt')
-    expect(wrapper.text()).toContain('中文提示词')
   })
 
-  it('closes the dialog when the close button is clicked', async () => {
-    const wrapper = mount(MPromptLibrary, {
-      props: { models: PROMPT_LIBRARY_MODELS, items: PROMPT_LIBRARY_ITEMS },
-    })
-
-    await wrapper.get('[data-test="prompt-card"]').trigger('click')
-    await wrapper.get('[data-test="prompt-dialog-close"]').trigger('click')
-
-    expect(wrapper.find('[data-test="prompt-dialog"]').exists()).toBe(false)
-  })
-
-  it('shows Chinese labels for categories and source metadata inside the dialog', async () => {
+  it('shows the base Chinese labels and active tag labels', () => {
     const wrapper = mount(MPromptLibrary, {
       props: { models: PROMPT_LIBRARY_MODELS, items: PROMPT_LIBRARY_ITEMS },
     })
 
     expect(wrapper.text()).toContain('全部')
+    expect(wrapper.text()).toContain('摄影')
+    expect(wrapper.text()).toContain('创意')
+  })
+
+  it('renders top filter tabs from tags and filters cards by selected tag', async () => {
+    const wrapper = mount(MPromptLibrary, {
+      props: { models: PROMPT_LIBRARY_MODELS, items: TAG_DRIVEN_ITEMS },
+    })
+
     expect(wrapper.text()).toContain('海报')
+    expect(wrapper.text()).toContain('品牌')
+    expect(wrapper.text()).toContain('教育')
 
-    await wrapper.get('[data-test="prompt-card"]').trigger('click')
+    await wrapper.get('[data-test="tag-tab-品牌"]').trigger('click')
 
-    expect(wrapper.text()).toContain('Introducing ChatGPT Images 2.0')
-    expect(wrapper.text()).toContain('2026-04-21')
+    expect(wrapper.findAll('[data-test="prompt-card"]')).toHaveLength(1)
+    expect(wrapper.text()).toContain('品牌海报')
   })
 })

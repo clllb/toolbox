@@ -1,6 +1,6 @@
 <script setup lang="ts">
 defineProps<{
-  items: Array<{ id: string; label: string; disabled?: boolean }>
+  items: Array<{ id: string; label: string; count?: number; disabled?: boolean }>
   modelValue: string
   testPrefix: string
 }>()
@@ -21,7 +21,7 @@ const emit = defineEmits<{
       type="button"
       @click="emit('update:modelValue', item.id)"
     >
-      {{ item.label }}
+      {{ item.label }}<span v-if="item.count != null" class="count">{{ item.count }}</span>
     </button>
   </div>
 </template>
@@ -58,5 +58,11 @@ const emit = defineEmits<{
     cursor: not-allowed;
     opacity: 0.6;
   }
+}
+
+.count {
+  margin-left: 4px;
+  font-size: 12px;
+  opacity: 0.7;
 }
 </style>

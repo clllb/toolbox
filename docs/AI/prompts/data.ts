@@ -1,14 +1,15 @@
 export type PromptModelId = 'gpt-image-2' | 'nano-banana-2'
+export const PROMPT_PRIMARY_TAGS = [
+  '摄影',
+  '海报',
+  '漫画',
+  '信息图',
+  '品牌',
+  '教育',
+  '创意',
+] as const
 
-export type PromptCategoryId =
-  | 'portrait'
-  | 'landscape'
-  | 'poster'
-  | 'manga'
-  | 'infographic'
-  | 'brand-visual'
-  | 'education'
-  | 'layout-experiment'
+export type PromptPrimaryTagId = (typeof PROMPT_PRIMARY_TAGS)[number]
 
 export interface PromptLibraryModel {
   id: PromptModelId
@@ -20,9 +21,8 @@ export interface PromptLibraryModel {
 export interface PromptLibraryItem {
   id: string
   model: PromptModelId
-  category: PromptCategoryId
   title: string
-  image: string
+  images: string[]
   promptEn: string
   promptZh: string
   tags: string[]
@@ -46,153 +46,537 @@ export const PROMPT_LIBRARY_MODELS: PromptLibraryModel[] = [
   },
 ]
 
-const OPENAI_SOURCE_TITLE = 'Introducing ChatGPT Images 2.0'
-const OPENAI_SOURCE_URL = 'https://openai.com/index/introducing-chatgpt-images-2-0/'
-const OPENAI_SOURCE_DATE = '2026-04-21'
+const SOURCE_TITLE = 'ChatGPT官方提示词'
+const SOURCE_URL = 'https://openai.com/zh-Hant/index/introducing-chatgpt-images-2-0/'
+const SOURCE_DATE = '2026-04-21'
 
+// `tags` 同时用于顶部筛选和卡片展示。
+// 顶部筛选只使用 `PROMPT_PRIMARY_TAGS`，其余标签作为辅助信息展示在卡片中。
+// 每个案例保持 2-3 个概括型标签即可，避免写成一次性的细节描述。
 export const PROMPT_LIBRARY_ITEMS: PromptLibraryItem[] = [
   {
-    id: 'gpt-image-2-coastal-portrait',
+    id: 'gpt-image-2-chatgpt-interface-screenshot',
     model: 'gpt-image-2',
-    category: 'portrait',
-    title: '海边抓拍人像',
-    image:
-      'https://images.ctfassets.net/kftzwdyauwt9/3VrMCLQjYjUUfVVcBlTOhI/a462f7273824ca481de556fc4f64e350/ChatGPT_Image_Apr_21__2026__03_31_09_PM.png',
+    title: '使用者界面截图',
+    images: ['/ai/prompts/1.webp'],
     promptEn:
-      'Create a cinematic candid portrait of a person in a brown jacket looking back toward the camera at a coastal roadside overlook, with misty cliffs, ocean water, a parked car, overcast daylight, soft film texture, and natural windblown hair.',
+      'a screenshot of chatgpt, in a browser, in macosx. the user types "draw me a dog" chatgpt draws an ascii dog the front window is chatgpt, but the desktop is quite messy with lots of random windows open (eg a terminal). they\'re all in the background',
     promptZh:
-      '生成一张电影感抓拍人像：人物穿棕色夹克，在海边公路观景点回头看向镜头；背景有薄雾山崖、海面与停着的汽车；阴天自然光、轻微胶片颗粒、被海风吹乱的头发，整体真实克制。',
-    tags: ['人像', '摄影'],
-    sourceTitle: OPENAI_SOURCE_TITLE,
-    sourceUrl: OPENAI_SOURCE_URL,
-    sourceDate: OPENAI_SOURCE_DATE,
+      '一张 ChatGPT 在 macOS 浏览器中的截图。用户输入“draw me a dog”，ChatGPT 画出一只 ASCII 狗。前景窗口是 ChatGPT，但桌面相当凌乱，背景中打开了许多随机窗口，例如终端。它们都在背景里。',
+    tags: ['界面', '产品'],
+    sourceTitle: SOURCE_TITLE,
+    sourceUrl: SOURCE_URL,
+    sourceDate: SOURCE_DATE,
   },
   {
     id: 'gpt-image-2-thai-city-panorama',
     model: 'gpt-image-2',
-    category: 'landscape',
-    title: '泰国城市全景街景',
-    image:
-      'https://images.ctfassets.net/kftzwdyauwt9/2igYgWqTB6w06TQ6jXkB15/e1d4f9dd4c13446c207060cfefadf428/Slide_16_9_-_42.png',
+    title: 'iPhone 全景图',
+    images: ['/ai/prompts/images-2-thai_pano.webp'],
     promptEn:
-      'Generate a wide panoramic daytime city scene in Thailand with multilane traffic, taxis, buses, motorbikes, shopping centers, tall buildings, Thai-language signage, bright daylight, and the visual realism of a stitched urban panorama.',
+      'create a photorealistic panorama shot as if taken on iphone of a busy asian city. make it a bit jaggedy like my hand shook while taking the panorama shot ; there should be fault lines where the image breaks from my hand shaking or not keeping a straight line',
     promptZh:
-      '生成一张泰国城市白天全景街景图：多车道交通、出租车、公交车、摩托车、商场、高楼与泰文招牌同时出现；光线明亮，画面具有真实城市摄影的宽幅拼接感。',
-    tags: ['风景', '城市'],
-    sourceTitle: OPENAI_SOURCE_TITLE,
-    sourceUrl: OPENAI_SOURCE_URL,
-    sourceDate: OPENAI_SOURCE_DATE,
+      '创建一张逼真的全景照片，像是用 iPhone 拍摄的繁忙亚洲城市。让它稍微有点不平整，像我拍全景时手抖了一样；画面中应该有断裂线，表现出因为手抖或没有保持直线而导致图像断开的地方。',
+    tags: ['摄影', '纪实'],
+    sourceTitle: SOURCE_TITLE,
+    sourceUrl: SOURCE_URL,
+    sourceDate: SOURCE_DATE,
   },
   {
     id: 'gpt-image-2-kizuna-matcha-poster',
     model: 'gpt-image-2',
-    category: 'poster',
-    title: '抹茶新品开业海报',
-    image:
-      'https://images.ctfassets.net/kftzwdyauwt9/5qHdeM2ayl03B0LOqEbIbw/7bb211ef29ee5e6dcad0a1af9f8f391c/ChatGPT_Image_Apr_21__2026__01_35_56_PM.png',
+    title: '抹茶店广告',
+    images: ['/ai/prompts/mocha.webp'],
     promptEn:
-      'Design a polished cafe launch poster for Kizuna Matcha opening in Brooklyn Heights, featuring modern Japanese-inspired branding, soft editorial typography, a premium iced strawberry matcha hero product, clean lifestyle composition, and print-ready promotional hierarchy.',
+      'Make an advertisement promoting my new matcha shop called ‘kizuki’ opening in brooklyn heights. have a nice sunlight image of a strawberry matcha (iced) and a streetwear aesthetic w japanese minimalism. make sure to include multiple aspect ratio outputs so i can use it on twitter, IG stories, IG feed, and linkedin.',
     promptZh:
-      '设计一张 Kizuna Matcha 在 Brooklyn Heights 开业的精致咖啡品牌海报：现代日式品牌气质、柔和的编辑感字体、一杯高质感草莓抹茶作为主视觉，整体清爽高级，具备可直接用于宣传的版式层级。',
+      '制作一张广告，宣传我在布鲁克林高地新开的抹茶店“kizuki”。画面中要有一张阳光很好看的草莓冰抹茶图片，并带有街头服饰审美和日式极简风格。请确保输出多个画幅比例，方便我用于 Twitter、Instagram Stories、Instagram Feed 和 LinkedIn。',
     tags: ['海报', '品牌'],
-    sourceTitle: OPENAI_SOURCE_TITLE,
-    sourceUrl: OPENAI_SOURCE_URL,
-    sourceDate: OPENAI_SOURCE_DATE,
-  },
-  {
-    id: 'gpt-image-2-editorial-poster',
-    model: 'gpt-image-2',
-    category: 'poster',
-    title: '法式拼贴编辑海报',
-    image:
-      'https://images.ctfassets.net/kftzwdyauwt9/7JvLMQ4xw5RMWP5A1P0WoI/76ef8f1f018a8a8cd7555fe0e2a8f7a7/Slide_16_9_-_9.png',
-    promptEn:
-      'Create a vintage French New Wave-inspired editorial poster for GPT Image 2.0 using torn-paper collage, red blue black and cream tones, cinematic portraits, bold typography, street-photography fragments, and a strong graphic point of view.',
-    promptZh:
-      '生成一张受法国新浪潮启发的复古编辑海报，用撕纸拼贴、红蓝黑米色配色、电影感肖像、粗体标题和街头摄影碎片来表现 GPT Image 2.0，整体要有鲜明的平面观点与杂志封面感。',
-    tags: ['海报', '版式'],
-    sourceTitle: OPENAI_SOURCE_TITLE,
-    sourceUrl: OPENAI_SOURCE_URL,
-    sourceDate: OPENAI_SOURCE_DATE,
+    sourceTitle: SOURCE_TITLE,
+    sourceUrl: SOURCE_URL,
+    sourceDate: SOURCE_DATE,
   },
   {
     id: 'gpt-image-2-japanese-fantasy-manga',
     model: 'gpt-image-2',
-    category: 'manga',
-    title: '日文奇幻漫画分镜',
-    image:
-      'https://images.ctfassets.net/kftzwdyauwt9/6foL89PA8tMjyK5gsBn2v5/6d4339966d01d6cf61563429948ecc38/Slide_16_9_-_31.png',
+    title: '日文少年漫画',
+    images: ['/ai/prompts/japanese.webp'],
     promptEn:
-      'Create a dramatic manga-style fantasy comic page in Japanese showing a young adventurer discovering a glowing magical feather pen in ancient ruins, with cinematic paneling, dynamic effects, detailed fantasy environments, and readable Japanese lettering.',
+      'Make a sample page of a colorized Japanese shonen adventure manga. The page should vividly depict our main character found a magical quill. The name of the quill is called the Quill of GPT Image. Make it dramatic. The magical quill has strong power sealed inside it.\n\nAdditional instructions: Aspect ratio: Portrait 1440×2560. The pen should have an OpenAI logo on it. The language throughout the manga should be Japanese. Think carefully first to make this a good story with good split of manga panels. The page should appear as a photo of a physical page, not a digital page.',
     promptZh:
-      '创作一页日文奇幻漫画：年轻冒险者在古代遗迹中发现一支会发光的魔法羽毛笔；需要电影式分镜、动态特效、细致的奇幻场景与清晰可读的日文文字。',
-    tags: ['漫画', '日文'],
-    sourceTitle: OPENAI_SOURCE_TITLE,
-    sourceUrl: OPENAI_SOURCE_URL,
-    sourceDate: OPENAI_SOURCE_DATE,
+      '制作一页彩色日本少年冒险漫画样张。页面应生动描绘主角发现一支魔法羽毛笔。这支羽毛笔名叫 GPT Image 之笔。让画面充满戏剧张力。这支魔法羽毛笔内部封印着强大的力量。\n\n附加说明：画幅比例：竖版 1440×2560。笔上应有 OpenAI 标志。整页漫画都应使用日语。先认真思考，做出一个好故事，并合理拆分漫画分镜。页面应呈现为实体纸页的照片，而不是数字页面。',
+    tags: ['漫画', '角色'],
+    sourceTitle: SOURCE_TITLE,
+    sourceUrl: SOURCE_URL,
+    sourceDate: SOURCE_DATE,
   },
   {
     id: 'gpt-image-2-wolves-infographic',
     model: 'gpt-image-2',
-    category: 'infographic',
-    title: '北美狼群杂志信息图',
-    image:
-      'https://images.ctfassets.net/kftzwdyauwt9/rA6vavM9x8N4c8PNUgxVo/96184ee9d6d2ebe513f61f9e71fe8316/Slide_16_9_-_24.png',
+    title: '科学杂志页面',
+    images: ['/ai/prompts/images-2-wolf-magazine.webp'],
     promptEn:
-      'Design a magazine-style infographic spread about wolves in North America, with a hero wildlife photo of three gray wolves in snow, myth-versus-fact callouts, maps, statistics, educational illustrations, and editorial page hierarchy.',
+      "an editorial magazine page about wolves in north america and how they're more harmless than we think. make it look like a glossy, smooth, well laid out widely distributed science magazine.",
     promptZh:
-      '设计一组关于北美狼群的杂志式信息图版面：主图为雪地中的三只灰狼，同时包含 myth vs. fact 对照、地图、统计数据、教育插图与清晰的编辑排版层级。',
-    tags: ['信息图', '杂志'],
-    sourceTitle: OPENAI_SOURCE_TITLE,
-    sourceUrl: OPENAI_SOURCE_URL,
-    sourceDate: OPENAI_SOURCE_DATE,
+      '制作一页关于北美狼群的编辑型杂志页面，主题是狼比我们想象的更无害。让它看起来像一本发行广泛的科学杂志，光滑精致、版式顺畅、布局良好。',
+    tags: ['信息图', '版式'],
+    sourceTitle: SOURCE_TITLE,
+    sourceUrl: SOURCE_URL,
+    sourceDate: SOURCE_DATE,
   },
   {
     id: 'gpt-image-2-product-campaign-board',
     model: 'gpt-image-2',
-    category: 'brand-visual',
-    title: '韩屋民宿品牌物料板',
-    image:
-      'https://images.ctfassets.net/kftzwdyauwt9/5bdRejGcJ61PZ5sz7w2abT/ba6db9f48ea0ad3f39db39f7cd2a5801/ChatGPT_Image_Apr_21__2026__03_31_54_PM.png',
+    title: '韩国广告卡片',
+    images: ['/ai/prompts/images-2-korean-advertisement.webp'],
     promptEn:
-      'Create a premium hospitality campaign board for a Korean hanok stay, combining serene lifestyle photography, elegant Korean typography, brochure-style panels, warm natural light, and market-ready travel advertising composition.',
+      '프리미엄 한옥 스테이 예약 유도용 카드 이미지, 고즈넉한 골목을 지나 체크인하는 순간, 마당이 보이는 창가에서 차를 마시는 순간, 따뜻한 조명 아래 객실에서 쉬는 순간의 3장면이 한 화면 안에서 자연스럽게 이어지는 구성, 같은 한국 여성이 반복 등장하며 우아하고 여유로운 여행 분위기, 크림과 우드 톤, 부드러운 자연광, 정갈한 한옥 공간, 저장하고 싶은 프리미엄 여행 카드 무드, 제목과 짧은 라벨, 예약 안내를 얹기 쉬운 여백, 모바일 중심 4:5 비율',
     promptZh:
-      '制作一组高端韩屋民宿品牌视觉物料：结合安静松弛的生活方式摄影、优雅的韩文字体、 brochure 式多面板排版、温暖自然光与可直接商用的旅行广告构图。',
-    tags: ['品牌视觉', '旅行'],
-    sourceTitle: OPENAI_SOURCE_TITLE,
-    sourceUrl: OPENAI_SOURCE_URL,
-    sourceDate: OPENAI_SOURCE_DATE,
+      '用于引导预订高端韩屋住宿的卡片图片。画面由三个场景自然衔接在同一张图中：穿过宁静小巷办理入住的瞬间、在能看到庭院的窗边喝茶的瞬间、在温暖灯光下的客房中休息的瞬间。同一位韩国女性重复出现，营造优雅从容的旅行氛围。使用奶油色与木色调、柔和自然光、整洁的韩屋空间，呈现让人想收藏的高端旅行卡片氛围。画面应留出便于添加标题、短标签和预订说明的空白，移动端优先，4:5 比例。',
+    tags: ['品牌', '广告'],
+    sourceTitle: SOURCE_TITLE,
+    sourceUrl: SOURCE_URL,
+    sourceDate: SOURCE_DATE,
   },
   {
     id: 'gpt-image-2-cantor-diagonal-diagram',
     model: 'gpt-image-2',
-    category: 'education',
     title: '康托对角线证明图解',
-    image:
-      'https://images.ctfassets.net/kftzwdyauwt9/4DKxAnMQ4yD25ij6cs4D9N/cf3e31ec8388b48aef63775b2c5ff67f/Slide_16_9_-_17.png',
-    promptEn:
-      'Design an elegant educational infographic explaining Cantor’s diagonalization proof step by step, with numbered sections, mathematical notation, highlighted diagonal digits, and a clean academic poster layout.',
-    promptZh:
-      '设计一张优雅的教育信息图，分步骤讲解康托对角线证明：需要编号步骤、数学符号、被高亮的对角元素，以及清晰、学术化的海报式排版。',
-    tags: ['教育内容', '数学'],
-    sourceTitle: OPENAI_SOURCE_TITLE,
-    sourceUrl: OPENAI_SOURCE_URL,
-    sourceDate: OPENAI_SOURCE_DATE,
+    images: ['/ai/prompts/images-2-cantor.webp'],
+    promptEn: 'cantor’s diagonalization proof, infographic',
+    promptZh: '康托对角线证明，信息图表',
+    tags: ['教育', '信息图'],
+    sourceTitle: SOURCE_TITLE,
+    sourceUrl: SOURCE_URL,
+    sourceDate: SOURCE_DATE,
   },
   {
-    id: 'gpt-image-2-2025-trends-layout',
+    id: 'gpt-image-2-visual-polyglot-collage',
     model: 'gpt-image-2',
-    category: 'layout-experiment',
-    title: '2025 设计趋势版式板',
-    image:
-      'https://images.ctfassets.net/kftzwdyauwt9/1nQvAq6j5cBgLk4h0QF4jL/148c85fecd0234766f4b7977924a5797/Slide_16_9_-_5.png',
+    title: '杂志拼贴',
+    images: ['/ai/prompts/2.webp'],
     promptEn:
-      'Create a polished infographic board that highlights six major design trends for 2025, including Analog + AI, Shape-Driven Layouts, Opulent Minimalism, Motion-First Design, Refined Grit, and Nature x Tech, with modular cards and presentation-ready hierarchy.',
+      'I am creating a magazine page with the theme of "visual polyglot". The title in the center of the image should be "Create Everything at Once". Create a piece of art celebrating visual creations, not limited to beautiful photographs but also across the full breadth of human visual culture and natural visual elements. There should be curated collage representing the diverse distribution: scientific diagrams, the periodic table, the solar system, medieval manuscript pages, botanical illustrations, anatomical drawings, old maps, climate charts, engineering schematics, transit signage, multilingual text, comic panels, UI screenshots, a camera photo, a butterfly specimen, pie charts, architectural blueprints, and façade drawings. The text frames the model as fluent across languages, notation systems, interfaces, cultural forms, and visual conventions—able to move from utility to beauty, from document understanding to artistic generation. Also feature artistic elements like pixel art, styles, history, sculpture, nature, photography, paintings, and all art forms. These are just examples, I need you to actively think about other elements / styles that may fit in a good design that\'s not limited to these concepts. The overall effect is that of a premium research announcement or museum-style manifesto: elegant, ambitious, and designed to argue that image intelligence should be trained on the whole visual world, not just polished aesthetics. Use an unstructured, creative and artistic layout, such as but not limited to fan out, avoid grid-like layouts. Portrait 4:5 aspect ratio. Don\'t add any content text beside the "Create Everything at Once" title. Text as part of the art is okay. Avoid a beige tint of the overall style, since we want vibrant elements to be vibrant.',
     promptZh:
-      '制作一张 polished 的 2025 设计趋势信息板，展示 Analog + AI、Shape-Driven Layouts、Opulent Minimalism、Motion-First Design、Refined Grit、Nature x Tech 六个方向；采用模块化卡片和可演示的清晰层级。',
-    tags: ['版式实验', '趋势'],
-    sourceTitle: OPENAI_SOURCE_TITLE,
-    sourceUrl: OPENAI_SOURCE_URL,
-    sourceDate: OPENAI_SOURCE_DATE,
+      '我正在创建一张以"视觉多语者"为主题的杂志页面。图像中央的标题应为"Create Everything at Once"。创作一件致敬视觉创作的艺术作品，不限于精美照片，还涵盖人类视觉文化和自然视觉元素的全貌。画面应呈现精心策展的拼贴画，展示多元化的分布：科学图表、元素周期表、太阳系、中世纪手稿页面、植物插图、解剖图、古地图、气候图表、工程示意图、交通标识、多语言文字、漫画分镜、UI 截图、相机照片、蝴蝶标本、饼图、建筑蓝图和立面图。文字将模型定位为精通多种语言、记谱系统、界面、文化形式和视觉惯例——能够从实用到美学、从文档理解到艺术生成自由切换。还应包含像素艺术、各种风格、历史、雕塑、自然、摄影、绘画及所有艺术形式等艺术元素。以上仅为示例，请主动思考其他可能适合优秀设计的元素或风格，不局限于这些概念。整体效果应是一份高端研究公告或博物馆风格宣言：优雅、雄心勃勃，旨在论证图像智能应当在整个视觉世界而非仅是精致美学上进行训练。使用非结构化、创意性的艺术化布局，例如但不限于扇形展开，避免网格状布局。竖版 4:5 比例。除"Create Everything at Once"标题外，不要添加任何内容文字。作为艺术一部分的文字可以接受。整体风格避免偏米色调，因为我们希望鲜艳的元素保持鲜艳。',
+    tags: ['版式', '艺术'],
+    sourceTitle: SOURCE_TITLE,
+    sourceUrl: SOURCE_URL,
+    sourceDate: SOURCE_DATE,
+  },
+  {
+    id: 'gpt-image-2-rice-grain-text',
+    model: 'gpt-image-2',
+    title: '一堆米粒',
+    images: ['/ai/prompts/rice.webp'],
+    promptEn:
+      'Mound of rice with thousands of grains, zoomed out. One of those grains has "GPT Image 2" etched onto it, just big enough to fit on that single grain. This rice grain is exactly the same size as the others, not any bigger or smaller, and blends into the rice mound well so it cannot be spotted at a glance.',
+    promptZh:
+      '一堆米粒，远景。其中一粒米上刻有"GPT Image 2"字样，大小刚好刻在这一粒米上。这粒米和其他米粒完全一样大，不大不小，很好地融入米堆中，一眼看不出来。',
+    tags: ['创意', '版式'],
+    sourceTitle: SOURCE_TITLE,
+    sourceUrl: SOURCE_URL,
+    sourceDate: SOURCE_DATE,
+  },
+  {
+    id: 'gpt-image-2-handwritten-baseball-essay',
+    model: 'gpt-image-2',
+    title: '手写文章',
+    images: ['/ai/prompts/images-2-wbaseball-note.webp'],
+    promptEn:
+      'a photorealistic, taken by phone photo of a handwritten essay in pencil, bold but elegant handwriting, but messy and somewhat uneven, on an 8.5x11 piece of lined paper, about the history of baseball in toronto. make sure there is variance in the writing in a very human way. give it a slight coffee stain on the top right corner',
+    promptZh:
+      '一张逼真的手机照片，拍摄一篇用铅笔手写的文章，字迹粗犷而优雅，但有些凌乱和不均匀，写在一张 8.5×11 的横线纸上，内容是多伦多棒球的历史。确保书写有差异，呈现非常自然的人感。右上角加一点咖啡渍。',
+    tags: ['摄影', '纪实'],
+    sourceTitle: SOURCE_TITLE,
+    sourceUrl: SOURCE_URL,
+    sourceDate: SOURCE_DATE,
+  },
+  {
+    id: 'gpt-image-2-indian-bookstore',
+    model: 'gpt-image-2',
+    title: '印度书店',
+    images: ['/ai/prompts/hindi.webp'],
+    promptEn:
+      'I want to create a magazine page that features a professional realistic photography in an Indian bookstore that selling indian books in different languages used in India. The photography should feature book covers in Hindi, Bengali, Marathi, Telugu, Tamil, Urdu, Gujarati, Kannada, Odia. The books must be made-up books with title related to "art" in these languages, but looks like actual book covers rather than a set. The publisher must be "OpenAI". All text must be clearly visible. The purpose of this photography is to show case the diversity of India language. The page should be a picture entirely, no meta text nor title. Aspect Ratio: 1440x2560 portrait',
+    promptZh:
+      '我想创建一张杂志页面，展示一张专业的写实摄影作品，拍摄场景是一家印度书店，售卖印度各语言的书籍。摄影作品应展示印地语、孟加拉语、马拉地语、泰卢固语、泰米尔语、乌尔都语、古吉拉特语、卡纳达语、奥里亚语的书籍封面。这些书籍必须是虚构的，书名与"艺术"相关，使用对应语言书写，但看起来像真实的书籍封面而非布景。出版社必须为"OpenAI"。所有文字必须清晰可见。此摄影旨在展示印度语言的多样性。页面应完全是一张图片，不含元文字或标题。画幅比例：竖版 1440×2560。',
+    tags: ['摄影', '多语言'],
+    sourceTitle: SOURCE_TITLE,
+    sourceUrl: SOURCE_URL,
+    sourceDate: SOURCE_DATE,
+  },
+  {
+    id: 'gpt-image-2-chinese-manga',
+    model: 'gpt-image-2',
+    title: '中文漫画',
+    images: ['/ai/prompts/chinese.webp'],
+    promptEn:
+      'Generate a full color Chinese-text manga about this OpenAI 研究科学家, 陈博远(first picture), who works on improving the text rendering capability of ChatGPT Image 2 model for the upcoming release. (in the background there is boba tea and a banana taped to the wall with a single slice of duct tape). The model can render insanely small Chinese text when he tried generating some detailed and beautiful multilingual infographics handdrawn-style poster about his hometown, 无锡on his computer screen. His hard work pays off and the team was impressed by the absurdly good quality of multilingual text performance of his model, seeing all the languages it can write. When he takes a break with one hand holding his phone, he received a translated text message from Sam Altman on his phone (avatar attached as second picture), asking him to take a look at the rendered multilingual text in an image he just generated to congrat the team, since Sam only knows English. However, make it funny by let Boyuan outrage (typical manga style) at the end by seeing Sam\'s generated image contains a "稳稳地接住你" phrase at the central location in an otherwise perfectly rendered image that\'s used to congrat the team, because this sentence has been memed as an unnatural but funny Chinese sentence GPT likes to use on Chinese internet. Boyuan should rage "天呐! 它又学会了接住!" (with teammates as tiny heads on the side, sweating and saying in Chinese"we are working hard to fix it！"). At the very bottom of the manga, add a tiny line of footnote (very tiny)in Chinese that "note: the entire manga, including this footnote and picture in picture, are all generated with gpt image 2 at once without editing or multiple steps。"\n\nAdditional Instructions: Use vertical 1440x2560 image layout, with first row about this researcher working hard, second row about his result on 无锡with multiple languages, third row shows the team excitement, fourth row split into left and right where left shows he takes a break and the phone received a message, right panel shows Sam\'s text message, and fifth row shows Sam\'s picture and 陈博远\'s reaction. No narration except for the first row. Avoid Chinese map. All characters should be in manga style. The banana background should only appear in the first panel and the tape should be a single slice of tape, not a cross tape. The banana and tape decoration should be small as a insignificant easter egg for people to find. OpenAI logo shall only appear on 陈博远\'s cloth, not elsewhere. No mugs in the scene since we already have the boba. Sam should only appear in the text message panel. The entire manga should be appear as a professional photo of a physical page in a manga book. In the lower right most corner of the poster there is a small "极小中文也清晰可读：" with a paragraph of much smaller Chinese that begins with "（此处为极小字号测试）无锡是作者的故乡，所以做了这幅海报，中文总算是修好了。很多年没回家了，好想吃大闸蟹啊！" (ultra small).',
+    promptZh:
+      '生成一篇全彩中文漫画，主角是这位 OpenAI 研究科学家陈博远（第一张图片），他负责改进即将发布的 ChatGPT Image 2 模型的文字渲染能力。（背景中有珍珠奶茶和一根用单条胶带贴在墙上的香蕉）。当他在电脑屏幕上尝试生成一张关于家乡无锡的精美手绘风格多语言信息图表海报时，模型能渲染极其微小的中文文字。他的努力得到了回报，团队对他模型出色的多语言文字表现质量印象深刻，看到了它能书写的各种语言。当他单手拿着手机休息时，收到了 Sam Altman 发来的翻译短信（头像见第二张图片），请他看看自己刚生成的一张用于祝贺团队的图片中的多语言文字渲染效果，因为 Sam 只懂英文。然而，要让结局搞笑——博远看到 Sam 生成的图片中，在一张其他方面完美渲染的祝贺图片的中央位置出现了"稳稳地接住你"这句话而暴怒（典型漫画风格），因为这句话在中国互联网上被玩梗，是 GPT 爱用的一句不自然但搞笑的中文。博远应怒吼"天呐！它又学会了接住！"（旁边的队友以小脑袋形象出现，满头大汗地说中文"we are working hard to fix it！"）。在漫画最底部，用中文添加一行极小的脚注："note: the entire manga, including this footnote and picture in picture, are all generated with gpt image 2 at once without editing or multiple steps。"\n\n附加说明：使用竖版 1440×2560 画面布局。第一行关于这位研究员努力工作，第二行展示他在无锡多语言方面的成果，第三行展示团队的兴奋，第四行左右分割——左边展示他休息时手机收到消息，右边展示 Sam 的短信，第五行展示 Sam 的图片和陈博远的反应。除第一行外不使用旁白。避免出现中国地图。所有角色应为漫画风格。香蕉背景仅在第一个面板出现，胶带应为单条胶带，不是交叉胶带。香蕉和胶带装饰应很小，作为一个不起眼的彩蛋供人发现。OpenAI 标志只出现在陈博远的衣服上，不出现在其他地方。场景中不要马克杯，因为已有珍珠奶茶。Sam 仅在短信面板中出现。整篇漫画应呈现为漫画书中实体页面的专业照片。在海报右下角有小的"极小中文也清晰可读："，后接一段更小的中文，以"（此处为极小字号测试）无锡是作者的故乡，所以做了这幅海报，中文总算是修好了。很多年没回家了，好想吃大闸蟹啊！"开头（极小字号）。',
+    tags: ['漫画', '多语言'],
+    sourceTitle: SOURCE_TITLE,
+    sourceUrl: SOURCE_URL,
+    sourceDate: SOURCE_DATE,
+  },
+  {
+    id: 'gpt-image-2-typography-poster',
+    model: 'gpt-image-2',
+    title: '字体设计海报',
+    images: ['/ai/prompts/images-2-typography.webp'],
+    promptEn:
+      'Generate professional multilingual poster about typography. The poster is supposed to be an artwork celebrating languages around the world. Japanese editorial style. 4:5 portrait aspect ratio',
+    promptZh:
+      '生成一张关于排版设计的专业多语言海报。海报应是一件致敬世界各地语言的艺术作品。日式编辑风格。竖版 4:5 比例。',
+    tags: ['海报', '多语言'],
+    sourceTitle: SOURCE_TITLE,
+    sourceUrl: SOURCE_URL,
+    sourceDate: SOURCE_DATE,
+  },
+  {
+    id: 'gpt-image-2-candid-coastal-travel',
+    model: 'gpt-image-2',
+    title: '自然抓拍',
+    images: ['/ai/prompts/images-2-candid-people-1.webp'],
+    promptEn:
+      'A photorealistic candid travel scene of a person standing at a coastal roadside turnout on an overcast morning, shot on 35mm film. Natural imperfect framing, visible grain, ambient light, muted colors, wind in clothing and hair, cinematic realism, and the feeling of a lived-in documentary photograph.',
+    promptZh:
+      '一张逼真的自然抓拍旅行场景，一个人站在阴天早晨的海边路边停车区，使用 35mm 胶片拍摄。自然不完美的构图，可见颗粒感，环境光，柔和低饱和色调，衣摆和头发被风吹动，电影级真实感，呈现一张有生活气息的纪实照片感觉。',
+    tags: ['摄影', '胶片'],
+    sourceTitle: SOURCE_TITLE,
+    sourceUrl: SOURCE_URL,
+    sourceDate: SOURCE_DATE,
+  },
+  {
+    id: 'gpt-image-2-surreal-portrait',
+    model: 'gpt-image-2',
+    title: '超现实肖像',
+    images: ['/ai/prompts/xiaoxiang.webp'],
+    promptEn:
+      'The portraits are taken outdoors, indoors, in specific, intimate, suburban settings. I don\'t want to replicate this; I want to maintain the same photographic style and realism, with shots taken using view cameras with colour film and medium-format cameras with colour film, but pushing the strangeness of the subjects and locations further. Not so much in a poor and grubby way, but more in the direction of kitsch and the middle classes, yet with elements that could not exist in reality, either aesthetically or physically.',
+    promptZh:
+      '这些肖像在户外、室内以及特定的私密郊区环境中拍摄。我不想复制这种做法，而是想保持相同的摄影风格和真实感——使用大画幅相机搭配彩色胶片和中画幅相机搭配彩色胶片拍摄——但进一步将拍摄对象和场景的奇异感推向极致。不是那种贫困邋遢的方向，而是更多朝向庸俗艺术和中产阶级美学，同时融入在审美上或物理上现实中不可能存在的元素。',
+    tags: ['摄影', '超现实'],
+    sourceTitle: SOURCE_TITLE,
+    sourceUrl: SOURCE_URL,
+    sourceDate: SOURCE_DATE,
+  },
+  {
+    id: 'gpt-image-2-film-realism-twins',
+    model: 'gpt-image-2',
+    title: '电影写实',
+    images: ['/ai/prompts/dianyingxieshi.webp'],
+    promptEn:
+      'Create a photographic image with beautiful depth of field, as if it were shot on a medium-format analogue camera using colour film, 85 mm f/4. It should be a distinctive portrait of twins—realistic, authentic, imperfect, and natural—set in the middle of a deserted, misty road in the heart of America. Aspect ratio 3:4.',
+    promptZh:
+      '创建一张具有美丽景深的摄影作品，如同使用中画幅胶片相机搭配彩色胶片拍摄，85mm f/4。这应是一张独特的双胞胎肖像——真实、自然、不完美、不做作——背景是美国腹地一条荒无人烟、雾气弥漫的公路中央。画幅比例 3:4。',
+    tags: ['摄影', '胶片'],
+    sourceTitle: SOURCE_TITLE,
+    sourceUrl: SOURCE_URL,
+    sourceDate: SOURCE_DATE,
+  },
+  {
+    id: 'gpt-image-2-recursive-lecture-hall',
+    model: 'gpt-image-2',
+    title: '讲课图片',
+    images: ['/ai/prompts/images-2-lecture-hall.webp'],
+    promptEn:
+      'a 2015 ubc lecture hall with professor showing slides about GPT imagegen 2, photorealistic. the slides show a professor showing slides about GPT imagegen 2, and so on, recursively, forever.',
+    promptZh:
+      '一间 2015 年的 UBC 阶梯教室，教授正在展示关于 GPT Image 2 的幻灯片，逼真写实。幻灯片中显示一位教授正在展示关于 GPT Image 2 的幻灯片，如此递归，无限循环。',
+    tags: ['创意', '版式'],
+    sourceTitle: SOURCE_TITLE,
+    sourceUrl: SOURCE_URL,
+    sourceDate: SOURCE_DATE,
+  },
+  {
+    id: 'gpt-image-2-iphone-aliens-cafe',
+    model: 'gpt-image-2',
+    title: 'iPhone 外星人',
+    images: ['/ai/prompts/images-2-aliens.webp'],
+    promptEn:
+      'A photorealistic iPhone photo of two aliens sitting at an outdoor cafe in late afternoon, taken casually by someone at the table. Half-finished drinks, uneven sunlight, relaxed posture, slightly imperfect framing, and the natural realism of a real everyday phone snapshot.',
+    promptZh:
+      '一张逼真的 iPhone 照片，两个外星人坐在傍晚的露天咖啡馆，由同桌的人随意拍摄。喝了一半的饮料，不均匀的阳光，放松的坐姿，略显不完美的构图，呈现真实日常手机快照的自然真实感。',
+    tags: ['摄影', '创意'],
+    sourceTitle: SOURCE_TITLE,
+    sourceUrl: SOURCE_URL,
+    sourceDate: SOURCE_DATE,
+  },
+  {
+    id: 'gpt-image-2-high-fashion-book',
+    model: 'gpt-image-2',
+    title: '时尚书籍',
+    images: ['/ai/prompts/images-2-high-fashion.webp'],
+    promptEn: '35mm photograph of a book of high-fashion photoshoots',
+    promptZh:
+      '一张 35mm 胶片照片，拍摄一本高级时尚摄影集。',
+    tags: ['摄影', '胶片'],
+    sourceTitle: SOURCE_TITLE,
+    sourceUrl: SOURCE_URL,
+    sourceDate: SOURCE_DATE,
+  },
+  {
+    id: 'gpt-image-2-disposable-camera-computer-lab',
+    model: 'gpt-image-2',
+    title: '抛弃式相机',
+    images: ['/ai/prompts/images-2-computer-lab.webp'],
+    promptEn:
+      'Create one photorealistic candid disposable-camera snapshot from a fictional early 2000s American high school computer lab, alternate-history/anachronistic premise: every student is using ChatGPT on old beige CRT monitors and bulky desktop towers. Scene feels like 2002-2004: rows of tan computers, rolling chairs, Windows XP-era browser windows, ball mice, tangled cables, binder stickers, floppy disks, CD-ROM binders, overhead fluorescent lights, laminated keyboard-shortcut posters, backpacks under desks. Diverse teenage students in non-sexualized early-2000s clothes, leaning toward screens, laughing, one student pointing at a ChatGPT answer, another typing. Show simple readable screen text on several monitors: ChatGPT, Ask anything, and short chat bubbles, but do not imitate a modern polished app UI. Make it candid and nostalgic, imperfect flash photo, mild motion blur, film grain, slightly off-center composition, orange date stamp in corner reading 02 18 04.',
+    promptZh:
+      '创建一张逼真的抛弃式相机抓拍照片，场景是一个虚构的 2000 年代初美国高中计算机教室，架空历史前提：每个学生都在老旧的米色 CRT 显示器和笨重的台式主机上使用 ChatGPT。场景呈现 2002-2004 年的感觉：一排排米色电脑、转椅、Windows XP 时代的浏览器窗口、滚球鼠标、缠绕的线缆、活页贴纸、软盘、CD-ROM 收纳册、头顶荧光灯、塑封的键盘快捷键海报、桌下的背包。穿着 2000 年代初服装的多元青少年学生，身体前倾看着屏幕，有人在笑，一个学生指着 ChatGPT 的回答，另一个在打字。在多台显示器上显示简单可读的文字：ChatGPT、Ask anything 以及简短的聊天气泡，但不要模仿现代精致的 app 界面。画面要自然怀旧，不完美的闪光灯效果、轻微运动模糊、胶片颗粒、略微偏心的构图，角落有橙色日期戳显示 02 18 04。',
+    tags: ['摄影', '复古'],
+    sourceTitle: SOURCE_TITLE,
+    sourceUrl: SOURCE_URL,
+    sourceDate: SOURCE_DATE,
+  },
+  {
+    id: 'gpt-image-2-35mm-street-photography',
+    model: 'gpt-image-2',
+    title: '街头摄影',
+    images: ['/ai/prompts/images-2-35mm-photograph.webp'],
+    promptEn: '35mm photograph of a book of 1970s NYC candid street photographs',
+    promptZh:
+      '一张 35mm 胶片照片，拍摄一本 1970 年代纽约街头纪实摄影集。',
+    tags: ['摄影', '胶片'],
+    sourceTitle: SOURCE_TITLE,
+    sourceUrl: SOURCE_URL,
+    sourceDate: SOURCE_DATE,
+  },
+  {
+    id: 'gpt-image-2-seinen-manga-page',
+    model: 'gpt-image-2',
+    title: '青年漫画',
+    images: ['/ai/prompts/shonenfinal.webp'],
+    promptEn: 'a page of a comic book in the style of Japanese Seinen manga',
+    promptZh:
+      '一页漫画，日本青年漫画风格。',
+    tags: ['漫画', '角色'],
+    sourceTitle: SOURCE_TITLE,
+    sourceUrl: SOURCE_URL,
+    sourceDate: SOURCE_DATE,
+  },
+  {
+    id: 'gpt-image-2-french-new-wave-poster',
+    model: 'gpt-image-2',
+    title: '电影海报',
+    images: ['/ai/prompts/images-2-french-poster.webp', '/ai/prompts/haibao2.png'],
+    promptEn:
+      '1960s French New Wave theatrical poster, bold photomontage composition, torn-paper collage sensibility, pop-art color bursts, high-contrast black-and-white imagery with selective red blue and yellow accents, hand-made offset-print texture, slightly off-register ink, expressive asymmetry, art-house poster cool, graphic spontaneity, street-poster energy, adventurous typography-led design.\n\nPoster text:\n- Large title at the bottom: "GPT Image 2.0"\n- Smaller headline at the top: "Image generation with a point of view"\n- Small footer text: "Coming soon"\n\nKeep all visible text in English. Use a theatrical poster composition.',
+    promptZh:
+      '1960 年代法国新浪潮电影海报，大胆的摄影拼贴构图，撕裂纸张的拼贴质感，波普艺术色彩迸发，高对比黑白影像搭配局部的红、蓝、黄点缀，手工胶印质感，略微套色不准的油墨，富有表现力的不对称构图，文艺片海报的酷感，图形的即兴感，街头海报的能量，以字体设计为核心的冒险式设计。\n\n海报文字：\n- 底部大标题："GPT Image 2.0"\n- 顶部较小标题："Image generation with a point of view"\n- 底部小字："Coming soon"\n\n所有可见文字保持英文。使用电影海报构图。',
+    tags: ['海报', '复古'],
+    sourceTitle: SOURCE_TITLE,
+    sourceUrl: SOURCE_URL,
+    sourceDate: SOURCE_DATE,
+  },
+  {
+    id: 'gpt-image-2-mid-century-pastel-comic',
+    model: 'gpt-image-2',
+    title: '中世纪风粉彩漫画',
+    images: ['/ai/prompts/images-2-miami-comic.webp'],
+    promptEn: 'A page of a comic book in the style of Mid-Century Pastel Comic Art',
+    promptZh:
+      '一页漫画，中世纪风粉彩漫画艺术风格。',
+    tags: ['漫画', '复古'],
+    sourceTitle: SOURCE_TITLE,
+    sourceUrl: SOURCE_URL,
+    sourceDate: SOURCE_DATE,
+  },
+  {
+    id: 'gpt-image-2-modern-indie-comic',
+    model: 'gpt-image-2',
+    title: '现代独立漫画',
+    images: ['/ai/prompts/images-2-indie-comic.webp'],
+    promptEn: 'A page of a comic book in the style of modern indie comic',
+    promptZh:
+      '一页漫画，现代独立漫画风格。',
+    tags: ['漫画', '艺术'],
+    sourceTitle: SOURCE_TITLE,
+    sourceUrl: SOURCE_URL,
+    sourceDate: SOURCE_DATE,
+  },
+  {
+    id: 'gpt-image-2-character-sheet',
+    model: 'gpt-image-2',
+    title: '角色设定表',
+    images: ['/ai/prompts/juese.webp'],
+    promptEn:
+      'Based on everything you know about me, make a character sheet of shonen-style anime character of me, name is adele',
+    promptZh:
+      '根据你所了解的关于我的一切信息，为我制作一张少年动漫风格的角色设定表，名字是 adele。',
+    tags: ['漫画', '角色'],
+    sourceTitle: SOURCE_TITLE,
+    sourceUrl: SOURCE_URL,
+    sourceDate: SOURCE_DATE,
+  },
+  {
+    id: 'gpt-image-2-studio-artifacts',
+    model: 'gpt-image-2',
+    title: '工作室素材',
+    images: ['/ai/prompts/gongzuoshi.webp'],
+    promptEn:
+      'calligraphy with the following text. it should be written using different food as an ingredient. (do not use too easy ingredients like beans)\n\n"GPT Image"\n\nyou should be careful/creative about how to use food as an ingredient for each letter. You should not distort food to fit in alphabet though, but it should naturally assemble or look like a letter. Prefer keeping originality/naturalness of real food over likeliness to alphabet. prefer assembling food naturally over distorting, cutting food into unnatural shape to look like a letter.\n\n=============================\n\nCreate a beautifully designed set of studio artifacts for the launch of GPT Image 2: printed review sheets, pinned proofs, contact prints, layout studies, notes, and small pieces of launch collateral. It should feel like the wall or table of a serious creative studio preparing for a major release, with restrained typography, believable details, and an elegant documentary-style realism.',
+    promptZh:
+      '用书法形式书写以下文字，使用不同的食物作为素材来构成字母。（不要使用太简单的食材比如豆子）\n\n"GPT Image"\n\n你应该谨慎且有创意地思考如何用食物来构成每个字母。不要为了让食物看起来像字母而将其扭曲变形，而是让食物自然地组合成或看起来像一个字母。优先保持食物本身的自然性和原貌，而非追求与字母的相似度。优先自然地组合食物，而非将食物切割成不自然的形状来模仿字母。\n\n=============================\n\n为 GPT Image 2 的发布创建一套精美设计的工作室素材：印刷审稿单、钉在墙上的校样、接触印相、版式研究、便签以及小型发布物料。整体感觉应该像一家严肃的创意工作室为重大发布做准备时的墙面或桌面，排版克制，细节真实可信，呈现优雅的纪实风格真实感。',
+    tags: ['品牌', '版式'],
+    sourceTitle: SOURCE_TITLE,
+    sourceUrl: SOURCE_URL,
+    sourceDate: SOURCE_DATE,
+  },
+  {
+    id: 'gpt-image-2-basketball-dunk-disassembly',
+    model: 'gpt-image-2',
+    title: '灌篮缩略',
+    images: ['/ai/prompts/images-2-manga-style_disassembly.webp'],
+    promptEn:
+      '"japanese-manga-style disassembly" of a basketball dunk shoot motion like a time lapse. Tell the most story through visuals rather than text. 3:1 utlrawide aspect ratio. prefer light background rather than dark. do not use japanese',
+    promptZh:
+      '用"日式漫画分解图"的方式呈现篮球扣篮动作的连续过程，如同延时摄影。尽量通过画面而非文字来讲述故事。3:1 超宽比例。偏好浅色背景而非深色。不要使用日文。',
+    tags: ['漫画', '角色'],
+    sourceTitle: SOURCE_TITLE,
+    sourceUrl: SOURCE_URL,
+    sourceDate: SOURCE_DATE,
+  },
+  {
+    id: 'gpt-image-2-art-deco-bookmark',
+    model: 'gpt-image-2',
+    title: '装饰艺术书签',
+    images: ['/ai/prompts/bookmark.webp'],
+    promptEn:
+      'i\'m opening a bookstore called \'tangerine books\' in toronto and would like to make a bookmark to print, that i give my shoppers. the aesthetic should be gorgeous art deco - colorful, retro, joyful, elegant. include print dimensions and margins. please include the address and phone number:\n\n88 Paper Lane\nToronto, ON M0X 2Z2\n(416) 555-0188\n\nOpen 7 days a week, 9am-9pm.\n\ninclude bleed, trim, and safe margin.',
+    promptZh:
+      '我正在多伦多开一家名为"Tangerine Books"的书店，想制作一张可印刷的书签赠送给顾客。美学风格应是华丽的装饰艺术——色彩丰富、复古、愉悦、优雅。包含印刷尺寸和边距。请包含地址和电话：\n\n88 Paper Lane\nToronto, ON M0X 2Z2\n(416) 555-0188\n\n每周七天营业，早 9 点至晚 9 点。\n\n包含出血线、裁切线和安全边距。',
+    tags: ['品牌', '复古'],
+    sourceTitle: SOURCE_TITLE,
+    sourceUrl: SOURCE_URL,
+    sourceDate: SOURCE_DATE,
+  },
+  {
+    id: 'gpt-image-2-chinese-landscape-painting',
+    model: 'gpt-image-2',
+    title: '中国画',
+    images: ['/ai/prompts/images-2-traditional-chinese-painting.webp'],
+    promptEn:
+      'Traditional long Chinese 山水画.Aspect ratio: Landscape 3:1',
+    promptZh:
+      '传统长幅中国山水画。画幅比例：横版 3:1。',
+    tags: ['艺术', '创意'],
+    sourceTitle: SOURCE_TITLE,
+    sourceUrl: SOURCE_URL,
+    sourceDate: SOURCE_DATE,
+  },
+  {
+    id: 'gpt-image-2-japanese-sticker-caricature',
+    model: 'gpt-image-2',
+    title: '讽刺漫画',
+    images: ['/ai/prompts/images-2-japanese-charicature.webp'],
+    promptEn:
+      'Use the input photos only for each person\'s identity. Redraw all 9 of us in one ultrawide image as very simple surreal Japanese sticker-style caricatures: long thin necks, small deadpan faces, minimal black outline, flat light coloring, almost no shading, very few facial details, simplified hair shapes, lots of white space, plain white background, slightly awkward and funny. Show all 9 of us naturally gathered around a giant sheet of paper on the floor, leaning over it from different sides in diverse drawing poses, all actively working together on the same single large drawing-in-progress on the paper, not separate little drawings, with exactly one drawn person per input person. the drawing on the paper should read as one coherent poster-like scene.',
+    promptZh:
+      '仅使用输入照片来确定每个人的身份。将我们 9 个人重绘在一张超宽图像中，使用非常简约的超现实日式贴纸风格漫画：细长脖子、小巧面无表情的脸、极简黑色轮廓、扁平浅色上色、几乎没有阴影、极少面部细节、简化的发型、大量留白、纯白背景、略带笨拙和滑稽感。展示我们 9 个人自然地围站在地板上一张大纸旁边，从不同方向俯身以各种绘画姿势，共同在同一张纸上完成一幅正在绘制中的大型画作，而非各自分开的小画，每个输入人物对应一个绘制角色。纸上的画作应呈现为一幅连贯的海报式场景。',
+    tags: ['漫画', '超现实'],
+    sourceTitle: SOURCE_TITLE,
+    sourceUrl: SOURCE_URL,
+    sourceDate: SOURCE_DATE,
+  },
+  {
+    id: 'gpt-image-2-storybook-winding-path',
+    model: 'gpt-image-2',
+    title: '故事书',
+    images: ['/ai/prompts/images-2-storybook.webp'],
+    promptEn:
+      'a really tall and narrow photo where there\'s a winding path that goes through children storybook like characters and phrases like "not yet" until it arrives at a satisfying conclusion at the bottom. it should be on a white background and the path should be a really thin winding solid black line',
+    promptZh:
+      '一张非常又高又窄的图片，画面中有一条蜿蜒的路径穿过童话书般的角色和诸如"还没到"之类的短语，最终在底部抵达一个令人满意的结局。白色背景，路径应是一条非常细的蜿蜒实心黑线。',
+    tags: ['创意', '版式'],
+    sourceTitle: SOURCE_TITLE,
+    sourceUrl: SOURCE_URL,
+    sourceDate: SOURCE_DATE,
+  },
+  {
+    id: 'gpt-image-2-2025-design-trends-poster',
+    model: 'gpt-image-2',
+    title: '2025 设计趋势',
+    images: ['/ai/prompts/images-2-wheat-trends.webp'],
+    promptEn:
+      'make an wheatpaste poster of the 6 biggest design trends in 2025 . make sure each pane is the same size.',
+    promptZh:
+      '制作一张浆糊海报，展示 2025 年最大的 6 个设计趋势。确保每个面板大小相同。',
+    tags: ['海报', '版式'],
+    sourceTitle: SOURCE_TITLE,
+    sourceUrl: SOURCE_URL,
+    sourceDate: SOURCE_DATE,
+  },
+  {
+    id: 'gpt-image-2-color-analysis',
+    model: 'gpt-image-2',
+    title: '色彩分析',
+    images: ['/ai/prompts/images-2-color-analysis.webp'],
+    promptEn:
+      'Using this portrait, create a diagram-first personal color analysis. Show which clothing colors suit the subject through visual comparison. Keep text minimal and avoid paragraphs.',
+    promptZh:
+      '使用这张肖像照，创建一张以图表为主的个人色彩分析。通过视觉对比展示哪些服装颜色适合照片中的人。保持文字最少，避免段落。',
+    tags: ['信息图', '教育'],
+    sourceTitle: SOURCE_TITLE,
+    sourceUrl: SOURCE_URL,
+    sourceDate: SOURCE_DATE,
+  },
+  {
+    id: 'gpt-image-2-capybara-otter-comic',
+    model: 'gpt-image-2',
+    title: '四页漫画',
+    images: ['/ai/prompts/siye.webp'],
+    promptEn:
+      'make a four-page american retro comic about a capybara and a sea otter who are friends and go on a trip to the south of france together',
+    promptZh:
+      '制作一篇四页的美国复古漫画，讲述一只水豚和一只海獭是好朋友，一起前往法国南部旅行的故事。',
+    tags: ['漫画', '复古'],
+    sourceTitle: SOURCE_TITLE,
+    sourceUrl: SOURCE_URL,
+    sourceDate: SOURCE_DATE,
+  },
+  {
+    id: 'gpt-image-2-academic-paper-poster',
+    model: 'gpt-image-2',
+    title: 'GPT 分析',
+    images: ['/ai/prompts/images-2-academic-poster.webp'],
+    promptEn:
+      'Please make a landscape academic paper poster based on the uploaded PDF file. Remember to include important charts/diagrams/plots from the source.',
+    promptZh:
+      '请根据上传的 PDF 文件制作一张横版学术论文海报。记得包含来源中的重要图表/示意图/数据图。',
+    tags: ['信息图', '教育'],
+    sourceTitle: SOURCE_TITLE,
+    sourceUrl: SOURCE_URL,
+    sourceDate: SOURCE_DATE,
+  },
+  {
+    id: 'gpt-image-2-thinking-mode-searches',
+    model: 'gpt-image-2',
+    title: '做周边',
+    images: ['/ai/prompts/images-2-thinking-mode-searches.webp'],
+    promptEn:
+      'Search for the merch in OpenAI supply co website and make a professional poster displaying our merch in a nice layout. The title of the poster should be "Thinking Mode Searches". Along the title there is a subtitle "With thinking mode, the model can automatically browse the internet and find relevant contents for reference." Below that, add a caption for the images below: "Prompt: Make a poster about OpenAI merch available on the official website right now." Aspect ratio: 4:5 portrait.',
+    promptZh:
+      '搜索 OpenAI Supply Co 网站上的周边商品，制作一张专业海报，以精美的布局展示我们的周边商品。海报标题应为"Thinking Mode Searches"。标题旁有副标题"With thinking mode, the model can automatically browse the internet and find relevant contents for reference."在下方添加图片说明："Prompt: Make a poster about OpenAI merch available on the official website right now."画幅比例：竖版 4:5。',
+    tags: ['海报', '品牌'],
+    sourceTitle: SOURCE_TITLE,
+    sourceUrl: SOURCE_URL,
+    sourceDate: SOURCE_DATE,
+  },
+  {
+    id: 'gpt-image-2-visual-proof-blackboard',
+    model: 'gpt-image-2',
+    title: '视觉佐证',
+    images: ['/ai/prompts/shijue.webp'],
+    promptEn:
+      'a 35mm film photograph of a blackboard in a classroom, and on the blackboard is a visual proof of sum of odd numbers is a square. there is a title "Thinking Mode On" before the math proof. Aspect Ratio: 4:5 portrait.',
+    promptZh:
+      '一张 35mm 胶片照片，拍摄教室里的一块黑板，黑板上是一个关于奇数之和为完全平方数的可视化证明。数学证明前有标题"Thinking Mode On"。画幅比例：竖版 4:5。',
+    tags: ['教育', '胶片'],
+    sourceTitle: SOURCE_TITLE,
+    sourceUrl: SOURCE_URL,
+    sourceDate: SOURCE_DATE,
   },
 ]

@@ -2,28 +2,28 @@
 import { computed, ref, watch } from 'vue'
 
 import type {
-  PromptLibraryItem,
-  PromptLibraryModel,
-  PromptModelId,
-} from '../../../AI/prompts/data'
+  PaperPromptLibraryItem,
+  PaperPromptLibraryModel,
+  PaperPromptModelId,
+} from '../../../AI/paper-prompts/data'
 import {
-  filterPromptItems,
-  getPromptPrimaryTags,
-  isModelAvailable,
-  type PromptFilterTagId,
-} from '../composables/usePromptLibrary'
+  filterPaperPromptItems,
+  getPaperPromptPrimaryTags,
+  isPaperModelAvailable,
+  type PaperPromptFilterTagId,
+} from '../composables/usePaperPromptLibrary'
 import MPromptCard from './MPromptCard.vue'
 import MPromptDialog from './MPromptDialog.vue'
 import MPromptFilterTabs from './MPromptFilterTabs.vue'
 
 const props = defineProps<{
-  models: PromptLibraryModel[]
-  items: PromptLibraryItem[]
+  models: PaperPromptLibraryModel[]
+  items: PaperPromptLibraryItem[]
 }>()
 
-const activeModel = ref<PromptModelId>(props.models[0]?.id ?? 'gpt-image-2')
-const activeTag = ref<PromptFilterTagId>('all')
-const activeItem = ref<PromptLibraryItem | null>(null)
+const activeModel = ref<PaperPromptModelId>(props.models[0]?.id ?? 'gpt-5-5')
+const activeTag = ref<PaperPromptFilterTagId>('all')
+const activeItem = ref<PaperPromptLibraryItem | null>(null)
 
 watch(activeModel, () => {
   activeTag.value = 'all'
@@ -40,18 +40,18 @@ const modelTabs = computed(() =>
 )
 
 const tagTabs = computed(() =>
-  getPromptPrimaryTags(activeModel.value, props.items).map((tag) => ({
+  getPaperPromptPrimaryTags(activeModel.value, props.items).map((tag) => ({
     id: tag,
     label: tag === 'all' ? '全部' : tag,
   })),
 )
 
 const visibleItems = computed(() =>
-  filterPromptItems(activeModel.value, activeTag.value, props.items),
+  filterPaperPromptItems(activeModel.value, activeTag.value, props.items),
 )
 
 const activeModelAvailable = computed(() =>
-  isModelAvailable(activeModel.value, props.models),
+  isPaperModelAvailable(activeModel.value, props.models),
 )
 </script>
 

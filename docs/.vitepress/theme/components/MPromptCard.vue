@@ -2,7 +2,7 @@
 import type { PromptLibraryItem } from '../../../AI/prompts/data'
 
 defineProps<{
-  item: PromptLibraryItem
+  item: PromptLibraryItem & { images?: string[] }
 }>()
 
 const emit = defineEmits<{
@@ -16,7 +16,7 @@ const emit = defineEmits<{
     data-test="prompt-card"
     @click="emit('select', item)"
   >
-    <img class="cover" :src="item.image" :alt="item.title" />
+    <img v-if="item.images?.length" class="cover no-zoom" :src="item.images[0]" :alt="item.title" />
     <div class="body">
       <h3 data-test="prompt-card-title">{{ item.title }}</h3>
       <div class="tags">

@@ -1,39 +1,33 @@
 import type {
-  PromptCategoryId,
   PromptLibraryItem,
   PromptLibraryModel,
   PromptModelId,
+  PromptPrimaryTagId,
 } from '../../../AI/prompts/data'
+import { PROMPT_PRIMARY_TAGS } from '../../../AI/prompts/data'
 
-const CATEGORY_ORDER: Array<'all' | PromptCategoryId> = [
-  'all',
-  'portrait',
-  'landscape',
-  'poster',
-  'manga',
-  'infographic',
-  'brand-visual',
-  'education',
-  'layout-experiment',
-]
+export type PromptFilterTagId = 'all' | PromptPrimaryTagId
 
 export function isModelAvailable(modelId: PromptModelId, models: PromptLibraryModel[]) {
   return models.some((model) => model.id === modelId && model.available)
 }
 
-export function getPromptCategories(modelId: PromptModelId, items: PromptLibraryItem[]) {
-  const activeCategories = new Set(
-    items.filter((item) => item.model === modelId).map((item) => item.category),
+export function getPromptPrimaryTags(modelId: PromptModelId, items: PromptLibraryItem[]) {
+  const activeTags = new Set(
+    items
+      .filter((item) => item.model === modelId)
+      .flatMap((item) => item.tags)
+      .filter((tag): tag is PromptPrimaryTagId =>
+        PROMPT_PRIMARY_TAGS.includes(tag as PromptPrimaryTagId),
+      ),
   )
 
-  return CATEGORY_ORDER.filter(
-    (category) => category === 'all' || activeCategories.has(category),
-  )
+  return ['all', ...PROMPT_PRIMARY_TAGS.filter((tag) => activeTags.has(tag))]
 }
 
 export function filterPromptItems(
   modelId: PromptModelId,
-  categoryId: 'all' | PromptCategoryId,
+  tagId: PromptFilterTagId,
   items: PromptLibraryItem[],
 ) {
   return items.filter((item) => {
@@ -41,6 +35,6 @@ export function filterPromptItems(
       return false
     }
 
-    return categoryId === 'all' ? true : item.category === categoryId
+    return tagId === 'all' ? true : item.tags.includes(tagId)
   })
 }

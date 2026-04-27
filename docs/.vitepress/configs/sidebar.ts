@@ -21,9 +21,22 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
   ],
   '/AI/prompts/': [
     {
-      text: 'AI 图片提示词库',
+      text: 'AI 提示词库',
       collapsed: false,
-      items: [{ text: 'AI 图片提示词库', link: '/AI/prompts/' }]
+      items: [
+        { text: '图片提示词库', link: '/AI/prompts/' },
+        { text: '论文提示词库', link: '/AI/paper-prompts/' }
+      ]
+    }
+  ],
+  '/AI/paper-prompts/': [
+    {
+      text: 'AI 提示词库',
+      collapsed: false,
+      items: [
+        { text: '图片提示词库', link: '/AI/prompts/' },
+        { text: '论文提示词库', link: '/AI/paper-prompts/' }
+      ]
     }
   ],
   '/me/': [
