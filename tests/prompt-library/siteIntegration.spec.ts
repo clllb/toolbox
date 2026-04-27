@@ -9,9 +9,9 @@ import { sidebar } from '../../docs/.vitepress/configs/sidebar'
 const homeSource = readFileSync(resolve(__dirname, '../../docs/index.md'), 'utf-8')
 
 describe('prompt library site integration', () => {
-  it('adds a homepage card that links to /AI/prompts/', () => {
-    expect(homeSource).toContain('AI 图片提示词库')
-    expect(homeSource).toContain('link: /AI/prompts/')
+  it('adds a homepage card that links to /AI/prompts/image/', () => {
+    expect(homeSource).toContain('AI 提示词库')
+    expect(homeSource).toContain('link: /AI/prompts/image/')
   })
 
   it('adds the prompt library to the AI nav menu', () => {
@@ -20,14 +20,15 @@ describe('prompt library site integration', () => {
     expect(
       aiNav?.items?.some(
         (item) =>
-          item.text === 'AI图片提示词库' && item.link === '/AI/prompts/',
+          item.text === 'AI提示词库' && item.link === '/AI/prompts/image/',
       ),
     ).toBe(true)
   })
 
   it('adds a sidebar section for /AI/prompts/', () => {
     expect(sidebar['/AI/prompts/'][0].items).toEqual([
-      { text: 'AI 图片提示词库', link: '/AI/prompts/' },
+      { text: '图片提示词库', link: '/AI/prompts/image/' },
+      { text: '论文提示词库', link: '/AI/prompts/paper/' },
     ])
   })
 })

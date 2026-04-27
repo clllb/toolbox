@@ -5,7 +5,7 @@ import type {
   PromptLibraryItem,
   PromptLibraryModel,
   PromptModelId,
-} from '../../../AI/prompts/data'
+} from '../../../AI/prompts/image/data'
 import {
   filterPromptItems,
   getPromptPrimaryTags,

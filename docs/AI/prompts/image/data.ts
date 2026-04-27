@@ -50,10 +50,26 @@ const SOURCE_TITLE = 'ChatGPT官方提示词'
 const SOURCE_URL = 'https://openai.com/zh-Hant/index/introducing-chatgpt-images-2-0/'
 const SOURCE_DATE = '2026-04-21'
 
+const GH_SOURCE_DATE = '2026-04-27'
+
 // `tags` 同时用于顶部筛选和卡片展示。
 // 顶部筛选只使用 `PROMPT_PRIMARY_TAGS`，其余标签作为辅助信息展示在卡片中。
 // 每个案例保持 2-3 个概括型标签即可，避免写成一次性的细节描述。
 export const PROMPT_LIBRARY_ITEMS: PromptLibraryItem[] = [
+  {
+    id: 'gpt-image-2-urban-metabolism-atlas',
+    model: 'gpt-image-2',
+    title: '城市生命系统图谱',
+    images: ['/ai/prompts/case1.webp'],
+    promptEn:
+      'Vertical 9:16 isometric cutaway infographic "城市生命系统图谱 / Urban Metabolism Atlas". Smart city from sky to bedrock: skyscrapers, streets, subway, utility tunnels, water/sewage/gas/heating pipes, fiber, data center, flood tanks, aquifers, geothermal wells, bedrock. Color-coded flows for power/water/data/traffic/waste. 12 numbered panels bilingual CN/EN: 能源/水循环/交通/数据/垃圾/建筑/公共服务/物流/气候韧性/生态/地质/治理看板. 24h timeline at bottom. Style: engineering white paper + scientific atlas, light paper bg, crisp lines, 8K. No cyberpunk, no gibberish text, must show both above AND below ground.',
+    promptZh:
+      '竖版 9:16 等距剖面信息图"城市生命系统图谱"。从天空到基岩的智慧城市：摩天大楼、街道、地铁、综合管廊、给排水/燃气/供暖管道、光纤、数据中心、蓄洪池、含水层、地热井、基岩。用颜色编码展示电力/水/数据/交通/废物流。12个编号面板，中英双语：能源/水循环/交通/数据/垃圾/建筑/公共服务/物流/气候韧性/生态/地质/治理看板。底部24小时时间轴。风格：工程白皮书 + 科学报图，浅色纸张背景，精细线条，8K。不要赛博朋克风格，不要乱码文字，必须同时展示地上和地下。',
+    tags: ['信息图', '创意'],
+    sourceTitle: '小红书号insight_express',
+    sourceUrl: 'https://github.com/freestylefly/awesome-gpt-image-2/blob/main/docs/gallery-part-1.md#case-1',
+    sourceDate: GH_SOURCE_DATE,
+  },
   {
     id: 'gpt-image-2-chatgpt-interface-screenshot',
     model: 'gpt-image-2',

@@ -24,18 +24,8 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       text: 'AI 提示词库',
       collapsed: false,
       items: [
-        { text: '图片提示词库', link: '/AI/prompts/' },
-        { text: '论文提示词库', link: '/AI/paper-prompts/' }
-      ]
-    }
-  ],
-  '/AI/paper-prompts/': [
-    {
-      text: 'AI 提示词库',
-      collapsed: false,
-      items: [
-        { text: '图片提示词库', link: '/AI/prompts/' },
-        { text: '论文提示词库', link: '/AI/paper-prompts/' }
+        { text: '图片提示词库', link: '/AI/prompts/image/' },
+        { text: '论文提示词库', link: '/AI/prompts/paper/' }
       ]
     }
   ],

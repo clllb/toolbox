@@ -3,8 +3,8 @@ import type {
   PromptLibraryModel,
   PromptModelId,
   PromptPrimaryTagId,
-} from '../../../AI/prompts/data'
-import { PROMPT_PRIMARY_TAGS } from '../../../AI/prompts/data'
+} from '../../../AI/prompts/image/data'
+import { PROMPT_PRIMARY_TAGS } from '../../../AI/prompts/image/data'
 
 export type PromptFilterTagId = 'all' | PromptPrimaryTagId
 

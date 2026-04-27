@@ -4,7 +4,7 @@ outline: [2, 3]
 ---
 
 <script setup lang="ts">
-import MPromptLibrary from '../../.vitepress/theme/components/MPromptLibrary.vue'
+import MPromptLibrary from '../../../.vitepress/theme/components/MPromptLibrary.vue'
 import { PROMPT_LIBRARY_ITEMS, PROMPT_LIBRARY_MODELS } from './data'
 </script>
 

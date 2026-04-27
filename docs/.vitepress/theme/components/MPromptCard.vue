@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { PromptLibraryItem } from '../../../AI/prompts/data'
+import type { PromptLibraryItem } from '../../../AI/prompts/image/data'
 
 defineProps<{
   item: PromptLibraryItem & { images?: string[] }

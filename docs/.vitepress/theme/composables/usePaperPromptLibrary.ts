@@ -3,8 +3,8 @@ import type {
   PaperPromptLibraryModel,
   PaperPromptModelId,
   PaperPromptPrimaryTagId,
-} from '../../../AI/paper-prompts/data'
-import { PAPER_PROMPT_PRIMARY_TAGS } from '../../../AI/paper-prompts/data'
+} from '../../../AI/prompts/paper/data'
+import { PAPER_PROMPT_PRIMARY_TAGS } from '../../../AI/prompts/paper/data'
 
 export type PaperPromptFilterTagId = 'all' | PaperPromptPrimaryTagId
 

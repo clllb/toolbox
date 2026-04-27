@@ -2,7 +2,7 @@ import { mount } from '@vue/test-utils'
 import { describe, expect, it } from 'vitest'
 
 import MPromptLibrary from '../../docs/.vitepress/theme/components/MPromptLibrary.vue'
-import { PROMPT_LIBRARY_ITEMS, PROMPT_LIBRARY_MODELS } from '../../docs/AI/prompts/data'
+import { PROMPT_LIBRARY_ITEMS, PROMPT_LIBRARY_MODELS } from '../../docs/AI/prompts/image/data'
 
 const TAG_DRIVEN_ITEMS = [
   {
@@ -74,7 +74,7 @@ describe('MPromptLibrary', () => {
 
     await wrapper.get('[data-test="prompt-card"]').trigger('click')
 
-    expect(wrapper.get('[data-test="prompt-dialog-title"]').text()).toContain('使用者界面截图')
+    expect(wrapper.get('[data-test="prompt-dialog-title"]').text()).toContain('城市生命系统图谱')
     expect(wrapper.text()).toContain('English Prompt')
   })
 

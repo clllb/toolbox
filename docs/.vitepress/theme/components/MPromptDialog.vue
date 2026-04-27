@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue'
 
-import type { PromptLibraryItem } from '../../../AI/prompts/data'
+import type { PromptLibraryItem } from '../../../AI/prompts/image/data'
 
 const props = defineProps<{
   item: (PromptLibraryItem & { images?: string[] }) | null
@@ -116,9 +116,10 @@ function copy(text: string, flag: 'en' | 'zh') {
         </section>
       </div>
       <footer>
-        <a :href="item.sourceUrl" target="_blank" rel="noreferrer">
+        <a v-if="item.sourceUrl" :href="item.sourceUrl" target="_blank" rel="noreferrer">
           {{ item.sourceTitle }}
         </a>
+        <span v-else>{{ item.sourceTitle }}</span>
         <span> · {{ item.sourceDate }}</span>
       </footer>
     </div>

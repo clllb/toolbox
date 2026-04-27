@@ -5,7 +5,7 @@ import type {
   PaperPromptLibraryItem,
   PaperPromptLibraryModel,
   PaperPromptModelId,
-} from '../../../AI/paper-prompts/data'
+} from '../../../AI/prompts/paper/data'
 import {
   filterPaperPromptItems,
   getPaperPromptPrimaryTags,

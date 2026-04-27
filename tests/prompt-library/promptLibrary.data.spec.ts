@@ -4,7 +4,7 @@ import {
   PROMPT_LIBRARY_ITEMS,
   PROMPT_LIBRARY_MODELS,
   PROMPT_PRIMARY_TAGS,
-} from '../../docs/AI/prompts/data'
+} from '../../docs/AI/prompts/image/data'
 import {
   filterPromptItems,
   getPromptPrimaryTags,

@@ -51,7 +51,7 @@ features:
   - icon: 🖼️
     title: AI 提示词库
     details: 包含：图片提示词、论文提示词<br />支持查看样式图、中英双语提示词与一键复制
-    link: /AI/prompts/
+    link: /AI/prompts/image/
     linkText: 进入词库
   - icon: 🆕
     title: 公众号杂谈
