@@ -8,7 +8,7 @@ import type {
 } from '../../../AI/prompts/image/data'
 import {
   filterPromptItems,
-  getPromptPrimaryTags,
+  getPromptTags,
   isModelAvailable,
   type PromptFilterTagId,
 } from '../composables/usePromptLibrary'
@@ -40,7 +40,7 @@ const modelTabs = computed(() =>
 )
 
 const tagTabs = computed(() =>
-  getPromptPrimaryTags(activeModel.value, props.items).map((tag) => ({
+  getPromptTags(activeModel.value, props.items).map((tag) => ({
     id: tag,
     label: tag === 'all' ? '全部' : tag,
   })),
@@ -67,6 +67,7 @@ const activeModelAvailable = computed(() =>
       v-if="activeModelAvailable"
       v-model="activeTag"
       :items="tagTabs"
+      :max-visible="9"
       test-prefix="tag-tab"
     />
 

@@ -2,27 +2,27 @@ import type {
   PromptLibraryItem,
   PromptLibraryModel,
   PromptModelId,
-  PromptPrimaryTagId,
+  PromptTagId,
 } from '../../../AI/prompts/image/data'
-import { PROMPT_PRIMARY_TAGS } from '../../../AI/prompts/image/data'
+import { PROMPT_TAGS } from '../../../AI/prompts/image/data'
 
-export type PromptFilterTagId = 'all' | PromptPrimaryTagId
+export type PromptFilterTagId = 'all' | PromptTagId
 
 export function isModelAvailable(modelId: PromptModelId, models: PromptLibraryModel[]) {
   return models.some((model) => model.id === modelId && model.available)
 }
 
-export function getPromptPrimaryTags(modelId: PromptModelId, items: PromptLibraryItem[]) {
+export function getPromptTags(modelId: PromptModelId, items: PromptLibraryItem[]) {
   const activeTags = new Set(
     items
       .filter((item) => item.model === modelId)
       .flatMap((item) => item.tags)
-      .filter((tag): tag is PromptPrimaryTagId =>
-        PROMPT_PRIMARY_TAGS.includes(tag as PromptPrimaryTagId),
+      .filter((tag): tag is PromptTagId =>
+        PROMPT_TAGS.includes(tag as PromptTagId),
       ),
   )
 
-  return ['all', ...PROMPT_PRIMARY_TAGS.filter((tag) => activeTags.has(tag))]
+  return ['all', ...PROMPT_TAGS.filter((tag) => activeTags.has(tag))]
 }
 
 export function filterPromptItems(

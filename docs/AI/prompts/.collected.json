@@ -1,0 +1,376 @@
+{
+  "lastUpdated": "2026-04-28",
+  "sources": [
+    {
+      "url": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "fetchedAt": "2026-04-27",
+      "totalFound": 58,
+      "totalCollected": 54,
+      "totalSkipped": 48,
+      "remaining": 0
+    }
+  ],
+  "collected": [
+    {
+      "id": "gpt-image-2-boston-spring-city-poster",
+      "promptZh": "一张引人注目的 2026 春季波士顿城市海报...",
+      "sourceUrl": "https://x.com/BubbleBrain/status/2045358053831172358",
+      "collectedAt": "2026-04-27"
+    },
+    {
+      "id": "gpt-image-2-vintage-amalfi-travel-poster",
+      "promptZh": "现代铅笔插画风格的阿马尔菲海岸复古旅行海报...",
+      "sourceUrl": "https://x.com/WolfRiccardo/status/2044562722491121718",
+      "collectedAt": "2026-04-27"
+    },
+    {
+      "id": "gpt-image-2-chengdu-food-map-illustration",
+      "promptZh": "一张手绘风格的城市美食地图，以成都为主题...",
+      "sourceUrl": "https://x.com/Panda20230902/status/2045396918965285111",
+      "collectedAt": "2026-04-27"
+    },
+    {
+      "id": "gpt-image-2-chinese-s-shaped-poster",
+      "promptZh": "极简新中式美学风格，画面以淡雅的灰白色为底...",
+      "sourceUrl": "https://x.com/liyue_ai/status/2045368305079447853",
+      "collectedAt": "2026-04-27"
+    },
+    {
+      "id": "gpt-image-2-guangzhou-spring-city-poster",
+      "promptZh": "一张充满新春喜庆氛围但不失高雅格调的 2026 城市宣传海报...",
+      "sourceUrl": "https://x.com/liyue_ai/status/2045332620352119274",
+      "collectedAt": "2026-04-27"
+    },
+    {
+      "id": "gpt-image-2-doodle-sketch-ai-builder",
+      "promptZh": "以涂鸦速写风表现【一个厉害的AI builder】...",
+      "sourceUrl": "https://x.com/blanplan/status/2045190582453350748",
+      "collectedAt": "2026-04-27"
+    },
+    {
+      "id": "gpt-image-2-song-dynasty-social-media",
+      "promptZh": "宋朝人的朋友圈...",
+      "sourceUrl": "https://x.com/Panda20230902/status/2045385588065313057",
+      "collectedAt": "2026-04-27"
+    },
+    {
+      "id": "gpt-image-2-museum-hanfu-infographic",
+      "promptZh": "请根据【主题】自动生成一张博物馆图鉴式中文拆解信息图...",
+      "sourceUrl": "https://x.com/MrLarus/status/2045504669401653414",
+      "collectedAt": "2026-04-27"
+    },
+    {
+      "id": "gpt-image-2-cosplayer-phone-screenshot",
+      "promptZh": "生成一张竖版手机截图风格的图片...",
+      "sourceUrl": "https://x.com/Zoulinshen/status/2045082518089810073",
+      "collectedAt": "2026-04-27"
+    },
+    {
+      "id": "gpt-image-2-persona5-character-card",
+      "promptZh": "基于此角色和背景，请制作一份类似官方设定资料的角色资料卡...",
+      "sourceUrl": "https://x.com/iamrednightS/status/2045075682837836265",
+      "collectedAt": "2026-04-27"
+    },
+    {
+      "id": "gpt-image-2-qiongqi-eastern-aesthetics-poster",
+      "promptZh": "极简主义，新中式风格立体图形设计...",
+      "sourceUrl": "https://x.com/liyue_ai/status/2045506567735558336",
+      "collectedAt": "2026-04-27"
+    },
+    {
+      "id": "gpt-image-2-guangzhou-paper-cut-city-poster",
+      "promptZh": "以珠江新城现代都市景观为灵感的剪纸艺术...",
+      "sourceUrl": "https://x.com/liyue_ai/status/2045527750606487877",
+      "collectedAt": "2026-04-27"
+    },
+    {
+      "id": "gpt-image-2-dreamy-watercolor-editorial",
+      "promptZh": "梦幻水彩插画风格绘制[主题]...",
+      "sourceUrl": "https://x.com/hmontilla_/status/2045513933096636575",
+      "collectedAt": "2026-04-27"
+    },
+    {
+      "id": "gpt-image-2-silhouette-universe-narrative-poster",
+      "promptZh": "请根据【主题：xxx】自动生成一张高审美的轮廓宇宙收藏版叙事海报...",
+      "sourceUrl": "https://x.com/MrLarus/status/2045418028733538620",
+      "collectedAt": "2026-04-27"
+    },
+    {
+      "id": "gpt-image-2-multi-platform-screenshots",
+      "promptZh": "生成视频号内容截图...",
+      "sourceUrl": "https://x.com/MrLarus/status/2045373105041007013",
+      "collectedAt": "2026-04-27"
+    },
+    {
+      "id": "gpt-image-2-liu-yifei-douyin-livestream",
+      "promptZh": "9:16 的图片比例，生成一张抖音直播的截图...",
+      "sourceUrl": "https://x.com/alanblogsooo/status/2044784762594918516",
+      "collectedAt": "2026-04-27"
+    },
+    {
+      "id": "gpt-image-2-king-taejo-x-page",
+      "promptZh": "请制作朝鲜太祖李成桂的X页面...",
+      "sourceUrl": "https://x.com/SKA_Neotype/status/2044637900978217334",
+      "collectedAt": "2026-04-27"
+    },
+    {
+      "id": "gpt-image-2-convenience-store-neon-portrait",
+      "promptZh": "35mm胶片摄影风格，便利店内部荧光灯与外部彩色霓虹灯交织...",
+      "sourceUrl": "https://x.com/BubbleBrain/status/2045167461147042202",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-cinematic-minimal-portrait",
+      "promptZh": "生成一张电影感极简人像...",
+      "sourceUrl": "https://x.com/iam_miharbi/status/2045151354679665101",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-japanese-onsen-ryokan-portrait",
+      "promptZh": "35mm胶片摄影，温暖的复古日式温泉旅馆美学...",
+      "sourceUrl": "https://x.com/BubbleBrain/status/2045092449803284923",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-35mm-flash-editorial-portrait",
+      "promptZh": "35mm彩色胶片摄影，刺眼的机顶直射闪光灯...",
+      "sourceUrl": "https://x.com/BubbleBrain/status/2045052982728016131",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-mirror-selfie-bedroom-portrait",
+      "promptZh": "一位令人惊艳的18岁中国女孩...",
+      "sourceUrl": "https://x.com/Shinning1010/status/2045002808903020962",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-soft-airy-35mm-portrait",
+      "promptZh": "模拟35mm胶片摄影，柔和通透日系美学...",
+      "sourceUrl": "https://x.com/BubbleBrain/status/2046115431144902732",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-urban-turn-back-street-portrait",
+      "promptZh": "该画面为中近景，采用平视镜头...",
+      "sourceUrl": "https://x.com/Tz_2022/status/2045892003775361198",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-korean-idol-3x3-grid-portrait",
+      "promptZh": "竖版9:16，韩国偶像人像摄影...",
+      "sourceUrl": "https://x.com/BubbleBrain/status/2046268941941850575",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-ccd-flash-korean-idol",
+      "promptZh": "手机照片风格，老式CCD相机美学...",
+      "sourceUrl": "https://x.com/BubbleBrain/status/2046190539213885806",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-korean-idol-3x3-collage-portrait",
+      "promptZh": "竖版9:16，韩国偶像人像摄影3x3拼贴...",
+      "sourceUrl": "https://x.com/BubbleBrain/status/2046151898621993364",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-soft-black-mist-editorial-portrait",
+      "promptZh": "竖版9:16，编辑人像，单人...",
+      "sourceUrl": "https://x.com/BubbleBrain/status/2046434670724907395",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-fujifilm-strawberry-school-portrait",
+      "promptZh": "竖版9:16，日式富士胶片风格人像...",
+      "sourceUrl": "https://x.com/BubbleBrain/status/2046483268019884384",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-soft-black-mist-idol-portrait",
+      "promptZh": "竖版9:16，韩国偶像人像摄影...",
+      "sourceUrl": "https://x.com/BubbleBrain/status/2046518189509734903",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-vintage-newspaper-front-page",
+      "promptZh": "创建最逼真的复古报纸头版设计...",
+      "sourceUrl": "https://x.com/Naiknelofar788/status/2047207812800147647",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-travel-magazine-feature",
+      "promptZh": "创建杂志专题文章[旅行]导览页面...",
+      "sourceUrl": "https://x.com/andis13/status/2047204384811921764",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-photo-json-prompt-rebuild",
+      "promptZh": "分析这张照片并给我一个详细的JSON...",
+      "sourceUrl": "https://x.com/pavellaslov/status/2047182214304055339",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-green-tea-product-photography",
+      "promptZh": "舒缓绿茶胶片套装正面展示...",
+      "sourceUrl": "https://x.com/ZaraIrahh/status/2047180061657452601",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-strawberry-ice-cream-product",
+      "promptZh": "超写实产品摄影，浓郁草莓软冰淇淋...",
+      "sourceUrl": "https://x.com/ZaraIrahh/status/2047179916161212542",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-ultra-realistic-dslr-portrait",
+      "promptZh": "超写实电影感DSLR人像摄影，18岁英俊年轻男性...",
+      "sourceUrl": "https://x.com/harboriis/status/2047175250761433416",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-night-bodega-musician-portrait",
+      "promptZh": "一张纪实风格的杂志封面品质抓拍照片...",
+      "sourceUrl": "https://x.com/commanderdgr8/status/2047934886124867684",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-old-delhi-sweet-shop-documentary",
+      "promptZh": "创建一张照片级写实的旅行纪实图像...",
+      "sourceUrl": "https://x.com/commanderdgr8/status/2047889839123521635",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-cyberpunk-sci-fi-side-portrait",
+      "promptZh": "电影感侧面人像，一位粗犷的男性...",
+      "sourceUrl": "https://x.com/iamsofiaijaz/status/2047882171336253928",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-bedroom-voice-note-portrait",
+      "promptZh": "一位真实的年轻女性在傍晚柔和的卧室光线中...",
+      "sourceUrl": "https://x.com/ChillaiKalan__/status/2047862141894681076",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-toddler-crayon-scribble-portrait",
+      "promptZh": "（主体）以超级糟糕的儿童画风格呈现...",
+      "sourceUrl": "https://x.com/akakageAI/status/2047812983389356276",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-restored-vintage-mother-child-portrait",
+      "promptZh": "一张修复后的复古家庭快照...",
+      "sourceUrl": "https://x.com/gdb/status/2048184797374325031",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-dreamy-backlit-editorial-portrait",
+      "promptZh": "电影感柔焦人像，从背后和侧面拍摄女性...",
+      "sourceUrl": "https://x.com/ToroJushiAi/status/2048139425465467248",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-3d-cartoon-character-render",
+      "promptZh": "高品质 3D CGI 渲染，以迷人卡通风格呈现角色...",
+      "sourceUrl": "https://x.com/Inshrah_ali_/status/2048121503367995753",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-staircase-sequin-dress-portrait",
+      "promptZh": "竖版 2:3 比例。年轻女性头发凌乱盘起...",
+      "sourceUrl": "https://x.com/XSydneyFan/status/2048114180906217566",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-cozy-cafe-anime-maid-portrait",
+      "promptZh": "精致动漫风格肖像，金发 VTuber 灵感女仆...",
+      "sourceUrl": "https://x.com/yume00112211/status/2048072808606089230",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-dreamy-oriental-female-portrait",
+      "promptZh": "梦幻东方女性人像，成年女性近景肖像...",
+      "sourceUrl": "https://x.com/liyue_ai/status/2048046253842559183",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-hermes-style-monochrome-avatar",
+      "promptZh": "极简黑白矢量头像标志，神话动漫女性优雅侧脸...",
+      "sourceUrl": "https://x.com/jiajia232016/status/2048044100793032976",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-pastel-lavender-anime-portrait",
+      "promptZh": "精致竖版动漫肖像，梦幻少女在空灵粉彩薰衣草色调中...",
+      "sourceUrl": "https://x.com/libearal/status/2048026376645861799",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-lavender-ai-girl-memory-space",
+      "promptZh": "梦幻动漫肖像，精致虚拟少女蜷坐地板上...",
+      "sourceUrl": "https://x.com/libearal/status/2048026376645861799",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-pastel-ai-assistant-anime-portrait",
+      "promptZh": "梦幻动漫风格肖像，温柔虚拟助手少女蜷坐...",
+      "sourceUrl": "https://x.com/libearal/status/2048026376645861799",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-dreamy-underwater-surreal-portrait",
+      "promptZh": "梦幻超现实人像，年轻女性站在水下...",
+      "sourceUrl": "https://x.com/kotobukigraphic/status/2047967522453123255",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-japanese-classroom-long-hair-snapshot",
+      "promptZh": "写实日式高中教室场景，竖版手机照片构图...",
+      "sourceUrl": "https://x.com/Hair_Hair55/status/2047963832732221723",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-cozy-cat-ear-pajama-night-portrait",
+      "promptZh": "柔和动漫风格卧室肖像，猫耳少女胸部以上构图...",
+      "sourceUrl": "https://x.com/yume00112211/status/2047951384734228617",
+      "collectedAt": "2026-04-28"
+    }
+  ],
+  "rejected": [
+    {
+      "sourceUrl": "https://x.com/patrickassale/status/2044581766309060765",
+      "title": "奢华魅力美妆人像",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/ZaraIrahh/status/2047179669011616172",
+      "title": "笔记本上的超写实 UI/UX 模型",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/charliejhills/status/2047969988368314526",
+      "title": "卧室抓拍自拍写实人像",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/gdb/status/2048184698195870102",
+      "title": "复古雕版风连帽衫人像",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/Abdullah__Ai7/status/2048083022315159595",
+      "title": "奢华棚拍服装变身",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/libearal/status/2048026376645861799",
+      "title": "赛博水晶动漫少女人像",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/jeremydevz/status/2048026214812561683",
+      "title": "暗黑佳得乐风格人像",
+      "rejectedAt": "2026-04-28"
+    }
+  ]
+}
