@@ -120,6 +120,7 @@ jobs:
                 file_date="${BASH_REMATCH[1]}"
 
                 sed -i '/^>  `AI资讯/d' "$mdfile"
+                sed -i '\|hex2077\.dev|d' "$mdfile"
                 sed -i '/^## \*\*AI资讯日报多渠道\*\*/,$d' "$mdfile"
 
                 h1_tag="<h1 align=\"center\">${file_date} AI资讯</h1>"
@@ -158,6 +159,7 @@ jobs:
                 ' "$mdfile" > "${mdfile}.tmp" && mv "${mdfile}.tmp" "$mdfile"
 
                 sed -i '/^>  `AI资讯/d' "$mdfile"
+                sed -i '\|hex2077\.dev|d' "$mdfile"
                 sed -i '/^## \*\*AI资讯日报多渠道\*\*/,$d' "$mdfile"
 
                 h1_tag="<h1 align=\"center\">${file_date} AI资讯</h1>"
