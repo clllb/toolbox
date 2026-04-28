@@ -8,6 +8,14 @@
       "totalCollected": 54,
       "totalSkipped": 48,
       "remaining": 0
+    },
+    {
+      "url": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts/blob/main/README_zh-CN.md",
+      "fetchedAt": "2026-04-28",
+      "totalFound": 167,
+      "totalCollected": 92,
+      "totalSkipped": 28,
+      "remaining": 47
     }
   ],
   "collected": [
@@ -334,6 +342,420 @@
       "promptZh": "柔和动漫风格卧室肖像，猫耳少女胸部以上构图...",
       "sourceUrl": "https://x.com/yume00112211/status/2047951384734228617",
       "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-ink-curve-guangzhou-aesthetics-poster",
+      "promptZh": "纯黑深邃底色，一条粗壮有力的墨色书法 S 型曲线...",
+      "sourceUrl": "https://x.com/liyue_ai/status/2045873940883808523",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-guangdong-super-league-invitation-poster",
+      "promptZh": "广东省城市足球超级联赛（粤超）邀请函海报设计...",
+      "sourceUrl": "https://x.com/liyue_ai/status/2045772039521542202",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-epic-silhouette-world-poster",
+      "promptZh": "收藏版史诗海报，人物侧脸剪影中生长出完整世界观...",
+      "sourceUrl": "https://x.com/Ghhhh3owi/status/2045803217251102897",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-new-chinese-ink-landscape-poster",
+      "promptZh": "新中式水墨山水海报，竖版9:16构图...",
+      "sourceUrl": "https://x.com/liyue_ai/status/2046215276249993720",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-science-encyclopedia-infographic",
+      "promptZh": "请根据【主题】生成一张高质量竖版「科普百科图」...",
+      "sourceUrl": "https://x.com/MrLarus/status/2046231542817497392",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-dark-fantasy-guangzhou-city-poster",
+      "promptZh": "平面插画，东方幻想风格高端城市海报设计...",
+      "sourceUrl": "https://x.com/liyue_ai/status/2046243132774494607",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-silicon-valley-2026-promo-poster",
+      "promptZh": "一张精致优雅的 2026 硅谷城市推广海报...",
+      "sourceUrl": "https://x.com/carsonyungos/status/2046523198116889064",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-dark-epic-concept-poster",
+      "promptZh": "围绕【主题】自动生成一张顶级暗黑史诗概念海报...",
+      "sourceUrl": "https://x.com/A9Quant/status/2046224777208361126",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-cinematic-infographic-concept-poster",
+      "promptZh": "请围绕【主题】自动生成一张顶级概念海报...",
+      "sourceUrl": "https://x.com/A9Quant/status/2046228485841334559",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-chili-pork-cooking-flowchart",
+      "promptZh": "帮我制作辣椒炒肉这道菜的详细制作流程图...",
+      "sourceUrl": "https://x.com/Kurt_Rousey466/status/2046267707881029934",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-watercolor-children-book-illustration",
+      "promptZh": "柔和诗意的水彩与水粉纹理儿童绘本插画...",
+      "sourceUrl": "https://x.com/dotey/status/2047174895293849972",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-chinese-odyssey-90s-hk-poster",
+      "promptZh": "大话西游海报重制为90年代港片风格...",
+      "sourceUrl": "https://x.com/songguoxiansen/status/2047201597697245252",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-luxury-basketball-athlete-campaign-poster",
+      "promptZh": "创建一张高端奢华运动服宣传海报...",
+      "sourceUrl": "https://x.com/Shorelyn_/status/2047949711181832558",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-avant-garde-basketball-sculpture-ad",
+      "promptZh": "前卫运动时尚广告，超大篮球如纪念碑雕塑般摆放...",
+      "sourceUrl": "https://x.com/AIwithkhan/status/2047886964037398989",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-premium-food-recipe-poster",
+      "promptZh": "为[菜名]创建一张高端美食制作海报...",
+      "sourceUrl": "https://x.com/Preda2005/status/2047883394152088004",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-avant-garde-tennis-racket-sculpture-ad",
+      "promptZh": "前卫运动时尚广告，超大网球拍如纪念碑雕塑般竖立...",
+      "sourceUrl": "https://x.com/AIwithSynthia/status/2047884609321619831",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-surrealist-liquor-brand-fashion-poster",
+      "promptZh": "一张超现实主义高级定制风格烈酒广告海报...",
+      "sourceUrl": "https://x.com/hmontilla_/status/2047884126343032995",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-luxury-fashion-magazine-cover-bw",
+      "promptZh": "创建一张受奢华时尚出版物启发的高级时装编辑杂志封面...",
+      "sourceUrl": "https://x.com/iamrealsnow/status/2047883187527856345",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-surrealist-rolex-luxury-watch-poster",
+      "promptZh": "一张劳力士高级时尚超现实主义海报...",
+      "sourceUrl": "https://x.com/Sheldon056/status/2047873913049538927",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-peacock-botanical-vintage-art-print",
+      "promptZh": "对称设计，两只优雅的蓝色孔雀搭配精细羽毛纹理...",
+      "sourceUrl": "https://x.com/dotey/status/2047803054422901046",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-splash-fashion-brand-campaign-poster",
+      "promptZh": "为 SPLASH 创建一张超写实时尚海报...",
+      "sourceUrl": "https://x.com/miratechtool/status/2047780974709346606",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-avant-garde-guitar-sculpture-fashion-ad",
+      "promptZh": "前卫时尚广告，超大吉他如雕塑般摆放...",
+      "sourceUrl": "https://x.com/QamarRiaz1/status/2047777016733110722",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-biomimetic-stingray-aircraft-poster",
+      "promptZh": "仿生航空航天概念海报...",
+      "sourceUrl": "https://x.com/_simonsmith/status/2048172203946996041",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-taoist-three-souls-seven-spirits-poster",
+      "promptZh": "一张高度精细的道教密宗信息图竖版海报...",
+      "sourceUrl": "https://x.com/leyu37829/status/2048125950681075833",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-vintage-shannon-information-theory-poster",
+      "promptZh": "关于克劳德·香农与信息论的复古编辑信息图海报...",
+      "sourceUrl": "https://x.com/mob_17/status/2048118645017219381",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-chen-uen-ink-tribute-poster",
+      "promptZh": "一张在陈年宣纸上的复古编辑海报，致敬郑问...",
+      "sourceUrl": "https://x.com/mob_17/status/2048118645017219381",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-prs-guitar-heritage-lineage-poster",
+      "promptZh": "奢华复古吉他对比信息图海报...",
+      "sourceUrl": "https://x.com/GlennHasABeard/status/2048087784141857235",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-baroque-painting-reality-fracture",
+      "promptZh": "一幅巴洛克油画活了过来...",
+      "sourceUrl": "https://x.com/JohnnyWang8802/status/2048129335853559824",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-urban-alley-mural-artist",
+      "promptZh": "一张电影感超写实夜景照片...",
+      "sourceUrl": "https://x.com/Professor_134/status/2048066672398102896",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-urban-fantasy-coexistence-crossing",
+      "promptZh": "一张高度精细的动漫风格都市奇幻插画...",
+      "sourceUrl": "https://x.com/Ray_CROWN0/status/2048024227664494775",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-magic-seed-packet-miniature-scene",
+      "promptZh": "史诗 3D 场景：一个风化的种子包装袋...",
+      "sourceUrl": "https://x.com/AllaAisling/status/2048156345518768190",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-dubai-miniature-city-model",
+      "promptZh": "一张超精细电影级等距微缩城市模型...",
+      "sourceUrl": "https://x.com/silentempiredev/status/2048086378383384773",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-moss-perfume-editorial-product-shot",
+      "promptZh": "一张高端编辑风产品摄影，单瓶奢华香水...",
+      "sourceUrl": "https://x.com/Salmaaboukarr/status/2048103506125463983",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-earbuds-ecommerce-infographic",
+      "promptZh": "高冲击力无线耳机电商信息图...",
+      "sourceUrl": "https://x.com/SPEEDAI07/status/2047981795552153860",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-plantable-tag-eco-tshirt-ad",
+      "promptZh": "一张高端环保意识时尚广告...",
+      "sourceUrl": "https://x.com/Diplomeme/status/2047957339974828092",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-minimalist-pure-crunch-product-ad",
+      "promptZh": "一张极简主义产品广告...",
+      "sourceUrl": "https://x.com/Strength04_X/status/2047917220165231011",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-gas-giant-descent-storyboard",
+      "promptZh": "电影感科幻分镜联系表...",
+      "sourceUrl": "https://x.com/xRahultripathi/status/2048140775356354892",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-rpg-map-to-anime-scene",
+      "promptZh": "使用提供的参考图片，将俯视角 RPG 城镇地图转换...",
+      "sourceUrl": "https://x.com/ArtwlDesign/status/2048054726768709769",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-miniature-diorama-skincare-ad",
+      "promptZh": "一张超写实微缩场景产品广告...",
+      "sourceUrl": "https://x.com/Strength04_X/status/2048074514278563949",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-pastel-blue-clogs-fashion-ad",
+      "promptZh": "一张高端摄影棚洞洞鞋广告海报...",
+      "sourceUrl": "https://x.com/SPEEDAI07/status/2047907058079650035",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-3d-stone-staircase-evolution",
+      "promptZh": "演化时间线信息图。以参考图为结构基础...",
+      "sourceUrl": "https://x.com/GeekCatX/status/2045792240044511277",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-luxury-ad-parody-four-loko",
+      "promptZh": "高冲击力恶搞电商信息图...",
+      "sourceUrl": "https://x.com/tonysimons_/status/2048057490940596595",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-anime-museum-background",
+      "promptZh": "使用提供的参考照片，以精致的剧场动画背景插画...",
+      "sourceUrl": "https://x.com/Dakiny/status/2048175219966394695",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-dreamy-shibuya-bubble-girl",
+      "promptZh": "梦幻动漫风格全身插画...",
+      "sourceUrl": "https://x.com/terunari/status/2048308270914490666",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-stormy-tropical-city-rooftop-plane",
+      "promptZh": "电影感宽幅航拍视角...",
+      "sourceUrl": "https://x.com/Gerry/status/2048303505702629537",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-japanese-chinese-food-delivery-flyer",
+      "promptZh": "日式社区中华料理外卖传单...",
+      "sourceUrl": "https://x.com/xc5_/status/2048310696686014935",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-good-bath-day-editorial-poster",
+      "promptZh": "创建一张柔和的编辑风格生活海报...",
+      "sourceUrl": "https://x.com/Kazuch75240438/status/2048205418238030327",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-japanese-sci-fi-armor-process",
+      "promptZh": "日式科幻穿甲流程信息图...",
+      "sourceUrl": "https://x.com/yy7482933910896/status/2048192904922075161",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-fashion-editorial-hamptons-formula",
+      "promptZh": "老钱风汉普顿编辑大片，高挑金发女性约25岁，优雅宁静的表情...",
+      "sourceUrl": "https://x.com/anacoding/status/2046904999045628114",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-street-fashion-full-body-portrait",
+      "promptZh": "全身户外街拍，一位约25岁的白人女性大步走过城市斑马线...",
+      "sourceUrl": "https://x.com/AIwithSarah_/status/2047234995627172229",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-sparkling-water-tropical-product",
+      "promptZh": "专业产品摄影，一罐冰冷气泡水竖直放在金色沙滩上...",
+      "sourceUrl": "https://x.com/meng_dagg695/status/2047227172486824002",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-ming-hanfu-fashion-magazine-cover",
+      "promptZh": "比例9:16竖版。高端编辑时尚摄影，电影级品质，媲美Vogue封面...",
+      "sourceUrl": "https://x.com/GeekCatX/status/2047220831491858766",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-epic-career-cinematic-poster-template",
+      "promptZh": "创建一张史诗级海报，展示[人物名称]职业生涯中最具标志性的时刻...",
+      "sourceUrl": "https://x.com/Goodmanprotocol/status/2047900470921040270",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-mascot-brand-identity-document",
+      "promptZh": "18格品牌形象设计文档，JSON结构化提示词。包含18个模块...",
+      "sourceUrl": "https://x.com/Colin_Leeee/status/2044802802149650631",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-super-famicom-retro-poster",
+      "promptZh": "超级任天堂海报风格...",
+      "sourceUrl": "https://x.com/lilimliliychan/status/2045114760937804187",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-character-visual-vertical-poster",
+      "promptZh": "角色视觉竖版海报...",
+      "sourceUrl": "https://x.com/tebasaki3D/status/2046371076402503709",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-sony-a7-exploded-view",
+      "promptZh": "索尼A7爆炸图分解...",
+      "sourceUrl": "https://x.com/iaPulse_/status/2046903739429097660",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-journey-west-daughter-kingdom-poster",
+      "promptZh": "西游记女儿国海报...",
+      "sourceUrl": "https://x.com/cj858cjsoul/status/2047103956535697822",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-luxury-amber-perfume-cinematic-ad",
+      "promptZh": "奢华琥珀香水电影感广告...",
+      "sourceUrl": "https://x.com/Polanco_IA/status/2047689647967609037",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-tropical-citrus-soda-ad-poster",
+      "promptZh": "热带柑橘苏打广告海报...",
+      "sourceUrl": "https://x.com/edimakorfr/status/2047635133466124726",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-industrial-design-presentation-sheet",
+      "promptZh": "工业设计产品展示图...",
+      "sourceUrl": "https://x.com/ShamsAmin56/status/2047627860752621647",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-dark-mode-marketing-ui",
+      "promptZh": "深色模式营销案例UI...",
+      "sourceUrl": "https://x.com/IndieDevHailey/status/2044974254769463312",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-anime-character-brand-merch-board",
+      "promptZh": "动漫角色品牌周边展示板...",
+      "sourceUrl": "https://x.com/chi_vc_/status/2046061073720369228",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-skincare-product-studio-shot",
+      "promptZh": "护肤品棚拍广告...",
+      "sourceUrl": "https://x.com/Strength04_X/status/2047636847231222",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-16-pose-dance-combat-reference",
+      "promptZh": "16格舞蹈战斗姿势参考...",
+      "sourceUrl": "https://x.com/ExquisitMe/status/2048143577264402629",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-pastel-anime-girl-full-body",
+      "promptZh": "粉彩动漫少女全身图...",
+      "sourceUrl": "https://x.com/hoshi122221/status/2048025730425196801",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-grain-powder-ecommerce-board",
+      "promptZh": "谷物粉电商展板...",
+      "sourceUrl": "https://x.com/WooGabriel76263/status/2047988112094101770",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-elegant-cosmetic-poster-template",
+      "promptZh": "优雅美妆海报模板...",
+      "sourceUrl": "https://x.com/Adam38363368936/status/2047917266361360682",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-jellyfish-room-goods-poster",
+      "promptZh": "水母房间周边海报...",
+      "sourceUrl": "https://x.com/Ayu_AI_0912/status/2048309565817766139",
+      "collectedAt": "2026-04-28"
     }
   ],
   "rejected": [
@@ -370,6 +792,171 @@
     {
       "sourceUrl": "https://x.com/jeremydevz/status/2048026214812561683",
       "title": "暗黑佳得乐风格人像",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/liyue_ai/status/2045875219307655337",
+      "title": "超现实鲤鱼星云插画",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/llllegend0620/status/2045963764466688065",
+      "title": "浏览器游戏广告创意海报",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/alanlovelq/status/2046378199681257920",
+      "title": "主题科学百科卡片",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/songguoxiansen/status/2047204566559756707",
+      "title": "东方不败武侠角色海报",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/chenenpei/status/2046985783715025135",
+      "title": "卓别林产品海报重新设计",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/harboriis/status/2047921293123895520",
+      "title": "街头潮流时尚亚洲服饰海报",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/degewa/status/2048104569037783226",
+      "title": "藏族礼帽民族志图版",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/TWnese/status/2048077204786212887",
+      "title": "阿里山一日游海报",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/AlwaveNazca/status/2048147643809865950",
+      "title": "奢华计时腕表广告",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/AlwaveNazca/status/2048147643809865950",
+      "title": "霓虹耐克Lumina广告海报",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/AlwaveNazca/status/2048147643809865950",
+      "title": "街头潮流球鞋海报广告",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/_LaurentB/status/2048126606313464040",
+      "title": "大阪六号卫衣编辑风广告",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/Salmaaboukarr/status/2048103506125463983",
+      "title": "金色皮草香水瓶编辑风广告",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/songguoxiansen/status/2048046906585280977",
+      "title": "传统中国艺术与瓷瓶",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/komorimedia/status/2048114825398731143",
+      "title": "水象星座角色海报",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/komorimedia/status/2048114825398731143",
+      "title": "土象星座角色海报",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/komorimedia/status/2048114825398731143",
+      "title": "火象星座角色海报",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/komorimedia/status/2048114825398731143",
+      "title": "风象星座角色海报",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/Magncsans/status/2047876253898903594",
+      "title": "9格产品TVC分镜",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/sarinaashapi/status/2048307780864606708",
+      "title": "亲子沟通误区信息图",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/GeekCatX/status/2046805182967726329",
+      "title": "VR头显爆炸图海报",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/Panda20230902/status/2045396918965285111",
+      "title": "城市美食插画地图",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/genel_ai/status/2046501692246470871",
+      "title": "清爽夏日乌冬面广告",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/wory37303852/status/2045925660401795478",
+      "title": "VR头显爆炸图海报",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/mm_zzm44854/status/2045861258520568230",
+      "title": "城市美食插画地图(JSON版)",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/ck_igarashi/status/2046528889124728993",
+      "title": "普拉提工作室广告海报",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/caiziboshi/status/2047091751731519744",
+      "title": "鹿鼎记角色海报",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/dynamicwangs/status/2047580984342925545",
+      "title": "奢华毛绒乐福鞋生活照",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/MiguelMaestroIA/status/2047555836252151831",
+      "title": "大理石梳妆台香水广告",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/Ciri_ai/status/2048074587955658848",
+      "title": "舞蹈动作参考图",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/ExquisitMe/status/2048143577264402629",
+      "title": "16格舞蹈姿势参考表(Case134)",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/ExquisitMe/status/2048143577264402629",
+      "title": "16格女性舞蹈姿势表(Case135)",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/ExquisitMe/status/2048143577264402629",
+      "title": "16格舞蹈姿势参考图(Case136)",
       "rejectedAt": "2026-04-28"
     }
   ]
