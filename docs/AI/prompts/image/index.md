@@ -13,7 +13,7 @@ import { PROMPT_LIBRARY_ITEMS, PROMPT_LIBRARY_MODELS } from './data'
 # AI 图片提示词库
 
 ::: tip 项目动态
-已上线 GPT image 2 首批案例，内容根据 OpenAI《Introducing ChatGPT Images 2.0》（2026-04-21）示例图与说明整理 · 持续更新中
+已连续更新 3 天 · 本项目纯属用爱发电 ❤️ · 所有内容均由AI进行数据清洗、去重。由陈老板亲自筛选、审核，已过滤无意义、无价值、过短提示词，只收录精品！
 :::
 
 <MPromptLibrary :models="PROMPT_LIBRARY_MODELS" :items="PROMPT_LIBRARY_ITEMS" />

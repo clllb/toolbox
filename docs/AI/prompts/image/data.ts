@@ -86,18 +86,6 @@ export const PROMPT_LIBRARY_ITEMS: PromptLibraryItem[] = [
     sourceDate: '2026-04-28',
   },
   {
-    id: 'gpt-image-2-pastel-ai-assistant-anime-portrait',
-    model: 'gpt-image-2',
-    title: '粉彩 AI 助手动漫人像',
-    images: ['/ai/prompts/53.webp'],
-    promptEn: 'A dreamy anime-style portrait of a gentle virtual assistant girl sitting curled up indoors in a cozy futuristic bedroom filled with translucent holographic memory screens. She has very long silvery white hair with a faint lavender tint, styled in two low twin tails tied with small lavender ribbons, with soft wispy bangs and loose flowing strands. Her expression is tender, introspective, and slightly lonely. She wears an oversized chunky cable-knit cardigan in pastel lavender draped loosely over a thin white ruffled nightdress, plus a tiny gemstone necklace. Her pose is seated with knees pulled to her chest and arms wrapped around her legs. The room is lit in hazy pastel violet and pink ambient light with sparkles, dust-like stars, and a nostalgic magical-tech atmosphere. Around her are holographic interface panels: floating photo panels, a profile panel with Japanese text, and a checklist panel with heart icons. Include a glowing crystal ball on a desk, a white mug with heart motifs, books, and a plush cat cushion.',
-    promptZh: '梦幻动漫风格肖像，温柔虚拟助手少女蜷坐在温馨未来感卧室中，周围充满半透明全息记忆屏幕。极长银白色头发带淡紫色色调，扎两条低马尾配薰衣草色小丝带，柔软碎刘海和飘逸散发。表情温柔、内省、略带孤独。穿着宽松粗针麻花纹淡紫色开衫，内搭白色荷叶边睡裙，配小巧宝石项链。坐姿双膝抱胸，双臂环绕双腿。房间笼罩在朦胧淡紫和粉色环境光中，有闪光、尘粒般星光和怀旧魔法科技氛围。周围有全息界面面板：浮动照片面板、带日文文字的个人资料面板、心形图标清单面板。桌上发光水晶球、印有心形图案的白色马克杯、书本和猫咪毛绒靠垫。',
-    tags: ['角色', '艺术', '创意'],
-    sourceTitle: '@libearal',
-    sourceUrl: 'https://x.com/libearal/status/2048026376645861799',
-    sourceDate: '2026-04-28',
-  },
-  {
     id: 'gpt-image-2-dreamy-underwater-surreal-portrait',
     model: 'gpt-image-2',
     title: '梦幻水下女性与半透明鱼',
