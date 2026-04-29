@@ -23,8 +23,8 @@ hero:
     - text: AI日报
       link: /AI/daily/index
       theme: brand
-    - text: AI周报
-      link: /AI/weekly/index
+    - text: AI提示词库
+      link: /AI/prompts/image/
       theme: alt
 
 features:
