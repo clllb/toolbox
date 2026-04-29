@@ -2,6 +2,14 @@
   "lastUpdated": "2026-04-28",
   "sources": [
     {
+      "url": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts/blob/main/README.md",
+      "fetchedAt": "2026-04-28",
+      "totalFound": 58,
+      "totalCollected": 44,
+      "totalSkipped": 29,
+      "remaining": 0
+    },
+    {
       "url": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
       "fetchedAt": "2026-04-27",
       "totalFound": 58,
@@ -752,13 +760,372 @@
       "collectedAt": "2026-04-28"
     },
     {
+      "id": "gpt-image-2-nostalgic-16-photo-couple-grid",
+      "promptZh": "16张怀旧联拍底片拼贴...",
+      "sourceUrl": "https://x.com/zenkaiAI/status/2048051889460437351",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-anime-bl-promo-thumbnail",
+      "promptZh": "明亮精致的动漫风格推广封面...",
+      "sourceUrl": "https://x.com/himukai_an/status/2047981800535085555",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-artist-ethereal-muse-night",
+      "promptZh": "电影感动漫风格数字插画，深夜温馨画师房间...",
+      "sourceUrl": "https://x.com/almimeister/status/2048309710118687101",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-dreamy-sayori-anime-banner",
+      "promptZh": "宽幅动漫横幅插画，明亮梦幻教室中的纱织...",
+      "sourceUrl": "https://x.com/mirochill/status/2047639852485620070",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-anime-band-budokan-finale",
+      "promptZh": "戏剧性动漫演唱会插画，从舞台后方视角...",
+      "sourceUrl": "https://x.com/SDAI1807097011/status/2048127178592915583",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-luxury-mustang-lifestyle-shot",
+      "promptZh": "时尚年轻女性站在亮粉色福特野马前...",
+      "sourceUrl": "https://x.com/Just_sharon7/status/2048095904138485962",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-anime-soba-friends-dining",
+      "promptZh": "温馨动漫风格传统日式荞麦面店内景...",
+      "sourceUrl": "https://x.com/AIMAG31G/status/2048089673621516547",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-gothic-android-warrior-cathedral",
+      "promptZh": "电影感暗黑奇幻动漫插画，废墟哥特大教堂...",
+      "sourceUrl": "https://x.com/yanagihara_0805/status/2048085829713842405",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-cloud-shape-doodle-overlay",
+      "promptZh": "根据图像中云朵的形状，识别它们最像什么...",
+      "sourceUrl": "https://x.com/Gorden_Sun/status/2048080137149899133",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-anime-winter-camping-scene",
+      "promptZh": "温馨冬季露营场景，大型米色帆布帐篷内...",
+      "sourceUrl": "https://x.com/sub_raw_jin/status/2048066779835220392",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-bmw-performance-social-poster",
+      "promptZh": "创建4:5竖版社交海报，8K印刷品质...",
+      "sourceUrl": "https://x.com/harboriis/status/2048063332624843046",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-asmr-ear-massage-anime",
+      "promptZh": "柔和梦幻的动漫插画，可爱年轻女性夜间在温馨卧室做ASMR...",
+      "sourceUrl": "https://x.com/Shion_yamabuki/status/2047232198382964969",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-monika-anime-banner",
+      "promptZh": "高品质动漫横幅插画，温暖金色调教室文学部场景...",
+      "sourceUrl": "https://x.com/mirochill/status/2047639852485620070",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-cyberpunk-404-witch-summoning",
+      "promptZh": "戏剧性动漫风格赛博朋克女巫站在暗黑屋顶...",
+      "sourceUrl": "https://x.com/Eris_Create_Lab/status/2047537707904274795",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-anime-fantasy-travel-movie-poster",
+      "promptZh": "虚构电影EL VIAJE DE LA LUNA DE PLATA的电影感动漫海报...",
+      "sourceUrl": "https://x.com/Design4p0/status/2047531978346398002",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-tropical-parrot-pixel-mosaic",
+      "promptZh": "鲜艳像素风格热带鹦鹉马赛克...",
+      "sourceUrl": "https://x.com/erikmackinnon/status/2048190288179675290",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-golden-cocktail-greenhouse-bar",
+      "promptZh": "电影感竖版照片，手举大型气球酒杯装满闪亮金黄柑橘鸡尾酒...",
+      "sourceUrl": "https://x.com/FernandesK47117/status/2048183925294371147",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-multi-panel-image-board",
+      "promptZh": "创建4×3无边框网格，每个面板是一位年轻女性的独立图像...",
+      "sourceUrl": "https://x.com/aimikoda/status/2048183782876778821",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-handwritten-realistic-letter",
+      "promptZh": "创建一张高度真实的手写信件图片...",
+      "sourceUrl": "https://x.com/mosthssan/status/2048160477658980711",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-zelda-pvp-game-screenshot",
+      "promptZh": "基于已生成的角色，制作一张以塞尔达：御风者为主题的PVP游戏截图...",
+      "sourceUrl": "https://x.com/khaiinit/status/2047219694130827273",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-landing-page-from-reference",
+      "promptZh": "用这张图片作为风格和调色参考，创建一个着陆页...",
+      "sourceUrl": "https://x.com/D_studioproject/status/2047212826264211540",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-li-jiaqi-lipstick-livestream",
+      "promptZh": "李佳琦直播间背景，口红矩阵展示墙...",
+      "sourceUrl": "https://x.com/songguoxiansen/status/2047207826913972518",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-apple-pods-pro3-ecommerce-infographic",
+      "promptZh": "高冲击力 Apple Pods Pro 3 头戴式耳机电商信息图...",
+      "sourceUrl": "https://x.com/meng_dagg695/status/2047935217231663186",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-aaa-game-screenshot-concept",
+      "promptZh": "生成模拟人生荒岛求生续作可能呈现的AAA级游戏截图...",
+      "sourceUrl": "https://x.com/ChiefMonkeyMike/status/2047828814580138156",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-grwm-beauty-thumbnail",
+      "promptZh": "竖版9:16 TikTok风格GRWM美妆封面...",
+      "sourceUrl": "https://x.com/S0N_IA_/status/2047414367243657296",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-iphone-keynote-snapshot",
+      "promptZh": "业余 iPhone 照片，Apple Park iPhone 20 发布会现场...",
+      "sourceUrl": "https://x.com/patrickassale/status/2044687244368441742",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-handwritten-notebook-photo",
+      "promptZh": "业余照片风格，一本平铺打开的笔记本写满黑色圆珠笔手写笔记...",
+      "sourceUrl": "https://x.com/patrickassale/status/2044569086013718958",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-style-to-ui-design-system",
+      "promptZh": "用这种风格帮我生成一套UI设计系统...",
+      "sourceUrl": "https://x.com/stark_nico99/status/2045836554451706125",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-elon-musk-douyin-livestream",
+      "promptZh": "9:16 竖版，高细节写实风格中国抖音直播截图...",
+      "sourceUrl": "https://x.com/Shinning1010/status/2046501587762188535",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-galgame-character-intro-page",
+      "promptZh": "使用最新的图片生成工具，将这个Q版角色插画和立绘转换为看起来像真实网站的角色介绍页面...",
+      "sourceUrl": "https://x.com/09lyco/status/2045281845391323175",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-official-character-sheet-jp",
+      "promptZh": "基于此角色和背景，制作一份官方设定资料风格的角色设定表...",
+      "sourceUrl": "https://x.com/Toshi_nyaruo_AI/status/2045025277538107420",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-mecha-girl-sea-city-keyvisual",
+      "promptZh": "一位十几岁的机甲少女，苍白皮肤沾满煤灰和海雾...",
+      "sourceUrl": "https://x.com/old_pgmrs_will/status/2046144801071079612",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-chaos-notes-hidden-face-art",
+      "promptZh": "从混乱潦草的笔记和符号集合中浮现出角色面孔的艺术作品...",
+      "sourceUrl": "https://x.com/loglogrog/status/2046448773162033240",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-anime-martial-arts-battle",
+      "promptZh": "一幅动漫风格的两位年轻女武术家在传统木质道场中进行高强度武术战斗的插画...",
+      "sourceUrl": "https://x.com/Tanemomi_Ver2/status/2046063806846214265",
+      "collectedAt": "2026-04-28"
+    },
+    {
       "id": "gpt-image-2-jellyfish-room-goods-poster",
       "promptZh": "水母房间周边海报...",
       "sourceUrl": "https://x.com/Ayu_AI_0912/status/2048309565817766139",
       "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-luxun-morning-flowers",
+      "promptZh": "一张具有20世纪初中国文学风格的照片级场景：窗边一张旧木桌，午后暖光洒落...",
+      "sourceUrl": "https://x.com/op7418/status/1922516693062496541",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-wuxia-heroine",
+      "promptZh": "一位武侠女侠站在清晨雾气缭绕的竹林小径上...",
+      "sourceUrl": "https://x.com/op7418/status/1922516693062496541",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-guanyin-portrait",
+      "promptZh": "一张超写实照片，仿佛观音菩萨是真实存在的人...",
+      "sourceUrl": "https://x.com/Gorden_Sun/status/1922516693062496541",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-tang-lantern-festival",
+      "promptZh": "一场盛大的唐代灯会夜景，数百盏华丽丝绸灯笼照亮繁华的古中国街道...",
+      "sourceUrl": "https://x.com/op7418/status/1922516693062496541",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-surreal-japanese-city",
+      "promptZh": "一个超现实的未来日式都市景观，传统建筑与先进科技融合...",
+      "sourceUrl": "https://x.com/op7418/status/1922516693062496541",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-eastern-fantasy-portrait",
+      "promptZh": "一幅空灵的东方幻想女性肖像，肤如凝脂，凤眼缀以金色额饰...",
+      "sourceUrl": "https://x.com/op7418/status/1922516693062496541",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-yang-guifei-realistic-portrait",
+      "promptZh": "根据真实历史对杨玉环的形象描述，生成一张杨贵妃真实照片...",
+      "sourceUrl": "https://x.com/Zhaoge01/status/2047110776897638568",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-tushan-yaya-glamour-portrait",
+      "promptZh": "狐妖小红娘涂山雅雅写真大片，粉色九尾狐裘紧身裙...",
+      "sourceUrl": "https://x.com/sdjn_wgc/status/2046981757325475954",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-artistic-eastern-woman-portrait",
+      "promptZh": "9:16 竖向构图，单人女性艺术肖像，年轻东方女生...",
+      "sourceUrl": "https://x.com/zhiyangzhu22222/status/2046952985562062888",
+      "collectedAt": "2026-04-28"
+    },
+    {
+      "id": "gpt-image-2-autobots-lunar-base-assembly",
+      "promptZh": "图片1：汽车人全员月球基地集结，地球悬于身后星空...",
+      "sourceUrl": "https://x.com/songguoxiansen/status/2046952548469530716",
+      "collectedAt": "2026-04-28"
     }
   ],
   "rejected": [
+    {
+      "sourceUrl": "https://x.com/Diplomeme/status/2048060325925470358",
+      "title": "电影感鸡肉蒸饺街头广告海报",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/mirochill/status/2047639852485620070",
+      "title": "紫色百合动漫横幅(Yuri)",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/mirochill/status/2047639852485620070",
+      "title": "粉色奈月动漫横幅(Natsuki)",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/AIillust_studio/status/2048099186214900130",
+      "title": "动漫少女与真人约会拼贴",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/m_Raiko_AIart/status/2048069313387737222",
+      "title": "乡间车站少女场景",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/sub_raw_jin/status/2048066779835220392",
+      "title": "动漫角色居酒屋照片",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/rerxmsz06/status/2047261622121705782",
+      "title": "动漫VTuber我的世界直播封面",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/sorane_aimusic/status/2047507066697507134",
+      "title": "动漫音乐训练营宣传海报",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/AIwithSarah_/status/2047904483359760677",
+      "title": "美妆产品商业营销广告",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/sjbbxhz/status/2045684734714380687",
+      "title": "电商直播UI界面模拟(JSON)",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/makaneko_AI/status/2045764016858087720",
+      "title": "四格日本数字广告Banner",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/Gugombly/status/2047310862428303636",
+      "title": "电影感城市爆炸追逃场景",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/austinit/status/2044968740782272596",
+      "title": "一键生成UI设计系统",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/yammamon/status/2045778624092254603",
+      "title": "桃太郎解说PPT风格插画",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/agi_aibusi/status/2046530764871696750",
+      "title": "手相诊断鉴定书",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/loglogrog/status/2046437230127034774",
+      "title": "唐吉诃德卖场POP海报",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/AZLnfvp/status/2046468976092533180",
+      "title": "赛博朋克霓虹UI设计系统",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/ailovedirector/status/2046905387274891296",
+      "title": "AI游戏开发概要PPT",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/songguoxiansen/status/2046476566537080849",
+      "title": "圣斗士星矢黄金十二宫格卡牌",
+      "rejectedAt": "2026-04-28"
+    },
     {
       "sourceUrl": "https://x.com/patrickassale/status/2044581766309060765",
       "title": "奢华魅力美妆人像",
@@ -957,6 +1324,66 @@
     {
       "sourceUrl": "https://x.com/ExquisitMe/status/2048143577264402629",
       "title": "16格舞蹈姿势参考图(Case136)",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/ZHO_ZHO_ZHO/status/1922516693062496541",
+      "title": "四季眼部特写",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/op7418/status/1922516693062496541",
+      "title": "狮驼岭暗黑神话",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/dotey/status/1922516693062496541",
+      "title": "古法编程博物馆",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/op7418/status/1922516693062496541",
+      "title": "新中式极简荷花插画",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/saskr_13/status/2044744396932079934",
+      "title": "四格漫画风格绘制",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/GeekCatX/status/2046939656244318676",
+      "title": "食物标本解剖博物图",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/chesnyfcb/status/2047714457774637213",
+      "title": "餐厅视角变换对比图",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/MoveHiro1219/status/2047698611665096732",
+      "title": "霓虹AI对比YouTube封面",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/MoveHiro1219/status/2047698611665096732",
+      "title": "赛博朋克AI工具对比海报",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/mikko_20100518/status/2047514897404354598",
+      "title": "东京迪士尼最前列格斗UI",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/chesnyfcb/status/2047714457774637213",
+      "title": "动漫人群视角转换(JSON)",
+      "rejectedAt": "2026-04-28"
+    },
+    {
+      "sourceUrl": "https://x.com/MoveHiro1219/status/2047698611665096732",
+      "title": "AI战国时代YouTube封面",
       "rejectedAt": "2026-04-28"
     }
   ]
