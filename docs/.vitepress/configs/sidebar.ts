@@ -49,6 +49,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           text: '2026-05',
           collapsed: false,
           items: [
+            { text: '2026-05-07', link: '/AI/daily/cn/2026-05/2026-05-07.md' },
             { text: '2026-05-06', link: '/AI/daily/cn/2026-05/2026-05-06.md' },
             { text: '2026-05-05', link: '/AI/daily/cn/2026-05/2026-05-05.md' },
             { text: '2026-05-04', link: '/AI/daily/cn/2026-05/2026-05-04.md' },
