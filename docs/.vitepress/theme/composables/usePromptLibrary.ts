@@ -25,6 +25,8 @@ export function getPromptTags(modelId: PromptModelId, items: PromptLibraryItem[]
   return ['all', ...PROMPT_TAGS.filter((tag) => activeTags.has(tag))]
 }
 
+export const getPromptPrimaryTags = getPromptTags
+
 export function filterPromptItems(
   modelId: PromptModelId,
   tagId: PromptFilterTagId,

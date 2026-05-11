@@ -4,6 +4,7 @@ export const PROMPT_TAGS = [
   '创意', '界面', '产品', '纪实', '角色', '版式', '广告',
   '多语言', '胶片', '超现实', '艺术', '复古',
 ] as const
+export const PROMPT_PRIMARY_TAGS = PROMPT_TAGS
 
 export type PromptTagId = (typeof PROMPT_TAGS)[number]
 

@@ -74,7 +74,9 @@ describe('MPromptLibrary', () => {
 
     await wrapper.get('[data-test="prompt-card"]').trigger('click')
 
-    expect(wrapper.get('[data-test="prompt-dialog-title"]').text()).toContain('城市生命系统图谱')
+    expect(wrapper.get('[data-test="prompt-dialog-title"]').text()).toContain(
+      PROMPT_LIBRARY_ITEMS[0].title,
+    )
     expect(wrapper.text()).toContain('English Prompt')
   })
 
