@@ -49,6 +49,9 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           text: '2026-05',
           collapsed: false,
           items: [
+            { text: '2026-05-11', link: '/AI/daily/cn/2026-05/2026-05-11.md' },
+            { text: '2026-05-10', link: '/AI/daily/cn/2026-05/2026-05-10.md' },
+            { text: '2026-05-09', link: '/AI/daily/cn/2026-05/2026-05-09.md' },
             { text: '2026-05-08', link: '/AI/daily/cn/2026-05/2026-05-08.md' },
             { text: '2026-05-07', link: '/AI/daily/cn/2026-05/2026-05-07.md' },
             { text: '2026-05-06', link: '/AI/daily/cn/2026-05/2026-05-06.md' },
@@ -58,7 +61,8 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             { text: '2026-05-02', link: '/AI/daily/cn/2026-05/2026-05-02.md' },
             { text: '2026-05-01', link: '/AI/daily/cn/2026-05/2026-05-01.md' }
           ]
-        },
+        }
+,
         {
           text: '2026-04',
           collapsed: false,
@@ -93,7 +97,8 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             { text: '2026-04-02', link: '/AI/daily/cn/2026-04/2026-04-02.md' },
             { text: '2026-04-01', link: '/AI/daily/cn/2026-04/2026-04-01.md' }
           ]
-        },
+        }
+,
         {
           text: '2026-03',
           collapsed: false,
@@ -131,6 +136,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             { text: '2026-03-01', link: '/AI/daily/cn/2026-03/2026-03-01.md' }
           ]
         }
+
       ]
     },
     {
@@ -142,9 +148,11 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           text: '2026-05',
           collapsed: false,
           items: [
+            { text: '2026-05-11 周报', link: '/AI/weekly/cn/2026-05/2026-05-11-ai-signals-weekly-2026-w19-agent-economy-reasoning-infra.md' },
             { text: '2026-05-03 周报', link: '/AI/weekly/cn/2026-05/2026-05-03-hexi-2077-ai-signals-weekly-2026-w18.md' }
           ]
-        },
+        }
+,
         {
           text: '2026-04',
           collapsed: false,
@@ -155,7 +163,8 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             { text: '2026-04-12 周报', link: '/AI/weekly/cn/2026-04/2026-04-12-ai-signal-weekly-2026-w15-agent-security-crisis.md' },
             { text: '2026-04-05 周报', link: '/AI/weekly/cn/2026-04/2026-04-05-deepseek-v4-huawei-ascend-ai-sycophancy-weekly-2026-w14.md' }
           ]
-        },
+        }
+,
         {
           text: '2026-03',
           collapsed: false,
@@ -167,6 +176,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             { text: '2026-03-01 周报', link: '/AI/weekly/cn/2026-03/2026-03-01-hexi-2077-ai-signal-weekly-2026-w09-trillion-dollar-arms-race.md' }
           ]
         }
+
       ]
     }
   ]

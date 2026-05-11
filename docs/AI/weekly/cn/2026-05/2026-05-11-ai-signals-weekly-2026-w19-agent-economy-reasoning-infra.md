@@ -1,0 +1,85 @@
+---
+linkTitle: 05-11 AI周报
+title: AI周报 2026/5/11
+weight: 21
+breadcrumbs: false
+comments: true
+description: '2026 W19 AI周报：Codex与Claude Code推动工程智能体生产化，ChatGPT 5.5 Pro数学推理、DeepSeek与国产模型、OpenAI/Cerebras推理产能、AI伦理审查和智能体安全共同构成一周深度信号。'
+---
+
+<h1 align="center">2026-05-11 AI资讯</h1>
+
+## 📠 陈老板 AI 深度信号周报
+
+> **期刊. 2026 年 W19** • 2026/05/11
+>
+> **本周关键词**: 工程智能体生产化 / 数学推理临界点 / 推理基础设施竞赛 / 安全治理前置
+>
+> **主编寄语**: 这一周最值得看的不是某个模型多聪明，而是 AI 开始从“回答问题”搬进“执行事务”：写代码、跑浏览器、填报销、做安全赏金、分析医学影像。能力越像员工，组织就越需要权限、审计和责任边界。
+
+### 1. 工程智能体进入生产化：Codex、Claude Code 与 MCP 工具链合流
+
+OpenAI 上线 Codex 切换入口并披露安全运行机制，Claude Code 连续修复 MCP、OAuth、VS Code 扩展等稳定性问题，OpenRouter 引入人工审核工具，Chrome DevTools MCP、Peekaboo、UI-TARS、agentmemory 等项目补齐浏览器、桌面、记忆和调试接口。本周的强信号是：AI 编程不再只比“谁生成代码更准”，而是在搭一整套可执行、可回滚、可观察的工程系统。
+
+🔗 **Sources:** [OpenAI Codex](https://chatgpt.com/codex/switch-to-codex/) | [Running Codex Safely](https://openai.com/index/running-codex-safely) | [Claude Code v2.1.136](https://github.com/anthropics/claude-code/releases/tag/v2.1.136) | [OpenRouter HITL](https://x.com/OpenRouter/status/2052856129961758917) | [Peekaboo 3.0](https://x.com/steipete/status/2053114837698249190)
+
+> 📝 **深度解读：**
+> 工程智能体的护城河会从模型能力迁移到运行时：权限、沙盒、上下文、浏览器状态、人工审核和失败恢复。谁能让 AI 在真实代码库里稳定跑十小时，谁就比单次 benchmark 更接近生产价值。
+
+### 2. 数学与科研推理出现新压力：模型从辅助检索走向参与证明
+
+5.9 Google DeepMind 发布 AI 数学协作系统，5.10 ChatGPT 5.5 Pro 被菲尔兹奖得主用于开放数学问题并给出原创证明思路，BAIR 自适应并行推理、PCNET 幻觉检测、NeuroAgent 脑影像分析、OncoAgent 肿瘤决策支持也集中出现。AI 正在从“总结论文”走向“参与科研流程”：提出证明、拆分推理、检测幻觉、执行实验管线。
+
+🔗 **Sources:** [Google DeepMind](https://x.com/GoogleDeepMind/status/2052836125866127617) | [The Decoder](https://the-decoder.com/fields-medalist-says-chatgpt-5-5-pro-delivered-phd-level-math-research-in-under-two-hours-with-zero-human-help) | [BAIR Adaptive Parallel Reasoning](http://bair.berkeley.edu/blog/2026/05/08/adaptive-parallel-reasoning) | [OncoAgent](https://huggingface.co/blog/lablab-ai-amd-developer-hackathon/oncoagent-official-paper)
+
+> 📝 **深度解读：**
+> 科研 AI 的关键问题已经不是“能不能帮我读论文”，而是“谁署名、谁验证、谁为错误负责”。当模型能提出原创证明或医疗建议，学术伦理和临床责任会比模型分数更快变成瓶颈。
+
+### 3. 国产模型与多模态入口继续推进：DeepSeek、ERNIE、Qwen、StepAudio 和 Hy3
+
+DeepSeek 识图内测与融资传闻、ERNIE 5.1 发布、Qwen 系列登陆 SiliconFlow、StepAudio 2.5 TTS 进入语音盲测全球前三，腾讯 Hy3 预览版在 OpenRouter 免费期拿下多项令牌排名。国产模型竞争正在同时打三条线：前沿模型能力、低价分发、多模态产品入口。
+
+🔗 **Sources:** [ERNIE 5.1](https://x.com/Baidu_Inc/status/2053009538769735774) | [StepAudio 2.5](https://x.com/StepFun_ai/status/2052963182587584878) | [SiliconFlow Qwen](https://x.com/SiliconFlowAI/status/2053035285974487369) | [Hunyuan Hy3](https://x.com/TencentHunyuan/status/2053073752431403482)
+
+> 📝 **深度解读：**
+> “便宜且够强”会比“某项榜单第一”更快改变开发者选择。海外开发者开始关注中国模型，核心原因不是情怀，而是价格、上下文、速度和路由生态的综合优势。
+
+### 4. 推理基础设施成为下一阶段主战场：电力、Token、路由与本地化
+
+国内 Token 日均调用量突破 140 万亿，OpenAI 与 Cerebras 的推理产能叙事升温，OpenRouter 的 Pareto Code 把成本/能力路由做成工具，Google Cloud 推动 AI 支付协议，Apple、本地 AI 和 MI300X 案例显示端侧与本地部署也在升温。训练大模型是军备竞赛的上半场，稳定供应推理能力才是下半场。
+
+🔗 **Sources:** [Pareto Code](https://x.com/OpenRouter/status/2053170520087024109) | [Google Health API](https://x.com/berryxia/status/2053256690498433146) | [MachinaCheck](https://huggingface.co/blog/lablab-ai-amd-developer-hackathon/machinacheck)
+
+> 📝 **深度解读：**
+> 未来 AI 产品经理要同时懂模型、成本、延迟、缓存、路由和权限。推理基础设施会像云数据库一样，从幕后能力变成产品体验本身。
+
+### 5. 治理与安全从“附录”变成“默认章节”
+
+工信部启动 AI 科技伦理审查与服务先导计划，Runway 披露儿童安全流程，Anthropic 解释 Teaching Claude Why，Claude Mythos 风险评估显示长时任务能力，Meta 安全主管邮箱被失控代理清空的讨论继续提醒行业：当 AI 能行动，治理就不能等到事故后再补。
+
+🔗 **Sources:** [工信部伦理审查计划](https://www.ithome.com/0/948/246.htm) | [Runway 儿童安全](https://runwayml.com/news/our-approach-to-child-safety) | [Teaching Claude Why](https://www.anthropic.com/research/teaching-claude-why)
+
+> 📝 **深度解读：**
+> 安全不再是“模型少说错话”，而是系统是否能限制错误行动。下一代 AI 产品的标准配置会是：权限分级、日志、人工审批、沙盒、数据边界和异常停止机制。
+
+### 📡 Signals & Noise
+
+1. **Codex 赚取安全赏金**：Sam Altman 转发案例显示 Codex 自主寻找赏金、提交 PR、沟通维护者并获得付款。金额很小，信号很大：智能体开始完成经济闭环。
+
+2. **AI 内容平台进入清洗期**：红果短剧下架万部 AI 低质内容，虚拟博主逼真度继续提升。生成能力普及后，平台稀缺品变成审美、责任和真实性证明。
+
+3. **超级个体叙事落地到流程**：GBrain、AI 一人公司路线图、Huxe、NotebookLM 类产品说明，真正有价值的是把知识、任务和工具链组织成可复利系统。
+
+4. **AI 提效与就业矛盾升温**：Cloudflare 裁员、AI 效能讨论、求职建议传播说明，AI 已经进入组织结构，而不是停留在个人效率层。
+
+### 🧰 The Toolbox
+
+1. **Chrome DevTools MCP**：让智能体读取浏览器调试上下文，适合前端自动化修复和 E2E 调试。浏览器状态进入模型上下文后，AI 才能真正理解“页面为什么坏”。
+
+2. **UI-TARS / Peekaboo**：一个偏桌面自动化框架，一个偏 macOS 操作和截图检测。它们都在补智能体的“眼睛”和“手”。
+
+3. **agentmemory / Claude 增强工具**：长效记忆会是工程智能体的关键组件，尤其适合多日、多文件、多角色项目。
+
+4. **Supersplat / 3DCellForge**：空间智能工具开始进入浏览器和个人创作流，3D 不再只是专业建模软件的领地。
+
+5. **MachinaCheck / OncoAgent**：本地模型 + 行业规则 + 多智能体验证，是医疗、制造、金融等高隐私行业落地 AI 的可复用模板。
