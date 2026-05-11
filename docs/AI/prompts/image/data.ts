@@ -2618,4 +2618,88 @@ export const PROMPT_LIBRARY_ITEMS: PromptLibraryItem[] = [
     sourceUrl: 'https://x.com/SKA_Neotype/status/2044637900978217334',
     sourceDate: '2026-04-18',
   },
+  {
+    id: 'gpt-image-2-surreal-brand-world-poster',
+    model: 'gpt-image-2',
+    title: '超现实品牌世界海报',
+    images: ['/ai/prompts/172.webp'],
+    promptEn:
+      'A hyper-detailed surreal advertising poster for [BRAND NAME].\n\nBACKGROUND: A large deep-toned rounded rectangle in [BRAND NAME]\'s signature brand color fills 90% of the frame. Behind the subject, massive cropped brand typography bleeds off-frame, letters constructed from the brand\'s core material texture, embossed and lit with sharp directional rim lighting. Subtle noise grain texture overlays the background.\n\nSUBJECT: Use the uploaded reference image. Preserve the subject\'s exact face and skin tone from the reference. The person faces camera in a three-quarter foreground stance, holding the brand\'s most iconic product directly toward the lens.\n\nEXPRESSION: Restyle the subject\'s facial expression to match [BRAND NAME]\'s brand personality and emotional tone.\n\nOUTFIT: Completely restyle the subject\'s clothing into a character that naturally belongs to [BRAND NAME]\'s universe. Use [BRAND NAME]\'s exact brand palette and add small branded details.\n\nSURREAL PRODUCT MOMENT: The product held by the subject opens, spills, or expands into a self-contained miniature world tied to [BRAND NAME]\'s identity and values.\n\nGRAPHIC LAYER: Scattered sparkle glyphs, floating micro-elements, layered soft fog, and subtle chromatic aberration at frame edges.\n\nTEXT SYSTEM:\n- TOP: Rounded pill badge, "[BRAND NAME]"\n- CENTER-LEFT: Brand tagline in bold condensed uppercase\n- BOTTOM STRIP: Four feature tags in a row\n\nQUALITY: Unreal Engine render quality, octane lighting, macro lens bokeh on background elements, 8K sharp foreground.',
+    promptZh:
+      '为[品牌名称]创建一张超精细的超现实广告海报。\n\n背景：[品牌名称]标志性品牌色的大型深色圆角矩形填满画面90%。主体后方有巨大的裁切品牌字体延伸出画面边缘，字母由品牌核心材质纹理构成，带有浮雕感，并由锐利方向轮廓光照亮。背景叠加细微噪点颗粒纹理。\n\n主体：使用上传的参考图。保留参考图中人物准确的脸部与肤色。人物以前景三分之四角度面向镜头，将品牌最具标志性的产品直接递向镜头。\n\n表情：重新设计人物表情，使其符合[品牌名称]的品牌个性与情绪基调。\n\n服装：将人物服装完全重塑为自然属于[品牌名称]宇宙的角色造型。使用[品牌名称]准确品牌色，并加入小型品牌细节。\n\n超现实产品瞬间：主体手中的产品打开、溢出或扩展成一个与[品牌名称]身份和价值观相关的自包含微型世界。\n\n图形层：散落闪光符号、漂浮微元素、分层柔雾，以及画面边缘轻微色差。\n\n文字系统：顶部为圆角胶囊徽章"[品牌名称]"；中左区域为粗体压缩大写品牌标语；底部横条为四个功能标签并排。\n\n质量：虚幻引擎渲染质量，Octane灯光，背景元素微距镜头散景，8K锐利前景。',
+    tags: ['广告', '品牌', '超现实'],
+    sourceTitle: '@SaasJunctionHQ',
+    sourceUrl: 'https://x.com/SaasJunctionHQ/status/2050644926023844149',
+    sourceDate: '2026-05-07',
+  },
+  {
+    id: 'gpt-image-2-chibi-mini-me-photo-effect',
+    model: 'gpt-image-2',
+    title: '迷你3D小人照片效果',
+    images: ['/ai/prompts/173.webp'],
+    promptEn:
+      'Mini "chibi 3D" versions of the same person appear around the original photo - sitting, climbing, playing, interacting with objects - with realistic shadows and depth. Keep base image unchanged. Add soft handwritten text: "Little versions of me... living my quiet moments." Include tiny props text like "You got this ♡". Cinematic, cozy, viral aesthetic.',
+    promptZh:
+      '在原始照片周围添加同一个人的迷你"chibi 3D"版本，它们坐着、攀爬、玩耍并与物体互动，带有真实阴影和深度。保持底图不变。添加柔和手写文字："Little versions of me... living my quiet moments."包含小道具文字如"You got this ♡"。电影感、温暖舒适、适合传播的视觉美学。',
+    tags: ['人像', '创意', '角色'],
+    sourceTitle: '@miratechtool',
+    sourceUrl: 'https://x.com/miratechtool/status/2051691169592033488',
+    sourceDate: '2026-05-07',
+  },
+  {
+    id: 'gpt-image-2-luxury-brand-ad-campaign-poster',
+    model: 'gpt-image-2',
+    title: '奢侈品牌广告海报',
+    images: ['/ai/prompts/174.webp'],
+    promptEn:
+      'A world-class luxury advertising campaign poster, 4:5 ratio, for [BRAND/PRODUCT], shot in a high-end photography studio, [COLOR] dramatic lighting with vivid color gels casting bold shadows, single hero product floating center frame with hyper-reflective surface catching light streaks, cinematic lens flare, deep rich background with gradient bloom, chrome and glass material feel, oversized bold editorial typography with the brand name, razor-sharp tagline in elegant thin font, extreme detail and texture on the product, smoke or liquid elements subtly in background, feels like Apple x Nike x Lamborghini had a campaign, shot on Hasselblad, photorealistic, magazine cover quality',
+    promptZh:
+      '一张世界级奢侈品广告宣传海报，4:5比例，面向[品牌/产品]，在高端摄影棚拍摄，[颜色]戏剧性灯光配合鲜明彩色凝胶投下大胆阴影。单个主角产品悬浮在画面中央，超高反射表面捕捉光线轨迹，电影级镜头光晕，深邃浓郁背景带渐变辉光，呈现金属铬与玻璃材质感。加入超大粗体编辑排版品牌名、锐利清晰的优雅细字体标语，产品拥有极致细节与纹理，背景中微妙加入烟雾或液体元素，整体感觉像 Apple x Nike x Lamborghini 联合打造的广告大片。哈苏相机拍摄，照片级真实，杂志封面品质。',
+    tags: ['海报', '广告', '品牌'],
+    sourceTitle: '@TechieBySA',
+    sourceUrl: 'https://x.com/TechieBySA/status/2051676877794816074',
+    sourceDate: '2026-05-07',
+  },
+  {
+    id: 'gpt-image-2-food-photography-doodle-characters',
+    model: 'gpt-image-2',
+    title: '食物摄影涂鸦角色',
+    images: ['/ai/prompts/175.webp'],
+    promptEn:
+      'Prompt 1 (Beach cafe + cute doodle characters):\n\nAesthetic beachside cafe scene with a wooden table overlooking the ocean, bright daylight, soft shadows, tropical vibe. A delicious bowl of food and a coconut drink placed on the table. Add cute illustrated cartoon characters (fox, bunny, cat) sitting and relaxing around the food, with tiny hand-drawn doodles (hearts, sparkles, motion lines). Cozy wholesome mood, playful storytelling, mix of real photography and 2D illustration overlay, soft warm color grading, shallow depth of field, ultra-realistic food details, 4K.\n\nPrompt 2 (Food flatlay + playful illustrated annotations):\n\nTop-down vibrant food flatlay featuring multiple crispy fried dishes (fish, shrimp, chicken) with dipping sauces on a dark textured table. Add playful hand-drawn doodles and tiny cartoon characters interacting with the food (surfing shrimp, holding signs, cooking, playing). Include fun handwritten labels like "Golden Crunch", "Perfect Pairing", "Champion Fish". Bright colors, high contrast, crispy texture details, steam effects, dynamic composition, social media food ad style, ultra-realistic, 4K.\n\nPrompt 3 (Cozy coffee + illustrated storytelling):\n\nWarm cozy coffee scene on a rustic wooden table with a cup of latte art on a yellow saucer, coffee beans and cinnamon sticks around, small bonsai plant nearby. Add cute animated doodle characters (coffee bean with wings, cat barista painting latte art) and flowing illustrated steam forming magical shapes. Include soft handwritten typography: "Crafted Comfort - Your Daily Ritual". Golden hour lighting, warm tones, soft glow, dreamy atmosphere, shallow depth of field, ultra-realistic + 2D illustration blend, 4K.',
+    promptZh:
+      '提示词1（海边咖啡馆 + 可爱涂鸦角色）：\n\n审美化的海边咖啡馆场景，木桌俯瞰海洋，明亮日光，柔和阴影，热带氛围。桌上摆放一碗美味食物和一杯椰子饮品。添加可爱的插画卡通角色围坐在食物周围放松，并加入小型手绘涂鸦（爱心、闪光、运动线）。温暖治愈的氛围，俏皮叙事，真实摄影与2D插画叠加混合，柔和暖色调，浅景深，超真实食物细节，4K。\n\n提示词2（食物平铺 + 俏皮插画标注）：\n\n俯拍高饱和食物平铺图，在深色纹理桌面上展示多种酥脆炸物（鱼、虾、鸡）和蘸酱。添加俏皮手绘涂鸦与小型卡通角色和食物互动，如冲浪的虾、举牌、烹饪、玩耍。加入有趣手写标签："Golden Crunch"、"Perfect Pairing"、"Champion Fish"。明亮色彩，高对比，酥脆质感细节，热气效果，动态构图，社交媒体食品广告风格，超真实，4K。\n\n提示词3（温暖咖啡 + 插画叙事）：\n\n温暖舒适的咖啡场景，粗粝木桌上有一杯放在黄色杯碟上的拉花咖啡，周围摆放咖啡豆和肉桂棒，旁边有小型盆景。添加可爱的动画涂鸦角色，如带翅膀的咖啡豆、正在画拉花的猫咖啡师，以及形成魔法形状的流动插画蒸汽。加入柔和手写字体："Crafted Comfort - Your Daily Ritual"。黄金时刻光线，暖色调，柔和光晕，梦幻氛围，浅景深，超真实与2D插画融合，4K。',
+    tags: ['广告', '创意', '产品'],
+    sourceTitle: '@Taaruk_',
+    sourceUrl: 'https://x.com/Taaruk_/status/2051690647997088110',
+    sourceDate: '2026-05-07',
+  },
+  {
+    id: 'gpt-image-2-twelve-panel-storyboard-poster',
+    model: 'gpt-image-2',
+    title: '12格动画分镜海报',
+    images: ['/ai/prompts/176.webp'],
+    promptEn:
+      'A super simple workflow: 2 character images -> GPT Image 2.0 storyboard -> Seedance 2.0 animation. Just upload two character images and use the prompt below in GPT Image 2.0 to generate a full storyboard on a single page. Prompt: Create a clean, colorful storyboard poster in a 3x4 grid layout with 12 panels on a single page. Title at the top: "[MAIN TITLE]" Each panel must include: a scene number in a small circle, a short scene title, a colorful illustrated image, a 1-2 line description under the image. Main characters must remain visually consistent across all 12 panels: Character 1: [describe main character in detail] Character 2: [describe second character in detail] Theme/story: [overall story theme] Scene breakdown: [Scene title] - [what happens] [Scene title] - [what happens] [Scene title] - [what happens] [Scene title] - [what happens] [Scene title] - [what happens] [Scene title] - [what happens] [Scene title] - [what happens] [Scene title] - [what happens] [Scene title] - [what happens] [Scene title] - [what happens] [Scene title] - [what happens] [Scene title] - [what happens] Design style: cute 3D animated storybook style, warm emotional lighting, bright colors, soft shadows, child-friendly, clean panel borders, readable typography, neat poster composition, high detail. Important: Keep all 12 panels inside one single image. Make the layout clean and balanced. Keep the characters consistent in face, outfit, and colors. Make the text readable and properly placed. No cropped panels. No extra characters unless mentioned. Then upload that storyboard to Seedance 2.0 and use this prompt: Prompt: Generate a scene using the shots in the uploaded film storyboard. No text on screen. That\'s it.',
+    promptZh:
+      '一个超简单工作流：2张角色图 -> GPT Image 2.0 分镜 -> Seedance 2.0 动画。只需上传两张角色图片，并在 GPT Image 2.0 中使用下方提示词，即可在单页上生成完整分镜。提示词：创建一张干净、彩色的分镜海报，采用3x4网格布局，在单页中包含12个面板。顶部标题："[主标题]"。每个面板必须包含：小圆圈中的场景编号、简短场景标题、彩色插画图像、图像下方1-2行描述。主角在全部12个面板中必须保持视觉一致：角色1：[详细描述主角]；角色2：[详细描述第二个角色]；主题/故事：[整体故事主题]；场景拆解：[场景标题] - [发生的事情]，依次写满12个场景。设计风格：可爱的3D动画故事书风格，温暖情绪光线，明亮色彩，柔和阴影，适合儿童，干净面板边框，可读排版，整洁海报构图，高细节。重要：所有12个面板都必须在同一张图中。布局干净平衡。保持角色脸部、服装和颜色一致。文字清晰可读并正确摆放。不要裁切面板。除非提到，否则不要添加额外角色。然后将该分镜上传到 Seedance 2.0，并使用提示词：根据上传的电影分镜中的镜头生成一个场景。画面中不要出现文字。就这样。',
+    tags: ['界面', '漫画', '创意'],
+    sourceTitle: '@bmx_ai13',
+    sourceUrl: 'https://x.com/bmx_ai13/status/2050432594647642414',
+    sourceDate: '2026-05-07',
+  },
+  {
+    id: 'gpt-image-2-printable-paint-by-numbers',
+    model: 'gpt-image-2',
+    title: '可打印数字填色模板',
+    images: ['/ai/prompts/177.webp'],
+    promptEn:
+      'This GPT Image 2 prompt turns any image into a printable paint-by-numbers page. For best results, use ChatGPT in Thinking mode. Create a professional high-resolution paint-by-numbers template from the provided image as a single PNG only. Use an A4 portrait ratio canvas at 300 DPI with a pure white background. The main artwork must be a clean black-and-white line drawing containing only black outlines, black numbers, and white unfilled paintable areas. Do not create a PDF, document, mockup, multi-page layout, or colored version. Do not use color, gray, shading, texture, gradients, transparency, or pre-filled areas in the main artwork. Analyze the original image and choose the number of colors adaptively based on image complexity, from 1 to a maximum of 14 colors. If the image has only 1-2 important colors, use only 1-2 colors; for simple images use 3-6 colors; for medium complexity use 7-10 colors; for complex, photographic, or highly detailed images use 11-14 colors. Do not force unnecessary colors. Assign each selected color one unique number and merge similar shades unless separation is essential for recognition. Convert the image into simplified, fully closed, easy-to-paint regions while preserving the recognizable composition, main objects, characters, text, logos, foreground, background, and key details. Every paintable white region must contain the correct black number, centered clearly inside the matching area, readable, upright, and not touching outlines. Large black or dark areas from the original must remain white paintable regions with the correct number, not filled black. Only tiny permanent black line details, such as mouth lines, nostrils, pupils, eyelashes, seams, or small decorative strokes, may remain unnumbered. At the bottom of the same PNG, add a neat legend section with the heading "Instructions", the sentence "Paint the areas with the matching colors.", and a list of every used number with a small color swatch and the English color name. Color swatches may appear only in the legend. Ensure the numbering exactly matches the legend, every paintable area is numbered, all regions are closed, and the final result is clean, professional, print-ready, and recognizable as the original image.',
+    promptZh:
+      '这个 GPT Image 2 提示词可以把任意图片转换成可打印的数字填色页面。为获得最佳效果，请在 ChatGPT 思考模式中使用。根据提供的图片创建一个专业高分辨率数字填色模板，仅输出单张 PNG。使用 A4 竖版比例画布，300 DPI，纯白背景。主体作品必须是干净的黑白线稿，只包含黑色轮廓、黑色数字和白色未填充可上色区域。不要创建 PDF、文档、样机、多页布局或彩色版本。主体作品中不要使用颜色、灰色、阴影、纹理、渐变、透明或预填色区域。分析原始图片，并根据图片复杂度自适应选择颜色数量，从1种到最多14种。如果图片只有1-2种重要颜色，只使用1-2种；简单图片使用3-6种；中等复杂度使用7-10种；复杂、照片级或高细节图片使用11-14种。不要强行添加不必要颜色。为每种选定颜色分配唯一编号，并合并相近色调，除非分离对识别至关重要。将图片转换为简化、完全闭合、易上色的区域，同时保留可识别的构图、主要物体、角色、文字、标志、前景、背景和关键细节。每个可上色白色区域都必须包含正确黑色编号，清晰居中放在对应区域内，可读、正向且不接触轮廓。原图中的大面积黑色或深色区域必须保持为白色可上色区域并标注正确编号，不要填成黑色。只有嘴线、鼻孔、瞳孔、睫毛、缝线或小装饰笔画等极小的永久黑线细节可以不编号。在同一张 PNG 底部添加整洁图例区，标题为"Instructions"，句子为"Paint the areas with the matching colors."，并列出每个使用的编号、小色块和英文颜色名。色块只能出现在图例中。确保编号与图例完全一致，每个可上色区域都有编号，所有区域闭合，最终结果干净、专业、可打印，并能识别为原始图片。',
+    tags: ['艺术', '教育', '创意'],
+    sourceTitle: '@TheRoaringToady',
+    sourceUrl: 'https://x.com/TheRoaringToady/status/2050469389720314030',
+    sourceDate: '2026-05-07',
+  },
 ]

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-28",
+  "lastUpdated": "2026-05-07",
   "sources": [
     {
       "url": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts/blob/main/README.md",
@@ -7,7 +7,9 @@
       "totalFound": 58,
       "totalCollected": 44,
       "totalSkipped": 29,
-      "remaining": 0
+      "remaining": 0,
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:README.md",
+      "repoUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts"
     },
     {
       "url": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
@@ -15,7 +17,9 @@
       "totalFound": 58,
       "totalCollected": 54,
       "totalSkipped": 48,
-      "remaining": 0
+      "remaining": 0,
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:repo-root",
+      "repoUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts"
     },
     {
       "url": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts/blob/main/README_zh-CN.md",
@@ -23,7 +27,9 @@
       "totalFound": 167,
       "totalCollected": 92,
       "totalSkipped": 28,
-      "remaining": 47
+      "remaining": 47,
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:README_zh-CN.md",
+      "repoUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts"
     }
   ],
   "collected": [
@@ -31,1360 +37,2075 @@
       "id": "gpt-image-2-boston-spring-city-poster",
       "promptZh": "一张引人注目的 2026 春季波士顿城市海报...",
       "sourceUrl": "https://x.com/BubbleBrain/status/2045358053831172358",
-      "collectedAt": "2026-04-27"
+      "collectedAt": "2026-04-27",
+      "canonicalSourceUrl": "https://x.com/BubbleBrain/status/2045358053831172358",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-vintage-amalfi-travel-poster",
       "promptZh": "现代铅笔插画风格的阿马尔菲海岸复古旅行海报...",
       "sourceUrl": "https://x.com/WolfRiccardo/status/2044562722491121718",
-      "collectedAt": "2026-04-27"
+      "collectedAt": "2026-04-27",
+      "canonicalSourceUrl": "https://x.com/WolfRiccardo/status/2044562722491121718",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-chengdu-food-map-illustration",
       "promptZh": "一张手绘风格的城市美食地图，以成都为主题...",
       "sourceUrl": "https://x.com/Panda20230902/status/2045396918965285111",
-      "collectedAt": "2026-04-27"
+      "collectedAt": "2026-04-27",
+      "canonicalSourceUrl": "https://x.com/Panda20230902/status/2045396918965285111",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-chinese-s-shaped-poster",
       "promptZh": "极简新中式美学风格，画面以淡雅的灰白色为底...",
       "sourceUrl": "https://x.com/liyue_ai/status/2045368305079447853",
-      "collectedAt": "2026-04-27"
+      "collectedAt": "2026-04-27",
+      "canonicalSourceUrl": "https://x.com/liyue_ai/status/2045368305079447853",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-guangzhou-spring-city-poster",
       "promptZh": "一张充满新春喜庆氛围但不失高雅格调的 2026 城市宣传海报...",
       "sourceUrl": "https://x.com/liyue_ai/status/2045332620352119274",
-      "collectedAt": "2026-04-27"
+      "collectedAt": "2026-04-27",
+      "canonicalSourceUrl": "https://x.com/liyue_ai/status/2045332620352119274",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-doodle-sketch-ai-builder",
       "promptZh": "以涂鸦速写风表现【一个厉害的AI builder】...",
       "sourceUrl": "https://x.com/blanplan/status/2045190582453350748",
-      "collectedAt": "2026-04-27"
+      "collectedAt": "2026-04-27",
+      "canonicalSourceUrl": "https://x.com/blanplan/status/2045190582453350748",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-song-dynasty-social-media",
       "promptZh": "宋朝人的朋友圈...",
       "sourceUrl": "https://x.com/Panda20230902/status/2045385588065313057",
-      "collectedAt": "2026-04-27"
+      "collectedAt": "2026-04-27",
+      "canonicalSourceUrl": "https://x.com/Panda20230902/status/2045385588065313057",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-museum-hanfu-infographic",
       "promptZh": "请根据【主题】自动生成一张博物馆图鉴式中文拆解信息图...",
       "sourceUrl": "https://x.com/MrLarus/status/2045504669401653414",
-      "collectedAt": "2026-04-27"
+      "collectedAt": "2026-04-27",
+      "canonicalSourceUrl": "https://x.com/MrLarus/status/2045504669401653414",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-cosplayer-phone-screenshot",
       "promptZh": "生成一张竖版手机截图风格的图片...",
       "sourceUrl": "https://x.com/Zoulinshen/status/2045082518089810073",
-      "collectedAt": "2026-04-27"
+      "collectedAt": "2026-04-27",
+      "canonicalSourceUrl": "https://x.com/Zoulinshen/status/2045082518089810073",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-persona5-character-card",
       "promptZh": "基于此角色和背景，请制作一份类似官方设定资料的角色资料卡...",
       "sourceUrl": "https://x.com/iamrednightS/status/2045075682837836265",
-      "collectedAt": "2026-04-27"
+      "collectedAt": "2026-04-27",
+      "canonicalSourceUrl": "https://x.com/iamrednightS/status/2045075682837836265",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-qiongqi-eastern-aesthetics-poster",
       "promptZh": "极简主义，新中式风格立体图形设计...",
       "sourceUrl": "https://x.com/liyue_ai/status/2045506567735558336",
-      "collectedAt": "2026-04-27"
+      "collectedAt": "2026-04-27",
+      "canonicalSourceUrl": "https://x.com/liyue_ai/status/2045506567735558336",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-guangzhou-paper-cut-city-poster",
       "promptZh": "以珠江新城现代都市景观为灵感的剪纸艺术...",
       "sourceUrl": "https://x.com/liyue_ai/status/2045527750606487877",
-      "collectedAt": "2026-04-27"
+      "collectedAt": "2026-04-27",
+      "canonicalSourceUrl": "https://x.com/liyue_ai/status/2045527750606487877",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-dreamy-watercolor-editorial",
       "promptZh": "梦幻水彩插画风格绘制[主题]...",
       "sourceUrl": "https://x.com/hmontilla_/status/2045513933096636575",
-      "collectedAt": "2026-04-27"
+      "collectedAt": "2026-04-27",
+      "canonicalSourceUrl": "https://x.com/hmontilla_/status/2045513933096636575",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-silhouette-universe-narrative-poster",
       "promptZh": "请根据【主题：xxx】自动生成一张高审美的轮廓宇宙收藏版叙事海报...",
       "sourceUrl": "https://x.com/MrLarus/status/2045418028733538620",
-      "collectedAt": "2026-04-27"
+      "collectedAt": "2026-04-27",
+      "canonicalSourceUrl": "https://x.com/MrLarus/status/2045418028733538620",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-multi-platform-screenshots",
       "promptZh": "生成视频号内容截图...",
       "sourceUrl": "https://x.com/MrLarus/status/2045373105041007013",
-      "collectedAt": "2026-04-27"
+      "collectedAt": "2026-04-27",
+      "canonicalSourceUrl": "https://x.com/MrLarus/status/2045373105041007013",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-liu-yifei-douyin-livestream",
       "promptZh": "9:16 的图片比例，生成一张抖音直播的截图...",
       "sourceUrl": "https://x.com/alanblogsooo/status/2044784762594918516",
-      "collectedAt": "2026-04-27"
+      "collectedAt": "2026-04-27",
+      "canonicalSourceUrl": "https://x.com/alanblogsooo/status/2044784762594918516",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-king-taejo-x-page",
       "promptZh": "请制作朝鲜太祖李成桂的X页面...",
       "sourceUrl": "https://x.com/SKA_Neotype/status/2044637900978217334",
-      "collectedAt": "2026-04-27"
+      "collectedAt": "2026-04-27",
+      "canonicalSourceUrl": "https://x.com/SKA_Neotype/status/2044637900978217334",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-convenience-store-neon-portrait",
       "promptZh": "35mm胶片摄影风格，便利店内部荧光灯与外部彩色霓虹灯交织...",
       "sourceUrl": "https://x.com/BubbleBrain/status/2045167461147042202",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/BubbleBrain/status/2045167461147042202",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-cinematic-minimal-portrait",
       "promptZh": "生成一张电影感极简人像...",
       "sourceUrl": "https://x.com/iam_miharbi/status/2045151354679665101",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/iam_miharbi/status/2045151354679665101",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-japanese-onsen-ryokan-portrait",
       "promptZh": "35mm胶片摄影，温暖的复古日式温泉旅馆美学...",
       "sourceUrl": "https://x.com/BubbleBrain/status/2045092449803284923",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/BubbleBrain/status/2045092449803284923",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-35mm-flash-editorial-portrait",
       "promptZh": "35mm彩色胶片摄影，刺眼的机顶直射闪光灯...",
       "sourceUrl": "https://x.com/BubbleBrain/status/2045052982728016131",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/BubbleBrain/status/2045052982728016131",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-mirror-selfie-bedroom-portrait",
       "promptZh": "一位令人惊艳的18岁中国女孩...",
       "sourceUrl": "https://x.com/Shinning1010/status/2045002808903020962",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/Shinning1010/status/2045002808903020962",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-soft-airy-35mm-portrait",
       "promptZh": "模拟35mm胶片摄影，柔和通透日系美学...",
       "sourceUrl": "https://x.com/BubbleBrain/status/2046115431144902732",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/BubbleBrain/status/2046115431144902732",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-urban-turn-back-street-portrait",
       "promptZh": "该画面为中近景，采用平视镜头...",
       "sourceUrl": "https://x.com/Tz_2022/status/2045892003775361198",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/Tz_2022/status/2045892003775361198",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-korean-idol-3x3-grid-portrait",
       "promptZh": "竖版9:16，韩国偶像人像摄影...",
       "sourceUrl": "https://x.com/BubbleBrain/status/2046268941941850575",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/BubbleBrain/status/2046268941941850575",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-ccd-flash-korean-idol",
       "promptZh": "手机照片风格，老式CCD相机美学...",
       "sourceUrl": "https://x.com/BubbleBrain/status/2046190539213885806",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/BubbleBrain/status/2046190539213885806",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-korean-idol-3x3-collage-portrait",
       "promptZh": "竖版9:16，韩国偶像人像摄影3x3拼贴...",
       "sourceUrl": "https://x.com/BubbleBrain/status/2046151898621993364",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/BubbleBrain/status/2046151898621993364",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-soft-black-mist-editorial-portrait",
       "promptZh": "竖版9:16，编辑人像，单人...",
       "sourceUrl": "https://x.com/BubbleBrain/status/2046434670724907395",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/BubbleBrain/status/2046434670724907395",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-fujifilm-strawberry-school-portrait",
       "promptZh": "竖版9:16，日式富士胶片风格人像...",
       "sourceUrl": "https://x.com/BubbleBrain/status/2046483268019884384",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/BubbleBrain/status/2046483268019884384",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-soft-black-mist-idol-portrait",
       "promptZh": "竖版9:16，韩国偶像人像摄影...",
       "sourceUrl": "https://x.com/BubbleBrain/status/2046518189509734903",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/BubbleBrain/status/2046518189509734903",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-vintage-newspaper-front-page",
       "promptZh": "创建最逼真的复古报纸头版设计...",
       "sourceUrl": "https://x.com/Naiknelofar788/status/2047207812800147647",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/Naiknelofar788/status/2047207812800147647",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-travel-magazine-feature",
       "promptZh": "创建杂志专题文章[旅行]导览页面...",
       "sourceUrl": "https://x.com/andis13/status/2047204384811921764",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/andis13/status/2047204384811921764",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-photo-json-prompt-rebuild",
       "promptZh": "分析这张照片并给我一个详细的JSON...",
       "sourceUrl": "https://x.com/pavellaslov/status/2047182214304055339",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/pavellaslov/status/2047182214304055339",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-green-tea-product-photography",
       "promptZh": "舒缓绿茶胶片套装正面展示...",
       "sourceUrl": "https://x.com/ZaraIrahh/status/2047180061657452601",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/ZaraIrahh/status/2047180061657452601",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-strawberry-ice-cream-product",
       "promptZh": "超写实产品摄影，浓郁草莓软冰淇淋...",
       "sourceUrl": "https://x.com/ZaraIrahh/status/2047179916161212542",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/ZaraIrahh/status/2047179916161212542",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-ultra-realistic-dslr-portrait",
       "promptZh": "超写实电影感DSLR人像摄影，18岁英俊年轻男性...",
       "sourceUrl": "https://x.com/harboriis/status/2047175250761433416",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/harboriis/status/2047175250761433416",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-night-bodega-musician-portrait",
       "promptZh": "一张纪实风格的杂志封面品质抓拍照片...",
       "sourceUrl": "https://x.com/commanderdgr8/status/2047934886124867684",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/commanderdgr8/status/2047934886124867684",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-old-delhi-sweet-shop-documentary",
       "promptZh": "创建一张照片级写实的旅行纪实图像...",
       "sourceUrl": "https://x.com/commanderdgr8/status/2047889839123521635",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/commanderdgr8/status/2047889839123521635",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-cyberpunk-sci-fi-side-portrait",
       "promptZh": "电影感侧面人像，一位粗犷的男性...",
       "sourceUrl": "https://x.com/iamsofiaijaz/status/2047882171336253928",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/iamsofiaijaz/status/2047882171336253928",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-bedroom-voice-note-portrait",
       "promptZh": "一位真实的年轻女性在傍晚柔和的卧室光线中...",
       "sourceUrl": "https://x.com/ChillaiKalan__/status/2047862141894681076",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/ChillaiKalan__/status/2047862141894681076",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-toddler-crayon-scribble-portrait",
       "promptZh": "（主体）以超级糟糕的儿童画风格呈现...",
       "sourceUrl": "https://x.com/akakageAI/status/2047812983389356276",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/akakageAI/status/2047812983389356276",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-restored-vintage-mother-child-portrait",
       "promptZh": "一张修复后的复古家庭快照...",
       "sourceUrl": "https://x.com/gdb/status/2048184797374325031",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/gdb/status/2048184797374325031",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-dreamy-backlit-editorial-portrait",
       "promptZh": "电影感柔焦人像，从背后和侧面拍摄女性...",
       "sourceUrl": "https://x.com/ToroJushiAi/status/2048139425465467248",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/ToroJushiAi/status/2048139425465467248",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-3d-cartoon-character-render",
       "promptZh": "高品质 3D CGI 渲染，以迷人卡通风格呈现角色...",
       "sourceUrl": "https://x.com/Inshrah_ali_/status/2048121503367995753",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/Inshrah_ali_/status/2048121503367995753",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-staircase-sequin-dress-portrait",
       "promptZh": "竖版 2:3 比例。年轻女性头发凌乱盘起...",
       "sourceUrl": "https://x.com/XSydneyFan/status/2048114180906217566",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/XSydneyFan/status/2048114180906217566",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-cozy-cafe-anime-maid-portrait",
       "promptZh": "精致动漫风格肖像，金发 VTuber 灵感女仆...",
       "sourceUrl": "https://x.com/yume00112211/status/2048072808606089230",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/yume00112211/status/2048072808606089230",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-dreamy-oriental-female-portrait",
       "promptZh": "梦幻东方女性人像，成年女性近景肖像...",
       "sourceUrl": "https://x.com/liyue_ai/status/2048046253842559183",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/liyue_ai/status/2048046253842559183",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-hermes-style-monochrome-avatar",
       "promptZh": "极简黑白矢量头像标志，神话动漫女性优雅侧脸...",
       "sourceUrl": "https://x.com/jiajia232016/status/2048044100793032976",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/jiajia232016/status/2048044100793032976",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-pastel-lavender-anime-portrait",
       "promptZh": "精致竖版动漫肖像，梦幻少女在空灵粉彩薰衣草色调中...",
       "sourceUrl": "https://x.com/libearal/status/2048026376645861799",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/libearal/status/2048026376645861799",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-lavender-ai-girl-memory-space",
       "promptZh": "梦幻动漫肖像，精致虚拟少女蜷坐地板上...",
       "sourceUrl": "https://x.com/libearal/status/2048026376645861799",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/libearal/status/2048026376645861799",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-pastel-ai-assistant-anime-portrait",
       "promptZh": "梦幻动漫风格肖像，温柔虚拟助手少女蜷坐...",
       "sourceUrl": "https://x.com/libearal/status/2048026376645861799",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/libearal/status/2048026376645861799",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-dreamy-underwater-surreal-portrait",
       "promptZh": "梦幻超现实人像，年轻女性站在水下...",
       "sourceUrl": "https://x.com/kotobukigraphic/status/2047967522453123255",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/kotobukigraphic/status/2047967522453123255",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-japanese-classroom-long-hair-snapshot",
       "promptZh": "写实日式高中教室场景，竖版手机照片构图...",
       "sourceUrl": "https://x.com/Hair_Hair55/status/2047963832732221723",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/Hair_Hair55/status/2047963832732221723",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-cozy-cat-ear-pajama-night-portrait",
       "promptZh": "柔和动漫风格卧室肖像，猫耳少女胸部以上构图...",
       "sourceUrl": "https://x.com/yume00112211/status/2047951384734228617",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/yume00112211/status/2047951384734228617",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-ink-curve-guangzhou-aesthetics-poster",
       "promptZh": "纯黑深邃底色，一条粗壮有力的墨色书法 S 型曲线...",
       "sourceUrl": "https://x.com/liyue_ai/status/2045873940883808523",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/liyue_ai/status/2045873940883808523",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-guangdong-super-league-invitation-poster",
       "promptZh": "广东省城市足球超级联赛（粤超）邀请函海报设计...",
       "sourceUrl": "https://x.com/liyue_ai/status/2045772039521542202",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/liyue_ai/status/2045772039521542202",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-epic-silhouette-world-poster",
       "promptZh": "收藏版史诗海报，人物侧脸剪影中生长出完整世界观...",
       "sourceUrl": "https://x.com/Ghhhh3owi/status/2045803217251102897",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/Ghhhh3owi/status/2045803217251102897",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-new-chinese-ink-landscape-poster",
       "promptZh": "新中式水墨山水海报，竖版9:16构图...",
       "sourceUrl": "https://x.com/liyue_ai/status/2046215276249993720",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/liyue_ai/status/2046215276249993720",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-science-encyclopedia-infographic",
       "promptZh": "请根据【主题】生成一张高质量竖版「科普百科图」...",
       "sourceUrl": "https://x.com/MrLarus/status/2046231542817497392",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/MrLarus/status/2046231542817497392",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-dark-fantasy-guangzhou-city-poster",
       "promptZh": "平面插画，东方幻想风格高端城市海报设计...",
       "sourceUrl": "https://x.com/liyue_ai/status/2046243132774494607",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/liyue_ai/status/2046243132774494607",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-silicon-valley-2026-promo-poster",
       "promptZh": "一张精致优雅的 2026 硅谷城市推广海报...",
       "sourceUrl": "https://x.com/carsonyungos/status/2046523198116889064",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/carsonyungos/status/2046523198116889064",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-dark-epic-concept-poster",
       "promptZh": "围绕【主题】自动生成一张顶级暗黑史诗概念海报...",
       "sourceUrl": "https://x.com/A9Quant/status/2046224777208361126",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/A9Quant/status/2046224777208361126",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-cinematic-infographic-concept-poster",
       "promptZh": "请围绕【主题】自动生成一张顶级概念海报...",
       "sourceUrl": "https://x.com/A9Quant/status/2046228485841334559",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/A9Quant/status/2046228485841334559",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-chili-pork-cooking-flowchart",
       "promptZh": "帮我制作辣椒炒肉这道菜的详细制作流程图...",
       "sourceUrl": "https://x.com/Kurt_Rousey466/status/2046267707881029934",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/Kurt_Rousey466/status/2046267707881029934",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-watercolor-children-book-illustration",
       "promptZh": "柔和诗意的水彩与水粉纹理儿童绘本插画...",
       "sourceUrl": "https://x.com/dotey/status/2047174895293849972",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/dotey/status/2047174895293849972",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-chinese-odyssey-90s-hk-poster",
       "promptZh": "大话西游海报重制为90年代港片风格...",
       "sourceUrl": "https://x.com/songguoxiansen/status/2047201597697245252",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/songguoxiansen/status/2047201597697245252",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-luxury-basketball-athlete-campaign-poster",
       "promptZh": "创建一张高端奢华运动服宣传海报...",
       "sourceUrl": "https://x.com/Shorelyn_/status/2047949711181832558",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/Shorelyn_/status/2047949711181832558",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-avant-garde-basketball-sculpture-ad",
       "promptZh": "前卫运动时尚广告，超大篮球如纪念碑雕塑般摆放...",
       "sourceUrl": "https://x.com/AIwithkhan/status/2047886964037398989",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/AIwithkhan/status/2047886964037398989",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-premium-food-recipe-poster",
       "promptZh": "为[菜名]创建一张高端美食制作海报...",
       "sourceUrl": "https://x.com/Preda2005/status/2047883394152088004",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/Preda2005/status/2047883394152088004",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-avant-garde-tennis-racket-sculpture-ad",
       "promptZh": "前卫运动时尚广告，超大网球拍如纪念碑雕塑般竖立...",
       "sourceUrl": "https://x.com/AIwithSynthia/status/2047884609321619831",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/AIwithSynthia/status/2047884609321619831",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-surrealist-liquor-brand-fashion-poster",
       "promptZh": "一张超现实主义高级定制风格烈酒广告海报...",
       "sourceUrl": "https://x.com/hmontilla_/status/2047884126343032995",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/hmontilla_/status/2047884126343032995",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-luxury-fashion-magazine-cover-bw",
       "promptZh": "创建一张受奢华时尚出版物启发的高级时装编辑杂志封面...",
       "sourceUrl": "https://x.com/iamrealsnow/status/2047883187527856345",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/iamrealsnow/status/2047883187527856345",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-surrealist-rolex-luxury-watch-poster",
       "promptZh": "一张劳力士高级时尚超现实主义海报...",
       "sourceUrl": "https://x.com/Sheldon056/status/2047873913049538927",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/Sheldon056/status/2047873913049538927",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-peacock-botanical-vintage-art-print",
       "promptZh": "对称设计，两只优雅的蓝色孔雀搭配精细羽毛纹理...",
       "sourceUrl": "https://x.com/dotey/status/2047803054422901046",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/dotey/status/2047803054422901046",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-splash-fashion-brand-campaign-poster",
       "promptZh": "为 SPLASH 创建一张超写实时尚海报...",
       "sourceUrl": "https://x.com/miratechtool/status/2047780974709346606",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/miratechtool/status/2047780974709346606",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-avant-garde-guitar-sculpture-fashion-ad",
       "promptZh": "前卫时尚广告，超大吉他如雕塑般摆放...",
       "sourceUrl": "https://x.com/QamarRiaz1/status/2047777016733110722",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/QamarRiaz1/status/2047777016733110722",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-biomimetic-stingray-aircraft-poster",
       "promptZh": "仿生航空航天概念海报...",
       "sourceUrl": "https://x.com/_simonsmith/status/2048172203946996041",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/_simonsmith/status/2048172203946996041",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-taoist-three-souls-seven-spirits-poster",
       "promptZh": "一张高度精细的道教密宗信息图竖版海报...",
       "sourceUrl": "https://x.com/leyu37829/status/2048125950681075833",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/leyu37829/status/2048125950681075833",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-vintage-shannon-information-theory-poster",
       "promptZh": "关于克劳德·香农与信息论的复古编辑信息图海报...",
       "sourceUrl": "https://x.com/mob_17/status/2048118645017219381",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/mob_17/status/2048118645017219381",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-chen-uen-ink-tribute-poster",
       "promptZh": "一张在陈年宣纸上的复古编辑海报，致敬郑问...",
       "sourceUrl": "https://x.com/mob_17/status/2048118645017219381",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/mob_17/status/2048118645017219381",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-prs-guitar-heritage-lineage-poster",
       "promptZh": "奢华复古吉他对比信息图海报...",
       "sourceUrl": "https://x.com/GlennHasABeard/status/2048087784141857235",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/GlennHasABeard/status/2048087784141857235",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-baroque-painting-reality-fracture",
       "promptZh": "一幅巴洛克油画活了过来...",
       "sourceUrl": "https://x.com/JohnnyWang8802/status/2048129335853559824",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/JohnnyWang8802/status/2048129335853559824",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-urban-alley-mural-artist",
       "promptZh": "一张电影感超写实夜景照片...",
       "sourceUrl": "https://x.com/Professor_134/status/2048066672398102896",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/Professor_134/status/2048066672398102896",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-urban-fantasy-coexistence-crossing",
       "promptZh": "一张高度精细的动漫风格都市奇幻插画...",
       "sourceUrl": "https://x.com/Ray_CROWN0/status/2048024227664494775",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/Ray_CROWN0/status/2048024227664494775",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-magic-seed-packet-miniature-scene",
       "promptZh": "史诗 3D 场景：一个风化的种子包装袋...",
       "sourceUrl": "https://x.com/AllaAisling/status/2048156345518768190",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/AllaAisling/status/2048156345518768190",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-dubai-miniature-city-model",
       "promptZh": "一张超精细电影级等距微缩城市模型...",
       "sourceUrl": "https://x.com/silentempiredev/status/2048086378383384773",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/silentempiredev/status/2048086378383384773",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-moss-perfume-editorial-product-shot",
       "promptZh": "一张高端编辑风产品摄影，单瓶奢华香水...",
       "sourceUrl": "https://x.com/Salmaaboukarr/status/2048103506125463983",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/Salmaaboukarr/status/2048103506125463983",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-earbuds-ecommerce-infographic",
       "promptZh": "高冲击力无线耳机电商信息图...",
       "sourceUrl": "https://x.com/SPEEDAI07/status/2047981795552153860",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/SPEEDAI07/status/2047981795552153860",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-plantable-tag-eco-tshirt-ad",
       "promptZh": "一张高端环保意识时尚广告...",
       "sourceUrl": "https://x.com/Diplomeme/status/2047957339974828092",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/Diplomeme/status/2047957339974828092",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-minimalist-pure-crunch-product-ad",
       "promptZh": "一张极简主义产品广告...",
       "sourceUrl": "https://x.com/Strength04_X/status/2047917220165231011",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/Strength04_X/status/2047917220165231011",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-gas-giant-descent-storyboard",
       "promptZh": "电影感科幻分镜联系表...",
       "sourceUrl": "https://x.com/xRahultripathi/status/2048140775356354892",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/xRahultripathi/status/2048140775356354892",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-rpg-map-to-anime-scene",
       "promptZh": "使用提供的参考图片，将俯视角 RPG 城镇地图转换...",
       "sourceUrl": "https://x.com/ArtwlDesign/status/2048054726768709769",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/ArtwlDesign/status/2048054726768709769",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-miniature-diorama-skincare-ad",
       "promptZh": "一张超写实微缩场景产品广告...",
       "sourceUrl": "https://x.com/Strength04_X/status/2048074514278563949",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/Strength04_X/status/2048074514278563949",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-pastel-blue-clogs-fashion-ad",
       "promptZh": "一张高端摄影棚洞洞鞋广告海报...",
       "sourceUrl": "https://x.com/SPEEDAI07/status/2047907058079650035",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/SPEEDAI07/status/2047907058079650035",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-3d-stone-staircase-evolution",
       "promptZh": "演化时间线信息图。以参考图为结构基础...",
       "sourceUrl": "https://x.com/GeekCatX/status/2045792240044511277",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/GeekCatX/status/2045792240044511277",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-luxury-ad-parody-four-loko",
       "promptZh": "高冲击力恶搞电商信息图...",
       "sourceUrl": "https://x.com/tonysimons_/status/2048057490940596595",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/tonysimons_/status/2048057490940596595",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-anime-museum-background",
       "promptZh": "使用提供的参考照片，以精致的剧场动画背景插画...",
       "sourceUrl": "https://x.com/Dakiny/status/2048175219966394695",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/Dakiny/status/2048175219966394695",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-dreamy-shibuya-bubble-girl",
       "promptZh": "梦幻动漫风格全身插画...",
       "sourceUrl": "https://x.com/terunari/status/2048308270914490666",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/terunari/status/2048308270914490666",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-stormy-tropical-city-rooftop-plane",
       "promptZh": "电影感宽幅航拍视角...",
       "sourceUrl": "https://x.com/Gerry/status/2048303505702629537",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/Gerry/status/2048303505702629537",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-japanese-chinese-food-delivery-flyer",
       "promptZh": "日式社区中华料理外卖传单...",
       "sourceUrl": "https://x.com/xc5_/status/2048310696686014935",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/xc5_/status/2048310696686014935",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-good-bath-day-editorial-poster",
       "promptZh": "创建一张柔和的编辑风格生活海报...",
       "sourceUrl": "https://x.com/Kazuch75240438/status/2048205418238030327",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/Kazuch75240438/status/2048205418238030327",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-japanese-sci-fi-armor-process",
       "promptZh": "日式科幻穿甲流程信息图...",
       "sourceUrl": "https://x.com/yy7482933910896/status/2048192904922075161",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/yy7482933910896/status/2048192904922075161",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-fashion-editorial-hamptons-formula",
       "promptZh": "老钱风汉普顿编辑大片，高挑金发女性约25岁，优雅宁静的表情...",
       "sourceUrl": "https://x.com/anacoding/status/2046904999045628114",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/anacoding/status/2046904999045628114",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-street-fashion-full-body-portrait",
       "promptZh": "全身户外街拍，一位约25岁的白人女性大步走过城市斑马线...",
       "sourceUrl": "https://x.com/AIwithSarah_/status/2047234995627172229",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/AIwithSarah_/status/2047234995627172229",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-sparkling-water-tropical-product",
       "promptZh": "专业产品摄影，一罐冰冷气泡水竖直放在金色沙滩上...",
       "sourceUrl": "https://x.com/meng_dagg695/status/2047227172486824002",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/meng_dagg695/status/2047227172486824002",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-ming-hanfu-fashion-magazine-cover",
       "promptZh": "比例9:16竖版。高端编辑时尚摄影，电影级品质，媲美Vogue封面...",
       "sourceUrl": "https://x.com/GeekCatX/status/2047220831491858766",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/GeekCatX/status/2047220831491858766",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-epic-career-cinematic-poster-template",
       "promptZh": "创建一张史诗级海报，展示[人物名称]职业生涯中最具标志性的时刻...",
       "sourceUrl": "https://x.com/Goodmanprotocol/status/2047900470921040270",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/Goodmanprotocol/status/2047900470921040270",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-mascot-brand-identity-document",
       "promptZh": "18格品牌形象设计文档，JSON结构化提示词。包含18个模块...",
       "sourceUrl": "https://x.com/Colin_Leeee/status/2044802802149650631",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/Colin_Leeee/status/2044802802149650631",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-super-famicom-retro-poster",
       "promptZh": "超级任天堂海报风格...",
       "sourceUrl": "https://x.com/lilimliliychan/status/2045114760937804187",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/lilimliliychan/status/2045114760937804187",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-character-visual-vertical-poster",
       "promptZh": "角色视觉竖版海报...",
       "sourceUrl": "https://x.com/tebasaki3D/status/2046371076402503709",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/tebasaki3D/status/2046371076402503709",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-sony-a7-exploded-view",
       "promptZh": "索尼A7爆炸图分解...",
       "sourceUrl": "https://x.com/iaPulse_/status/2046903739429097660",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/iaPulse_/status/2046903739429097660",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-journey-west-daughter-kingdom-poster",
       "promptZh": "西游记女儿国海报...",
       "sourceUrl": "https://x.com/cj858cjsoul/status/2047103956535697822",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/cj858cjsoul/status/2047103956535697822",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-luxury-amber-perfume-cinematic-ad",
       "promptZh": "奢华琥珀香水电影感广告...",
       "sourceUrl": "https://x.com/Polanco_IA/status/2047689647967609037",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/Polanco_IA/status/2047689647967609037",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-tropical-citrus-soda-ad-poster",
       "promptZh": "热带柑橘苏打广告海报...",
       "sourceUrl": "https://x.com/edimakorfr/status/2047635133466124726",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/edimakorfr/status/2047635133466124726",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-industrial-design-presentation-sheet",
       "promptZh": "工业设计产品展示图...",
       "sourceUrl": "https://x.com/ShamsAmin56/status/2047627860752621647",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/ShamsAmin56/status/2047627860752621647",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-dark-mode-marketing-ui",
       "promptZh": "深色模式营销案例UI...",
       "sourceUrl": "https://x.com/IndieDevHailey/status/2044974254769463312",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/IndieDevHailey/status/2044974254769463312",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-anime-character-brand-merch-board",
       "promptZh": "动漫角色品牌周边展示板...",
       "sourceUrl": "https://x.com/chi_vc_/status/2046061073720369228",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/chi_vc_/status/2046061073720369228",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-skincare-product-studio-shot",
       "promptZh": "护肤品棚拍广告...",
       "sourceUrl": "https://x.com/Strength04_X/status/2047636847231222",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/Strength04_X/status/2047636847231222",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-16-pose-dance-combat-reference",
       "promptZh": "16格舞蹈战斗姿势参考...",
       "sourceUrl": "https://x.com/ExquisitMe/status/2048143577264402629",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/ExquisitMe/status/2048143577264402629",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-pastel-anime-girl-full-body",
       "promptZh": "粉彩动漫少女全身图...",
       "sourceUrl": "https://x.com/hoshi122221/status/2048025730425196801",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/hoshi122221/status/2048025730425196801",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-grain-powder-ecommerce-board",
       "promptZh": "谷物粉电商展板...",
       "sourceUrl": "https://x.com/WooGabriel76263/status/2047988112094101770",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/WooGabriel76263/status/2047988112094101770",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-elegant-cosmetic-poster-template",
       "promptZh": "优雅美妆海报模板...",
       "sourceUrl": "https://x.com/Adam38363368936/status/2047917266361360682",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/Adam38363368936/status/2047917266361360682",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-nostalgic-16-photo-couple-grid",
       "promptZh": "16张怀旧联拍底片拼贴...",
       "sourceUrl": "https://x.com/zenkaiAI/status/2048051889460437351",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/zenkaiAI/status/2048051889460437351",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-anime-bl-promo-thumbnail",
       "promptZh": "明亮精致的动漫风格推广封面...",
       "sourceUrl": "https://x.com/himukai_an/status/2047981800535085555",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/himukai_an/status/2047981800535085555",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-artist-ethereal-muse-night",
       "promptZh": "电影感动漫风格数字插画，深夜温馨画师房间...",
       "sourceUrl": "https://x.com/almimeister/status/2048309710118687101",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/almimeister/status/2048309710118687101",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-dreamy-sayori-anime-banner",
       "promptZh": "宽幅动漫横幅插画，明亮梦幻教室中的纱织...",
       "sourceUrl": "https://x.com/mirochill/status/2047639852485620070",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/mirochill/status/2047639852485620070",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-anime-band-budokan-finale",
       "promptZh": "戏剧性动漫演唱会插画，从舞台后方视角...",
       "sourceUrl": "https://x.com/SDAI1807097011/status/2048127178592915583",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/SDAI1807097011/status/2048127178592915583",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-luxury-mustang-lifestyle-shot",
       "promptZh": "时尚年轻女性站在亮粉色福特野马前...",
       "sourceUrl": "https://x.com/Just_sharon7/status/2048095904138485962",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/Just_sharon7/status/2048095904138485962",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-anime-soba-friends-dining",
       "promptZh": "温馨动漫风格传统日式荞麦面店内景...",
       "sourceUrl": "https://x.com/AIMAG31G/status/2048089673621516547",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/AIMAG31G/status/2048089673621516547",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-gothic-android-warrior-cathedral",
       "promptZh": "电影感暗黑奇幻动漫插画，废墟哥特大教堂...",
       "sourceUrl": "https://x.com/yanagihara_0805/status/2048085829713842405",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/yanagihara_0805/status/2048085829713842405",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-cloud-shape-doodle-overlay",
       "promptZh": "根据图像中云朵的形状，识别它们最像什么...",
       "sourceUrl": "https://x.com/Gorden_Sun/status/2048080137149899133",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/Gorden_Sun/status/2048080137149899133",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-anime-winter-camping-scene",
       "promptZh": "温馨冬季露营场景，大型米色帆布帐篷内...",
       "sourceUrl": "https://x.com/sub_raw_jin/status/2048066779835220392",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/sub_raw_jin/status/2048066779835220392",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-bmw-performance-social-poster",
       "promptZh": "创建4:5竖版社交海报，8K印刷品质...",
       "sourceUrl": "https://x.com/harboriis/status/2048063332624843046",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/harboriis/status/2048063332624843046",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-asmr-ear-massage-anime",
       "promptZh": "柔和梦幻的动漫插画，可爱年轻女性夜间在温馨卧室做ASMR...",
       "sourceUrl": "https://x.com/Shion_yamabuki/status/2047232198382964969",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/Shion_yamabuki/status/2047232198382964969",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-monika-anime-banner",
       "promptZh": "高品质动漫横幅插画，温暖金色调教室文学部场景...",
       "sourceUrl": "https://x.com/mirochill/status/2047639852485620070",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/mirochill/status/2047639852485620070",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-cyberpunk-404-witch-summoning",
       "promptZh": "戏剧性动漫风格赛博朋克女巫站在暗黑屋顶...",
       "sourceUrl": "https://x.com/Eris_Create_Lab/status/2047537707904274795",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/Eris_Create_Lab/status/2047537707904274795",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-anime-fantasy-travel-movie-poster",
       "promptZh": "虚构电影EL VIAJE DE LA LUNA DE PLATA的电影感动漫海报...",
       "sourceUrl": "https://x.com/Design4p0/status/2047531978346398002",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/Design4p0/status/2047531978346398002",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-tropical-parrot-pixel-mosaic",
       "promptZh": "鲜艳像素风格热带鹦鹉马赛克...",
       "sourceUrl": "https://x.com/erikmackinnon/status/2048190288179675290",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/erikmackinnon/status/2048190288179675290",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-golden-cocktail-greenhouse-bar",
       "promptZh": "电影感竖版照片，手举大型气球酒杯装满闪亮金黄柑橘鸡尾酒...",
       "sourceUrl": "https://x.com/FernandesK47117/status/2048183925294371147",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/FernandesK47117/status/2048183925294371147",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-multi-panel-image-board",
       "promptZh": "创建4×3无边框网格，每个面板是一位年轻女性的独立图像...",
       "sourceUrl": "https://x.com/aimikoda/status/2048183782876778821",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/aimikoda/status/2048183782876778821",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-handwritten-realistic-letter",
       "promptZh": "创建一张高度真实的手写信件图片...",
       "sourceUrl": "https://x.com/mosthssan/status/2048160477658980711",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/mosthssan/status/2048160477658980711",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-zelda-pvp-game-screenshot",
       "promptZh": "基于已生成的角色，制作一张以塞尔达：御风者为主题的PVP游戏截图...",
       "sourceUrl": "https://x.com/khaiinit/status/2047219694130827273",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/khaiinit/status/2047219694130827273",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-landing-page-from-reference",
       "promptZh": "用这张图片作为风格和调色参考，创建一个着陆页...",
       "sourceUrl": "https://x.com/D_studioproject/status/2047212826264211540",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/D_studioproject/status/2047212826264211540",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-li-jiaqi-lipstick-livestream",
       "promptZh": "李佳琦直播间背景，口红矩阵展示墙...",
       "sourceUrl": "https://x.com/songguoxiansen/status/2047207826913972518",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/songguoxiansen/status/2047207826913972518",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-apple-pods-pro3-ecommerce-infographic",
       "promptZh": "高冲击力 Apple Pods Pro 3 头戴式耳机电商信息图...",
       "sourceUrl": "https://x.com/meng_dagg695/status/2047935217231663186",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/meng_dagg695/status/2047935217231663186",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-aaa-game-screenshot-concept",
       "promptZh": "生成模拟人生荒岛求生续作可能呈现的AAA级游戏截图...",
       "sourceUrl": "https://x.com/ChiefMonkeyMike/status/2047828814580138156",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/ChiefMonkeyMike/status/2047828814580138156",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-grwm-beauty-thumbnail",
       "promptZh": "竖版9:16 TikTok风格GRWM美妆封面...",
       "sourceUrl": "https://x.com/S0N_IA_/status/2047414367243657296",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/S0N_IA_/status/2047414367243657296",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-iphone-keynote-snapshot",
       "promptZh": "业余 iPhone 照片，Apple Park iPhone 20 发布会现场...",
       "sourceUrl": "https://x.com/patrickassale/status/2044687244368441742",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/patrickassale/status/2044687244368441742",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-handwritten-notebook-photo",
       "promptZh": "业余照片风格，一本平铺打开的笔记本写满黑色圆珠笔手写笔记...",
       "sourceUrl": "https://x.com/patrickassale/status/2044569086013718958",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/patrickassale/status/2044569086013718958",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-style-to-ui-design-system",
       "promptZh": "用这种风格帮我生成一套UI设计系统...",
       "sourceUrl": "https://x.com/stark_nico99/status/2045836554451706125",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/stark_nico99/status/2045836554451706125",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-elon-musk-douyin-livestream",
       "promptZh": "9:16 竖版，高细节写实风格中国抖音直播截图...",
       "sourceUrl": "https://x.com/Shinning1010/status/2046501587762188535",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/Shinning1010/status/2046501587762188535",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-galgame-character-intro-page",
       "promptZh": "使用最新的图片生成工具，将这个Q版角色插画和立绘转换为看起来像真实网站的角色介绍页面...",
       "sourceUrl": "https://x.com/09lyco/status/2045281845391323175",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/09lyco/status/2045281845391323175",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-official-character-sheet-jp",
       "promptZh": "基于此角色和背景，制作一份官方设定资料风格的角色设定表...",
       "sourceUrl": "https://x.com/Toshi_nyaruo_AI/status/2045025277538107420",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/Toshi_nyaruo_AI/status/2045025277538107420",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-mecha-girl-sea-city-keyvisual",
       "promptZh": "一位十几岁的机甲少女，苍白皮肤沾满煤灰和海雾...",
       "sourceUrl": "https://x.com/old_pgmrs_will/status/2046144801071079612",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/old_pgmrs_will/status/2046144801071079612",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-chaos-notes-hidden-face-art",
       "promptZh": "从混乱潦草的笔记和符号集合中浮现出角色面孔的艺术作品...",
       "sourceUrl": "https://x.com/loglogrog/status/2046448773162033240",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/loglogrog/status/2046448773162033240",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-anime-martial-arts-battle",
       "promptZh": "一幅动漫风格的两位年轻女武术家在传统木质道场中进行高强度武术战斗的插画...",
       "sourceUrl": "https://x.com/Tanemomi_Ver2/status/2046063806846214265",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/Tanemomi_Ver2/status/2046063806846214265",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-jellyfish-room-goods-poster",
       "promptZh": "水母房间周边海报...",
       "sourceUrl": "https://x.com/Ayu_AI_0912/status/2048309565817766139",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/Ayu_AI_0912/status/2048309565817766139",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-luxun-morning-flowers",
       "promptZh": "一张具有20世纪初中国文学风格的照片级场景：窗边一张旧木桌，午后暖光洒落...",
       "sourceUrl": "https://x.com/op7418/status/1922516693062496541",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/op7418/status/1922516693062496541",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-wuxia-heroine",
       "promptZh": "一位武侠女侠站在清晨雾气缭绕的竹林小径上...",
       "sourceUrl": "https://x.com/op7418/status/1922516693062496541",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/op7418/status/1922516693062496541",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-guanyin-portrait",
       "promptZh": "一张超写实照片，仿佛观音菩萨是真实存在的人...",
       "sourceUrl": "https://x.com/Gorden_Sun/status/1922516693062496541",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/Gorden_Sun/status/1922516693062496541",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-tang-lantern-festival",
       "promptZh": "一场盛大的唐代灯会夜景，数百盏华丽丝绸灯笼照亮繁华的古中国街道...",
       "sourceUrl": "https://x.com/op7418/status/1922516693062496541",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/op7418/status/1922516693062496541",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-surreal-japanese-city",
       "promptZh": "一个超现实的未来日式都市景观，传统建筑与先进科技融合...",
       "sourceUrl": "https://x.com/op7418/status/1922516693062496541",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/op7418/status/1922516693062496541",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-eastern-fantasy-portrait",
       "promptZh": "一幅空灵的东方幻想女性肖像，肤如凝脂，凤眼缀以金色额饰...",
       "sourceUrl": "https://x.com/op7418/status/1922516693062496541",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/op7418/status/1922516693062496541",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-yang-guifei-realistic-portrait",
       "promptZh": "根据真实历史对杨玉环的形象描述，生成一张杨贵妃真实照片...",
       "sourceUrl": "https://x.com/Zhaoge01/status/2047110776897638568",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/Zhaoge01/status/2047110776897638568",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-tushan-yaya-glamour-portrait",
       "promptZh": "狐妖小红娘涂山雅雅写真大片，粉色九尾狐裘紧身裙...",
       "sourceUrl": "https://x.com/sdjn_wgc/status/2046981757325475954",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/sdjn_wgc/status/2046981757325475954",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-artistic-eastern-woman-portrait",
       "promptZh": "9:16 竖向构图，单人女性艺术肖像，年轻东方女生...",
       "sourceUrl": "https://x.com/zhiyangzhu22222/status/2046952985562062888",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/zhiyangzhu22222/status/2046952985562062888",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "id": "gpt-image-2-autobots-lunar-base-assembly",
       "promptZh": "图片1：汽车人全员月球基地集结，地球悬于身后星空...",
       "sourceUrl": "https://x.com/songguoxiansen/status/2046952548469530716",
-      "collectedAt": "2026-04-28"
+      "collectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/songguoxiansen/status/2046952548469530716",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     }
   ],
   "rejected": [
     {
       "sourceUrl": "https://x.com/Diplomeme/status/2048060325925470358",
       "title": "电影感鸡肉蒸饺街头广告海报",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/Diplomeme/status/2048060325925470358",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/mirochill/status/2047639852485620070",
       "title": "紫色百合动漫横幅(Yuri)",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/mirochill/status/2047639852485620070",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/mirochill/status/2047639852485620070",
       "title": "粉色奈月动漫横幅(Natsuki)",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/mirochill/status/2047639852485620070",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/AIillust_studio/status/2048099186214900130",
       "title": "动漫少女与真人约会拼贴",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/AIillust_studio/status/2048099186214900130",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/m_Raiko_AIart/status/2048069313387737222",
       "title": "乡间车站少女场景",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/m_Raiko_AIart/status/2048069313387737222",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/sub_raw_jin/status/2048066779835220392",
       "title": "动漫角色居酒屋照片",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/sub_raw_jin/status/2048066779835220392",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/rerxmsz06/status/2047261622121705782",
       "title": "动漫VTuber我的世界直播封面",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/rerxmsz06/status/2047261622121705782",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/sorane_aimusic/status/2047507066697507134",
       "title": "动漫音乐训练营宣传海报",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/sorane_aimusic/status/2047507066697507134",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/AIwithSarah_/status/2047904483359760677",
       "title": "美妆产品商业营销广告",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/AIwithSarah_/status/2047904483359760677",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/sjbbxhz/status/2045684734714380687",
       "title": "电商直播UI界面模拟(JSON)",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/sjbbxhz/status/2045684734714380687",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/makaneko_AI/status/2045764016858087720",
       "title": "四格日本数字广告Banner",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/makaneko_AI/status/2045764016858087720",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/Gugombly/status/2047310862428303636",
       "title": "电影感城市爆炸追逃场景",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/Gugombly/status/2047310862428303636",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/austinit/status/2044968740782272596",
       "title": "一键生成UI设计系统",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/austinit/status/2044968740782272596",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/yammamon/status/2045778624092254603",
       "title": "桃太郎解说PPT风格插画",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/yammamon/status/2045778624092254603",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/agi_aibusi/status/2046530764871696750",
       "title": "手相诊断鉴定书",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/agi_aibusi/status/2046530764871696750",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/loglogrog/status/2046437230127034774",
       "title": "唐吉诃德卖场POP海报",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/loglogrog/status/2046437230127034774",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/AZLnfvp/status/2046468976092533180",
       "title": "赛博朋克霓虹UI设计系统",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/AZLnfvp/status/2046468976092533180",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/ailovedirector/status/2046905387274891296",
       "title": "AI游戏开发概要PPT",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/ailovedirector/status/2046905387274891296",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/songguoxiansen/status/2046476566537080849",
       "title": "圣斗士星矢黄金十二宫格卡牌",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/songguoxiansen/status/2046476566537080849",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/patrickassale/status/2044581766309060765",
       "title": "奢华魅力美妆人像",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/patrickassale/status/2044581766309060765",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/ZaraIrahh/status/2047179669011616172",
       "title": "笔记本上的超写实 UI/UX 模型",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/ZaraIrahh/status/2047179669011616172",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/charliejhills/status/2047969988368314526",
       "title": "卧室抓拍自拍写实人像",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/charliejhills/status/2047969988368314526",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/gdb/status/2048184698195870102",
       "title": "复古雕版风连帽衫人像",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/gdb/status/2048184698195870102",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/Abdullah__Ai7/status/2048083022315159595",
       "title": "奢华棚拍服装变身",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/Abdullah__Ai7/status/2048083022315159595",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/libearal/status/2048026376645861799",
       "title": "赛博水晶动漫少女人像",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/libearal/status/2048026376645861799",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/jeremydevz/status/2048026214812561683",
       "title": "暗黑佳得乐风格人像",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/jeremydevz/status/2048026214812561683",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/liyue_ai/status/2045875219307655337",
       "title": "超现实鲤鱼星云插画",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/liyue_ai/status/2045875219307655337",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/llllegend0620/status/2045963764466688065",
       "title": "浏览器游戏广告创意海报",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/llllegend0620/status/2045963764466688065",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/alanlovelq/status/2046378199681257920",
       "title": "主题科学百科卡片",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/alanlovelq/status/2046378199681257920",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/songguoxiansen/status/2047204566559756707",
       "title": "东方不败武侠角色海报",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/songguoxiansen/status/2047204566559756707",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/chenenpei/status/2046985783715025135",
       "title": "卓别林产品海报重新设计",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/chenenpei/status/2046985783715025135",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/harboriis/status/2047921293123895520",
       "title": "街头潮流时尚亚洲服饰海报",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/harboriis/status/2047921293123895520",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/degewa/status/2048104569037783226",
       "title": "藏族礼帽民族志图版",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/degewa/status/2048104569037783226",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/TWnese/status/2048077204786212887",
       "title": "阿里山一日游海报",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/TWnese/status/2048077204786212887",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/AlwaveNazca/status/2048147643809865950",
       "title": "奢华计时腕表广告",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/AlwaveNazca/status/2048147643809865950",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/AlwaveNazca/status/2048147643809865950",
       "title": "霓虹耐克Lumina广告海报",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/AlwaveNazca/status/2048147643809865950",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/AlwaveNazca/status/2048147643809865950",
       "title": "街头潮流球鞋海报广告",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/AlwaveNazca/status/2048147643809865950",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/_LaurentB/status/2048126606313464040",
       "title": "大阪六号卫衣编辑风广告",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/_LaurentB/status/2048126606313464040",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/Salmaaboukarr/status/2048103506125463983",
       "title": "金色皮草香水瓶编辑风广告",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/Salmaaboukarr/status/2048103506125463983",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/songguoxiansen/status/2048046906585280977",
       "title": "传统中国艺术与瓷瓶",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/songguoxiansen/status/2048046906585280977",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/komorimedia/status/2048114825398731143",
       "title": "水象星座角色海报",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/komorimedia/status/2048114825398731143",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/komorimedia/status/2048114825398731143",
       "title": "土象星座角色海报",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/komorimedia/status/2048114825398731143",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/komorimedia/status/2048114825398731143",
       "title": "火象星座角色海报",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/komorimedia/status/2048114825398731143",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/komorimedia/status/2048114825398731143",
       "title": "风象星座角色海报",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/komorimedia/status/2048114825398731143",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/Magncsans/status/2047876253898903594",
       "title": "9格产品TVC分镜",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/Magncsans/status/2047876253898903594",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/sarinaashapi/status/2048307780864606708",
       "title": "亲子沟通误区信息图",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/sarinaashapi/status/2048307780864606708",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/GeekCatX/status/2046805182967726329",
       "title": "VR头显爆炸图海报",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/GeekCatX/status/2046805182967726329",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/Panda20230902/status/2045396918965285111",
       "title": "城市美食插画地图",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/Panda20230902/status/2045396918965285111",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/genel_ai/status/2046501692246470871",
       "title": "清爽夏日乌冬面广告",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/genel_ai/status/2046501692246470871",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/wory37303852/status/2045925660401795478",
       "title": "VR头显爆炸图海报",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/wory37303852/status/2045925660401795478",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/mm_zzm44854/status/2045861258520568230",
       "title": "城市美食插画地图(JSON版)",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/mm_zzm44854/status/2045861258520568230",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/ck_igarashi/status/2046528889124728993",
       "title": "普拉提工作室广告海报",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/ck_igarashi/status/2046528889124728993",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/caiziboshi/status/2047091751731519744",
       "title": "鹿鼎记角色海报",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/caiziboshi/status/2047091751731519744",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/dynamicwangs/status/2047580984342925545",
       "title": "奢华毛绒乐福鞋生活照",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/dynamicwangs/status/2047580984342925545",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/MiguelMaestroIA/status/2047555836252151831",
       "title": "大理石梳妆台香水广告",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/MiguelMaestroIA/status/2047555836252151831",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/Ciri_ai/status/2048074587955658848",
       "title": "舞蹈动作参考图",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/Ciri_ai/status/2048074587955658848",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/ExquisitMe/status/2048143577264402629",
       "title": "16格舞蹈姿势参考表(Case134)",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/ExquisitMe/status/2048143577264402629",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/ExquisitMe/status/2048143577264402629",
       "title": "16格女性舞蹈姿势表(Case135)",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/ExquisitMe/status/2048143577264402629",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/ExquisitMe/status/2048143577264402629",
       "title": "16格舞蹈姿势参考图(Case136)",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/ExquisitMe/status/2048143577264402629",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/ZHO_ZHO_ZHO/status/1922516693062496541",
       "title": "四季眼部特写",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/ZHO_ZHO_ZHO/status/1922516693062496541",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/op7418/status/1922516693062496541",
       "title": "狮驼岭暗黑神话",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/op7418/status/1922516693062496541",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/dotey/status/1922516693062496541",
       "title": "古法编程博物馆",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/dotey/status/1922516693062496541",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/op7418/status/1922516693062496541",
       "title": "新中式极简荷花插画",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/op7418/status/1922516693062496541",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/saskr_13/status/2044744396932079934",
       "title": "四格漫画风格绘制",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/saskr_13/status/2044744396932079934",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/GeekCatX/status/2046939656244318676",
       "title": "食物标本解剖博物图",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/GeekCatX/status/2046939656244318676",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/chesnyfcb/status/2047714457774637213",
       "title": "餐厅视角变换对比图",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/chesnyfcb/status/2047714457774637213",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/MoveHiro1219/status/2047698611665096732",
       "title": "霓虹AI对比YouTube封面",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/MoveHiro1219/status/2047698611665096732",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/MoveHiro1219/status/2047698611665096732",
       "title": "赛博朋克AI工具对比海报",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/MoveHiro1219/status/2047698611665096732",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/mikko_20100518/status/2047514897404354598",
       "title": "东京迪士尼最前列格斗UI",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/mikko_20100518/status/2047514897404354598",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/chesnyfcb/status/2047714457774637213",
       "title": "动漫人群视角转换(JSON)",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/chesnyfcb/status/2047714457774637213",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     },
     {
       "sourceUrl": "https://x.com/MoveHiro1219/status/2047698611665096732",
       "title": "AI战国时代YouTube封面",
-      "rejectedAt": "2026-04-28"
+      "rejectedAt": "2026-04-28",
+      "canonicalSourceUrl": "https://x.com/MoveHiro1219/status/2047698611665096732",
+      "sourcePageUrl": "https://github.com/EvoLinkAI/awesome-gpt-image-2-prompts",
+      "repoKey": "EvoLinkAI/awesome-gpt-image-2-prompts:legacy-import"
     }
-  ]
+  ],
+  "schemaVersion": 2
 }
