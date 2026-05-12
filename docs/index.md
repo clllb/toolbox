@@ -20,7 +20,7 @@ hero:
     - text: AI工具手册
       link: /AI/tools/
       theme: alt
-    - text: AI日报
+    - text: AI大事件
       link: /AI/daily/index
       theme: brand
     - text: AI提示词库
@@ -39,10 +39,10 @@ features:
     link: /AI/tools/
     linkText: 查看手册
   - icon: 📝
-    title: AI日报
-    details: 每日追踪 AI 圈重要动态与热门产品<br />帮你快速了解今天发生了什么
+    title: AI大事件
+    details: 追踪 AI 圈重要动态与热点事件<br />帮你快速了解今天发生了什么
     link: /AI/daily/index
-    linkText: 每日总结
+    linkText: 查看详情
   - icon: 🤖
     title: AI周报
     details: 每周梳理重点趋势、产品更新与行业信号<br />把值得关注的内容集中看完

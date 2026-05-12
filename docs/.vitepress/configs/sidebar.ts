@@ -41,7 +41,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
   ],
   '/AI/': [
     {
-      text: 'AI日报',
+      text: 'AI大事件',
       collapsed: false,
       items: [
 
@@ -66,7 +66,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
 ,
         {
           text: '2026-04',
-          collapsed: false,
+          collapsed: true,
           items: [
             { text: '2026-04-30', link: '/AI/daily/cn/2026-04/2026-04-30.md' },
             { text: '2026-04-29', link: '/AI/daily/cn/2026-04/2026-04-29.md' },
@@ -102,7 +102,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
 ,
         {
           text: '2026-03',
-          collapsed: false,
+          collapsed: true,
           items: [
             { text: '2026-03-31', link: '/AI/daily/cn/2026-03/2026-03-31.md' },
             { text: '2026-03-30', link: '/AI/daily/cn/2026-03/2026-03-30.md' },
@@ -156,7 +156,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
 ,
         {
           text: '2026-04',
-          collapsed: false,
+          collapsed: true,
           items: [
             { text: '2026-04-26 周报', link: '/AI/weekly/cn/2026-04/2026-04-26-hexi-2077-ai-signals-weekly-2026-w17-gpt5-5-nvidia-trust-deficit.md' },
             { text: '2026-04-26 周报', link: '/AI/weekly/cn/2026-04-26-hexi-2077-ai-signals-weekly-2026-w17-gpt5-5-nvidia-trust-deficit.md' },
@@ -168,7 +168,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
 ,
         {
           text: '2026-03',
-          collapsed: false,
+          collapsed: true,
           items: [
             { text: '2026-03-29 周报', link: '/AI/weekly/cn/2026-03/2026-03-29-hexi-2077-ai-deep-signal-weekly-2026-w13.md' },
             { text: '2026-03-22 周报', link: '/AI/weekly/cn/2026-03/2026-03-22-hexi-2077-ai-weekly-2026-w12.md' },
