@@ -5,7 +5,10 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
     {
       text: '公众号杂谈',
       collapsed: false,
-      items: [{ text: 'What? FastExcel没了！', link: '/bug/fastexcel' }]
+      items: [
+        { text: 'What? FastExcel没了！', link: '/bug/fastexcel' },
+        { text: '特朗普访华团再加一人：老黄，我 tm 来了！', link: '/bug/trump-visit-ceo-list' }
+      ]
     }
   ],
   '/AI/tools/': [
