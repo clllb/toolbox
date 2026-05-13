@@ -1,6 +1,8 @@
 # EasyExcel 不维护了？FastExcel 也“消失”了？别慌，它只是进了 Apache！
 
-大家好我是陈老板，最近偶然发现 github 上 FastExcel 项目查不到了，然后就去了解了一下，结果发现 FastExcel 并没有消失，而是被 Apache 软件基金会“招安”了，接下来带大家一起梳理下这个事件的来龙去脉。
+<mark>**🎉 大家好我是陈老板！评论区任意评论即可参加 Claude Code Opus 10 美元密钥抽奖，每周五开奖！**</mark>
+
+最近偶然发现 github 上 FastExcel 项目查不到了，然后就去了解了一下，结果发现 FastExcel 并没有消失，而是被 Apache 软件基金会“招安”了，接下来带大家一起梳理下这个事件的来龙去脉。
 
 > **“我的项目还在用 EasyExcel，作者却停更了？”**  
 > **“听说 FastExcel 是替代方案，结果 GitHub 上都搜不到了？”**  
@@ -160,4 +162,4 @@ public static void main(String[] args) {
 
 **你的项目还在用 EasyExcel 吗？打算迁移到 FESOD 吗？欢迎在评论区聊聊你的经验！**
 
-> 👉 转发本文，帮助更多 Java 开发者避开“维护陷阱”！
+<mark>**👉 ai 中转站&爬虫代理就找陈老老老板！进群还可以参加每周抽 10 美元密钥抽奖，与评论区互不影响哦！**</mark>
