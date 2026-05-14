@@ -9,6 +9,7 @@ import { usePageId } from '../composables'
 import MNavVisitor from './MNavVisitor.vue'
 import MDocFooter from './MDocFooter.vue'
 import MSponsor from './MSponsor.vue'
+import MHomeServiceBanner from './MHomeServiceBanner.vue'
 
 const { Layout } = DefaultTheme
 const { isDark, theme, frontmatter } = useData()
@@ -76,6 +77,10 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
 
     <template #aside-bottom>
       <MSponsor />
+    </template>
+
+    <template v-if="frontmatter.homeServiceBanner" #home-hero-after>
+      <MHomeServiceBanner />
     </template>
 
     <template v-if="comment && frontmatter.comment !== false" #doc-after>

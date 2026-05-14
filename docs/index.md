@@ -1,6 +1,7 @@
 ---
 layout: home
 layoutClass: 'm-home-layout'
+homeServiceBanner: true
 
 title: 陈老板的百宝箱
 description: 好玩、好用、好牛的工具,尽在陈老板的百宝箱!
@@ -17,14 +18,14 @@ hero:
     - text: 工具导航
       link: /nav/
       theme: brand
-    - text: AI工具手册
-      link: /AI/tools/
-      theme: alt
     - text: AI大事件
       link: /AI/daily/index
-      theme: brand
+      theme: alt
     - text: AI提示词库
       link: /AI/prompts/image/
+      theme: brand
+    - text: AI工具手册
+      link: /AI/tools/
       theme: alt
 
 features:
@@ -33,26 +34,26 @@ features:
     details: 精选全网好用的网站/工具，覆盖工作/学习/生活全场景<br />每周更新，拒绝收藏吃灰
     link: /nav/
     linkText: 立即探索
-  - icon: ⚡️
-    title: AI工具手册
-    details: 合并每周工具速递与 AI 工具使用手册<br />从发现新工具到真正用顺手，一站搞定
-    link: /AI/tools/
-    linkText: 查看手册
-  - icon: 📝
-    title: AI大事件
-    details: 追踪 AI 圈重要动态与热点事件<br />帮你快速了解今天发生了什么
-    link: /AI/daily/index
-    linkText: 查看详情
-  - icon: 🤖
-    title: AI周报
-    details: 每周梳理重点趋势、产品更新与行业信号<br />把值得关注的内容集中看完
-    link: /AI/weekly/index
-    linkText: 每周总结
   - icon: 🖼️
     title: AI 提示词库
     details: 包含：图片提示词、论文提示词<br />支持查看样式图、中英双语提示词与一键复制
     link: /AI/prompts/image/
     linkText: 进入词库
+  - icon: 📝
+    title: AI大事件
+    details: 追踪 AI 圈重要动态与热点事件<br />帮你快速了解今天发生了什么
+    link: /AI/daily/index
+    linkText: 查看详情
+  - icon: ⚡️
+    title: AI工具手册
+    details: 合并每周工具速递与 AI 工具使用手册<br />从发现新工具到真正用顺手，一站搞定
+    link: /AI/tools/
+    linkText: 查看手册
+  - icon: 🤖
+    title: AI周报
+    details: 每周梳理重点趋势、产品更新与行业信号<br />把值得关注的内容集中看完
+    link: /AI/weekly/index
+    linkText: 每周总结
   - icon: 🆕
     title: 公众号杂谈
     details: 记录技术实践、工具体验和折腾随笔<br />不止避坑，也分享一些值得聊的事
