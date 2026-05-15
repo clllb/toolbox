@@ -14,6 +14,6 @@ export const nav: DefaultTheme.Config['nav'] = [
     ],
   },
   { text: '百宝箱主页',
-    link: 'index.md'
+    link: '/'
   }
 ]

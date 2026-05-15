@@ -7,6 +7,7 @@ import { createMediumZoomProvider } from './composables/useMediumZoom'
 import MLayout from './components/MLayout.vue'
 import MNavLinks from './components/MNavLinks.vue'
 import MHomeServiceBanner from './components/MHomeServiceBanner.vue'
+import { isHomePagePath } from './utils/isHomePagePath'
 
 import './styles/index.scss'
 
@@ -37,16 +38,14 @@ export default {
     if (typeof window !== 'undefined') {
       watch(
         () => router.route.data.relativePath,
-        () =>
-          updateHomePageStyle(
-            /* /toolbox/ 是为了兼容 GitHub Pages */
-            location.pathname === '/' || location.pathname === '/toolbox/',
-          ),
+        () => updateHomePageStyle(isHomePagePath(location.pathname)),
         { immediate: true },
       )
     }
   },
 }
+
+export { isHomePagePath }
 
 if (typeof window !== 'undefined') {
   // detect browser, add to class for conditional styling
