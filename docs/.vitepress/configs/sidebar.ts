@@ -52,6 +52,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           text: '2026-05',
           collapsed: false,
           items: [
+            { text: '2026-05-15', link: '/AI/daily/cn/2026-05/2026-05-15.md' },
             { text: '2026-05-14', link: '/AI/daily/cn/2026-05/2026-05-14.md' },
             { text: '2026-05-13', link: '/AI/daily/cn/2026-05/2026-05-13.md' },
             { text: '2026-05-12', link: '/AI/daily/cn/2026-05/2026-05-12.md' },
@@ -67,8 +68,8 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             { text: '2026-05-02', link: '/AI/daily/cn/2026-05/2026-05-02.md' },
             { text: '2026-05-01', link: '/AI/daily/cn/2026-05/2026-05-01.md' }
           ]
-        }
-,
+        },
+
         {
           text: '2026-04',
           collapsed: true,
@@ -103,8 +104,8 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             { text: '2026-04-02', link: '/AI/daily/cn/2026-04/2026-04-02.md' },
             { text: '2026-04-01', link: '/AI/daily/cn/2026-04/2026-04-01.md' }
           ]
-        }
-,
+        },
+
         {
           text: '2026-03',
           collapsed: true,
@@ -157,23 +158,22 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             { text: '2026-05-11 周报', link: '/AI/weekly/cn/2026-05/2026-05-11-ai-signals-weekly-2026-w19-agent-economy-reasoning-infra.md' },
             { text: '2026-05-03 周报', link: '/AI/weekly/cn/2026-05/2026-05-03-hexi-2077-ai-signals-weekly-2026-w18.md' }
           ]
-        }
-,
+        },
+
         {
           text: '2026-04',
-          collapsed: true,
+          collapsed: false,
           items: [
             { text: '2026-04-26 周报', link: '/AI/weekly/cn/2026-04/2026-04-26-hexi-2077-ai-signals-weekly-2026-w17-gpt5-5-nvidia-trust-deficit.md' },
-            { text: '2026-04-26 周报', link: '/AI/weekly/cn/2026-04-26-hexi-2077-ai-signals-weekly-2026-w17-gpt5-5-nvidia-trust-deficit.md' },
             { text: '2026-04-19 周报', link: '/AI/weekly/cn/2026-04/2026-04-19-ai-compute-agents-trust-crisis-2026-w16.md' },
             { text: '2026-04-12 周报', link: '/AI/weekly/cn/2026-04/2026-04-12-ai-signal-weekly-2026-w15-agent-security-crisis.md' },
             { text: '2026-04-05 周报', link: '/AI/weekly/cn/2026-04/2026-04-05-deepseek-v4-huawei-ascend-ai-sycophancy-weekly-2026-w14.md' }
           ]
-        }
-,
+        },
+
         {
           text: '2026-03',
-          collapsed: true,
+          collapsed: false,
           items: [
             { text: '2026-03-29 周报', link: '/AI/weekly/cn/2026-03/2026-03-29-hexi-2077-ai-deep-signal-weekly-2026-w13.md' },
             { text: '2026-03-22 周报', link: '/AI/weekly/cn/2026-03/2026-03-22-hexi-2077-ai-weekly-2026-w12.md' },
