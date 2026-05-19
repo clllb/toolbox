@@ -7,6 +7,7 @@ import { createMediumZoomProvider } from './composables/useMediumZoom'
 import MLayout from './components/MLayout.vue'
 import MNavLinks from './components/MNavLinks.vue'
 import MHomeServiceBanner from './components/MHomeServiceBanner.vue'
+import MLuckDashboard from './components/MLuckDashboard.vue'
 import { isHomePagePath } from './utils/isHomePagePath'
 
 import './styles/index.scss'
@@ -34,6 +35,7 @@ export default {
 
     app.component('MNavLinks', MNavLinks)
     app.component('MHomeServiceBanner', MHomeServiceBanner)
+    app.component('MLuckDashboard', MLuckDashboard)
 
     if (typeof window !== 'undefined') {
       watch(

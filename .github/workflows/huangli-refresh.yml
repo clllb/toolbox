@@ -1,0 +1,61 @@
+name: Refresh Huangli Data
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Beijing time 08:15 on the 25th day of every month.
+    - cron: '15 0 25 * *'
+
+permissions:
+  contents: write
+
+env:
+  TZ: Asia/Shanghai
+
+jobs:
+  refresh-huangli:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          npm install
+          npm run huangli:setup
+
+      - name: Generate current and next month data
+        run: npm run huangli:generate
+
+      - name: Spot-check against rilu.cc
+        run: npm run huangli:verify -- --sample-size 5
+
+      - name: Run tests
+        run: npm test
+
+      - name: Build site
+        run: npm run build
+
+      - name: Add source check to job summary
+        if: always()
+        run: |
+          if [ -f docs/public/huangli/data/source-check.md ]; then
+            cat docs/public/huangli/data/source-check.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Commit refreshed Huangli data
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: refresh huangli data"
+          file_pattern: docs/public/huangli/data/*.json docs/public/huangli/data/*.md
