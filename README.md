@@ -7,23 +7,23 @@
 
 ### 📚 核心内容
 
-| 模块                                                          | 内容亮点                                                       |
-| ------------------------------------------------------------- | -------------------------------------------------------------- |
-| 🔧 [**工具导航**](https://toolguide.top/nav/)                 | 精选全网好用的网站/工具，覆盖工作/学习/生活全场景，每周更新    |
-| 🖼️ [**AI 提示词库**](https://toolguide.top/AI/prompts/image/) | 包含图片提示词、论文提示词，支持查看样式图、中英双语与一键复制 |
-| 📝 [**AI 大事件**](https://toolguide.top/AI/daily/)           | 每日追踪 AI 圈重要动态与热门产品，帮你快速了解今天发生了什么   |
-| ⚡ [**AI 工具手册**](https://toolguide.top/AI/tools/)         | 合并每周工具速递与 AI 工具使用手册，从发现新工具到真正用顺手   |
-| 🤖 [**AI 周报**](https://toolguide.top/AI/weekly/)            | 每周梳理重点趋势、产品更新与行业信号，把值得关注的内容集中看完 |
-| 🆕 [**公众号杂谈**](https://toolguide.top/bug/)               | 记录技术实践、工具体验和折腾随笔，不止避坑，也分享值得聊的事   |
-| 💰 [**金主荣誉榜**](https://toolguide.top/boss/bossboss)      | 超级无敌伟大的老板们聚集地，感谢支持，用爱发电，每周更新       |
-| 💯 [**陈老板这一辈子也不容易**](https://toolguide.top/me/)    | 我的老朋友查理布朗，他从不放弃                                 |
+| 模块                                                          | 内容亮点                                                         |
+| ------------------------------------------------------------- | ---------------------------------------------------------------- |
+| 🔧 [**工具导航**](https://toolguide.top/nav/)                 | 精选全网好用的网站/工具，覆盖工作/学习/生活全场景，每周更新      |
+| 🖼️ [**AI 提示词库**](https://toolguide.top/AI/prompts/image/) | 包含图片提示词、论文提示词，支持查看样式图、中英双语与一键复制   |
+| 📝 [**AI 大事件**](https://toolguide.top/AI/daily/)           | 每日追踪 AI 圈重要动态与热门产品，帮你快速了解今天发生了什么     |
+| ⚡ [**AI 工具手册**](https://toolguide.top/AI/tools/)         | 合并每周工具速递与 AI 工具使用手册，从发现新工具到真正用顺手     |
+| 🍀 [**幸运卡片**](https://toolguide.top/luck/)                | 基于传统黄历的每日幸运指南，穿衣颜色、出行宜忌、打牌方位一应俱全 |
+| 🆕 [**公众号杂谈**](https://toolguide.top/bug/)               | 记录技术实践、工具体验和折腾随笔，不止避坑，也分享值得聊的事     |
+| 💰 [**金主荣誉榜**](https://toolguide.top/boss/bossboss)      | 超级无敌伟大的老板们聚集地，感谢支持，用爱发电，每周更新         |
+| 💯 [**陈老板这一辈子也不容易**](https://toolguide.top/me/)    | 我的老朋友查理布朗，他从不放弃                                   |
 
 ### 🎨 趣味彩蛋
 
 - 主页查理布朗图片 hover 会「爱的魔力转圈圈」✨
 - 金主荣誉榜每周更新，感谢各位老板的“巨款”支持 💰
 - 不定期更新摸鱼技巧、黑科技工具，主打一个实用又好玩 🎉
-- AI 大事件、AI 周报、AI 工具手册、AI 提示词库等 AI 相关内容持续更新，敬请期待 🤖
+- AI 大事件、幸运卡片、AI 工具手册、AI 提示词库等 AI 相关内容持续更新，敬请期待 🤖
 
 ## 🚀 快速访问
 
@@ -37,7 +37,8 @@
 ## 🙏 鸣谢
 
 - 感谢所有打赏支持的「超级无敌伟大的老板们」👑
-- 感谢 [茂茂的开源模板 | maomao](https://github.com/maomao1996),[AI 日报 | 何夕夕](https://github.com/justlovemaki/CloudFlare-AI-Insight-Daily)
+- 感谢 [茂茂的开源模板 | maomao](https://github.com/maomao1996),[AI 数据 | 何夕夕](https://github.com/justlovemaki/CloudFlare-AI-Insight-Daily),[AI 数据 ｜ AI Hot](
+- https://github.com/KKKKhazix/khazix-skills),[黄历数据 ｜ cnlunar](https://github.com/OPN48/cnlunar)
 - 感谢互联网上所有无私分享工具 / 教程的大佬们
 
 ## 💬 联系我

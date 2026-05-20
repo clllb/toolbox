@@ -49,11 +49,11 @@ features:
     details: 合并每周工具速递与 AI 工具使用手册<br />从发现新工具到真正用顺手，一站搞定
     link: /AI/tools/
     linkText: 查看手册
-  - icon: 🤖
-    title: AI周报
-    details: 每周梳理重点趋势、产品更新与行业信号<br />把值得关注的内容集中看完
-    link: /AI/weekly/index
-    linkText: 每周总结
+  - icon: 🍀
+    title: 幸运卡片
+    details: 基于传统黄历的每日幸运指南<br />穿衣颜色、出行宜忌、打牌方位一应俱全
+    link: /luck/index
+    linkText: 今日运势
   - icon: 🆕
     title: 公众号杂谈
     details: 记录技术实践、工具体验和折腾随笔<br />不止避坑，也分享一些值得聊的事
