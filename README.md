@@ -37,10 +37,7 @@
 ## 🙏 鸣谢
 
 - 感谢所有打赏支持的「超级无敌伟大的老板们」👑
-- 感谢 [茂茂的开源模板 | maomao](https://github.com/maomao1996),
-- [AI 数据 | 何夕夕](https://github.com/justlovemaki/CloudFlare-AI-Insight-Daily),
-- [AI 数据 ｜ AI Hot](https://github.com/KKKKhazix/khazix-skills),
-- [黄历数据 ｜ cnlunar](https://github.com/OPN48/cnlunar)
+- 感谢 [茂茂的开源模板 | maomao](https://github.com/maomao1996),[AI 数据 | 何夕夕](https://github.com/justlovemaki/CloudFlare-AI-Insight-Daily),[AI 数据 ｜ AI Hot](https://github.com/KKKKhazix/khazix-skills),[黄历数据 ｜ cnlunar](https://github.com/OPN48/cnlunar)
 - 感谢互联网上所有无私分享工具 / 教程的大佬们
 
 ## 💬 联系我
