@@ -27,6 +27,7 @@ export interface HuangliRecord {
     good?: string[]
     bad?: string[]
   }
+  display?: LuckDisplay
 }
 
 export interface LuckCard {
@@ -56,6 +57,24 @@ export interface PengPitfall {
   source: string
 }
 
+export interface LuckDisplay {
+  summary?: string
+  pitfall?: string
+  action_advice?: ActionAdvice[]
+  scenes?: SceneAdvice[]
+}
+
+export interface SceneAdvice {
+  id: string
+  label: string
+  title: string
+  body: string
+}
+
+interface SceneCandidate extends SceneAdvice {
+  score: number
+}
+
 export function monthKey(date: string): string {
   return date.slice(0, 7)
 }
@@ -78,7 +97,7 @@ export function createLuckCard(record: HuangliRecord): LuckCard {
     dateLabel: [record.date, record.calendar?.weekday, record.lunar?.text]
       .filter(Boolean)
       .join(' · '),
-    tone: `${quality} · ${officer}：把传统黄历信号翻译成今天的小选择。`,
+    tone: record.display?.summary || `${quality} · ${officer}：把传统黄历信号翻译成今天的小选择。`,
     luckyDirection: [wealth && `财神 ${wealth}`, joy && `喜神 ${joy}`]
       .filter(Boolean)
       .join(' · ') || '今日未标注方位',
@@ -96,6 +115,14 @@ export function createLuckCard(record: HuangliRecord): LuckCard {
 
 export function createPengPitfall(record: HuangliRecord): PengPitfall {
   const source = record.day_quality?.peng_taboo ?? ''
+  if (record.display?.pitfall) {
+    return {
+      title: '今日避坑',
+      body: record.display.pitfall,
+      source,
+    }
+  }
+
   const notes: string[] = []
 
   if (source.includes('不词讼')) notes.push('少打嘴仗')
@@ -121,6 +148,10 @@ export function createPengPitfall(record: HuangliRecord): PengPitfall {
 }
 
 export function createActionAdvice(record: HuangliRecord): ActionAdvice[] {
+  if (record.display?.action_advice?.length === 3) {
+    return record.display.action_advice
+  }
+
   const good = record.activities?.good ?? []
   const bad = record.activities?.bad ?? []
   const cautiousDay =
@@ -154,11 +185,27 @@ export function createActionAdvice(record: HuangliRecord): ActionAdvice[] {
   ]
 }
 
-export function sceneAdvice(record: HuangliRecord) {
+function includesAny(items: string[], keywords: string[]): boolean {
+  return keywords.some((keyword) => items.some((item) => item.includes(keyword)))
+}
+
+export function sceneAdvice(record: HuangliRecord): SceneAdvice[] {
+  if (record.display?.scenes?.length === 5) {
+    return record.display.scenes
+  }
+
   const good = record.activities?.good ?? []
   const bad = record.activities?.bad ?? []
+  const cautiousDay =
+    record.day_quality?.black_yellow === '黑道日' ||
+    includesAny(bad, ['出行', '破土', '动土'])
+  const tradeFriendly = includesAny(good, ['纳财', '立券', '交易'])
+  const socialFriendly = includesAny(good, ['宴会', '会友', '会亲友', '纳采'])
+  const travelFriendly = includesAny(good, ['出行', '移徙', '赴任'])
+  const travelBlocked = includesAny(bad, ['出行', '远行'])
+  const launchBlocked = includesAny(bad, ['破土', '动土', '开市'])
 
-  return [
+  const candidates: SceneCandidate[] = [
     {
       id: 'launch',
       label: '发版',
@@ -166,12 +213,14 @@ export function sceneAdvice(record: HuangliRecord) {
       body: bad.includes('出行') || bad.includes('破土')
         ? '适合小步灰度、补监控、留回滚，不适合临时硬上大版本。'
         : '可以推进低风险发布，把验证、监控和回滚放在前面。',
+      score: 2 + (cautiousDay ? -1 : 2) + (launchBlocked ? -6 : 0),
     },
     {
       id: 'interview',
       label: '面试',
       title: '穿稳一点，说清一点',
       body: '优先用幸运色做主色，表达上少抢、多确认，把准备好的例子讲完整。',
+      score: 3 + (socialFriendly ? 2 : 0),
     },
     {
       id: 'deal',
@@ -180,18 +229,21 @@ export function sceneAdvice(record: HuangliRecord) {
       body: good.includes('立券交易') || good.includes('纳财')
         ? '谈合作可以更主动，但合同细节仍要逐条确认。'
         : '适合先对齐边界和价格，重要签署留给更确定的窗口。',
+      score: 2 + (tradeFriendly ? 6 : 0) + (cautiousDay ? -1 : 0),
     },
     {
       id: 'writing',
       label: '写作',
       title: '先把草稿变真实',
       body: '今天先把结构落下来，少追求一句封神，多让文章能继续往前长。',
+      score: 3 + (cautiousDay ? 1 : 0),
     },
     {
       id: 'sports',
       label: '打球',
       title: '先赢下一分',
       body: '别问玄学能不能包赢，先热身、控节奏、少上头。好运负责加一点气势，你负责把球打进去。',
+      score: 2 + (cautiousDay ? -1 : 1),
     },
     {
       id: 'travel',
@@ -200,6 +252,7 @@ export function sceneAdvice(record: HuangliRecord) {
       body: bad.includes('出行')
         ? '今天出门更适合保守安排，提前看路线，别把时间卡到极限。'
         : '可以安排外出，把交通、天气和备选路线提前确认好。',
+      score: 2 + (travelFriendly ? 5 : 0) + (travelBlocked ? -99 : 0),
     },
     {
       id: 'raise',
@@ -208,24 +261,34 @@ export function sceneAdvice(record: HuangliRecord) {
       body: good.includes('纳财')
         ? '适合把成果、范围和市场价讲清楚，语气稳一点，筹码摆足一点。'
         : '先整理贡献和证据，正式开口前再多确认对方窗口。',
+      score: 2 + (good.includes('纳财') ? 6 : 0) + (cautiousDay ? -1 : 0),
     },
     {
       id: 'study',
       label: '学习',
       title: '把注意力收回来',
       body: '适合做笔记、复盘错题、补基础。今天别贪多，学透一小块就算赚到。',
+      score: 3 + (cautiousDay ? 2 : 0),
     },
     {
       id: 'tidy',
       label: '整理',
       title: '清掉一点旧负担',
       body: '适合整理文件、待办、桌面和计划。先让环境变清爽，脑子会跟着松一口气。',
+      score: 3 + (cautiousDay ? 2 : 0),
     },
     {
       id: 'client',
       label: '见客户',
       title: '先稳住场，再推进事',
       body: '适合提前准备议程、案例和底线。见面时少即兴发挥，多用事实把信任垫起来。',
+      score: 3 + (socialFriendly ? 3 : 0) + (tradeFriendly ? 1 : 0),
     },
   ]
+
+  return candidates
+    .filter((scene) => scene.score > -20)
+    .sort((left, right) => right.score - left.score)
+    .slice(0, 5)
+    .map(({ score, ...scene }) => scene)
 }

@@ -50,10 +50,10 @@ features:
     link: /AI/tools/
     linkText: 查看手册
   - icon: 🍀
-    title: 幸运卡片
+    title: 今日顺了吗
     details: 基于传统黄历的每日幸运指南<br />穿衣颜色、出行宜忌、打牌方位一应俱全
     link: /luck/index
-    linkText: 今日运势
+    linkText: 看看今天顺不顺
   - icon: 🆕
     title: 公众号杂谈
     details: 记录技术实践、工具体验和折腾随笔<br />不止避坑，也分享一些值得聊的事

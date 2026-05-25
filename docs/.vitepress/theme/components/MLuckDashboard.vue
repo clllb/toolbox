@@ -30,8 +30,8 @@ const loading = ref(true)
 const error = ref('')
 
 const selectedRecord = computed(() => monthData.value?.days?.[selectedDate.value])
-const card = computed(() => selectedRecord.value ? createLuckCard(selectedRecord.value) : null)
-const scenes = computed(() => selectedRecord.value ? sceneAdvice(selectedRecord.value) : [])
+const card = computed(() => (selectedRecord.value ? createLuckCard(selectedRecord.value) : null))
+const scenes = computed(() => (selectedRecord.value ? sceneAdvice(selectedRecord.value) : []))
 const actionAdvice = computed(() =>
   selectedRecord.value ? createActionAdvice(selectedRecord.value) : [],
 )
@@ -118,26 +118,22 @@ async function loadSelectedDate() {
   <section class="luck-dashboard">
     <header class="luck-shell">
       <div class="intro">
-        <p class="eyebrow">Luck Skill</p>
-        <h1>幸运卡片</h1>
-        <p class="intro-copy">
-          把黄历里的宜忌、方位和五行穿衣，翻译成今天能直接参考的小建议。
+        <p class="eyebrow">
+          <a href="https://github.com/clllb/luck-skill" target="_blank" rel="noopener">
+            Luck Skill
+          </a>
         </p>
+        <h1>今日顺了吗</h1>
+        <p class="intro-copy">把黄历里的宜忌、方位和五行穿衣，翻译成今天能直接参考的小建议。</p>
       </div>
     </header>
 
     <div class="date-bar">
       <div class="date-controls">
-        <button type="button" @click="selectedDate = formatShanghaiDate(new Date())">
-          今天
-        </button>
+        <button type="button" @click="selectedDate = formatShanghaiDate(new Date())">今天</button>
         <button type="button" @click="shiftDate(1)">明天</button>
         <button type="button" @click="shiftDate(2)">后天</button>
       </div>
-      <label>
-        <span>日期</span>
-        <input v-model="selectedDate" type="date" />
-      </label>
     </div>
 
     <p v-if="loading" class="state">正在读取幸运数据...</p>
@@ -222,6 +218,28 @@ async function loadSelectedDate() {
         </div>
       </section>
 
+      <section class="skill-promo">
+        <h2>AI 接入</h2>
+        <p>把这个 Skill 装进你的 AI 助手，随时问"今天顺不顺"。</p>
+        <div class="skill-table">
+          <div class="skill-row">
+            <span>Skill</span>
+            <strong>
+              <a href="https://github.com/clllb/luck-skill" target="_blank" rel="noopener">
+                Luck Skill（黄历 Skill）
+              </a>
+            </strong>
+          </div>
+          <div class="skill-row">
+            <span>安装</span>
+            <strong>
+              跟 AI 助手说：
+              <code>安装 https://github.com/clllb/luck-skill</code>
+            </strong>
+          </div>
+        </div>
+      </section>
+
       <section class="data-panel">
         <h2>数据说明</h2>
         <div class="data-copy">
@@ -259,6 +277,15 @@ async function loadSelectedDate() {
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0;
+}
+
+.eyebrow a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.eyebrow a:hover {
+  text-decoration: underline;
 }
 
 h1,
@@ -555,6 +582,74 @@ li {
 
 .scene-panel {
   margin-top: 32px;
+}
+
+.scene-panel + .skill-promo {
+  margin-top: 32px;
+}
+
+.skill-promo {
+  border: 1px solid var(--luck-line);
+  border-radius: 8px;
+  background: var(--luck-surface);
+  padding: 22px;
+}
+
+.skill-promo h2 {
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.skill-promo p {
+  margin-bottom: 16px;
+  color: var(--luck-muted);
+  font-size: 14px;
+}
+
+.skill-table {
+  display: grid;
+  gap: 1px;
+}
+
+.skill-row {
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr);
+  gap: 12px;
+  padding: 14px 0;
+  border-top: 1px solid var(--luck-line);
+}
+
+.skill-row span {
+  color: var(--luck-muted);
+  font-size: 13px;
+}
+
+.skill-row strong {
+  color: var(--luck-text);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.skill-row a {
+  color: var(--luck-accent);
+  text-decoration: none;
+}
+
+.skill-row a:hover {
+  text-decoration: underline;
+}
+
+.skill-row code {
+  border: 1px solid var(--luck-line);
+  border-radius: 4px;
+  background: var(--vp-c-bg);
+  padding: 1px 6px;
+  font-size: 13px;
+  word-break: break-all;
+}
+
+.skill-promo + .data-panel {
+  margin-top: 18px;
 }
 
 .scene-panel + .data-panel {

@@ -2,7 +2,7 @@ import type { DefaultTheme } from 'vitepress'
 
 export const nav: DefaultTheme.Config['nav'] = [
   {
-    text: '幸运卡片',
+    text: '今日顺了吗',
     link: '/luck/'
   },
   { text: '工具导航',

@@ -41,6 +41,11 @@ jobs:
       - name: Spot-check against rilu.cc
         run: npm run huangli:verify -- --sample-size 5
 
+      - name: Generate display copy with DeepSeek
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: npm run huangli:display
+
       - name: Run tests
         run: npm test
 
