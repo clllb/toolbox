@@ -1,0 +1,74 @@
+name: Generate Huangli Display Copy
+
+on:
+  workflow_dispatch:
+    inputs:
+      start_date:
+        description: 'Start date in YYYY-MM-DD. Empty means today in Beijing time.'
+        required: false
+        type: string
+      days:
+        description: 'How many days to generate.'
+        required: false
+        default: '3'
+        type: string
+      force:
+        description: 'Regenerate days that already have display copy.'
+        required: false
+        default: false
+        type: boolean
+  schedule:
+    # Beijing time 08:35 every day.
+    - cron: '35 0 * * *'
+
+permissions:
+  contents: write
+
+env:
+  TZ: Asia/Shanghai
+
+jobs:
+  generate-display:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Generate display copy with DeepSeek
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          START_DATE: ${{ inputs.start_date }}
+          DAYS: ${{ inputs.days || '3' }}
+          FORCE: ${{ inputs.force || false }}
+        run: |
+          start_date="${START_DATE:-$(TZ=Asia/Shanghai date +%F)}"
+          args=(--start-date "$start_date" --days "$DAYS")
+          if [ "$FORCE" = "true" ]; then
+            args+=(--force)
+          fi
+          npm run huangli:display -- "${args[@]}"
+
+      - name: Run focused tests
+        run: |
+          npm run test:js -- tests/luck/luckDashboard.spec.ts
+          python3 -m unittest tests.huangli.test_generate_display
+
+      - name: Commit generated display copy
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: refresh huangli display copy"
+          file_pattern: docs/public/huangli/data/*.json

@@ -59,6 +59,63 @@ class GenerateDisplayTest(unittest.TestCase):
             self.assertEqual(record["display"]["summary"], "适合清理旧事，别急着定大事。")
             self.assertEqual(len(record["display"]["scenes"]), 5)
 
+    def test_limits_updates_to_requested_date_window(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            latest = {"months": ["2026-05"]}
+            month = {
+                "month": "2026-05",
+                "days": {
+                    f"2026-05-{day:02d}": {
+                        "date": f"2026-05-{day:02d}",
+                        "day_quality": {"peng_taboo": "癸不词讼 理弱敌强"},
+                        "activities": {"good": ["沐浴"], "bad": []},
+                    }
+                    for day in range(24, 28)
+                },
+            }
+            (root / "latest.json").write_text(json.dumps(latest), encoding="utf-8")
+            month_path = root / "2026-05.json"
+            month_path.write_text(json.dumps(month, ensure_ascii=False), encoding="utf-8")
+
+            def fake_generate(record):
+                return {
+                    "summary": f"{record['date']} summary",
+                    "pitfall": "少打嘴仗。",
+                    "action_advice": [
+                        {"label": "工作", "title": "稳", "body": "先收尾。"},
+                        {"label": "沟通", "title": "缓", "body": "少争辩。"},
+                        {"label": "生活", "title": "轻", "body": "早休息。"},
+                    ],
+                    "scenes": [
+                        {"id": "tidy", "label": "整理", "title": "清理", "body": "收尾。"},
+                        {"id": "study", "label": "学习", "title": "补课", "body": "慢来。"},
+                        {"id": "writing", "label": "写作", "title": "改稿", "body": "先改。"},
+                        {"id": "client", "label": "见客户", "title": "对齐", "body": "别急。"},
+                        {"id": "deal", "label": "签约", "title": "核条款", "body": "看清。"},
+                    ],
+                }
+
+            updated = generate_display.update_display(
+                root,
+                display_generator=fake_generate,
+                start_date="2026-05-25",
+                days=2,
+            )
+
+            self.assertEqual(updated, 2)
+            result = json.loads(month_path.read_text(encoding="utf-8"))
+            self.assertNotIn("display", result["days"]["2026-05-24"])
+            self.assertEqual(
+                result["days"]["2026-05-25"]["display"]["summary"],
+                "2026-05-25 summary",
+            )
+            self.assertEqual(
+                result["days"]["2026-05-26"]["display"]["summary"],
+                "2026-05-26 summary",
+            )
+            self.assertNotIn("display", result["days"]["2026-05-27"])
+
     def test_rejects_invalid_display_shape(self):
         with self.assertRaises(generate_display.DisplayValidationError):
             generate_display.validate_display(

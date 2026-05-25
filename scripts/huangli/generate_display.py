@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import datetime as dt
 import json
 import os
 import time
@@ -16,6 +17,7 @@ from typing import Any, Callable
 DEFAULT_BASE_URL = "https://api.deepseek.com"
 DEFAULT_MODEL = "deepseek-v4-pro"
 TIMEOUT_SECONDS = 90
+TIMEZONE = "Asia/Shanghai"
 
 
 class DisplayValidationError(ValueError):
@@ -221,12 +223,30 @@ def has_valid_display(record: dict[str, Any]) -> bool:
         return False
 
 
+def parse_date(value: str) -> dt.date:
+    return dt.date.fromisoformat(value)
+
+
+def date_in_window(date_key: str, start_date: str | None, days: int | None) -> bool:
+    if not start_date or not days:
+        return True
+    target = parse_date(date_key)
+    start = parse_date(start_date)
+    end = start + dt.timedelta(days=days)
+    return start <= target < end
+
+
 def update_display(
     data_dir: Path,
     *,
     display_generator: DisplayGenerator,
     force: bool = False,
+    start_date: str | None = None,
+    days: int | None = None,
 ) -> int:
+    if days is not None and days < 1:
+        raise ValueError("days must be at least 1")
+
     latest = load_json(data_dir / "latest.json")
     months = latest.get("months", [])
     if not isinstance(months, list) or not months:
@@ -236,13 +256,15 @@ def update_display(
     for month in months:
         month_path = data_dir / f"{month}.json"
         payload = load_json(month_path)
-        days = payload.get("days")
-        if not isinstance(days, dict):
+        day_records = payload.get("days")
+        if not isinstance(day_records, dict):
             raise ValueError(f"{month_path} must contain a days object")
 
         changed = False
-        for date_key in sorted(days):
-            record = days[date_key]
+        for date_key in sorted(day_records):
+            if not date_in_window(date_key, start_date, days):
+                continue
+            record = day_records[date_key]
             if not force and has_valid_display(record):
                 continue
             record["display"] = validate_display(display_generator(record))
@@ -260,6 +282,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--model", default=DEFAULT_MODEL)
     parser.add_argument("--base-url", default=DEFAULT_BASE_URL)
     parser.add_argument("--retries", type=int, default=2)
+    parser.add_argument("--start-date", help="First date to update, YYYY-MM-DD. Defaults to all covered dates.")
+    parser.add_argument("--days", type=int, help="Number of days to update from --start-date.")
     parser.add_argument("--force", action="store_true")
     return parser.parse_args()
 
@@ -279,7 +303,13 @@ def main() -> None:
             retries=args.retries,
         )
 
-    updated = update_display(Path(args.data_dir), display_generator=generator, force=args.force)
+    updated = update_display(
+        Path(args.data_dir),
+        display_generator=generator,
+        force=args.force,
+        start_date=args.start_date,
+        days=args.days,
+    )
     print(f"Generated display copy for {updated} Huangli day(s).")
 
 
