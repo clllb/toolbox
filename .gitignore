@@ -14,6 +14,7 @@ docs/.vitepress/dist/
 build/
 
 # Caches
+__pycache__/
 docs/.vitepress/cache/
 docs/.vitepress/.temp/
 .pnpm-debug.log*
