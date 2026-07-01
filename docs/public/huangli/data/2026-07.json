@@ -852,6 +852,59 @@
         "neutral": ["红色", "紫色", "粉色", "橙色"],
         "not_recommended": ["绿色", "青色", "翠色"],
         "avoid": ["黑色", "蓝色", "深蓝色"]
+      },
+      "display": {
+        "summary": "成日宜行动，速决少争。",
+        "pitfall": "涉及土地、祭祀的事先缓一缓。",
+        "action_advice": [
+          {
+            "label": "工作",
+            "title": "快刀斩乱麻",
+            "body": "果断推进，勿拖延。"
+          },
+          {
+            "label": "沟通",
+            "title": "口气放软",
+            "body": "少争论，多倾听。"
+          },
+          {
+            "label": "生活",
+            "title": "聚会社交",
+            "body": "适合联络感情。"
+          }
+        ],
+        "scenes": [
+          {
+            "id": "wedding",
+            "label": "婚礼",
+            "title": "良辰吉日",
+            "body": "适合办喜事。"
+          },
+          {
+            "id": "party",
+            "label": "聚会",
+            "title": "欢聚一堂",
+            "body": "朋友聚餐顺利。"
+          },
+          {
+            "id": "heal",
+            "label": "看病",
+            "title": "宜就医",
+            "body": "当天求诊效果佳。"
+          },
+          {
+            "id": "enroll",
+            "label": "入学",
+            "title": "报名入学",
+            "body": "办理手续顺利。"
+          },
+          {
+            "id": "business",
+            "label": "开业",
+            "title": "开张纳财",
+            "body": "开业交易宜今天。"
+          }
+        ]
       }
     },
     "2026-07-04": {
