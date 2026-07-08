@@ -49,9 +49,29 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       items: [
 
         {
-          text: '2026-06',
+          text: '2026-07',
           collapsed: false,
           items: [
+            { text: '2026-07-08', link: '/AI/daily/cn/2026-07/2026-07-08.md' },
+            { text: '2026-07-07', link: '/AI/daily/cn/2026-07/2026-07-07.md' },
+            { text: '2026-07-06', link: '/AI/daily/cn/2026-07/2026-07-06.md' },
+            { text: '2026-07-05', link: '/AI/daily/cn/2026-07/2026-07-05.md' },
+            { text: '2026-07-04', link: '/AI/daily/cn/2026-07/2026-07-04.md' },
+            { text: '2026-07-03', link: '/AI/daily/cn/2026-07/2026-07-03.md' },
+            { text: '2026-07-02', link: '/AI/daily/cn/2026-07/2026-07-02.md' },
+            { text: '2026-07-01', link: '/AI/daily/cn/2026-07/2026-07-01.md' }
+          ]
+        },
+
+        {
+          text: '2026-06',
+          collapsed: true,
+          items: [
+            { text: '2026-06-30', link: '/AI/daily/cn/2026-06/2026-06-30.md' },
+            { text: '2026-06-29', link: '/AI/daily/cn/2026-06/2026-06-29.md' },
+            { text: '2026-06-28', link: '/AI/daily/cn/2026-06/2026-06-28.md' },
+            { text: '2026-06-27', link: '/AI/daily/cn/2026-06/2026-06-27.md' },
+            { text: '2026-06-26', link: '/AI/daily/cn/2026-06/2026-06-26.md' },
             { text: '2026-06-25', link: '/AI/daily/cn/2026-06/2026-06-25.md' },
             { text: '2026-06-24', link: '/AI/daily/cn/2026-06/2026-06-24.md' },
             { text: '2026-06-23', link: '/AI/daily/cn/2026-06/2026-06-23.md' },
