@@ -1,0 +1,64 @@
+{
+  "site": "陈老板的百宝箱",
+  "url": "https://toolguide.top/",
+  "language": "zh-CN",
+  "description": "中文工具与 AI 资讯站，收录 AI 大事件日报、AI 周报、AI 工具手册、AI 提示词库、实用工具导航和每日黄历参考。",
+  "canonicalUrlPattern": "Use lowercase paths, especially /ai/ instead of /AI/.",
+  "updateFrequency": {
+    "daily": "AI大事件通常每日更新。",
+    "weekly": "AI周报通常每周更新。",
+    "evergreen": "工具导航、提示词库和 AI 工具手册按内容维护节奏更新。"
+  },
+  "sitemap": "https://toolguide.top/sitemap.xml",
+  "llms": "https://toolguide.top/llms.txt",
+  "sections": [
+    {
+      "title": "AI大事件",
+      "url": "https://toolguide.top/ai/daily/",
+      "type": "daily-news",
+      "description": "每日追踪 AI 模型、产品、研究、开源工具、安全政策和产业动态。"
+    },
+    {
+      "title": "AI周报",
+      "url": "https://toolguide.top/ai/weekly/",
+      "type": "weekly-analysis",
+      "description": "每周梳理 AI 行业关键信号、趋势与深度观察。"
+    },
+    {
+      "title": "AI工具手册",
+      "url": "https://toolguide.top/ai/tools/",
+      "type": "guide",
+      "description": "整理 AI 工具速递、使用方法、场景打法与避坑经验。"
+    },
+    {
+      "title": "AI图片提示词库",
+      "url": "https://toolguide.top/ai/prompts/image/",
+      "type": "prompt-library",
+      "description": "精选 AI 图片生成提示词案例，支持按模型和主题浏览。"
+    },
+    {
+      "title": "AI论文提示词库",
+      "url": "https://toolguide.top/ai/prompts/paper/",
+      "type": "prompt-library",
+      "description": "面向论文阅读、研究分析和学术写作的提示词集合。"
+    },
+    {
+      "title": "工具导航",
+      "url": "https://toolguide.top/nav/",
+      "type": "directory",
+      "description": "精选实用工具、开发工具、效率网站与日常资源。"
+    },
+    {
+      "title": "今日顺了吗",
+      "url": "https://toolguide.top/luck/",
+      "type": "utility",
+      "description": "每日黄历、幸运颜色、宜忌、出行方向与运势参考。"
+    },
+    {
+      "title": "更新日志",
+      "url": "https://toolguide.top/me/changelog/",
+      "type": "changelog",
+      "description": "记录陈老板的百宝箱重要产品、内容、SEO/GEO 和模块级更新。"
+    }
+  ]
+}
