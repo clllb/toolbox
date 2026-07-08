@@ -11,6 +11,8 @@
     "test": "vitest run && python3 -m unittest discover tests/huangli",
     "test:watch": "vitest",
     "test:js": "vitest run",
+    "seo:generate": "node scripts/seo/generate-indexes.mjs",
+    "seo:check": "node scripts/seo/check-seo.mjs",
     "test:huangli": "python3 -m unittest discover tests/huangli",
     "huangli:setup": "python3 -m pip install --target .cache/python-cnlunar -r scripts/huangli/requirements.txt",
     "huangli:generate": "PYTHONPATH=.cache/python-cnlunar python3 scripts/huangli/generate_data.py",

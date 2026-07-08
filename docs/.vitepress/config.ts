@@ -3,11 +3,13 @@ import { defineConfig } from 'vitepress'
 import MarkdownPreview from 'vite-plugin-markdown-preview'
 
 import { head, nav, sidebar } from './configs'
+import { getSeoHead, transformSeoPageData, transformSitemapItems } from './configs/seo'
 
 const APP_BASE_PATH = basename(process.env.GITHUB_REPOSITORY || '')
 
 export default defineConfig({
   outDir: '../dist',
+  srcExclude: ['superpowers/**', 'public/huangli/data/source-check.md'],
   //base: APP_BASE_PATH ? `/${APP_BASE_PATH}/` : '/',
   base: '/',
 
@@ -18,6 +20,7 @@ export default defineConfig({
 
   lastUpdated: true,
   cleanUrls: false,
+  rewrites: (id) => id.startsWith('AI/') ? id.replace(/^AI\//, 'ai/') : id,
 
   /* markdown 配置 */
   markdown: {
@@ -130,10 +133,20 @@ export default defineConfig({
   },
 
   vite: {
+    assetsInclude: ['**/*.qt'],
     plugins: [MarkdownPreview()],
   },
 
+  transformPageData(pageData) {
+    return transformSeoPageData(pageData)
+  },
+
+  transformHead(context) {
+    return getSeoHead(context)
+  },
+
   sitemap: {
-    hostname: 'https://toolguide.top' 
+    hostname: 'https://toolguide.top',
+    transformItems: transformSitemapItems
   }
 })

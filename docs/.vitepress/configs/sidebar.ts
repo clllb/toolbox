@@ -11,47 +11,68 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       ]
     }
   ],
-  '/AI/tools/': [
+  '/ai/tools/': [
     {
       text: 'AI工具手册',
       collapsed: false,
       items: [
-        { text: '栏目介绍', link: '/AI/tools/' },
-        { text: '每周工具速递', link: '/AI/tools/weekly-tools/' },
-        { text: 'AI工具使用手册', link: '/AI/tools/usage-guide/' }
+        { text: '栏目介绍', link: '/ai/tools/' },
+        { text: '每周工具速递', link: '/ai/tools/weekly-tools/' },
+        { text: 'AI工具使用手册', link: '/ai/tools/usage-guide/' }
       ]
     }
   ],
-  '/AI/prompts/': [
+  '/ai/prompts/': [
     {
       text: 'AI 提示词库',
       collapsed: false,
       items: [
-        { text: '图片提示词库', link: '/AI/prompts/image/' },
-        { text: '论文提示词库', link: '/AI/prompts/paper/' }
+        { text: '图片提示词库', link: '/ai/prompts/image/' },
+        { text: '论文提示词库', link: '/ai/prompts/paper/' }
       ]
     }
   ],
   '/me/': [
     {
-      text: '年度总结',
+      text: '关于本站',
       collapsed: false,
       items: [
+        { text: '关于作者', link: '/me/' },
+        { text: '更新日志', link: '/me/changelog/' },
         { text: '2022年度总结', link: '/me/summary/2022' },
-        { text: '关于作者', link: '/me/' }
       ]
     }
   ],
-  '/AI/': [
+  '/ai/': [
     {
       text: 'AI大事件',
       collapsed: false,
       items: [
 
         {
-          text: '2026-06',
+          text: '2026-07',
           collapsed: false,
           items: [
+            { text: '2026-07-08', link: '/AI/daily/cn/2026-07/2026-07-08.md' },
+            { text: '2026-07-07', link: '/AI/daily/cn/2026-07/2026-07-07.md' },
+            { text: '2026-07-06', link: '/AI/daily/cn/2026-07/2026-07-06.md' },
+            { text: '2026-07-05', link: '/AI/daily/cn/2026-07/2026-07-05.md' },
+            { text: '2026-07-04', link: '/AI/daily/cn/2026-07/2026-07-04.md' },
+            { text: '2026-07-03', link: '/AI/daily/cn/2026-07/2026-07-03.md' },
+            { text: '2026-07-02', link: '/AI/daily/cn/2026-07/2026-07-02.md' },
+            { text: '2026-07-01', link: '/AI/daily/cn/2026-07/2026-07-01.md' }
+          ]
+        },
+
+        {
+          text: '2026-06',
+          collapsed: true,
+          items: [
+            { text: '2026-06-30', link: '/AI/daily/cn/2026-06/2026-06-30.md' },
+            { text: '2026-06-29', link: '/AI/daily/cn/2026-06/2026-06-29.md' },
+            { text: '2026-06-28', link: '/AI/daily/cn/2026-06/2026-06-28.md' },
+            { text: '2026-06-27', link: '/AI/daily/cn/2026-06/2026-06-27.md' },
+            { text: '2026-06-26', link: '/AI/daily/cn/2026-06/2026-06-26.md' },
             { text: '2026-06-25', link: '/AI/daily/cn/2026-06/2026-06-25.md' },
             { text: '2026-06-24', link: '/AI/daily/cn/2026-06/2026-06-24.md' },
             { text: '2026-06-23', link: '/AI/daily/cn/2026-06/2026-06-23.md' },
@@ -202,8 +223,8 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           text: '2026-05',
           collapsed: false,
           items: [
-            { text: '2026-05-11 周报', link: '/AI/weekly/cn/2026-05/2026-05-11-ai-signals-weekly-2026-w19-agent-economy-reasoning-infra.md' },
-            { text: '2026-05-03 周报', link: '/AI/weekly/cn/2026-05/2026-05-03-hexi-2077-ai-signals-weekly-2026-w18.md' }
+            { text: '2026-05-11 周报', link: '/ai/weekly/cn/2026-05/2026-05-11-ai-signals-weekly-2026-w19-agent-economy-reasoning-infra.md' },
+            { text: '2026-05-03 周报', link: '/ai/weekly/cn/2026-05/2026-05-03-hexi-2077-ai-signals-weekly-2026-w18.md' }
           ]
         },
 
@@ -211,10 +232,10 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           text: '2026-04',
           collapsed: false,
           items: [
-            { text: '2026-04-26 周报', link: '/AI/weekly/cn/2026-04/2026-04-26-hexi-2077-ai-signals-weekly-2026-w17-gpt5-5-nvidia-trust-deficit.md' },
-            { text: '2026-04-19 周报', link: '/AI/weekly/cn/2026-04/2026-04-19-ai-compute-agents-trust-crisis-2026-w16.md' },
-            { text: '2026-04-12 周报', link: '/AI/weekly/cn/2026-04/2026-04-12-ai-signal-weekly-2026-w15-agent-security-crisis.md' },
-            { text: '2026-04-05 周报', link: '/AI/weekly/cn/2026-04/2026-04-05-deepseek-v4-huawei-ascend-ai-sycophancy-weekly-2026-w14.md' }
+            { text: '2026-04-26 周报', link: '/ai/weekly/cn/2026-04/2026-04-26-hexi-2077-ai-signals-weekly-2026-w17-gpt5-5-nvidia-trust-deficit.md' },
+            { text: '2026-04-19 周报', link: '/ai/weekly/cn/2026-04/2026-04-19-ai-compute-agents-trust-crisis-2026-w16.md' },
+            { text: '2026-04-12 周报', link: '/ai/weekly/cn/2026-04/2026-04-12-ai-signal-weekly-2026-w15-agent-security-crisis.md' },
+            { text: '2026-04-05 周报', link: '/ai/weekly/cn/2026-04/2026-04-05-deepseek-v4-huawei-ascend-ai-sycophancy-weekly-2026-w14.md' }
           ]
         },
 
@@ -222,11 +243,11 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           text: '2026-03',
           collapsed: false,
           items: [
-            { text: '2026-03-29 周报', link: '/AI/weekly/cn/2026-03/2026-03-29-hexi-2077-ai-deep-signal-weekly-2026-w13.md' },
-            { text: '2026-03-22 周报', link: '/AI/weekly/cn/2026-03/2026-03-22-hexi-2077-ai-weekly-2026-w12.md' },
-            { text: '2026-03-15 周报', link: '/AI/weekly/cn/2026-03/2026-03-15-ai-signal-weekly-2026-w11-anthropic-agent-ecosystem-war.md' },
-            { text: '2026-03-08 周报', link: '/AI/weekly/cn/2026-03/2026-03-08-ai-weekly-2026-w10-gpt-5-4-militarization-claude-code.md' },
-            { text: '2026-03-01 周报', link: '/AI/weekly/cn/2026-03/2026-03-01-hexi-2077-ai-signal-weekly-2026-w09-trillion-dollar-arms-race.md' }
+            { text: '2026-03-29 周报', link: '/ai/weekly/cn/2026-03/2026-03-29-hexi-2077-ai-deep-signal-weekly-2026-w13.md' },
+            { text: '2026-03-22 周报', link: '/ai/weekly/cn/2026-03/2026-03-22-hexi-2077-ai-weekly-2026-w12.md' },
+            { text: '2026-03-15 周报', link: '/ai/weekly/cn/2026-03/2026-03-15-ai-signal-weekly-2026-w11-anthropic-agent-ecosystem-war.md' },
+            { text: '2026-03-08 周报', link: '/ai/weekly/cn/2026-03/2026-03-08-ai-weekly-2026-w10-gpt-5-4-militarization-claude-code.md' },
+            { text: '2026-03-01 周报', link: '/ai/weekly/cn/2026-03/2026-03-01-hexi-2077-ai-signal-weekly-2026-w09-trillion-dollar-arms-race.md' }
           ]
         }
 

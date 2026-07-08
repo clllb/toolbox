@@ -19,13 +19,13 @@ hero:
       link: /nav/
       theme: brand
     - text: AI大事件
-      link: /AI/daily/index
+      link: /ai/daily/index
       theme: alt
     - text: AI提示词库
-      link: /AI/prompts/image/
+      link: /ai/prompts/image/
       theme: brand
     - text: AI工具手册
-      link: /AI/tools/
+      link: /ai/tools/
       theme: alt
 
 features:
@@ -37,17 +37,17 @@ features:
   - icon: 🖼️
     title: AI 提示词库
     details: 包含：图片提示词、论文提示词<br />支持查看样式图、中英双语提示词与一键复制
-    link: /AI/prompts/image/
+    link: /ai/prompts/image/
     linkText: 进入词库
   - icon: 📝
     title: AI大事件
     details: 追踪 AI 圈重要动态与热点事件<br />帮你快速了解今天发生了什么
-    link: /AI/daily/index
+    link: /ai/daily/index
     linkText: 查看详情
   - icon: ⚡️
     title: AI工具手册
     details: 合并每周工具速递与 AI 工具使用手册<br />从发现新工具到真正用顺手，一站搞定
-    link: /AI/tools/
+    link: /ai/tools/
     linkText: 查看手册
   - icon: 🍀
     title: 今日顺了吗

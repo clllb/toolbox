@@ -11,10 +11,10 @@ export const nav: DefaultTheme.Config['nav'] = [
   {
     text: 'AI相关',
     items: [
-      { text: 'AI大事件', link: '/AI/daily/index' },
-      { text: 'AI周报', link: '/AI/weekly/index' },
-      { text: 'AI工具手册', link: '/AI/tools/' },
-      { text: 'AI提示词库', link: '/AI/prompts/image/' },
+      { text: 'AI大事件', link: '/ai/daily/index' },
+      { text: 'AI周报', link: '/ai/weekly/index' },
+      { text: 'AI工具手册', link: '/ai/tools/' },
+      { text: 'AI提示词库', link: '/ai/prompts/image/' },
     ],
   },
   { text: '百宝箱主页',
