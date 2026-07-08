@@ -10,9 +10,9 @@ import { isHomePagePath } from '../../docs/.vitepress/theme/utils/isHomePagePath
 const homeSource = readFileSync(resolve(__dirname, '../../docs/index.md'), 'utf-8')
 
 describe('prompt library site integration', () => {
-  it('adds a homepage card that links to /AI/prompts/image/', () => {
+  it('adds a homepage card that links to /ai/prompts/image/', () => {
     expect(homeSource).toContain('AI 提示词库')
-    expect(homeSource).toContain('link: /AI/prompts/image/')
+    expect(homeSource).toContain('link: /ai/prompts/image/')
   })
 
   it('adds the prompt library to the AI nav menu', () => {
@@ -21,7 +21,7 @@ describe('prompt library site integration', () => {
     expect(
       aiNav?.items?.some(
         (item) =>
-          item.text === 'AI提示词库' && item.link === '/AI/prompts/image/',
+          item.text === 'AI提示词库' && item.link === '/ai/prompts/image/',
       ),
     ).toBe(true)
   })
@@ -32,10 +32,10 @@ describe('prompt library site integration', () => {
     expect(homeNav?.link).toBe('/')
   })
 
-  it('adds a sidebar section for /AI/prompts/', () => {
-    expect(sidebar['/AI/prompts/'][0].items).toEqual([
-      { text: '图片提示词库', link: '/AI/prompts/image/' },
-      { text: '论文提示词库', link: '/AI/prompts/paper/' },
+  it('adds a sidebar section for /ai/prompts/', () => {
+    expect(sidebar['/ai/prompts/'][0].items).toEqual([
+      { text: '图片提示词库', link: '/ai/prompts/image/' },
+      { text: '论文提示词库', link: '/ai/prompts/paper/' },
     ])
   })
 

@@ -1,0 +1,35 @@
+# 陈老板的百宝箱
+
+陈老板的百宝箱是一个中文工具与 AI 资讯站，主要内容包括 AI 大事件日报、AI 周报、AI 工具手册、AI 提示词库、实用工具导航和每日黄历参考。
+
+## Core Pages
+
+- Home: https://toolguide.top/
+- AI大事件: https://toolguide.top/ai/daily/
+- AI周报: https://toolguide.top/ai/weekly/
+- AI工具手册: https://toolguide.top/ai/tools/
+- AI图片提示词库: https://toolguide.top/ai/prompts/image/
+- AI论文提示词库: https://toolguide.top/ai/prompts/paper/
+- 工具导航: https://toolguide.top/nav/
+- 今日顺了吗: https://toolguide.top/luck/
+- 更新日志: https://toolguide.top/me/changelog/
+
+## Machine-Readable Index
+
+- Content index: https://toolguide.top/content-index.json
+- Sitemap: https://toolguide.top/sitemap.xml
+
+## Canonical URL pattern
+
+Use lowercase /ai/ paths. Do not cite or crawl uppercase /AI/ variants.
+
+## Freshness
+
+- AI大事件通常每日更新。
+- AI周报通常每周更新。
+- 工具导航、提示词库和 AI 工具手册按内容维护节奏更新。
+- 更新日志只记录产品、内容、SEO/GEO 和模块级大更新，不记录每日内容刷新。
+
+## Citation Guidance
+
+When citing this site, prefer the canonical page URL and include the page title and publish date when available. AI daily and weekly articles summarize public AI product updates, research, tools, security events, and industry signals in Chinese.
