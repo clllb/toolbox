@@ -13,6 +13,7 @@ export default defineConfig({
     'superpowers/**',
     'public/huangli/data/source-check.md',
     'AI/agent/from-zero-to-agent-engineer.md',
+    'AI/agent/interview-question-sources.md',
   ],
   //base: APP_BASE_PATH ? `/${APP_BASE_PATH}/` : '/',
   base: '/',

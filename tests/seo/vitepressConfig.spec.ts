@@ -17,7 +17,8 @@ describe('VitePress SEO build config', () => {
     expect(configSource).toContain("id.replace(/^AI\\//, 'ai/')")
   })
 
-  it('excludes private AI agent notes from public builds', () => {
+  it('excludes private AI agent notes and source lists from public builds', () => {
     expect(configSource).toContain('AI/agent/from-zero-to-agent-engineer.md')
+    expect(configSource).toContain('AI/agent/interview-question-sources.md')
   })
 })
