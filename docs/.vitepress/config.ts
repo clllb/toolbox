@@ -9,7 +9,11 @@ const APP_BASE_PATH = basename(process.env.GITHUB_REPOSITORY || '')
 
 export default defineConfig({
   outDir: '../dist',
-  srcExclude: ['superpowers/**', 'public/huangli/data/source-check.md'],
+  srcExclude: [
+    'superpowers/**',
+    'public/huangli/data/source-check.md',
+    'AI/agent/from-zero-to-agent-engineer.md',
+  ],
   //base: APP_BASE_PATH ? `/${APP_BASE_PATH}/` : '/',
   base: '/',
 
