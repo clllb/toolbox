@@ -4163,6 +4163,59 @@
         "neutral": ["红色", "紫色", "粉色", "橙色"],
         "not_recommended": ["绿色", "青色", "翠色"],
         "avoid": ["黑色", "蓝色", "深蓝色"]
+      },
+      "display": {
+        "summary": "适合清理旧事，别急着定大事。",
+        "pitfall": "今天别立约和远行，容易两头空。",
+        "action_advice": [
+          {
+            "label": "工作",
+            "title": "先清旧账",
+            "body": "整理流程和旧问题。"
+          },
+          {
+            "label": "沟通",
+            "title": "慢点定",
+            "body": "重要承诺别当天拍死。"
+          },
+          {
+            "label": "生活",
+            "title": "轻一点",
+            "body": "适合洗护和整理。"
+          }
+        ],
+        "scenes": [
+          {
+            "id": "tidy",
+            "label": "整理",
+            "title": "清掉旧负担",
+            "body": "先收尾。"
+          },
+          {
+            "id": "review",
+            "label": "复盘",
+            "title": "理旧事",
+            "body": "总结问题比新开始强。"
+          },
+          {
+            "id": "meditate",
+            "label": "静心",
+            "title": "别冲动",
+            "body": "独处一会儿。"
+          },
+          {
+            "id": "clarify",
+            "label": "澄清",
+            "title": "解释误会",
+            "body": "把旧话说明白。"
+          },
+          {
+            "id": "gratitude",
+            "label": "感恩",
+            "title": "记点好",
+            "body": "想想帮过你的人。"
+          }
+        ]
       }
     },
     "2026-07-15": {
