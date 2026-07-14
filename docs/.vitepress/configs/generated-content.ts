@@ -9,6 +9,13 @@ export type GeneratedContentEntry = {
 export const GENERATED_CONTENT = {
   daily: [
   {
+    "date": "2026-07-09",
+    "title": "AI大事件 2026/7/9",
+    "description": "模型与产品更新：GPT‑Live 全双工语音上线、Grok 4.5 联合 Cursor 推进编程智能体、Seedream 5.0 Pro 接入 Runway 🚀前沿研究：智能体提示注入威胁升级、主动记忆导航进入检索新范式、双重用途知识“开关”给安全训练带来新思路 🧠",
+    "url": "/ai/daily/cn/2026-07/2026-07-09.html",
+    "sourcePath": "AI/daily/cn/2026-07/2026-07-09.md"
+  },
+  {
     "date": "2026-07-08",
     "title": "AI大事件 2026/7/8",
     "description": "模型与产品更新：智能生成社交媒体人像照片、快捷部署云端开发实例、Meta Superintelligence Labs 推出 Muse Image 和 Muse Video 🚀前沿研究：通用智能对齐数学证明、大模型分级安全水印技术、智能体内核层级安全网关 🧠",
@@ -168,13 +175,6 @@ export const GENERATED_CONTENT = {
     "description": "鸿蒙、Meta、MiniMax、Grok Build 和 Kimi 把 AI 产品推进到系统入口、编码会话和长上下文推理场景 🚀安全微调、成绩单处理、科研助理和线性注意力研究继续围绕可靠推理与效率展开 🧠",
     "url": "/ai/daily/cn/2026-06/2026-06-16.html",
     "sourcePath": "AI/daily/cn/2026-06/2026-06-16.md"
-  },
-  {
-    "date": "2026-06-15",
-    "title": "AI大事件 2026/6/15",
-    "description": "OpenClaw、英特尔、星火 X2VL 和支付宝继续把 AI 产品推向更具体的工程与生活场景 🚀递归推理、潜空间压缩、投机采样和双引擎认知模型显示推理架构仍在快速分化 🧠",
-    "url": "/ai/daily/cn/2026-06/2026-06-15.html",
-    "sourcePath": "AI/daily/cn/2026-06/2026-06-15.md"
   }
 ],
   weekly: [
