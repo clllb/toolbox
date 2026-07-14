@@ -9,6 +9,13 @@ export type GeneratedContentEntry = {
 export const GENERATED_CONTENT = {
   daily: [
   {
+    "date": "2026-07-14",
+    "title": "AI大事件 2026/7/14",
+    "description": "GPT-5.6 登陆 Bedrock、Claude 价值观研究、AI 安全与开源工具的今日进展。",
+    "url": "/ai/daily/cn/2026-07/2026-07-14.html",
+    "sourcePath": "AI/daily/cn/2026-07/2026-07-14.md"
+  },
+  {
     "date": "2026-07-09",
     "title": "AI大事件 2026/7/9",
     "description": "模型与产品更新：GPT‑Live 全双工语音上线、Grok 4.5 联合 Cursor 推进编程智能体、Seedream 5.0 Pro 接入 Runway 🚀前沿研究：智能体提示注入威胁升级、主动记忆导航进入检索新范式、双重用途知识“开关”给安全训练带来新思路 🧠",
@@ -168,13 +175,6 @@ export const GENERATED_CONTENT = {
     "description": "克劳德核心提示词大幅更新、Grok办公辅助插件一键生成PPT推动产品能力与工作流继续演进 🚀梯度算法新研究解决LoRA难题、智能体技能组合暴露严重漏洞展示研究侧对推理、数据与科学问题的持续推进 🧠",
     "url": "/ai/daily/cn/2026-06/2026-06-17.html",
     "sourcePath": "AI/daily/cn/2026-06/2026-06-17.md"
-  },
-  {
-    "date": "2026-06-16",
-    "title": "AI大事件 2026/6/16",
-    "description": "鸿蒙、Meta、MiniMax、Grok Build 和 Kimi 把 AI 产品推进到系统入口、编码会话和长上下文推理场景 🚀安全微调、成绩单处理、科研助理和线性注意力研究继续围绕可靠推理与效率展开 🧠",
-    "url": "/ai/daily/cn/2026-06/2026-06-16.html",
-    "sourcePath": "AI/daily/cn/2026-06/2026-06-16.md"
   }
 ],
   weekly: [
