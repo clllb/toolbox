@@ -16,6 +16,34 @@ export const GENERATED_CONTENT = {
     "sourcePath": "AI/daily/cn/2026-07/2026-07-14.md"
   },
   {
+    "date": "2026-07-13",
+    "title": "AI大事件 2026/7/13",
+    "description": "Claude计费延期引热议、苹果车项目留下芯片遗产、机器人船协作建造。",
+    "url": "/ai/daily/cn/2026-07/2026-07-13.html",
+    "sourcePath": "AI/daily/cn/2026-07/2026-07-13.md"
+  },
+  {
+    "date": "2026-07-12",
+    "title": "AI大事件 2026/7/12",
+    "description": "Claude重写Bun引争议、GPU瓦片教程上线、机器人学会视觉想象。",
+    "url": "/ai/daily/cn/2026-07/2026-07-12.html",
+    "sourcePath": "AI/daily/cn/2026-07/2026-07-12.md"
+  },
+  {
+    "date": "2026-07-11",
+    "title": "AI大事件 2026/7/11",
+    "description": "Cursor编辑器重磅更新、克劳德桌面端新增内置浏览器功能、实时视频生成模型问世。",
+    "url": "/ai/daily/cn/2026-07/2026-07-11.html",
+    "sourcePath": "AI/daily/cn/2026-07/2026-07-11.md"
+  },
+  {
+    "date": "2026-07-10",
+    "title": "AI大事件 2026/7/10",
+    "description": "OpenAI正式发布GPT-5.6三档模型、Meta发布Muse Spark 1.1推理模型、智谱提出异步强化学习新方案SAO。",
+    "url": "/ai/daily/cn/2026-07/2026-07-10.html",
+    "sourcePath": "AI/daily/cn/2026-07/2026-07-10.md"
+  },
+  {
     "date": "2026-07-09",
     "title": "AI大事件 2026/7/9",
     "description": "模型与产品更新：GPT‑Live 全双工语音上线、Grok 4.5 联合 Cursor 推进编程智能体、Seedream 5.0 Pro 接入 Runway 🚀前沿研究：智能体提示注入威胁升级、主动记忆导航进入检索新范式、双重用途知识“开关”给安全训练带来新思路 🧠",
@@ -147,34 +175,6 @@ export const GENERATED_CONTENT = {
     "description": "Midjourney跨界推出医疗超声设备、法国开源传奇转向机器人控制推动产品能力与工作流继续演进 🚀视觉接地思考提升多模态推理、拉格朗日开放词汇驾驶框架展示研究侧对推理、数据与科学问题的持续推进 🧠",
     "url": "/ai/daily/cn/2026-06/2026-06-21.html",
     "sourcePath": "AI/daily/cn/2026-06/2026-06-21.md"
-  },
-  {
-    "date": "2026-06-20",
-    "title": "AI大事件 2026/6/20",
-    "description": "Cloudflare 为 AI 智能体推出临时账户、新一代实时互动视频模型发布推动产品能力与工作流继续演进 🚀涌现对齐促使模型进行道德自省、新分割架构优化医疗图像处理展示研究侧对推理、数据与科学问题的持续推进 🧠",
-    "url": "/ai/daily/cn/2026-06/2026-06-20.html",
-    "sourcePath": "AI/daily/cn/2026-06/2026-06-20.md"
-  },
-  {
-    "date": "2026-06-19",
-    "title": "AI大事件 2026/6/19",
-    "description": "智能避障老年马桶正式亮相、百川智能发布M4医疗大模型推动产品能力与工作流继续演进 🚀Anthropic Project Fetch 第二阶段：Claude Opus 4.7 自主完成任务，速度比人类团队快约20倍、缅因猫实时世界大模型首发亮相展示研究侧对推理、数据与科学问题的持续推进 🧠",
-    "url": "/ai/daily/cn/2026-06/2026-06-19.html",
-    "sourcePath": "AI/daily/cn/2026-06/2026-06-19.md"
-  },
-  {
-    "date": "2026-06-18",
-    "title": "AI大事件 2026/6/18",
-    "description": "Midjourney、Cursor、Vercel、Google 与 OpenAI 延续产品和智能体工具更新，创作、编码、语音与云端协作继续加速 🚀GLM5.2、AMIE、LifeSciBench、SDR 和化学智能体线索显示，研究侧正在同时推进基准、医学、数据防御与科学发现 🧠",
-    "url": "/ai/daily/cn/2026-06/2026-06-18.html",
-    "sourcePath": "AI/daily/cn/2026-06/2026-06-18.md"
-  },
-  {
-    "date": "2026-06-17",
-    "title": "AI大事件 2026/6/17",
-    "description": "克劳德核心提示词大幅更新、Grok办公辅助插件一键生成PPT推动产品能力与工作流继续演进 🚀梯度算法新研究解决LoRA难题、智能体技能组合暴露严重漏洞展示研究侧对推理、数据与科学问题的持续推进 🧠",
-    "url": "/ai/daily/cn/2026-06/2026-06-17.html",
-    "sourcePath": "AI/daily/cn/2026-06/2026-06-17.md"
   }
 ],
   weekly: [

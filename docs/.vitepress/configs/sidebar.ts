@@ -54,6 +54,10 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           collapsed: false,
           items: [
             { text: '2026-07-14', link: '/AI/daily/cn/2026-07/2026-07-14.md' },
+            { text: '2026-07-13', link: '/AI/daily/cn/2026-07/2026-07-13.md' },
+            { text: '2026-07-12', link: '/AI/daily/cn/2026-07/2026-07-12.md' },
+            { text: '2026-07-11', link: '/AI/daily/cn/2026-07/2026-07-11.md' },
+            { text: '2026-07-10', link: '/AI/daily/cn/2026-07/2026-07-10.md' },
             { text: '2026-07-09', link: '/AI/daily/cn/2026-07/2026-07-09.md' },
             { text: '2026-07-08', link: '/AI/daily/cn/2026-07/2026-07-08.md' },
             { text: '2026-07-07', link: '/AI/daily/cn/2026-07/2026-07-07.md' },
