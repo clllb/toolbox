@@ -9,6 +9,13 @@ export type GeneratedContentEntry = {
 export const GENERATED_CONTENT = {
   daily: [
   {
+    "date": "2026-07-22",
+    "title": "AI大事件 2026/7/22",
+    "description": "2026-07-22 AI大事件：Gemini、Qwen-Image、Claude、AI安全、算力基建与开发者工具更新。",
+    "url": "/ai/daily/cn/2026-07/2026-07-22.html",
+    "sourcePath": "AI/daily/cn/2026-07/2026-07-22.md"
+  },
+  {
     "date": "2026-07-14",
     "title": "AI大事件 2026/7/14",
     "description": "GPT-5.6 登陆 Bedrock、Claude 价值观研究、AI 安全与开源工具的今日进展。",
@@ -168,13 +175,6 @@ export const GENERATED_CONTENT = {
     "description": "三星部署 ChatGPT Enterprise、ASML 警示欧洲差距，企业应用与全球算力竞争继续升温 🚀今天没有通过核验门禁的新研究首发，避免用社交传闻填充前沿研究栏目 🧠",
     "url": "/ai/daily/cn/2026-06/2026-06-22.html",
     "sourcePath": "AI/daily/cn/2026-06/2026-06-22.md"
-  },
-  {
-    "date": "2026-06-21",
-    "title": "AI大事件 2026/6/21",
-    "description": "Midjourney跨界推出医疗超声设备、法国开源传奇转向机器人控制推动产品能力与工作流继续演进 🚀视觉接地思考提升多模态推理、拉格朗日开放词汇驾驶框架展示研究侧对推理、数据与科学问题的持续推进 🧠",
-    "url": "/ai/daily/cn/2026-06/2026-06-21.html",
-    "sourcePath": "AI/daily/cn/2026-06/2026-06-21.md"
   }
 ],
   weekly: [
