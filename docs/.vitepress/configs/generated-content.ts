@@ -9,6 +9,13 @@ export type GeneratedContentEntry = {
 export const GENERATED_CONTENT = {
   daily: [
   {
+    "date": "2026-07-23",
+    "title": "AI大事件 2026/7/23",
+    "description": "Jetson Thor、Miora、OpenAI 数据中心、Anthropic 生态、前沿研究与开源工具的今日进展。",
+    "url": "/ai/daily/cn/2026-07/2026-07-23.html",
+    "sourcePath": "AI/daily/cn/2026-07/2026-07-23.md"
+  },
+  {
     "date": "2026-07-22",
     "title": "AI大事件 2026/7/22",
     "description": "2026-07-22 AI大事件：Gemini、Qwen-Image、Claude、AI安全、算力基建与开发者工具更新。",
