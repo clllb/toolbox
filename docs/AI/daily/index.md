@@ -10,6 +10,8 @@ outline: [2, 3]
 
 ## 最新 AI 大事件
 
+- [AI 大事件 2026/7/24](/ai/daily/cn/2026-07/2026-07-24.html)
+  2026-07-24 · AMD Helios、ChatGPT Health、Claude 语音、Flux 3、Runway Router、智能体安全与开源工具的今日进展。
 - [AI 大事件 2026/7/23](/ai/daily/cn/2026-07/2026-07-23.html)
   2026-07-23 · Jetson Thor、Miora、OpenAI 数据中心、Anthropic 生态、前沿研究与开源工具的今日进展。
 - [AI 大事件 2026/7/22](/ai/daily/cn/2026-07/2026-07-22.html)
@@ -41,6 +43,7 @@ outline: [2, 3]
 
 ### 2026-07
 
+- [AI 大事件 2026/7/24](/ai/daily/cn/2026-07/2026-07-24.html)
 - [AI 大事件 2026/7/23](/ai/daily/cn/2026-07/2026-07-23.html)
 - [AI 大事件 2026/7/22](/ai/daily/cn/2026-07/2026-07-22.html)
 - [AI 大事件 2026/7/14](/ai/daily/cn/2026-07/2026-07-14.html)
