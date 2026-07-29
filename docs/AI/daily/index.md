@@ -10,6 +10,8 @@ outline: [2, 3]
 
 ## 最新 AI 大事件
 
+- [AI 大事件 2026/7/29](/ai/daily/cn/2026-07/2026-07-29.html)
+  2026-07-29 · 2026-07-29 AI 大事件：Claude 加密研究、OlmoEarth、Kimi K3、MCP 无状态协议、Grok Workspace、AI 安全与智能体工具更新。
 - [AI 大事件 2026/7/24](/ai/daily/cn/2026-07/2026-07-24.html)
   2026-07-24 · AMD Helios、ChatGPT Health、Claude 语音、Flux 3、Runway Router、智能体安全与开源工具的今日进展。
 - [AI 大事件 2026/7/23](/ai/daily/cn/2026-07/2026-07-23.html)
@@ -43,6 +45,7 @@ outline: [2, 3]
 
 ### 2026-07
 
+- [AI 大事件 2026/7/29](/ai/daily/cn/2026-07/2026-07-29.html)
 - [AI 大事件 2026/7/24](/ai/daily/cn/2026-07/2026-07-24.html)
 - [AI 大事件 2026/7/23](/ai/daily/cn/2026-07/2026-07-23.html)
 - [AI 大事件 2026/7/22](/ai/daily/cn/2026-07/2026-07-22.html)
