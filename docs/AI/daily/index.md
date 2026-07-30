@@ -10,6 +10,8 @@ outline: [2, 3]
 
 ## 最新 AI 大事件
 
+- [AI 大事件 2026/7/30](/ai/daily/cn/2026-07/2026-07-30.html)
+  2026-07-30 · 2026-07-30 AI 大事件：Microsoft Copilot 超级应用、NVIDIA Cosmos-Dreams、GPT-5.6、Lyria 3.5、Kimi K3 本地推理、Meta 个人智能体、Perplexity Numbat 与 Agent 安全。
 - [AI 大事件 2026/7/29](/ai/daily/cn/2026-07/2026-07-29.html)
   2026-07-29 · 2026-07-29 AI 大事件：Claude 加密研究、OlmoEarth、Kimi K3、MCP 无状态协议、Grok Workspace、AI 安全与智能体工具更新。
 - [AI 大事件 2026/7/24](/ai/daily/cn/2026-07/2026-07-24.html)
@@ -45,6 +47,7 @@ outline: [2, 3]
 
 ### 2026-07
 
+- [AI 大事件 2026/7/30](/ai/daily/cn/2026-07/2026-07-30.html)
 - [AI 大事件 2026/7/29](/ai/daily/cn/2026-07/2026-07-29.html)
 - [AI 大事件 2026/7/24](/ai/daily/cn/2026-07/2026-07-24.html)
 - [AI 大事件 2026/7/23](/ai/daily/cn/2026-07/2026-07-23.html)

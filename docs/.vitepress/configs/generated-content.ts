@@ -9,6 +9,13 @@ export type GeneratedContentEntry = {
 export const GENERATED_CONTENT = {
   daily: [
   {
+    "date": "2026-07-30",
+    "title": "AI大事件 2026/7/30",
+    "description": "2026-07-30 AI大事件：Microsoft Copilot 超级应用、NVIDIA Cosmos-Dreams、GPT-5.6、Lyria 3.5、Kimi K3 本地推理、Meta 个人智能体、Perplexity Numbat 与 Agent 安全。",
+    "url": "/ai/daily/cn/2026-07/2026-07-30.html",
+    "sourcePath": "AI/daily/cn/2026-07/2026-07-30.md"
+  },
+  {
     "date": "2026-07-29",
     "title": "AI大事件 2026/7/29",
     "description": "2026-07-29 AI大事件：Claude 加密研究、OlmoEarth、Kimi K3、MCP 无状态协议、Grok Workspace、AI 安全与智能体工具更新。",
