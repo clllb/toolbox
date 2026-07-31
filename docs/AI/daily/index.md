@@ -10,6 +10,8 @@ outline: [2, 3]
 
 ## 最新 AI 大事件
 
+- [AI 大事件 7/31](/ai/daily/cn/2026-07/2026-07-31.html)
+  2026-07-31 · 2026-07-31 AI 大事件：OpenAI 下调 GPT-5.6 Luna 与 Terra 价格、Google 用 AI 加速 Chrome 安全修复、Gemini Robotics 2 扩展到全身控制、Claude 评测环境误接真实网络、Simile 与 Okta 推动代理时代产业落地
 - [AI 大事件 2026/7/30](/ai/daily/cn/2026-07/2026-07-30.html)
   2026-07-30 · 2026-07-30 AI 大事件：Microsoft Copilot 超级应用、NVIDIA Cosmos-Dreams、GPT-5.6、Lyria 3.5、Kimi K3 本地推理、Meta 个人智能体、Perplexity Numbat 与 Agent 安全。
 - [AI 大事件 2026/7/29](/ai/daily/cn/2026-07/2026-07-29.html)
@@ -47,6 +49,7 @@ outline: [2, 3]
 
 ### 2026-07
 
+- [AI 大事件 7/31](/ai/daily/cn/2026-07/2026-07-31.html)
 - [AI 大事件 2026/7/30](/ai/daily/cn/2026-07/2026-07-30.html)
 - [AI 大事件 2026/7/29](/ai/daily/cn/2026-07/2026-07-29.html)
 - [AI 大事件 2026/7/24](/ai/daily/cn/2026-07/2026-07-24.html)
