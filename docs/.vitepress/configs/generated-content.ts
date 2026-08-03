@@ -9,6 +9,13 @@ export type GeneratedContentEntry = {
 export const GENERATED_CONTENT = {
   daily: [
   {
+    "date": "2026-08-03",
+    "title": "AI大事件 2026/8/3",
+    "description": "2026-08-03 AI大事件：Inkling、OpenAI Presence、谷歌 TPU 8、TaoMate、Stream3D、Cloudflare Agents Week、MindMemOS、AirLLM 与 Grok 视频分析",
+    "url": "/ai/daily/cn/2026-08/2026-08-03.html",
+    "sourcePath": "AI/daily/cn/2026-08/2026-08-03.md"
+  },
+  {
     "date": "2026-08-02",
     "title": "AI大事件 2026/8/2",
     "description": "2026-08-02 AI大事件：MiniMax H3、Seedance 2.5、TRAE 模板库、Qwen-UI-Agent、OpenAI 十项数学证明、Suno 版权判决与开发者工具更新",

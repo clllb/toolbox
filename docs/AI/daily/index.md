@@ -10,6 +10,8 @@ outline: [2, 3]
 
 ## 最新 AI 大事件
 
+- [AI 大事件 2026/8/3](/ai/daily/cn/2026-08/2026-08-03.html)
+  2026-08-03 · 2026-08-03 AI 大事件：Inkling、OpenAI Presence、谷歌 TPU 8、TaoMate、Stream3D、Cloudflare Agents Week、MindMemOS、AirLLM 与 Grok 视频分析
 - [AI 大事件 2026/8/2](/ai/daily/cn/2026-08/2026-08-02.html)
   2026-08-02 · 2026-08-02 AI 大事件：MiniMax H3、Seedance 2.5、TRAE 模板库、Qwen-UI-Agent、OpenAI 十项数学证明、Suno 版权判决与开发者工具更新
 - [AI 大事件 7/31](/ai/daily/cn/2026-07/2026-07-31.html)
@@ -51,6 +53,7 @@ outline: [2, 3]
 
 ### 2026-08
 
+- [AI 大事件 2026/8/3](/ai/daily/cn/2026-08/2026-08-03.html)
 - [AI 大事件 2026/8/2](/ai/daily/cn/2026-08/2026-08-02.html)
 
 ### 2026-07
