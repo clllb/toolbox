@@ -9,6 +9,13 @@ export type GeneratedContentEntry = {
 export const GENERATED_CONTENT = {
   daily: [
   {
+    "date": "2026-08-02",
+    "title": "AI大事件 2026/8/2",
+    "description": "2026-08-02 AI大事件：MiniMax H3、Seedance 2.5、TRAE 模板库、Qwen-UI-Agent、OpenAI 十项数学证明、Suno 版权判决与开发者工具更新",
+    "url": "/ai/daily/cn/2026-08/2026-08-02.html",
+    "sourcePath": "AI/daily/cn/2026-08/2026-08-02.md"
+  },
+  {
     "date": "2026-07-31",
     "title": "AI大事件 7/31",
     "description": "2026-07-31 AI大事件：OpenAI 下调 GPT-5.6 Luna 与 Terra 价格、Google 用 AI 加速 Chrome 安全修复、Gemini Robotics 2 扩展到全身控制、Claude 评测环境误接真实网络、Simile 与 Okta 推动代理时代产业落地",

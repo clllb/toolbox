@@ -10,6 +10,8 @@ outline: [2, 3]
 
 ## 最新 AI 大事件
 
+- [AI 大事件 2026/8/2](/ai/daily/cn/2026-08/2026-08-02.html)
+  2026-08-02 · 2026-08-02 AI 大事件：MiniMax H3、Seedance 2.5、TRAE 模板库、Qwen-UI-Agent、OpenAI 十项数学证明、Suno 版权判决与开发者工具更新
 - [AI 大事件 7/31](/ai/daily/cn/2026-07/2026-07-31.html)
   2026-07-31 · 2026-07-31 AI 大事件：OpenAI 下调 GPT-5.6 Luna 与 Terra 价格、Google 用 AI 加速 Chrome 安全修复、Gemini Robotics 2 扩展到全身控制、Claude 评测环境误接真实网络、Simile 与 Okta 推动代理时代产业落地
 - [AI 大事件 2026/7/30](/ai/daily/cn/2026-07/2026-07-30.html)
@@ -46,6 +48,10 @@ outline: [2, 3]
   2026-07-04 · 模型与产品更新：Mistral 推出开源代码模型 Leanstral 1.5、生数科技发布 Vidu S1，推动视频生成迈向“实时交互”新时代、Wan Video 推出“音乐伴舞”新功能 🚀 前沿研究：中国团队首创百亿参数细胞世界模型、前沿大模型被曝存在同伴保护行为、推理算力才是代码生成成功的关键 🧠
 
 ## 月份归档
+
+### 2026-08
+
+- [AI 大事件 2026/8/2](/ai/daily/cn/2026-08/2026-08-02.html)
 
 ### 2026-07
 
