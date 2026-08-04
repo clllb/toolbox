@@ -9,6 +9,13 @@ export type GeneratedContentEntry = {
 export const GENERATED_CONTENT = {
   daily: [
   {
+    "date": "2026-08-04",
+    "title": "AI大事件 8/4",
+    "description": "2026-08-04 AI大事件：Qwen3.8-Max、千问办公、Cursor 云端代理、MiniMax H3、欧盟 AI 透明度规则、OpenRouter Ori Eval、智能体状态化分词与开发者工具更新",
+    "url": "/ai/daily/cn/2026-08/2026-08-04.html",
+    "sourcePath": "AI/daily/cn/2026-08/2026-08-04.md"
+  },
+  {
     "date": "2026-08-03",
     "title": "AI大事件 2026/8/3",
     "description": "2026-08-03 AI大事件：Inkling、OpenAI Presence、谷歌 TPU 8、TaoMate、Stream3D、Cloudflare Agents Week、MindMemOS、AirLLM 与 Grok 视频分析",
@@ -168,62 +175,6 @@ export const GENERATED_CONTENT = {
     "description": "模型与产品更新：美团发布VitaBench2.0评测系统、Cursor发布移动端编码程序、苹果紧急推送iOS系统安全更新 🚀前沿研究：智谱GLM5.2模型比肩Claude、学者利用AI攻克计算几何难题、研究人员提出AgentOdyssey框架 🧠",
     "url": "/ai/daily/cn/2026-06/2026-06-30.html",
     "sourcePath": "AI/daily/cn/2026-06/2026-06-30.md"
-  },
-  {
-    "date": "2026-06-29",
-    "title": "AI大事件 2026/6/29",
-    "description": "模型与产品更新：Grok 4.5 私测于 SpaceX 和 Tesla，性能接近 Opus、Wayfinder Router：在本地和托管的大语言模型之间进行确定性查询路由、阿德拉菲尼尔：仅在AI agent工作时阻止Mac睡眠的菜单栏工具 🚀前沿研究：百度开源Unlimited OCR、光计算突破太空算力瓶颈、英伟达发布最危险AI论文 🧠",
-    "url": "/ai/daily/cn/2026-06/2026-06-29.html",
-    "sourcePath": "AI/daily/cn/2026-06/2026-06-29.md"
-  },
-  {
-    "date": "2026-06-28",
-    "title": "AI大事件 2026/6/28",
-    "description": "模型与产品更新：GPT5.6强势登场、Claude安全模型解禁、钉钉悟空获国际认证 🚀前沿研究：BrowserBC蒸馏人类操作、腾讯Hy3性能极致优化、InfoKV增强长文本推理 🧠",
-    "url": "/ai/daily/cn/2026-06/2026-06-28.html",
-    "sourcePath": "AI/daily/cn/2026-06/2026-06-28.md"
-  },
-  {
-    "date": "2026-06-27",
-    "title": "AI大事件 2026/6/27",
-    "description": "模型与产品更新：百度千帆取消固定订阅、苹果Xcode新增Gemini、OpenAI 预览新一代模型 GPT5.6 Sol 🚀前沿研究：OPID技能自蒸馏机制、机器人世界建模框架、Qwen攻克上下文鸿沟 🧠",
-    "url": "/ai/daily/cn/2026-06/2026-06-27.html",
-    "sourcePath": "AI/daily/cn/2026-06/2026-06-27.md"
-  },
-  {
-    "date": "2026-06-26",
-    "title": "AI大事件 2026/6/26",
-    "description": "模型与产品更新：国内首个 AI 攻击测试套件发布、三体联名款 AI 穿戴设备正式开售、文心一言官网入口开启全面升级 🚀前沿研究：快手 RaG 让推荐系统进入生成时代、WATER 算法攻克艺术字识别难题、IVCoT 提升图像生成的结构感知 🧠",
-    "url": "/ai/daily/cn/2026-06/2026-06-26.html",
-    "sourcePath": "AI/daily/cn/2026-06/2026-06-26.md"
-  },
-  {
-    "date": "2026-06-25",
-    "title": "AI大事件 2026/6/25",
-    "description": "OpenAI Jalapeño、Gemini 3.5 Flash 计算机使用、豆包专业版和 QwenAgentWorld 把模型能力继续推向可执行工作流 🚀DramaDirector、DFlash、Google Research 参数化知识研究显示，推理、生成与解码效率仍在快速迭代 🧠",
-    "url": "/ai/daily/cn/2026-06/2026-06-25.html",
-    "sourcePath": "AI/daily/cn/2026-06/2026-06-25.md"
-  },
-  {
-    "date": "2026-06-24",
-    "title": "AI大事件 2026/6/24",
-    "description": "豆包 2.1、Seed 2.1、Krea 2 与多款多模态工具集中披露新能力，生产级 AI 继续提速 🚀GPT5.5Cyber、机器人安全栈与三项研究进展，显示能力扩张正倒逼评测和治理升级 🧠",
-    "url": "/ai/daily/cn/2026-06/2026-06-24.html",
-    "sourcePath": "AI/daily/cn/2026-06/2026-06-24.md"
-  },
-  {
-    "date": "2026-06-23",
-    "title": "AI大事件 2026/6/23",
-    "description": "阿里视频模型、GLM5.2、微信小微与 Sakana Fugu 集中拓展模型到真实服务的连接方式 🚀GeneralVLA2、扩散语言模型、SpatialAvatar0 和 BrainG3N 推进具身、多模态与医学研究 🧠",
-    "url": "/ai/daily/cn/2026-06/2026-06-23.html",
-    "sourcePath": "AI/daily/cn/2026-06/2026-06-23.md"
-  },
-  {
-    "date": "2026-06-22",
-    "title": "AI大事件 2026/6/22",
-    "description": "三星部署 ChatGPT Enterprise、ASML 警示欧洲差距，企业应用与全球算力竞争继续升温 🚀今天没有通过核验门禁的新研究首发，避免用社交传闻填充前沿研究栏目 🧠",
-    "url": "/ai/daily/cn/2026-06/2026-06-22.html",
-    "sourcePath": "AI/daily/cn/2026-06/2026-06-22.md"
   }
 ],
   weekly: [
