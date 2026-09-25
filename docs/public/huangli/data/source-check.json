@@ -1,120 +1,36 @@
 {
-  "months": ["2026-08", "2026-09"],
+  "months": ["2026-09", "2026-10"],
   "sample_size": 5,
   "results": [
     {
-      "date": "2026-08-01",
-      "status": "diff",
-      "differences": {
-        "yi": {
-          "local": [
-            "出行",
-            "宴会",
-            "上官",
-            "进人口",
-            "经络",
-            "纳财",
-            "纳畜",
-            "临政",
-            "举正直",
-            "施恩",
-            "裁制",
-            "酝酿",
-            "庆赐",
-            "招贤",
-            "立券交易"
-          ],
-          "rilu": [
-            "祭祀",
-            "结婚姻",
-            "移徙",
-            "入宅",
-            "竖柱上梁",
-            "入殓",
-            "牧养",
-            "解除",
-            "裁衣",
-            "闭塞",
-            "筑堤",
-            "补垣",
-            "塞穴"
-          ]
-        },
-        "black_yellow": {
-          "local": "黑道日",
-          "rilu": "黄道日"
-        },
-        "twelve_officer": {
-          "local": "建",
-          "rilu": "闭"
-        }
-      }
-    },
-    {
-      "date": "2026-08-16",
-      "status": "ok",
+      "date": "2026-09-01",
+      "status": "error",
+      "error": "<urlopen error timed out>",
       "differences": {}
     },
     {
-      "date": "2026-08-31",
-      "status": "ok",
+      "date": "2026-09-16",
+      "status": "error",
+      "error": "<urlopen error timed out>",
       "differences": {}
     },
     {
-      "date": "2026-09-15",
-      "status": "diff",
-      "differences": {
-        "ji": {
-          "local": [
-            "上表章",
-            "开渠",
-            "穿井",
-            "补垣",
-            "布政事",
-            "颁诏",
-            "宣政事",
-            "筑堤防",
-            "塞穴",
-            "招贤",
-            "上册",
-            "营建",
-            "出师",
-            "乘船渡水"
-          ],
-          "rilu": ["嫁娶", "开市", "移徙", "入宅", "动土", "安葬"]
-        },
-        "black_yellow": {
-          "local": "黑道日",
-          "rilu": "黄道日"
-        }
-      }
+      "date": "2026-10-01",
+      "status": "error",
+      "error": "<urlopen error timed out>",
+      "differences": {}
     },
     {
-      "date": "2026-09-30",
-      "status": "diff",
-      "differences": {
-        "ji": {
-          "local": [
-            "结婚姻",
-            "嫁娶",
-            "剃头",
-            "平治道涂",
-            "破屋坏垣",
-            "伐木",
-            "畋猎",
-            "营建",
-            "筑堤防",
-            "取鱼",
-            "修饰垣墙",
-            "补垣",
-            "整容",
-            "纳采",
-            "乘船渡水",
-            "开仓"
-          ],
-          "rilu": ["诸事不宜"]
-        }
-      }
+      "date": "2026-10-16",
+      "status": "error",
+      "error": "<urlopen error timed out>",
+      "differences": {}
+    },
+    {
+      "date": "2026-10-31",
+      "status": "error",
+      "error": "<urlopen error timed out>",
+      "differences": {}
     }
   ]
 }
